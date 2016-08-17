@@ -1,0 +1,16 @@
+---
+type: "two-column"
+title: "Agenda"
+subtitle: "What are we going to do?"
+menuTitle: "Agenda"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/cf-logo-vertical.png "Cloud Foundry")
+
+columnRightContent: |
+
+    * Custom Domains
+    * Routes
+    * Blue/Green Deployments

@@ -1,0 +1,11 @@
+type: "quote"
+menuTitle: "Microservices"
+title: "Microservices defined as..."
+backgroundColor: "#232B2F"
+quote: |
+  A loosely-coupled, service-oriented architecture with bounded context.
+author: "Adrian Cockcroft"
+source: "http://thenewstack.io/dockercon-europe-adrian-cockcroft-on-the-state-of-microservices/"
+notes: |
+
+  The good parts of SOA.

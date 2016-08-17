@@ -1,0 +1,12 @@
+type: "slide-basic"
+menuTitle: "Data Microservices"
+backgroundColor: "#243641"
+content: |
+
+  Data Microservices
+
+  ![Data Microservices](img/microservices.png)
+
+notes: |
+
+  Pick the right technology (language, persistence).  Use cloud friendly protocols.  Leverage asynch processing

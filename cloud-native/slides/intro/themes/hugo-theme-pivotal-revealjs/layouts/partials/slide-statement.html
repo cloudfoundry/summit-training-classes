@@ -1,0 +1,10 @@
+<div class="row quote">
+  <div class="col-sm-18 col-sm-offset-6 txt-l">
+    {{ $buildInStatements := .buildInStatements }}
+    {{ range $index, $element := .statements }}
+      <div class="row {{ if and (eq $buildInStatements true) (gt $index 0) }}fragment{{ end }}">
+        <h1 class="type-neutral-6">{{ $element | markdownify }}</h1>
+      </div>
+    {{ end }}
+  </div>
+</div>

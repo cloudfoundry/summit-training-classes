@@ -1,0 +1,9 @@
+type: "two-line"
+menuTitle: "Interactions"
+title: "Interactions between services need to be..."
+topLine: Reliable
+bottomLine: Fault Tolerant
+backgroundColor: "#232B2F"
+notes: |
+
+  In a distributed system, there are many interactions between services.  These interactions must be reliable and fault tolerant.  Otherwise, isssues cascade

@@ -1,0 +1,37 @@
+---
+type: "two-column"
+title: "How do they work?"
+subtitle: "Standardizing runtime and deployment"
+menuTitle: "How - Buildpacks"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  *Given*: **An Application**
+
+  *Execute*: A set of **script endpoints** against the app
+
+
+    <i class="fa fa-tint" style="font-size: 150px; margin-top: 50px;"></i>
+  </span>
+
+columnRightContent: |
+
+  * `bin/detect`: Can I handle this? (introspection)
+  * `bin/compile`: If yes, make the droplet
+  * `bin/release`: Build the metadata (env variables, start command, etc)
+
+notes: |
+
+  run in containers
+
+  ---
+
+  ## [Where does the](#/6) buildpack [run?](#/6)
+
+    * Uses the host kernel with a rootfs (jeos)
+    * Default rootfs is <span style="color: #8FF541;">cflinuxfs2</span> (based on Ubuntu 14.04 Trusty)
+    * Buildpack execution and app runtime are in containers
+    * Cloud Foundry uses [Garden](https://github.com/cloudfoundry-incubator/garden) for containerisation

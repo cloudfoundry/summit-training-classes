@@ -1,0 +1,20 @@
+---
+type: "slide-basic"
+title: "Certified Providers"
+subtitle: "Cloud Portability & the Open Core Model"
+menuTitle: "Certified Providers"
+content: |
+
+  <span class="txt-c">
+
+    **Certified Providers**
+
+    <iframe data-src="https://www.cloudfoundry.org/learn/certified-providers/" height="350px" width="100%" class="txt-c"></iframe>
+
+  </span>
+
+  ## https://www.cloudfoundry.org/learn/certified-providers/
+
+notes: |
+
+  Cloud Foundry follows the open core model and certifies base functionality of providers for consistent cloud portability.

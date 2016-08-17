@@ -1,0 +1,20 @@
+---
+type: "two-column"
+title: "Open Source Distribution"
+subtitle: "The open source cloud native platform"
+menuTitle: "Open Source Distribution"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/cf-logo-vertical.png "Cloud Foundry")
+
+columnRightContent: |
+
+  * [github.com/cloudfoundry](https://github.com/cloudfoundry)
+  * **cf-release** requires [BOSH](https://bosh.io/docs) knowledge
+  * **bosh-lite** for a local CF deployment
+
+notes: |
+
+  Cloud Foundry is an open source project.  Using the OSS distribution requires BOSH (significant learning curve).

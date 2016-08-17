@@ -1,0 +1,11 @@
+type: "quote"
+menuTitle: "Bounded Contexts"
+backgroundColor: "#232B2F"
+quote: |
+  It allows updates without needing to understand how everything else works.
+quoteNotes:
+  - single responsibility
+  - separation of concerns
+author: "Adrian Cockcroft"
+source: "http://thenewstack.io/dockercon-europe-adrian-cockcroft-on-the-state-of-microservices/"
+notes: |

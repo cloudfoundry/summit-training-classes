@@ -1,0 +1,14 @@
+type: "quote"
+title: "A haiku..."
+menuTitle: "Haiku"
+
+quote: |
+  here is my source code<br />
+  run it on the cloud for me<br />
+  i do not care how
+
+author: "Onsi Fakhouri"
+
+authorTagLine: "VP Cloud R&D, Pivotal"
+
+source: "https://twitter.com/onsijoe/status/598235841635360768"

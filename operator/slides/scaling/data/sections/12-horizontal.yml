@@ -1,0 +1,14 @@
+---
+type: slide-basic
+title: "Horizontal Scale"
+subtitle: "Scaling Out"
+content: |
+
+  **Adding Instances**
+
+  * Platform: More VMs
+  * Apps: More app instances (balanced across cells)
+
+notes: |
+
+  Horizontal scaling involves adding instances and balancing across them. To scale the platform out, we can add VMs via bosh.  To scale applications out, we can add instances.  CF will distribute and balance traffic across them.  Scaling applications out does not result in downtime.

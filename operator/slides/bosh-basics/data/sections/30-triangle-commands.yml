@@ -1,0 +1,24 @@
+type: slide-basic
+title: "Basic Commands"
+subtitle: "Seeing Deployments..."
+content: |
+
+  ```sh
+    bosh stemcells
+  ```
+
+  ```sh
+    bosh releases
+  ```
+
+  ```sh
+    bosh deployment
+  ```
+
+  ```sh
+    bosh download manifest
+  ```
+
+notes: |
+
+  Try it!  Don't forget to use the bosh help commands.  Generating a manifest is often the difficult "day one" problem.

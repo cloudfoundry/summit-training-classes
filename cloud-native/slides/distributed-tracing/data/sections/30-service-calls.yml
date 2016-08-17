@@ -1,0 +1,14 @@
+type: "centered"
+menuTitle: "Tracing Solutions"
+title: "Tracing Solutions"
+content: |
+
+  Zipkin
+
+  <img src="img/zipkin.png" style="max-height: 350px" />
+
+  <span style="font-size: 0.5em">Based on concepts in Google Dapper</span>
+
+notes: |
+    Span: basic unit of work.
+    Trace: per service call.

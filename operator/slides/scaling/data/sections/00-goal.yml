@@ -1,0 +1,9 @@
+---
+menuTitle: "Goal"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: true
+statements:
+  - As a *CF operator*
+  - I can *scale* Cloud Foundry
+  - To provide *additional capacity* to my users

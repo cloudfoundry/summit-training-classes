@@ -1,0 +1,23 @@
+---
+type: "two-column"
+title: "What is a Cloud?"
+subtitle: "Establishing the baseline"
+menuTitle: "What is a Cloud?"
+
+columnLeftContent: |
+  ### Technical
+
+  * **Virtual** infrastructure
+    * VMs
+    * Networks
+    * Disks
+  * **Driven** by an **API**
+
+columnRightContent: |
+  ### Cultural
+
+  * **Automated**, **repeatable** operations
+  * Agile, **unimpeded** development
+
+notes: |
+  Cloud is not just about technology, it is about culture too.

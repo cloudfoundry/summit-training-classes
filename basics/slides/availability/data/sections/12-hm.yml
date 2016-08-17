@@ -1,0 +1,23 @@
+---
+type: "slide-basic"
+menuTitle: "Health Management"
+
+content: |
+
+  <span class="txt-c">
+
+  *What happens when instances fail?*
+
+  <i class="fa fa-question-circle" style="font-size: 120px;"> </i>
+
+  They are **automatically recreated** by comparing desired state to actual state
+
+  </span>
+
+  ## https://docs.cloudfoundry.org/concepts/architecture/#nsync-converger
+
+notes:
+
+  Who likes to be paged b/c of outages?
+
+  The app execution layer is constantly comparing desired state to actual state and correcting any issues.

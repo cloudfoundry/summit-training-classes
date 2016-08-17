@@ -1,0 +1,23 @@
+---
+type: "two-column"
+title: "Agenda"
+subtitle: "What are we going to do?"
+menuTitle: "Agenda"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/cf-logo-vertical.png "Cloud Foundry")
+
+columnRightContent: |
+
+  * Deploying CF
+  * Baselining Cloud
+  * Fundamentals of Bosh
+
+notes: |
+
+  * Deploying CF on bosh-lite.  We will start here in the interest of time.
+  * The basics of cloud foundry deployment using bosh
+  * Cloud basics
+  * Bosh fundamentals

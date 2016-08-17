@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-12 txt-l divider-right">
+    {{ if or (isset . "columnLeftTitleImage") (isset . "columnLeftTitle") }}
+      <div class="row column-title txt-r" style="margin-right: 15px;">
+        {{ if isset . "columnLeftTitleImage" }}
+          <img src="{{ .columnLeftTitleImage }}" alt="{{ .columnLeftTitle }}" title="{{ .columnLeftTitle }}"/>
+        {{ else }}
+          {{ .columnLeftTitle }}
+        {{ end }}
+      </div>
+    {{ end }}
+    <div class="row content column-content type-neutral-3">
+      {{ .columnLeftContent | markdownify }}
+    </div>
+  </div>
+  <div class="col-md-12 txt-l">
+    {{ if or (isset . "columnRightTitleImage") (isset . "columnRightTitle") }}
+      <div class="row column-title txt-r" style="margin-left: 15px;">
+        {{ if isset . "columnRightTitleImage" }}
+          <img src="{{ .columnRightTitleImage }}" alt="{{ .columnRightTitle }}" title="{{ .columnRightTitle }}"/>
+        {{ else }}
+          {{ .columnRightTitle }}
+        {{ end }}
+      </div>
+    {{ end }}
+    <div class="row content column-content type-neutral-3" style="margin-left: 15px;">
+      {{ .columnRightContent | markdownify }}
+    </div>
+  </div>
+  {{ if and (isset . "buildInColumns") (eq .buildInColumns "true") }}
+    <script>
+      addFragmentsToList($('script').last().parent());
+    </script>
+  {{ end }}
+</div>

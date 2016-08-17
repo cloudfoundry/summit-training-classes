@@ -1,0 +1,12 @@
+type: "statement"
+menuTitle: "Load-balancing"
+title: "Client side load-balancing is..."
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "**Simple** - no need for another load-balancer"
+  - "**Efficient** - minimize components between calls"
+  - "**Flexible** - URIs change"
+
+notes: |
+  Client's should be able to access services directly without knowing brittle credentials like uris.  Load balancers fail.  Instances come and go.

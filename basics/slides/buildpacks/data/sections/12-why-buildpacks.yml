@@ -1,0 +1,25 @@
+---
+type: "two-column"
+title: "Why Buildpacks?"
+subtitle: "Standardizing runtime and deployment"
+menuTitle: "Why Buildpacks?"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  Why **buildpacks**?
+
+    <i class="fa fa-tint" style="font-size: 150px; margin-top: 50px;"></i>
+  </span>
+
+columnRightContent: |
+
+    * Simplify app deployment -> **focus on your code**
+    * Fewer files, **quicker** app deploys
+    * Produce **self-contained**, **runnable** and **cacheable** app artifacts
+
+notes: |
+
+  The alternative is the "wild west" of bring your own container (which CF does support).  Allowing the platform to construct containers is important for standardization, security, and reliability of the platform.

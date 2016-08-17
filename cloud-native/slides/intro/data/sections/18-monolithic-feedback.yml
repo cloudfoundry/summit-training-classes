@@ -1,0 +1,9 @@
+type: "two-line"
+title: "Challenges"
+menuTitle: "Monolithic Feedback Cycles"
+topLine: Monolithic
+backgroundColor: "#424242"
+bottomLine: Feedback Loop
+notes: |
+
+  Long release cycles yield long feedback cycles.  Long feedback cycles are the bain of customer responsiveness.

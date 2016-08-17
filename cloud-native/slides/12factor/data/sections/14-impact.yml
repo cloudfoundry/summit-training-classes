@@ -1,0 +1,16 @@
+type: "centered"
+menuTitle: "Impact"
+title: "Impact of Microservices"
+backgroundColor: "#232B2F"
+content: |
+  <br />
+
+  Decoupled change cycles -> **frequent deploys**
+
+  Small codebase -> **fast onboarding**
+
+  Efficient scale -> **technology & organizations**
+
+notes: |
+
+  Think back to what we are trying to achieve.

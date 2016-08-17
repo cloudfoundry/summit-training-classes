@@ -1,0 +1,36 @@
+{{ if isset $.Site.Params.titleSlide "backgroundColor" }}
+  <section class="title-slide" data-background="{{ $.Site.Params.titleSlide.backgroundColor }}">
+{{ else if isset $.Site.Params.titleSlide "backgroundImage" }}
+  <section class="title-slide" data-background="{{ $.Site.Params.titleSlide.backgroundImage }}">
+{{ else }}
+  <section class="title-slide" data-background="#243640">
+{{ end }}
+
+  <div class="row">
+    <div class="col-sm-18 col-sm-offset-6 txt-l">
+      <span class="type-neutral-8 h2">{{ $.Site.Params.titleSlide.subtitle }}</span><br />
+      <h1 class="type-neutral-8">{{ .Site.Title }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-18 col-sm-offset-6 txt-l">
+      <span class="type-neutral-8 presenter-name"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-18 col-sm-offset-6 txt-l">
+      <span class="type-neutral-8 presenter-title type-brand-5"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-18 col-sm-offset-6 txt-l">
+      <span class="type-neutral-8 presenter-contact"></span>
+    </div>
+  </div>
+
+
+  <aside class="notes">
+    {{ $.Site.Params.titleSlide.notes | markdownify }}
+  </aside>
+
+</section>

@@ -1,0 +1,19 @@
+---
+type: "two-column"
+title: "Bosh Agent"
+menuTitle: "Bosh Agent"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![Bosh Agent](img/vm-bosh-agent.svg "Bosh Agent")
+
+columnRightContent: |
+
+  * Part of the **stemcell**
+  * **Communicates** with bosh
+  * Critical to **availability**
+
+notes: |
+
+  The bosh agent is part of the stemcell (base OS) and is on every VM bosh creates.  It is critical to bosh's built in lifecycle management of VMs.

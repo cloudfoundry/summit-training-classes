@@ -1,0 +1,17 @@
+type: "statement"
+menuTitle: "Distributed Dependencies"
+title: "In distributed systems..."
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "Application dependencies **cease to be** a method call away"
+  - "Configuring each client is **error prone** and **brittle**"
+
+notes: |
+  In a monolith, the dependencies are all there or the monolith is completely down.
+
+  How have we discovered services in the past?
+
+  * Service Locators
+  * Dependency Injection
+  * Service Registries

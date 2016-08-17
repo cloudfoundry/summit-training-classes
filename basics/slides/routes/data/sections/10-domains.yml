@@ -1,0 +1,24 @@
+---
+type: "two-column"
+menuTitle: "Custom Domains"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  **Domains**: provide a **namespace** from which to create **routes**
+
+    <i class="fa fa-globe" style="font-size: 120px; margin-top: 30px;"></i>
+
+  </span>
+
+columnRightContent: |
+
+  * **Shared domain**: for all of CF
+  * **Private domain**: scoped to an Org
+  * **Requires DNS** to be configured
+
+notes: |
+
+  One or more domains can be added to CF.  Shared domains can be created by the CF admin and are shared across all orgs.  Private domains can be created by Org Managers.

@@ -1,0 +1,5 @@
+name: debug-app
+memory: 64M
+disk_quota: 256M
+random-route: true
+buildpack: ruby_buildpack

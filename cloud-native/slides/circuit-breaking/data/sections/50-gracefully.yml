@@ -1,0 +1,11 @@
+type: "centered"
+menuTitle: "Circuit Breaker"
+backgroundColor: "#232B2F"
+content: |
+
+  Circuit Breaking
+
+  <img src="img/circuit-breaker.png" style="max-height: 500px"/>
+
+notes: |
+  If a request times out or fails, the breaker is tripped - employing a fallback method.  After a timeout, a request is attempted.  If it succeeds, the breaker moves to half open, effectively throttling traffic.  If subsequent calls succeed, the circuit closes.

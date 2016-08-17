@@ -1,0 +1,16 @@
+---
+type: "two-column"
+title: "Online/Offline"
+menuTitle: "Online/Offline"
+
+columnLeftContent: |
+
+  <p style="margin-top: 10px">&nbsp;</p>
+
+  **Online**: Downloads dependencies as needed
+
+columnRightContent: |
+
+  <p style="margin-top: 10px">&nbsp;</p>
+
+  **Offline**: All possible dependencies included (behind the firewall)

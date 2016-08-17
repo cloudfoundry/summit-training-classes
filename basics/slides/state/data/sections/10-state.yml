@@ -1,0 +1,26 @@
+---
+type: "two-column"
+menuTitle: "Application State"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  *Where should my app store state?*
+
+  <i class="fa fa-question-circle" style="font-size: 120px;"> </i>
+
+  **In an external service**.
+
+  </span>
+
+columnRightContent: |
+
+  - Horizontal **scale** (adding instances)
+  - Eliminate costly **routing** overhead (*sticky sessions are supported*)
+  - Leverage services in the **marketplace**
+
+notes: |
+
+  Apps need state.  In order for apps to scale horizontally, handle failure, simplify routing apps should store state in an external service (like a database)

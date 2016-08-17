@@ -1,0 +1,26 @@
+---
+type: "two-column"
+menuTitle: "What is a Monolith?"
+
+columnLeftContent: |
+
+  <br />
+
+  # What is a Monolith?
+
+  <img src="img/monolith.svg" style="padding-left: 50px"/>
+
+columnRightContent: |
+
+  <br />
+
+  # Typically...
+
+  * Tightly **coupled**
+  * Multi-responsibility/**mixed concerns**
+  * **Large** deployable unit(s)
+
+
+notes: |
+
+  Monoliths are how we all built apps.  It is often still how we start.

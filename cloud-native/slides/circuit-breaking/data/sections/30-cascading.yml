@@ -1,0 +1,11 @@
+type: "statement"
+menuTitle: "Cascading Failure"
+title: "Cascading Failure"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "0.3% of 1 billion requests = **3,000,000 failures**"
+  - "Reality is **generally worse**"
+
+notes: | 
+  Source: https://github.com/Netflix/Hystrix/wiki

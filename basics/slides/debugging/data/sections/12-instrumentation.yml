@@ -1,0 +1,24 @@
+type: "two-column"
+title: "Instrumentation"
+menuTitle: "Instrumentation"
+subtitle: "3rd Party Integration"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  CF contains hooks to enable **3rd party** integrations
+
+  <i class="fa fa-plug" style="font-size: 120px; margin-top: 30px;"></i>
+
+  </span>
+
+columnRightTitle: Examples
+
+columnRightContent: |
+
+  * AppDynamics
+  * New Relic
+  * PWS console (built in)
+
+  *AppDynamics and New Relic agents are included in Java buildpack*

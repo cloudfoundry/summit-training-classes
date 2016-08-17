@@ -1,0 +1,26 @@
+---
+type: two-column
+menuTitle: "When to Upgrade?"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+    **When** should we upgrade?
+
+    <i class="fa fa-clock-o" style="font-size: 150px"></i>
+
+  </span>
+
+columnRightContent: |
+
+  * Regularly - generally cannot "skip" versions
+
+  * New CF release ~ every week.
+
+  * You should be upgrading during working hours!
+
+notes: |
+
+  Releases happen often as CF is advancing quickly.  Bosh makes upgrades easy and reliable and therefore updates should happen often and during normal business hours.  Example: Pivotal web services runs thousands of applications is updated multiple times a week.

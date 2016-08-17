@@ -1,0 +1,13 @@
+type: "centered"
+menuTitle: "Recovering Gracefully"
+backgroundColor: "#232B2F"
+title: "And if we don't recover gracefully..."
+content: |
+
+  <img src="img/black-friday.jpg" style="max-height: 500px"/>
+
+  <span style="font-size: 0.3em">source: www.dailymail.co.uk</span>
+
+notes: |
+
+  If we don't recover gracefully, we will crush our systems as they try to come back online.   

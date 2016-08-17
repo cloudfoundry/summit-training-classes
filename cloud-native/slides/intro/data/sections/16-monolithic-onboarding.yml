@@ -1,0 +1,9 @@
+type: "two-line"
+title: "Challenges"
+menuTitle: "Monolithic Onboarding"
+topLine: Monolithic
+backgroundColor: "#424242"
+bottomLine: Onboarding
+notes: |
+
+  Large, complex code bases are very hard for new developers to "wrap their heads around".

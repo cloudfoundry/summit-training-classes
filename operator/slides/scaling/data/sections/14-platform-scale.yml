@@ -1,0 +1,16 @@
+---
+type: slide-basic
+title: "Platform Scaling"
+subtitle: "What should I do?"
+content: |
+
+  Should I scale the **CF platform** out or up?
+
+  * First, **right size** VMs
+  * Then, **scale out** (add instances)
+
+  This is the **same approach w/ applications!**
+
+notes: |
+
+  Best practice is to right size vms in the installation.  Then to add capacity, scale out.

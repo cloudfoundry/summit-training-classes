@@ -1,0 +1,20 @@
+---
+type: "slide-basic"
+title: "CF Foundation"
+subtitle: "The open source cloud native platform"
+menuTitle: "CF Foundation"
+content: |
+
+  <span class="txt-c">
+
+  50+ industry leading member companies!
+
+  <iframe data-src="https://www.cloudfoundry.org/membership/members/" height="380px" width="100%" class="txt-c"></iframe>
+
+  ## https://www.cloudfoundry.org/membership/members/
+
+  </span>
+
+notes: |
+
+  Cloud Foundry is an open source project driven by a consortium of industry leading companies.

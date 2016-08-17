@@ -1,0 +1,27 @@
+---
+type: "two-column"
+title: "Zero Downtime"
+subtitle: "Day 2 optimizations"
+menuTitle: "Zero Downtime"
+buildInColumns: "true"
+
+columnLeftTitle: "Deployment Manifest"
+
+columnLeftContent: |
+
+  ```sh
+    update:
+      canaries: 1
+      max_in_flight: 1
+    ...
+  ```
+
+columnRightContent: |
+
+    * **Canaries**: # of failures that will trigger a roll back
+    * **Max in Flight**: Concurrent upgrades
+    * max_in_flight **must be less than** # of instances!
+
+notes: |
+
+  Bosh is optimized for day 2 onward.  Updates are performed with zero downtime (if configured correctly) by taking instances out of service, creating new ones and placing them in service.  VMs are immutable and never patched.

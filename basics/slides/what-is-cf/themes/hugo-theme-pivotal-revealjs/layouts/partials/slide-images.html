@@ -1,0 +1,26 @@
+<div class="slide-images">
+{{ $imageCount := len .images }}
+{{ $buildInRows := .buildInRows }}
+{{ range $index, $element := .images }}
+  {{ if modBool $index 3 }}
+    {{ if $buildInRows }}
+      <div class="row txt-c aligner fragment">
+    {{ else }}
+      <div class="row txt-c aligner">
+    {{ end }}
+  {{ end }}
+    {{ if eq $imageCount 1 }}
+      <div class="col-xs-24 txt-c slide-image">
+    {{ else if eq $imageCount 2 }}
+      <div class="col-xs-12 txt-c slide-image">
+    {{ else }}
+      <div class="col-xs-8 txt-c slide-image aligner">
+    {{ end }}
+        <img src="{{ .src }}" class="img-responsive txt-c aligner-item aligner-item-bottom" alt="{{ .alt }}" title="{{ .alt }}"/>
+        <p class="caption txt-c aligner-item aligner-item-bottom type-neutral-3">{{ .caption }}</p>
+      </div>
+  {{ if or (eq (mod $index 3) 2) (eq (sub $imageCount 1) $index) }}
+  </div>
+  {{ end }}
+{{ end }}
+</div>

@@ -1,0 +1,39 @@
+type: "two-column"
+menuTitle: "VCAP_SERVICES"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  *How are service credentials*<br />
+  *exposed to applications?*
+
+  ```sh
+  $ cf env stateful-app
+
+   "VCAP_SERVICES": {
+    "rediscloud": [
+     {
+      "credentials": {
+       "hostname": "pub-redis-15708.us-east-1-4.6.ec2.redislabs.com",
+       "password": "HITHERE",
+       "port": "15708"
+      },
+  ```
+
+  **Through the Environment!**
+
+  </span>
+
+columnRightTitle: "12 Factor"
+
+columnRightContent: |
+
+  * III. Config: Store config in the environment
+  * IV. Backing services: Treat backing services as attached resources
+
+
+notes: |
+
+    Service credentials are injected through an environment variable called "VCAP_SERVICES".  VCAP = VMWare Cloud App Platform (legacy name).

@@ -1,0 +1,19 @@
+---
+type: "slide-bacis"
+title: "12 Factor"
+subtitle: "Separating build and run stages"
+menuTitle: "12 Factor"
+
+content: |
+
+  ![12factor](img/12factor.gif)
+
+  **V. Build, release, run**
+
+  Strictly separate build and run stages
+
+  ## http://12factor.net/build-release-run
+
+notes: |
+
+  Helps to ensure reproducibilty, fast startup/shutdown/recovery.

@@ -1,0 +1,11 @@
+type: "statement"
+menuTitle: "12 Factor"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - So what is 12 factor?
+  - "**Coping mechanism** for **complexity** in **distributed systems**."
+
+notes: |
+
+  12 factor is a set of best practices to help cope with complexity and maximize the effectiveness of your organization and applications in the cloud.

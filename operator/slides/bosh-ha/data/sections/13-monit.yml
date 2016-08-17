@@ -1,0 +1,22 @@
+---
+type: "two-column"
+title: "Recovering failed Processes"
+subtitle: "High Availability"
+menuTitle: "Recovering failed VMs"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![monit](img/bosh-monit.svg "Monit")
+
+columnRightContent: |
+
+  Who **likes** being paged?
+
+  * Processes are **running software**
+  * **Monit** starts and monitors running processes
+  * If the process isn't running, **monit restarts it**
+
+notes: |
+
+  Software installed from the release runs in one or more processes on the VM.  Monit is an OSS technology responsible for the running processes.  More "day 2" high availibility.

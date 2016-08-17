@@ -1,0 +1,32 @@
+---
+type: "slide-basic"
+title: "Spaces"
+subtitle: "Apps & Services in Cloud Foundry"
+menuTitle: "Spaces"
+
+content: |
+
+  Every *application* and *service* is scoped to a **space**
+
+  ```sh
+  $ cf spaces
+  ```
+
+  ```sh
+  $ cf space <some-space> # for details
+
+  development
+      Org:               cf-hero
+      Apps:
+      Domains:
+      Services:
+      Security Groups:   public_networks, dns, ssh-logging, p-mysql...
+      Space Quota:
+  ```
+
+notes: |
+
+  Without a space, an application or service cannot be created.
+  A space provides a set of users access to a shared location for application development.
+  Each org must contain at least one space.
+  If an org contains a single space, that space will be automatically targeted.

@@ -1,0 +1,13 @@
+---
+type: slide-basic
+title: "Application Security Groups"
+subtitle: "Controlling Outbound Access"
+menuTitle: "Security Groups"
+
+content: |
+
+  <i class="fa fa-shield txt-c" style="font-size: 80px; padding: 10px"></i> **Application Security Groups** restrict *outbound* network access for applications.
+
+notes: |
+
+  One more concern - Controlling outbound application access.  Inbound access is not part of the platform currently and is left to the load balancer or application.

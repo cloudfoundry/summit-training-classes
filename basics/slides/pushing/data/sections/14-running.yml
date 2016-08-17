@@ -1,0 +1,17 @@
+---
+type: "slide-bacis"
+title: "Running"
+subtitle: "Executing application instances"
+menuTitle: "Running"
+
+content: |
+
+  **Apps** are started on specialized VMs called **cells**
+
+  * If it's a web process, it binds to a **TCP port**
+  * Instances are **distributed** across multiple cells
+  * **Router** distributes traffic across instances
+
+notes: |
+
+  Apps are run inside containers on cells.  If multiple instances are pushed, they are distributed across cells.  Traffic is routed automatically.

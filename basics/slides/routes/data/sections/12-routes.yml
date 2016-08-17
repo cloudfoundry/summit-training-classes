@@ -1,0 +1,19 @@
+---
+type: "slide-basic"
+menuTitle: "Routes"
+
+content: |
+
+  <span class="txt-c">
+
+  **Route**: A URL on which an application can be accessed.
+
+  <i class="fa fa-random" style="font-size: 150px; margin-top: 50px;"></i>
+
+  **Many to Many** Relationship between apps & routes.
+
+  </span>
+
+notes: |
+
+  Route manipulation can be used to perform zero downtime deployments, A/B testing, etc.  Apps do not have to have routes (workers)

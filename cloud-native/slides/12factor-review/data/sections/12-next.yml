@@ -1,0 +1,21 @@
+type: "statement"
+menuTitle: "Next Exercise"
+title: "What are you going to experience?"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - VI. Processes
+  - III. Config
+  - IV. Backing services
+  - VIII. Concurrency
+  - IX. Disposability
+
+notes: |
+
+  Here is what you are about to experience:
+
+  * Execute the app as one or more stateless processes
+  * Store config in the environment
+  * Treat backing services as attached resources
+  * Scale out via the process model
+  * Maximize robustness with fast startup and graceful shutdown

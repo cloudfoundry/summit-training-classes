@@ -1,0 +1,31 @@
+---
+type: "slide-bacis"
+title: "Where does the app run?"
+menuTitle: "Where does the app run?"
+
+content: |
+
+  ```nohighlight
+                             CONSUMER
+
+                                |
+
+                              ROUTER
+
+                              /    \
+                             /      \
+                            /        \
+                           /          \
+
+                        CELL 1       CELL 2
+
+                          |            |
+        APP A INSTANCE 1 -|            |- APP A INSTANCE 2
+        APP B INSTANCE 2 -|            |- APP B INSTANCE 1
+  ```
+
+notes: |
+    On an app host, also known as a CELL (CF v3).
+    The router sends traffic to the IP & port combination that match the Host header.
+    Multiple app instances means traffic gets randombly distributed.
+    Production Cloud Foundries use multiple routers for resiliency and many app hosts for a better app distribution.

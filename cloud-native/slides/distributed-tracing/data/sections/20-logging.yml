@@ -1,0 +1,17 @@
+type: "centered"
+menuTitle: "Loggregator"
+content: |
+
+  XI. Logs - Treat logs as event streams
+
+  <img src="img/loggregator.png" style="max-height: 300px" />
+
+notes: |
+  What if the problem is one single instance or some other CF component?
+
+  How to you get logs today?  Lots of instances, components (like the router), etc.
+
+  This is a complicated picture.  The important takeaways:
+
+    * CF aggregates logs across instances and CF components
+    * Exporting to an external analysis system like Splunk, Papertrail, ELK is trivial.

@@ -1,0 +1,10 @@
+type: "two-line"
+title: "Challenges"
+menuTitle: "Scaling a Monolith"
+topLine: Monolithic
+backgroundColor: "#424242"
+bottomLine: Scaling
+
+notes: |
+
+  Scaling a monolith is often difficult.  Size is a challenge, but the complexity of the codebase, inter-dependencies, networking, data sources, often make them very difficult to scale past a certain point.

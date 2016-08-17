@@ -1,0 +1,17 @@
+#!/bin/sh -ex
+
+main() {
+  find_my_public_ip
+  suspend_myself
+}
+
+find_my_public_ip() {
+  ! which curl >/dev/null ||
+    curl -sL "https://api.ipify.org?format=json" -w "\n"
+}
+
+suspend_myself() {
+  kill -STOP $$
+}
+
+main

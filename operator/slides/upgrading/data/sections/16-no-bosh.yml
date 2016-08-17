@@ -1,0 +1,31 @@
+---
+type: "two-column"
+title: "Life w/o Bosh"
+subtitle: "Pondering the horror"
+menuTitle: "Life w/o Bosh"
+buildInColumns: "true"
+
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  Environments without Bosh...
+
+  **Why would you?**
+
+  <i class="fa fa-question" style="font-size: 120px"></i>
+
+  </span>
+
+columnRightTitle: "What is in your organization?"
+
+columnRightContent: |
+
+  * How many VMs?
+  * How many applications?
+  * What about user provided containers (Docker)?
+
+notes: |
+
+  What happens when a CVE occurs in the O/S?  In the application runtime?  Docker containers must be patched by the container creator.

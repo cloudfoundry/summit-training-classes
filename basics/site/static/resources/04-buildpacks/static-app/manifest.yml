@@ -1,0 +1,7 @@
+name: static-app
+memory: 16M
+disk_quota: 64M
+random-route: true
+buildpack: staticfile_buildpack
+# Bluemix
+# buildpack: https://github.com/cloudfoundry/staticfile-buildpack

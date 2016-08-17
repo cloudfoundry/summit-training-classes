@@ -1,0 +1,10 @@
+---
+menuTitle: "Cloud Computing"
+type: "quote"
+backgroundImage: "img/takeoff.png"
+quote: |
+  Cloud is about how you do computing, not where you do computing.
+author: "Paul Maritz"
+authorTagLine: "Chairman of the Board, Pivotal"
+notes: |
+  Cloud native is a fundamental change in the way organizations and applications are structured.

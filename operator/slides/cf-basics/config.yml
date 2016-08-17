@@ -1,0 +1,15 @@
+---
+
+baseurl: "/"
+languageCode: "en-us"
+title: "CF Basics"
+theme: "hugo-theme-pivotal-revealjs"
+
+params:
+
+  logo: img/cf.png
+
+  titleSlide:
+    subtitle: "Operating the Foundry"
+    notes: |
+      In this section, we cover the basic concerns in Cloud Foundry and prepare for developer use.

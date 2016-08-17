@@ -1,0 +1,23 @@
+<h1>Hi, I'm app instance <%= instance %> running at <%= addr %></h1>
+
+<h2>I have responded to this request:</h2>
+<ul>
+  <li><%= @total_instance_responses %> times through this app instance</li>
+  <li><%= @total_app_responses %> times in total</li>
+</ul>
+
+<% if ENV.has_key?("SHOW_APP_SUPPORTERS") %>
+  <form method="post" action="/app_supporters">
+    <input type="text" name="name" id="name" value="" placeholder="your name" required="true" />
+    <input type="submit" value="I support this app" />
+  </form>
+
+  <% if @app_supporters.any? %>
+  <h2>App supporters:</h2>
+  <ul>
+    <% @app_supporters.each do |name| %>
+    <li><%= name %></li>
+    <% end %>
+  <ul>
+  <% end %>
+<% end %>

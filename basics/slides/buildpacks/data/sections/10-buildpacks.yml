@@ -1,0 +1,13 @@
+---
+type: "slide-basic"
+title: "Buildpacks"
+subtitle: "Runtime Dependencies in Cloud Foundry"
+menuTitle: "Buildpacks"
+
+content: |
+
+  **Buildpack**: A Cloud Foundry component that resolves your app's **runtime dependencies**
+
+notes: |
+
+  A buildpack constructs a runnable element called a droplet containing your application plus its runtime dependencies.  Droplets are cached in the blobstore.

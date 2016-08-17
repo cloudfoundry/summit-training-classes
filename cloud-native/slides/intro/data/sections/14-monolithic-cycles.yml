@@ -1,0 +1,10 @@
+type: "two-line"
+title: "Challenges"
+menuTitle: "Monolithic release cycles"
+topLine: Monolithic
+backgroundColor: "#424242"
+bottomLine: Release Cycles
+
+notes: |
+
+  The tight coupling and poor separation of concerns in most monoliths coupled with antiquated process lead to very long and complicated release cycles.

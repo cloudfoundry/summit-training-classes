@@ -1,0 +1,27 @@
+---
+type: "slide-basic"
+title: "Quotas"
+subtitle: "Limiting Resources"
+menuTitle: "Quotas"
+
+content: |
+
+  **Quotas** provide *resource limits* to orgs and spaces
+
+  ```sh
+  $ cf quotas
+
+  name           total mem   instance mem   routes   service instances
+  free           0           unlimited      1000     0
+  trial          2G          unlimited      1000     10
+  paid           10G         unlimited      1000     unlimited
+  25GB           25G         unlimited      1000     unlimited
+  50GB           50G         unlimited      1000     unlimited
+  75GB           75G         unlimited      1000     unlimited
+  100GB          100G        unlimited      1000     unlimited
+  ...
+  ```
+
+notes: |
+
+  Quotas can be applied to orgs and spaces to limit the resources that can be consumed in that org or space.  Org quotas are shared by all spaces in that org.

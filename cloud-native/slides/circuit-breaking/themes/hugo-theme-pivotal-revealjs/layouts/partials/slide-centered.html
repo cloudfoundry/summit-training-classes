@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col-md-24 txt-c">
+    {{ if isset . "content" }}
+      {{ .content | markdownify }}
+    {{ end }}
+  </div>
+</div>

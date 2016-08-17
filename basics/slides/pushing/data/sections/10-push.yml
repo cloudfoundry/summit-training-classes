@@ -1,0 +1,21 @@
+---
+type: "slide-basic"
+title: "Deploying Apps"
+subtitle: "The Magic of CF Push"
+menuTitle: "Deploying Apps"
+
+content: |
+
+  What happens when I `cf push`?
+
+  1. **Upload**: App files sent to CF
+  1. **Staging**: Executable artifact is created (droplet)
+  1. **Running**: App starts on an app host
+
+  App receives web requests (if it binds to TCP port)
+
+notes: |
+
+  CF cli sent all our app files to the Cloud Controller.
+  The Cloud Controller stores all files it receives in the Blob Store.
+  It also stores metadata about the app in the database.

@@ -1,0 +1,14 @@
+---
+type: "slide-basic"
+title: "Types of Buildpacks"
+menuTitle: "Types of Buildpacks"
+
+content: |
+
+  * Default buildpacks (included in the platform)
+  * [Community](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks) buildpacks: Leverage the community
+  * Custom buildpacks: Build your own
+
+notes: |
+  Platform ships with buildpacks.  You will see which ones are on PWS in the lab.  The community is also developing buildpacks.
+  Or build your own - your language deserves its own buildpack (complexity is up to you).

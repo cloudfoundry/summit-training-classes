@@ -1,0 +1,31 @@
+---
+type: "two-column"
+title: "Why a Cloud Native Platform?"
+subtitle: "Benefits beyond the platform"
+menuTitle: "Why a Cloud Native Platform?"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  <img src="img/logging.svg" />
+
+  </span>
+
+columnRightContent: |
+
+  **Why a Cloud Native Platform?**
+
+  * Deliver **business value** quickly
+  * Focus on **what matters** for your business
+  * Cheap &amp; fast to fail, **promote learning**
+
+notes: |
+
+  Find what your customers actually want by showing them.
+  Iterate constantly by learning what is actually important.
+
+  Do not wait for IT to provision servers.
+
+  Let developers choose the language and services that they believe are best for the job.

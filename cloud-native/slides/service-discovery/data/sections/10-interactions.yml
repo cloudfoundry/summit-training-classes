@@ -1,0 +1,10 @@
+type: "two-line"
+menuTitle: "Interactions"
+title: "Services need to be..."
+topLine: Discoverable
+bottomLine: Accessible
+backgroundColor: "#243641"
+notes: |
+
+  In a distributed system, there are many interactions between services.  Services need to be discoverable and easily (but securely) accessible.
+  These interactions must be efficient and fault tolerant.

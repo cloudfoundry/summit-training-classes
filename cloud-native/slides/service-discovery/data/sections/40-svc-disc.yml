@@ -1,0 +1,15 @@
+type: "centered"
+menuTitle: "Service Discovery"
+backgroundColor: "#243641"
+content: |
+
+  Service Discovery
+
+  <img src="img/service-registry.png" style="max-height: 500px" />
+
+  Client Side load-balancing
+
+notes: |
+
+  Service discovery leverages a fault tolerant, distributed and scalable registry.  The registry allows services to self register and client to find instances of services.
+  Client side load-balancing allows clients to directly connect, removing the single point of failure in many ESB solutions.

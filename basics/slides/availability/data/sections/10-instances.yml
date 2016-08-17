@@ -1,0 +1,31 @@
+---
+type: "two-column"
+menuTitle: "Embracing Failure"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  *How do you configure an app deployment for resilience?*
+
+  <i class="fa fa-question-circle" style="font-size: 120px;"> </i>
+
+  **Embrace failure** & run **many instances** of the same app
+
+
+
+  </span>
+
+columnRightContent: |
+
+  ```sh
+  $ cf scale imperfect-app -i 3
+  $ cf apps
+
+  name            state     instances
+  imperfect-app   started   2/3         
+  ```
+
+notes: |
+
+  Because CF is running your app, running many instances of it is just a command away. The more app instances you have, the less likely that they will be running on the same host

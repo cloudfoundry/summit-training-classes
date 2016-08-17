@@ -1,0 +1,15 @@
+type: slide-basic
+title: "Bosh-lite"
+subtitle: "You just deployed..."
+menuTitle: "Bosh-lite"
+content: |
+
+  * Single VM "cloud" with BOSH director installed
+  * Custom "container" CPI
+  * Simulate VMs using containers
+
+  > Simulate a cloud in a single VM!
+
+notes:
+
+  Bosh-lite runs in a single VM.  The CPI is called "Warden" and provides containers when bosh requests VMs.

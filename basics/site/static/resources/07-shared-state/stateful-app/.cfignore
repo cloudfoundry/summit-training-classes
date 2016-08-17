@@ -1,0 +1,10 @@
+.bundle
+.envrc
+.rspec
+
+bin
+script
+spec
+vendor
+
+Guardfile

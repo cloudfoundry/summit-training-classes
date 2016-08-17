@@ -1,0 +1,31 @@
+---
+type: "slide-bacis"
+title: "Orgs"
+subtitle: "Multitenancy in Cloud Foundry"
+menuTitle: "Orgs"
+
+content: |
+
+  **Organizations** segregate *tenants* in a Cloud Foundry installation.
+
+  ```sh
+  $ cf orgs
+  ```
+
+  ```sh
+  $ cf org <some-org> # for details
+
+  Getting info for org Pivotal-Enablement as sgreenberg@pivotal.io...
+  OK
+
+  my-org:
+    domains:        cfapps.io
+    quota:          50GB (51200M memory limit, Unlimited instance memory limit, 1000 routes, -1 services, paid services allowed)
+    spaces:         dev, staging, prod
+    space quotas:
+  ```
+
+
+notes: |
+
+  Orgs contain 1 or more spaces.  Organizations are typically used to segregate tenants or projects in a cloud foundry installation.  However, there are no limits and users are free to implement any structure they see fit.

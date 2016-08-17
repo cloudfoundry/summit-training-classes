@@ -1,0 +1,44 @@
+<div class="settings-icon">
+  <i class="type-accent-3 fa fa-cog" data-toggle="modal" data-target="#settingsModal"></i>
+</div>
+<div class="modal fade modal-basic" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Presentation Settings</h4>
+      </div>
+      <div class="modal-body">
+        <div class="presenter">
+          <p>Set presenter information below.  These values will show on the title slide.</p>
+          <form role="form">
+            <div class="form-group">
+              <label for="presenterName">Presenter Name</label>
+              <input type="text" class="form-control" id="presenterName" placeholder="Presenter Name">
+            </div>
+            <div class="form-group">
+              <label for="presenterTitle">Presenter Title</label>
+              <input type="text" class="form-control" id="presenterTitle" placeholder="Presenter Title">
+            </div>
+            <div class="form-group">
+              <label for="presenterContact">Presenter Contact</label>
+              <input type="text" class="form-control" id="presenterContact" placeholder="Presenter Contact">
+            </div>
+          </form>
+        </div>
+        <hr class="divider-alternate-2"/>
+        <div class="settings">
+          <p>Toggle settings for your presentation by clicking below.</p>
+          <ul class="list-group">
+            <li class="list-group-item"><a onclick="PresentationSettings.toggleShowNotes()"><i id="showNotes"></i>On Screen Notes</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lowlight" onclick="PresentationSettings.updateFromForm()" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+
+</div>

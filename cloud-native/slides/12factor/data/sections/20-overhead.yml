@@ -1,0 +1,9 @@
+type: "two-line"
+menuTitle: "Overhead"
+title: "Microservices architectures have significant..."
+topLine: Ops Overhead
+bottomLine: "Mitigated by CF"
+backgroundColor: "#232B2F"
+notes: |
+
+  No free lunch.  Microservice architectures require significant overhead.  However, CF is designed to alleviate these challenges.

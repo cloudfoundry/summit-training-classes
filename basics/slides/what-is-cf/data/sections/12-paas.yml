@@ -1,0 +1,28 @@
+---
+type: "two-column"
+title: "What is PaaS?"
+subtitle: "Cloud Native Platforms"
+menuTitle: "What is PaaS?"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  <img src="img/logging.svg" />
+
+  </span>
+
+columnRightContent: |
+
+  **Platform as a Service**
+
+  * Cloud Computing characterised as **IaaS**, **PaaS**, and **SaaS**
+  * Applications are the **Cloud Native** unit of currency
+  * Heroku blazed a trail for **PaaS**
+
+notes: |
+
+  IaaS - servers, SaaS - users.
+
+  Heroku created patterns based on their experiences called "12 Factors" that have been heavily influencial. Also drove "buildpack" model

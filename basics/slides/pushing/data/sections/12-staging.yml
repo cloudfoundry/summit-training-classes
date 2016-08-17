@@ -1,0 +1,23 @@
+---
+type: "slide-basic"
+title: "Staging"
+subtitle: "Getting ready to run"
+menuTitle: "Staging"
+
+content: |
+
+  <span class="txt-c">
+
+    **Buildpacks** create a runnable artifact called a **droplet**
+
+    ```sh
+    App Files + Runtime Dependencies = App Artifact (droplet)
+    ```
+
+    <i class="fa fa-tint" style="font-size: 150px; margin-top: 50px;"></i>
+  </span>
+
+notes: |
+
+  The output of the staging phase is an executable artifact called a 'droplet'.
+  Droplets are constructed by Buildpacks (more in the next section).

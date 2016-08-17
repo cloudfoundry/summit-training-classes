@@ -1,0 +1,12 @@
+type: "statement"
+menuTitle: "What if..."
+title: "What if we could..."
+backgroundColor: "#243641"
+buildInStatements: true
+statements:
+  - "Scale our **teams** and **applications**"
+  - "Fail **gracefully** and **recover** quickly"
+
+notes: |
+
+  The art of the possible by going Cloud Native.

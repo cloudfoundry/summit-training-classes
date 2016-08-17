@@ -1,0 +1,9 @@
+---
+menuTitle: "Goal"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: true
+statements:
+  - As a *CF operator*
+  - I can *deploy* the Cloud Foundry platform
+  - So that my users can *self-serve* their app deployment

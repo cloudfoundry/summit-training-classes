@@ -1,0 +1,9 @@
+name: worker-app
+command: sh -xe < ./work
+memory: 16M
+disk_quota: 64M
+no-route: true
+health-check-type: none
+buildpack: binary_buildpack
+# Bluemix
+# buildpack: https://github.com/cloudfoundry/binary-buildpack

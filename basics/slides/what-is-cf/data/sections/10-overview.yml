@@ -1,0 +1,31 @@
+---
+type: "two-column"
+title: "Cloud Foundry Overiew"
+subtitle: "The open platform"
+menuTitle: "CF Overview"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+    What is...
+
+    <img src="img/cf-logo-vertical.png" style="max-height: 350px" />
+
+  </span>
+
+columnRightContent: |
+
+  * An **open** Cloud Native Platform (PaaS)
+  * Fast and easy to **build, test, deploy &amp; scale apps**
+  * Works with **any language** or framework
+
+notes: |
+
+  Open-source with an Apache license, hosted on GitHub.
+
+  Developers use the cf command line utility to interact with a CF deployment.
+  The cf cli is pre-built for Windows, Mac and Linux.
+
+  CF supports any language or framework through buildpacks. More on that subject later.

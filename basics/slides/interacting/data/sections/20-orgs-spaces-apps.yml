@@ -1,0 +1,24 @@
+---
+type: "slide-basic"
+title: "Orgs, Spaces and Apps"
+subtitle: "Bringing it altogether"
+menuTitle: "Orgs, Spaces and Apps"
+
+content: |
+
+  What is the relationship between **orgs**, **spaces** & **apps**?
+
+  ```nohighlight
+
+                . Org                   . cf-hero
+                |                       |
+                \-- Space               \-- training
+                   |                       |
+                   |-- App 1               |-- web-app
+                   \-- App 2               \-- worker-app
+  .
+  ```
+
+notes: |
+
+    Orgs contain 1 or more spaces. Apps are deployed to spaces.

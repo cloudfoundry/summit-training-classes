@@ -1,0 +1,14 @@
+type: "statement"
+menuTitle: "Challenge"
+backgroundColor: "#243641"
+title: "Stateless services are constantly..."
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - scaling
+  - failing
+  - recovering
+
+notes: |
+
+  The ephemeral nature of stateless services coupled with the elastic scalability of the cloud, make service interactions a challenging problem.

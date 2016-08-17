@@ -1,0 +1,13 @@
+type: "statement"
+menuTitle: "Cascading Failure"
+title: "Cascading Failure"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "GIVEN: **app** that relies on **30 services**"
+  - "each service: 99.99% uptime"
+  - "**99.7% uptime**"
+
+notes: |
+
+  Example: Amazon product page made up of 20+ service calls.  What would happen if one call (like "Recommendations") failed?

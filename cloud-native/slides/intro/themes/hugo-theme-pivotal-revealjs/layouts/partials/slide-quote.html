@@ -1,0 +1,31 @@
+<div class="row quote">
+  <div class="col-sm-18 col-sm-offset-6 txt-l">
+    <div class="row">
+      <h1 class="type-neutral-6">"{{ .quote | markdownify }}"</h1>
+    </div>
+    <div class="row">
+      <h2 class="type-brand-5">{{ .author }}</h2>
+    </div>
+    {{ if isset . "authorTagLine" }}
+      <div class="row">
+        <h3 class="type-neutral-4">{{ .authorTagLine }}</h3>
+      </div>
+    {{ end }}
+    {{ if isset . "source" }}
+      <div class="row">
+        <h4 class="type-neutral-4">Source: {{ .source }}</h4>
+    {{ end }}
+    {{ if isset . "quoteNotes" }}
+      {{ range .quoteNotes }}
+        <div class="row fragment">
+          <h2 class="type-neutral-6">
+            <span class="quote-note">
+              <i class="fa fa-arrow-right type-neutral-4"></i>
+              {{ . | markdownify }}
+            </span>
+          </h2>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,16 @@
+type: "centered"
+menuTitle: "Distributed Tracing"
+backgroundColor: "#FBFBFC"
+
+content: |
+  When something goes bang...
+
+  <img src="img/hailo.png" style="max-height: 300px" />
+
+  how do we find the problem?
+
+  <span style="font-size: 0.5em">source: https://sudo.hailoapp.com/services/2015/03/09/journey-into-a-microservice-world-part-3/</span>
+
+notes: |
+
+  As the number of services grow and interactions between services grows, pinpointing issues becomes a big challenge.  We need distributed tracing.
