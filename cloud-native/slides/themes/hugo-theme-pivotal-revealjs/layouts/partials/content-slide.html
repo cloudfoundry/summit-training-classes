@@ -4,10 +4,11 @@
   {{ if isset . "menuTitle"}} data-menu-title="{{ .menuTitle }}"{{end}}
   {{ if isset . "audioTrack"}} data-audio-src="{{ .audioTrack }}"{{end}}>
 
+  {{ partial "slide-title.html" . }}
 
   {{ if isset . "type" }}
     {{ if eq .type "title" }}
-      {{ partial "slide-title.html" . }}
+      {{ partial "title-slide.html" . }}
     {{ else if eq .type "basic" }}
       {{ partial "slide-basic.html" . }}
     {{ else if eq .type "two-column" }}

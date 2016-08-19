@@ -6,8 +6,6 @@
     <body>
       <div class="reveal">
         <div class="slides">
-          {{ partial "title-slide.html" . }}
-
           {{ range $.Site.Data.sections }}
             {{ partial "content-slide.html" . }}
           {{ end }}
