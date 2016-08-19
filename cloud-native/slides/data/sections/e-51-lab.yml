@@ -1,0 +1,6 @@
+type: "slide-basic"
+menuTitle: "Lab"
+backgroundColor: "#243641"
+content: |
+
+  Lab: Circuit Breakers with Hystrix
