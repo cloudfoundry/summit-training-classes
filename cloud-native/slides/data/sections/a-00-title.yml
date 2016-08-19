@@ -1,7 +1,7 @@
 ---
 type: "title"
 menuTitle: "Title"
-title: "Cloud Native Evolution"
-subtitle: "Going Cloud Native"
+slideTitle: "Cloud Native Evolution"
+slideSubtitle: "Going Cloud Native"
 notes: |
   In this section, we cover the evolution toward cloud native

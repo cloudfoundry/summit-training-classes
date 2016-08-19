@@ -1,7 +1,7 @@
 ---
 type: "title"
 menuTitle: "Title"
-title: "Microservices and 12 factor apps"
-subtitle: "Going Cloud Native"
+slideTitle: "Microservices and 12 factor apps"
+slideSubtitle: "Going Cloud Native"
 notes: |
   In this section, we cover the basics of microservices and 12 factor apps.

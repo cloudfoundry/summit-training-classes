@@ -1,7 +1,7 @@
 ---
 type: "title"
 menuTitle: "Title"
-title: "12 Factor Review"
-subtitle: "Going Cloud Native"
+slideTitle: "12 Factor Review"
+slideSubtitle: "Going Cloud Native"
 notes: |
   In this section, we review 12 factor principles.
