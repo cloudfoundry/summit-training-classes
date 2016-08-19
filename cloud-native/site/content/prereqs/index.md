@@ -21,4 +21,4 @@ This training is targeted at people with:
 * ability to install software
 * code editor of choice
 * <a href="https://run.pivotal.io" target="_blank">Pivotal Web Services</a> account or ability to create one
-* curl (for windows: https://curl.haxx.se/download.html)
+* cURL (for windows: https://curl.haxx.se/download.html#Win32)
