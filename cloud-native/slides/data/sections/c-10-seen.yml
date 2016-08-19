@@ -1,0 +1,18 @@
+
+type: "statement"
+menuTitle: "Already experienced?"
+title: "What have you already experienced?"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "V. Build, release, run"
+  - "VII. Port binding"
+  - "X. Dev/prod parity"
+
+notes: |
+
+  Here is what you should already have experienced (or could experience).
+
+  * Strictly separate build and run stages - What happened when you pushed an app?
+  * Export services via port binding - Svc is accessible via REST over HTTP
+  * Keep development, staging, and production as similar as possible - in cf, orgs and spaces don't change the execution environment.
