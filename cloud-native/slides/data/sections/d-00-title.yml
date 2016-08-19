@@ -1,0 +1,7 @@
+---
+type: "title"
+menuTitle: "Title"
+title: "Service Discovery"
+subtitle: "Going Cloud Native"
+notes: |
+  In this section, we cover the basics of service discovery and access.

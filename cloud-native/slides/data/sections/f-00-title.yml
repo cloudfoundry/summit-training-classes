@@ -1,0 +1,7 @@
+---
+type: "title"
+menuTitle: "Title"
+title: "Distributed Tracing"
+subtitle: "Going Cloud Native"
+notes: |
+  In this section, we cover the basics of distributed tracing.
