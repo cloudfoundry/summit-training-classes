@@ -33,24 +33,27 @@ Now, you need to bind your service instance to your application so it can be use
 
 ### Checking Your Work
 
-If you view the details of your app, you should see the bound services.
+If you view the details of your service, you should see which apps it is bound to.
 
 ```sh
-cf app <your-app>
+cf services
 ```
 
-## Let's iterate on user feedback
+If you hit the `/env` endpoint of your app, or run the command `cf env stateful-app`, you will see the `VCAP_SERVICES` environment variable that Cloud Foundry provides to your app. When a service is bound to your app, its details appear in this variable.
 
-* Set the following env variable and restart your app.
+## Demonstrating Persistence
 
-```sh
-$ cf set-env stateful-app SHOW_APP_SUPPORTERS true
-$ cf restart stateful-app
-```
+Visit the app in a browser and you'll see the number of requests this app instance has served, along with the overall total number of requests _all_ app instances have served.
 
-* Then, open your app in a browser.
+Restart the app and visit it in a browser again. You'll see that the total number of requests is still stored in Redis, even though the app was restarted.
 
-* Scale your app.
+## Exploring the Service Instance Lifecycle
+
+Scale your app, and you'll be able to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance.
+
+Stop the app, and use `cf unbind-service` to unbind the service from the app. Rebind the app, start it, and see that the Redis instance still holds the same state.
+
+Can you use `cf delete-service redis`? Do whatever is necessary to delete the service instance, and then create it again. When you start your app and visit it in a browser, you'll see that this is a new, clean Redis instance with no existing state.
 
 ## Beyond the Class
 
