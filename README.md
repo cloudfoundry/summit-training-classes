@@ -12,7 +12,7 @@ Generated content will be in the `public` directory.
 
 ## Building slides
 
-1. `cd <courseName>/slides/<moduleName>`
+1. `cd <courseName>/slides`
 2. `hugo`
 
 Generated content will be in the `public` directory.
