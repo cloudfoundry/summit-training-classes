@@ -39,7 +39,7 @@ If you view the details of your service, you should see which apps it is bound t
 cf services
 ```
 
-If you hit the `/env` endpoint of your app, or run the command `cf env stateful-app`, you will see the `VCAP_SERVICES` environment variable that Cloud Foundry provides to your app. When a service is bound to your app, its details appear in this variable.
+If you hit the `/env` endpoint of your app, or run the command `cf env stateful-app`, you will see the `VCAP_SERVICES` environment variable that Cloud Foundry provides to your app. When a service is bound to your app, the service's details appear in this variable.
 
 ## Demonstrating Persistence
 
@@ -49,7 +49,7 @@ Restart the app and visit it in a browser again. You'll see that the total numbe
 
 ## Exploring the Service Instance Lifecycle
 
-Scale your app, and you'll be able to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance.
+Increase the number of instances of your app that are running, and when you visit them you'll be able to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance.
 
 Stop the app, and use `cf unbind-service` to unbind the service from the app. Rebind the app, start it, and see that the Redis instance still holds the same state.
 
