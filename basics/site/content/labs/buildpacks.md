@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Buildpacks
 ---
 
-In this exercise, you will explore buildpack basics.
+In this exercise, we will examine a running app to understand what a buildpack provides.
 
 ## System Buildpacks
 
