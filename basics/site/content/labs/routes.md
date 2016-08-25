@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Routes
 ---
 
-In this exercise, you will use a blue-green deployment to perform an update to your app.
+In this exercise, you will use route mapping to perform a zero-downtime upgrade of an app.
 
 
 ## Create a new route
@@ -14,10 +14,9 @@ First, you will want to create a route whereby your application will be accessib
 
 ### Push v1.0
 
-* First, deploy the app from **TO DO**.
+* Change to the `08-domains-routes/v1.0` directory and push the v1.0 app.
 * Use `cf help` to figure out how to map your route above to this app.  
 * Verify your app is accessible by accessing the route you created.
-* Change to the `08-domains-routes/v1.0` directory and push the v1.0 app.
 
 #### Checking Your Work
 
@@ -29,14 +28,13 @@ cf app
 
 ### Push v1.1
 
-* Now, deploy version 1.1 of the app from **TO DO**.  Do not map your main route yet.  You want the app to be validated before directing traffic to it.
+* Now, deploy version 1.1 of the app from `08-domains-routes/v1.1`.  Do not map your main route yet.  You want the app to be validated before directing traffic to it.
 * Validate you can access the app by accessing the automatically assigned route.
-* Now use the CF cli to map traffic to v1.1.  You should have some traffic going to v1.0 and some to v1.1.
-* Change to the `08-domains-routes/v1.1` directory and push the v1.0 app.
+* Now use the CF cli to map traffic to v1.1.
 
 #### Checking Your Work
 
-Check your work by accessing the main route multiple times.  You should observe traffic being balanced across both instances.  You can also see the routes/urls by looking at the app details:
+Check your work by accessing the main route multiple times.  You should observe traffic being balanced by Cloud Foundry across both instances.  You can also see the routes/urls by looking at the app details:
 
 ```sh
 cf app
@@ -54,7 +52,7 @@ Check your work by accessing the main route multiple times.  You should observe 
 cf app
 ```
 
-Congratulations!  You successfully updated your running application to a new version with no user interruption.
+Congratulations!  You successfully updated your running application to a new version with no downtime for users.
 
 
 ## Beyond the Class
