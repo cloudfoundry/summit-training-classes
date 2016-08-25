@@ -28,6 +28,13 @@ $ cf app static-app
      state     since        cpu    memory        disk
 #0   running   2015-11-02   0.0%   6.5M of 16M   33.6M of 64M
 ```
+## Exploring Buildpack Output
+
+* How does the running droplet compare to your app directory?
+
+Use `cf ssh static-app` to explore the filesystem of the running application, and observe what additional dependencies
+the buildpack made available for your app.
+
 
 ## Scaling with Speed
 
