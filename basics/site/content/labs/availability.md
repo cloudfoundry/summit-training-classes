@@ -3,15 +3,19 @@ date: 2016-04-19T19:21:15-06:00
 title: Availability
 ---
 
-In this lab, we will use a flawed app and see how Cloud Foundry works to maintain availability.
+In this lab, we will use purposefully crash app instances and see how Cloud Foundry works to maintain availability.
 
-## Pushing a Flawed App
+## Pushing a Crashable App
 
-* Change to the `05-resilience/imperfect-app` directory and push the flawed app.
+What happens when an app crashes?
 
-* Note the random URL for your app.
+* Change to the `05-resilience/imperfect-app` directory and push the crashable app.
+* Note the random URL for your app, and visit it in a browser.
+* Click the 'crash' link
 
-## Scaling
+Use `cf app imperfect-app` to see the state of your app. Can you see it in the "crashed" state before Cloud Foundry restarts it?
+
+## Access Your App Amid Failures
 
 * Scale your app to 3 instances.  
 
@@ -23,12 +27,20 @@ Use `cf apps` to ensure you have 3 instances requested.
 $ cf apps
 
 name            state     instances   memory   disk   urls
-imperfect-app   started   2/3         32M      256M   imperfect..
+imperfect-app   started   2/3         32M      256M   imperfect-app...
 ```
 
-## Access Your App Amid Failures
+Visit your app and click the 'crash' link. Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.
 
-Use `cf app` and notice instances are crashing.  However, you can still access the app via the random URL from above.  
+* Can you crash instances quicker than Cloud Foundry can restart them?
+
+If you have `watch` available on your system, use it to watch app instances restart in real time.
+
+```sh
+$ watch cf apps # Watch app instances restart in real-time
+```
+
+If not, you can re-run `cf app` multiple times.
 
 ```sh
 $ cf app imperfect-app
@@ -39,46 +51,7 @@ $ cf app imperfect-app
 #2   down      2015-11-02  0.0%   0 of 0         0 of 0
 ```
 
-If you have `watch` available on your system, use it to watch app instances restart in real time.
-
-```sh
-$ watch cf apps # Watch app instances restart in real-time
-```
-
-If not, you can re-run `cf app` multiple times.
-
-
-## Diagnosing Issues
-
-This app has 2 flaws.  You will use the cf cli to diagnose and correct the problems.
-
-### `cf events`
-
-The `cf events` command can be used to show recent events for your app.  Among those are often crashes and restarts.
-
-* Use `cf events` to diagnose the reason your app is crashing.
-* Use the cf cli to fix the issue.  What was the problem?
-
-#### Checking Your Work
-
-Using `cf events` you should have noticed your app did not have enough memory.  You should have used `cf scale` to add memory to your app.
-
-### Diagnosing Further
-
-There is still a problem with the app.
-
-* View the recent logs for your app to diagnose this problem.
-* Correct the problem using the cf cli.
-
-#### Checking Your Work
-
-You should have noticed something similar to the following in your logs:
-
-```sh
-Errno::EDQUOT - Disk quota exceeded @ io_write - infinite-file:
-```
-
-This can be fixed by scaling the disk for your app.
+* What happens if you make a request whilst they are all down?
 
 ## Beyond the Class
 
