@@ -2,7 +2,7 @@
 
 baseurl: "/"
 languageCode: "en-us"
-title: "Interacting with Cloud Foundry?"
+title: "What is CF?"
 theme: "hugo-theme-pivotal-revealjs"
 
 params:
