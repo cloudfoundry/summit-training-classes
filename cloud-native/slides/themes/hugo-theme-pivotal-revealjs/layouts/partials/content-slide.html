@@ -7,7 +7,9 @@
   {{ partial "slide-title.html" . }}
 
   {{ if isset . "type" }}
-    {{ if eq .type "basic" }}
+    {{ if eq .type "title" }}
+      {{ partial "title-slide.html" . }}
+    {{ else if eq .type "basic" }}
       {{ partial "slide-basic.html" . }}
     {{ else if eq .type "two-column" }}
       {{ partial "slide-two-column.html" . }}
