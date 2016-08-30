@@ -6,7 +6,7 @@ menuTitle: "Orgs"
 
 content: |
 
-  **Organizations** segregate *tenants* in a Cloud Foundry installation.
+  **Organisations** segregate *tenants* in a Cloud Foundry installation.
 
   ```sh
   $ cf orgs
