@@ -1,5 +1,6 @@
 ---
 menuTitle: "Goal"
+id: availability
 type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"

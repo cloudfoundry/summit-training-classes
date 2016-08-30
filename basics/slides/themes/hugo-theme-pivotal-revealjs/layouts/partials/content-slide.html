@@ -1,4 +1,5 @@
 <section class="content-slide"
+  {{ if isset . "id"}} id="{{ .id }}"{{end}}
   {{ if isset . "backgroundColor" }} data-background="{{ .backgroundColor }}"{{ end }}
   {{ if isset . "backgroundImage" }} data-background="{{ .backgroundImage }}"{{ end }}
   {{ if isset . "menuTitle"}} data-menu-title="{{ .menuTitle }}"{{end}}>

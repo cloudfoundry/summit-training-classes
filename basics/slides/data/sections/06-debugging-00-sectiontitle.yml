@@ -1,5 +1,6 @@
 ---
 menuTitle: "Goal"
+id: debugging
 type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
