@@ -59,7 +59,7 @@ cf target
 
 ## Targeting Orgs & Spaces
 
-You can change the org & space you are targeting without logging in again.
+You can change the org and space you are targeting without logging in again.
 
 ```bash
 $ cf target -o ORG -s SPACE
