@@ -3,7 +3,7 @@ type: "two-column"
 title: "Why a Cloud Native Platform?"
 subtitle: "Benefits beyond the platform"
 menuTitle: "Why a Cloud Native Platform?"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

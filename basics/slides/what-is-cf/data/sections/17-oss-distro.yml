@@ -3,7 +3,7 @@ type: "two-column"
 title: "Open Source Distribution"
 subtitle: "The open source cloud native platform"
 menuTitle: "Open Source Distribution"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

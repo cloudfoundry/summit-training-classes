@@ -3,7 +3,7 @@ type: "two-column"
 title: "Cloud Foundry Overiew"
 subtitle: "The open platform"
 menuTitle: "CF Overview"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

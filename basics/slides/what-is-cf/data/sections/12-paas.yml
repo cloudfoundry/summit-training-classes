@@ -3,7 +3,7 @@ type: "two-column"
 title: "What is PaaS?"
 subtitle: "Cloud Native Platforms"
 menuTitle: "What is PaaS?"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 
