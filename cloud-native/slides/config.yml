@@ -1,6 +1,6 @@
 ---
 
-baseurl: "/"
+baseurl: "/slides"
 languageCode: "en-us"
 title: "Cloud Native Evolution"
 theme: "hugo-theme-pivotal-revealjs"

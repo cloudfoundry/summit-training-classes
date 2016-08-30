@@ -1,4 +1,4 @@
-baseurl = "/public/cf-oss-training/cloud-native/site/"
+baseurl = "/site/"
 languageCode = "en-us"
 title = "Cloud Native with Microservices"
 theme = "hugo-material-docs"
