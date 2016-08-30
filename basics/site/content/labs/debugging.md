@@ -16,9 +16,11 @@ A buggy app is included in the `06-debugging/debug-app` directory with a manifes
 
 Open a browser and access the app.  You should see a 500 error.
 
+* How does this impact app health? How does an error on one page compare to a crashing app from the last lab?
+
 ## Check out the Logs
 
-Use `cf logs` to access the recent logs and debug the issue.  Alternatively, should be able to tail the logs using `cf logs` and then access the app.
+Use `cf logs` to access the recent logs and debug the issue. If you do not specify the `--recent` flag to `cf logs`, it will start tailing logs from that point onwards.
 
 ### Checking Your Work
 
@@ -33,12 +35,14 @@ You should see something similar to this in the logs:
 This app can be fixed by setting an environment variable and restarting it.  
 
 * Use `cf help` to set an environment variable for your app called `FIXED` with a value of `true`.
-* Then restart your app.
-
+* Restart your app, and visit it in a browser.
 
 ## Debugging with Events
 
-* View the recent events for your app.  
+Now the app offers other links that allow you to terminate the app's process, use up all the app's RAM, or fill the disk.
+
+* Try crashing the app, or exhausting its memory.
+* Use `cf events` to view the recent events for your app. 
 
 ### Checking Your Work
 
@@ -47,6 +51,8 @@ You should see something like the following:
 ```sh
 ... index: 0, reason: CRASHED, exit_description: 2 error(s) ...
 ```
+
+* Click the 'exhaust disk' link, and check `cf logs` and `cf events`. What happens? Is this what you expected?
 
 ## App instrumentation
 
