@@ -14,6 +14,8 @@ content: |
 
   * Vendor specific **consoles**
 
+  * CI tool integration (e.g Concourse.ci)
+
 notes: |
 
   The CF CLI utility communicates with the Cloud Controller, a CF component, that exposes a RESTful API
