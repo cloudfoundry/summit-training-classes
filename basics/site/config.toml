@@ -18,7 +18,7 @@ googleAnalytics = ""
 	repo_url = "https://github.com/pivotal-enablement/cf-oss-training"
 
 	version = "1.0.0"
-  headerLogo = "/public/cf-oss-training/basics/site/img/cf-white.png"
+  headerLogo = "img/cf-white.png"
   logo = "img/cf-rabbit.png"
 	favicon = ""
 
