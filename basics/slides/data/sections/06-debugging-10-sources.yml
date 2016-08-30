@@ -3,7 +3,7 @@ type: "two-column"
 title: "Debugging Basics"
 subtitle: "Where to go for information"
 menuTitle: "Debugging Basics"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

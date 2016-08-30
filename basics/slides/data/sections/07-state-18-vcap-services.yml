@@ -1,6 +1,6 @@
 type: "two-column"
 menuTitle: "VCAP_SERVICES"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

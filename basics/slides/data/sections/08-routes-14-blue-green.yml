@@ -1,6 +1,6 @@
 type: "two-column"
 menuTitle: "Blue Green Deployments"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftTitle: "Blue/Green Deployments"
 

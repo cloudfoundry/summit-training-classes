@@ -1,9 +1,0 @@
----
-menuTitle: "Delivered"
-type: "statement"
-backgroundColor: "#243641"
-buildInStatements: flase
-statements:
-  - As a *CF user*
-  - I want a new version of my app to show the *same data*
-  - So that I can *iterate on feedback* from my users

@@ -2,9 +2,8 @@
 menuTitle: "Goal"
 type: "statement"
 backgroundColor: "#243641"
-buildInStatements: true
+buildInColumns: "false"
 statements:
   - As a *CF user*
   - I want to deploy a *new version* of my app
   - With *no interruptions* to my users.
-  

@@ -2,7 +2,7 @@
 menuTitle: "Goal"
 type: "statement"
 backgroundColor: "#243641"
-buildInStatements: "true"
+buildInColumns: "false"
 statements:
   - Part 6.
   - Debugging
