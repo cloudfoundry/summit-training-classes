@@ -2,7 +2,7 @@
 
 baseurl: "/"
 languageCode: "en-us"
-title: "Availability"
+title: "Cloud Foundry : Zero to Hero"
 theme: "hugo-theme-pivotal-revealjs"
 
 params:
@@ -13,4 +13,4 @@ params:
     subtitle: "Cloud Foundry Basics"
     notes: |
 
-      In this section, we cover the basics of availability in CF.
+      A user's introduction to Cloud Foundry.
