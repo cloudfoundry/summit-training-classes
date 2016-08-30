@@ -17,9 +17,11 @@ columnRightContent: |
 
   **Platform as a Service**
 
-  * Cloud Computing characterised as **IaaS**, **PaaS**, and **SaaS**
+  * Cloud Computing taxonomy: **IaaS**, **PaaS**, and **SaaS**
+  * PaaS aims to improve developer productivity
+  * Reduces undifferentiated 'plumbing' aka 'yak shaving'
+  * Heroku blazed a trail for **PaaS** and **12 Factor** apps
   * Applications are the **Cloud Native** unit of currency
-  * Heroku blazed a trail for **PaaS**
 
 notes: |
 
