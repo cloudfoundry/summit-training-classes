@@ -15,7 +15,7 @@ googleAnalytics = ""
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/pivotal-enablement/cf-oss-training"
+	repo_url = "https://github.com/cloudfoundry/summit-training-classes"
 
 	version = "1.0.0"
   headerLogo = "/img/cf-white.png"
@@ -42,7 +42,7 @@ googleAnalytics = ""
 
 [social]
 	twitter = ""
-	github  = "pivotal-enablement/cf-oss-training"
+	github  = "cloudfoundry/summit-training-classes"
 
 
 [[menu.main]]
