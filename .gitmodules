@@ -1,0 +1,3 @@
+[submodule "basics/site/static/resources"]
+	path = basics/site/static/resources
+	url = https://github.com/EngineerBetter/training-zero-to-hero.git
