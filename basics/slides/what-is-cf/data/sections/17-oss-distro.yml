@@ -11,6 +11,8 @@ columnLeftContent: |
 
 columnRightContent: |
 
+  **Where can you get Open Source Cloud Foundry?**
+
   * [github.com/cloudfoundry](https://github.com/cloudfoundry)
   * **cf-release** requires [BOSH](https://bosh.io/docs) knowledge
   * **bosh-lite** for a local CF deployment
