@@ -9,11 +9,11 @@ In this exercise, you will deploy an app to Cloud Foundry.
 
 Be sure you are logged in and targeted to your org/space.
 
-A sample app is provided in the `basics/static/resources` directory.  Push it to cloud foundry.
+A sample app is provided in the `basics/static/resources` directory.  Push it to Cloud Foundry.
 
 ```bash
 # From the training home directory:
-$ cd 03-first-app/web-app
+$ cd 03-push/web-app
 $ cf push
 
 ...
@@ -23,16 +23,14 @@ urls: web-app-unpassionate-eighteen.cfapps.io   <<< note the route
 
 ### Deployment Manifest
 
-This app is configured with a [deployment manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).  The manifest tells cf the app name and how many instances to create (among other things).  Manifests are optional.  
+This app is configured with a [deployment manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).  The manifest tells CF the app name and how many instances to create (among other things).  Manifests are optional.  
 
-You can see the manifest by opening the file: `03-first-app/web-app/manifest.yml`.
+You can see the manifest by opening the file: `03-push/web-app/manifest.yml`.
 
 ```sh
-name: web-app
-memory: 32M
-disk_quota: 256M
-random-route: true
-buildpack: ruby_buildpack
+applications:
+- name: web-app
+  random-route: true
 ```
 
 ### Random Route
@@ -83,8 +81,10 @@ buildpack: ruby 1.6.7
 
 ## Pushing worker apps
 
-A worker app (no tcp routing) is also included.  You can push this app from the **TO DO** 03-first-app/worker-app directory.
+Not all apps need to respond to HTTP requests, instead they might do background work, such as consuming messages from a queue.
 
+* Push the app in the `worker-app` directory
+* _What differences are there in the manifest? Why are these needed?_
 
 ### Checking Your Work
 
@@ -112,13 +112,7 @@ The worker app outputs logs.  Use `cf help` to determine what command to run to 
 You should see an output similar to:
 
 ```sh
-2015... [App/0] ERR + main
-2015... [App/0] ERR + find_my_public_ip
-2015... [App/0] ERR + which curl
-2015... [App/0] ERR + curl -sL https://api.ipify.org?format=json
-2015... [App/0] OUT {"ip":"54.236.219.204"}
-2015... [App/0] ERR + suspend_myself
-2015... [App/0] ERR + kill -STOP 11
+2016-08-30T11:53:13.02+0100 [APP/0]      OUT Doing some work...
 ```
 
 ## Make room (for better apps)
