@@ -1,4 +1,4 @@
-baseurl = "/public/cf-oss-training/basics/site/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Cloud Foundry Basics"
 theme = "hugo-material-docs"
