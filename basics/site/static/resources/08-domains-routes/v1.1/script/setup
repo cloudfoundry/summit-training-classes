@@ -1,6 +1,0 @@
-#!/bin/bash -e
-
-[ -z "$DEBUG" ] || set -x
-
-bundle install --binstubs
-bundle package
