@@ -4,7 +4,7 @@ title: "Overview: Cloud Foundry Basics"
 type: index
 ---
 
-<a href="/public/cf-oss-training/basics/student-zip/cf-oss-basics.zip" target="_blank"><i class="fa fa-download"> </i> Slides & Labs</a> &nbsp; | &nbsp; <a href="/public/cf-oss-training/basics/site/resources/sample-apps.zip"><i class="fa fa-file-zip-o"> </i> Sample Apps</a>
+<a href="https://github.com/EngineerBetter/training-zero-to-hero"><i class="fa fa-file-zip-o"> </i> Sample Apps</a>
 
 Join us for a **hands-on** training workshop to learn about **deploying and managing applications on Cloud Foundry**. We will give an overview of Cloud Foundry and how it works, including specifics relating to services, buildpacks, and architecture. We will also look at how to effectively work with Cloud Foundry in your organization.
 
