@@ -1,0 +1,24 @@
+---
+type: "two-column"
+title: "Why a Cloud Native Platform?"
+subtitle: "Explaining Cloud Native"
+menuTitle: "Why a Cloud Native Platform?"
+buildInColumns: "false"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  <img src="img/logging.svg" />
+
+  </span>
+
+columnRightContent: |
+
+  **What characterises Cloud Native?**
+
+  * **12 Factor** architectural style
+  * Embracing **low cost of change**
+  * **Removing barriers** for software and people
+
+notes: |
