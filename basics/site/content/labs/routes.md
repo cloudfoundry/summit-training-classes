@@ -28,8 +28,8 @@ cf app
 
 ### Push v1.1
 
-* Now, deploy version 1.1 of the app from `08-domains-routes/v1.1`.  Do not map your main route yet.  You want the app to be validated before directing traffic to it.
-* Validate you can access the app by accessing the automatically assigned route.
+* Now, push version 1.1 of the app from `08-domains-routes/v1.1` and assign it a random route.  Do not map your main route yet.  You want the app to be validated before directing traffic to it.
+* Validate you can access the app by accessing the random route.
 * Now use the CF cli to map traffic to v1.1.
 
 #### Checking Your Work
@@ -43,6 +43,7 @@ cf app
 ### Cutting over  
 
 * Use `cf help` to figure out how to stop sending traffic to v1.0.
+* Could you leave the v1.0 app running in case you need to roll-back?
 
 #### Checking Your Work
 
