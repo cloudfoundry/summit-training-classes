@@ -5,9 +5,9 @@ title: Stateful Services
 
 In this lab,  you will create an instance of a Redis service and use it with an app.
 
-## Creating a service instance
+## Creating a Service Instance
 
-First, you need to create an instance of the service.  But you need to know what to create.
+First, you need to create an instance of the service.
 
 * Use `cf marketplace` to view the details of the Redis service.
 * Use `cf service` to create an instance of the `30mb` plan.
@@ -25,11 +25,11 @@ redis   rediscloud   30mb                create succeeded
 
 ## Binding Service Instances
 
-Now, you need to bind your service instance to your application so it can be used.  A sample app is included in `07-shared-state/stateful-app`.
+You need to bind your service instance to your application so it can be used.
 
-* Push the sample app with the `--no-start` flag.
-* Use `cf bind-service` to bind your service instance to your app.
-* Then start/restart your app so that it can pick up the environment values.
+* Push `07-shared-state/stateful-app` with the `--no-start` flag
+* Use `cf bind-service` to bind your service instance to your app
+* Start your app so that it can pick up the environment values.
 
 ### Checking Your Work
 
@@ -43,17 +43,31 @@ If you hit the `/env` endpoint of your app, or run the command `cf env stateful-
 
 ## Demonstrating Persistence
 
-Visit the app in a browser and you'll see the number of requests this app instance has served, along with the overall total number of requests _all_ app instances have served.
-
-Restart the app and visit it in a browser again. You'll see that the total number of requests is still stored in Redis, even though the app was restarted.
+* Visit the app in a browser
+* Observe the number of requests this app instance has served, along with the overall total number of requests _all_ app instances have served
+* Restart the app and visit it in a browser again
+* Observe that the total number of requests is still stored in Redis, even though the app was restarted
 
 ## Exploring the Service Instance Lifecycle
 
-Increase the number of instances of your app that are running, and when you visit them you'll be able to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance.
+Service instances can be shared by many apps, and can live longer than the apps that use them.
 
-Stop the app, and use `cf unbind-service` to unbind the service from the app. Rebind the app, start it, and see that the Redis instance still holds the same state.
+* Increase the number of instances of your app
+* Visit your app to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance
 
-Can you use `cf delete-service redis`? Do whatever is necessary to delete the service instance, and then create it again. When you start your app and visit it in a browser, you'll see that this is a new, clean Redis instance with no existing state.
+Now we have many app instances Cloud Foundry is load-balancing between them, but they're all sharing the same Redis instance.
+
+* _What happens when we unbind the app?_
+* Stop the app, and use `cf unbind-service` to unbind the service from the app
+* Rebind the app, and start it
+* Observe that the Redis instance still holds the same state
+
+Unbinding did not delete data in Redis. It _did_ remove the credentials that our app was using to connect to Redis, but new ones were issued when we bound the app again.
+
+* _What happens when we delete the service instance?_
+* _Can you use `cf delete-service redis`?_
+* Do whatever is necessary to delete the service instance, and then create it again
+* When you start your app and visit it in a browser, you'll see that this is a new, clean Redis instance with no existing state.
 
 ## Beyond the Class
 

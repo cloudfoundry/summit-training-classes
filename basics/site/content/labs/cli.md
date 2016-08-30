@@ -7,9 +7,7 @@ In this section we will cover the basics of installing and using the CF command 
 
 ## Installing
 
-Select and install the appropriate installer for your laptop:
-
-[github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads)
+* Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads)
 
 ### Checking Your Work
 
@@ -19,7 +17,7 @@ Open a terminal/command prompt and type the following:
 cf
 ```
 
-You Should see an output similar to the following:
+You should see an output similar to the following:
 
 ```sh
 NAME:
@@ -30,7 +28,7 @@ USAGE:
 ...
 ```
 
-> Notice that the CF cli is self documenting.  You can type any command with `--help` to see details.  Typing `cf` only lists all available commands.
+Notice that the CF cli is self documenting.  You can type any command with `--help` to see details.  Typing `cf` only lists all available commands.
 
 ```sh
 cf <some-command> --help
@@ -38,10 +36,11 @@ cf <some-command> --help
 
 ## Logging in
 
-You can use the CLI to log into any cloud foundry you have an account in.  
+You can use the CLI to log into any cloud foundry you have an account in.
 
-* Use `cf help` to login to Pivotal Web Services.  
-* The API endpoint you need is `api.run.pivotal.io`.
+* Use `cf help` to find out how to login to Pivotal Web Services
+
+The API endpoint you need is `api.run.pivotal.io`.
 
 ```sh
 cf login --help
@@ -55,12 +54,12 @@ You can see where you are logged in using the following:
 cf target
 ```
 
-* Are you logged into Pivotal Web Services?
-* What org and space are you targeted too?
+* _Are you logged into Pivotal Web Services?_
+* _What org and space are you targeting?_
 
 ## Targeting Orgs & Spaces
 
-You can change the org & space you are targeted to without logging in again.
+You can change the org & space you are targeting without logging in again.
 
 ```bash
 $ cf target -o ORG -s SPACE

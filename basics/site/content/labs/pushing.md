@@ -7,12 +7,11 @@ In this exercise, you will deploy an app to Cloud Foundry.
 
 ## Push my app
 
-Be sure you are logged in and targeted to your org/space.
+Be sure you are logged in and targeting your org/space.
 
-A sample app is provided in the `basics/static/resources` directory.  Push it to Cloud Foundry.
+* Push the app in `03-push/web-app` to Cloud Foundry
 
 ```bash
-# From the training home directory:
 $ cd 03-push/web-app
 $ cf push
 
@@ -23,7 +22,7 @@ urls: web-app-unpassionate-eighteen.cfapps.io   <<< note the route
 
 ### Deployment Manifest
 
-This app is configured with a [deployment manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).  The manifest tells CF the app name and how many instances to create (among other things).  Manifests are optional.  
+This app is configured with a [deployment manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).  The manifest tells CF the app name and how many instances to create (among other things). Manifests are optional.
 
 You can see the manifest by opening the file: `03-push/web-app/manifest.yml`.
 
@@ -53,7 +52,7 @@ Alternatively, you can look up the details on your app (next section).
 
 ### Checking Your Work
 
-#### What apps are in the CF space?
+* Use `cf apps` to see what apps are in the currently-targeted org/space
 
 ```sh
 $cf apps
@@ -62,7 +61,7 @@ name      state     instances   memory   disk   urls
 web-app   started   1/1         32M      256M   web-app-unpass...
 ```
 
-#### I want to see more app info...
+* Use `cf app web-app` to see more details of your app
 
 ```sh
 $ cf app web-app
@@ -81,7 +80,7 @@ buildpack: ruby 1.6.7
 
 ## Pushing worker apps
 
-Not all apps need to respond to HTTP requests, instead they might do background work, such as consuming messages from a queue.
+Not all apps need to respond to HTTP requests: instead they might do background work, such as consuming messages from a queue.
 
 * Push the app in the `worker-app` directory
 * _What differences are there in the manifest? Why are these needed?_
@@ -117,7 +116,9 @@ You should see an output similar to:
 
 ## Make room (for better apps)
 
-You can also delete apps.  Delete the two apps you deployed using `cf help` to find the correct command.
+You can also delete apps.
+
+* Delete the two apps you deployed (use `cf help` to find the correct command)
 
 ### Checking Your Work
 

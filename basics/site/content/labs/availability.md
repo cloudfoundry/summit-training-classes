@@ -7,37 +7,31 @@ In this lab, we will use purposefully crash app instances and see how Cloud Foun
 
 ## Pushing a Crashable App
 
-What happens when an app crashes?
+_What happens when an app crashes?_
 
 * Change to the `05-resilience/imperfect-app` directory and push the crashable app.
 * Note the random URL for your app, and visit it in a browser.
 * Click the 'crash' link
+* Use `cf app imperfect-app` to see the state of your app.
 
-Use `cf app imperfect-app` to see the state of your app. Can you see it in the "crashed" state before Cloud Foundry restarts it?
+Can you see it in the "crashed" state before Cloud Foundry restarts it?
 
 ## Access Your App Amid Failures
 
-* Scale your app to 3 instances.  
+* Scale your app to 3 instances.
 
 ### Checking Your Work
 
-Use `cf apps` to ensure you have 3 instances requested.
+* Use `cf apps` to ensure you have 3 instances requested.
+* Visit your app and click the 'crash' link. 
+* Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.
+
+### Can you crash instances quicker than Cloud Foundry can restart them?
+
+If you have `watch` available on your system, use it to watch app instances restart.
 
 ```sh
-$ cf apps
-
-name            state     instances   memory   disk   urls
-imperfect-app   started   2/3         32M      256M   imperfect-app...
-```
-
-Visit your app and click the 'crash' link. Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.
-
-* Can you crash instances quicker than Cloud Foundry can restart them?
-
-If you have `watch` available on your system, use it to watch app instances restart in real time.
-
-```sh
-$ watch cf apps # Watch app instances restart in real-time
+$ watch cf apps # Watch app instances restart
 ```
 
 If not, you can re-run `cf app` multiple times.
@@ -51,7 +45,7 @@ $ cf app imperfect-app
 #2   down      2015-11-02  0.0%   0 of 0         0 of 0
 ```
 
-* What happens if you make a request whilst they are all down?
+* _What happens if you make a request whilst they are all down?_
 
 ## Beyond the Class
 

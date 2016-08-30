@@ -7,16 +7,15 @@ In this exercise, we will examine a running app to understand what a buildpack p
 
 ## System Buildpacks
 
-Use `cf help` to take a look at the buildpacks configured in PWS.  
-
-* If you don't specify a buildpack, what is the first one that will be checked?
+* Use `cf help` to find out how to take a look at the buildpacks configured in PWS.
+* _If you don't specify a buildpack, what is the first one that will be tested for?_
 
 
 ## Pushing with the Static Buildpack
 
-An app is included in the `04-buildpacks/static-app` directory.  Push this app to CF using the provided manifest.
+An app is included in the `04-buildpacks/static-app` directory.
 
-This app uses a very small amount of memory and will be used to demonstrate the speed of scaling in Cloud Foundry.
+* Push the app in `04-buildpacks/static-app` to CF using the provided manifest
 
 ### Checking Your Work
 
@@ -31,16 +30,14 @@ $ cf app static-app
 
 ## Exploring Buildpack Output
 
-* How does the running droplet compare to your app directory?
-
-Use `cf ssh static-app` to explore the filesystem of the running application, and observe what additional dependencies
-the buildpack made available for your app.
+* _How does the running droplet compare to your app directory?_
+* Use `cf ssh static-app` to explore the filesystem of the running application
+* Observe what additional dependencies the buildpack made available for your app
 
 ## Scaling with Speed
 
-Use `cf scale` to scale your static app to 32 instances.  
-
-* Why is CF able to scale instances so quickly?
+* Use `cf scale` to scale your static app to 32 instances
+* _Why is CF able to scale instances so quickly?_
 
 
 ### Checking Your Work
@@ -67,9 +64,8 @@ called `Staticfile`.
 
 Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`. 
 
-_Which buildpack will be used to run this app? Staticfile, or PHP?_
-
-* `cf push` this app.
+* _Which buildpack do you think will be used to run this app? Staticfile, or PHP?_
+* `cf push` mixed-app
 * Observe from the CLI output which buildpack was used
 * Hit both `/index.html` and `index.php`
 * Use `cf ssh` to see what files the buildpack has added

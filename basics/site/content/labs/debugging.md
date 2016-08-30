@@ -9,18 +9,20 @@ In this lab, you will continue to master debugging techniques for your applicati
 
 A buggy app is included in the `06-debugging/debug-app` directory with a manifest.
 
-* Push it to PWS
+* Push `06-debugging/debug-app` to PWS
 * Note the URL
 
 ### Access the App
 
-Open a browser and access the app.  You should see a 500 error.
-
-* How does this impact app health? How does an error on one page compare to a crashing app from the last lab?
+* Open a browser and access the app.
+* Observe a 500 error.
+* _How does this impact app health? How does an error on one page compare to a crashing app from the last lab?_
 
 ## Check out the Logs
 
-Use `cf logs` to access the recent logs and debug the issue. If you do not specify the `--recent` flag to `cf logs`, it will start tailing logs from that point onwards.
+* Use `cf logs` to access the recent logs and debug the issue. 
+
+If you do not specify the `--recent` flag to `cf logs`, it will start tailing logs from that point onwards.
 
 ### Checking Your Work
 
@@ -32,17 +34,20 @@ You should see something similar to this in the logs:
 
 ### Fix it
 
-This app can be fixed by setting an environment variable and restarting it.  
+This app can be fixed by setting an environment variable and restarting it.
 
-* Use `cf help` to set an environment variable for your app called `FIXED` with a value of `true`.
-* Restart your app, and visit it in a browser.
+* Use `cf help` to find out how to set an environment variable for your app called `FIXED` with a value of `true`
+* Restart your app, and visit it in a browser to check that the bug is fixed
 
 ## Debugging with Events
 
 Now the app offers other links that allow you to terminate the app's process, use up all the app's RAM, or fill the disk.
 
-* Try crashing the app, or exhausting its memory.
-* Use `cf events` to view the recent events for your app. 
+* Click "crash"
+* Observe the output of `cf events` and `cf logs` for your app
+* Click "exhaust memory" 
+* Observe the output of `cf events` and `cf logs` for your app
+* _How do the two compare? What help does Cloud Foundry give you in determining the cause of failure?_
 
 ### Checking Your Work
 
@@ -52,59 +57,31 @@ You should see something like the following:
 ... index: 0, reason: CRASHED, exit_description: 2 error(s) ...
 ```
 
-* Click the 'exhaust disk' link, and check `cf logs` and `cf events`. What happens? Is this what you expected?
+* Click the 'exhaust disk' link, and check `cf logs` and `cf events`.
+* _What happens? Is this what you expected?_
 
 ## App instrumentation
 
-We will use New Relic as a example.  The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing.
+We will use New Relic as a example.  The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing. Services are covered in another section of this course, so don't worry if you don't understand these commands.
 
-```sh
-$ cf create-service newrelic standard newrelic
-$ cf bind-service debug-app newrelic
-```
-
-The license key is included in the environment.
-
-```sh
-$ cf env debug-app
-# Find your New Relic license key
-```
-
-You need to add the license key to a file in the app directory.
-
-```sh
-# From the training home directory:
-$ cd 06-debugging/debug-app
-# Replace YOUR-LICENSE-KEY
-$ vim newrelic.yml
-```
-
-Then re-push.
-
-```bash
-$ cf push
-```
+* Create a New Relic service instance: `cf create-service newrelic standard newrelic`
+* Tell Cloud Foundry that `debug-app` should use your New Relic service instance: `cf bind-service debug-app newrelic`
+* Find the New Relic license key in the output of `cf env debug-app`
+* In `newrelic.yml`, replace `YOUR-LICENSE-KEY` with the value you just found
+* Re-push the app
 
 ### Viewing the Dashboard
 
-New Relic has a dashboard.  You can find the URL by looking at the service details.
+New Relic has a dashboard. You can find the URL by looking at the service details.
 
-```bash
-$ cf service newrelic
-```
+* Visit the URL reported by `cf service newrelic`
 
-Open the link in your browser.
+It takes some time for the data from your app to be visible in the New Relic dashboard.
 
 
 ## SSH access
 
-If you need to, you can also access the application container directly via `cf ssh`.
-
-```bash
-$ cf ssh debug-app
-```
-
-This allows you to see the running container and the file system.
+Don't forget that you can use `cf ssh` to look at the current filesystem of your app.
 
 
 ## Beyond the Class
