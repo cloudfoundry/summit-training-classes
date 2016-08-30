@@ -3,7 +3,7 @@ type: "two-column"
 title: "How do they work?"
 subtitle: "Standardizing runtime and deployment"
 menuTitle: "How - Buildpacks"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 

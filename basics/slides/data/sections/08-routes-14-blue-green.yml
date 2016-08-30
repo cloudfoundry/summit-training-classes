@@ -6,8 +6,6 @@ columnLeftTitle: "Blue/Green Deployments"
 
 columnLeftContent: |
 
-  ![Blue Green](img/blue-green.png)
-
 columnRightContent: |
 
   * Deploy a new version (GREEN) of your app.
