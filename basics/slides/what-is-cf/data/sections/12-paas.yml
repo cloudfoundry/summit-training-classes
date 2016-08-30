@@ -1,7 +1,7 @@
 ---
 type: "two-column"
 title: "What is PaaS?"
-subtitle: "Cloud Native Platforms"
+subtitle: "PaaS Overview"
 menuTitle: "What is PaaS?"
 buildInColumns: "false"
 
@@ -18,8 +18,8 @@ columnRightContent: |
   **Platform as a Service**
 
   * Cloud Computing taxonomy: **IaaS**, **PaaS**, and **SaaS**
-  * PaaS aims to improve developer productivity
-  * Reduces undifferentiated 'plumbing' aka 'yak shaving'
+  * PaaS aims to improve developer **productivity**
+  * Reduces undifferentiated 'plumbing' aka **'yak shaving'**
   * Heroku blazed a trail for **PaaS** and **12 Factor** apps
   * Applications are the **Cloud Native** unit of currency
 
