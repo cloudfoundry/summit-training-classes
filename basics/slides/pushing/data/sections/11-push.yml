@@ -1,0 +1,15 @@
+---
+type: "slide-basic"
+title: "Deploying Apps"
+subtitle: "The Magic of CF Push"
+menuTitle: "Deploying Apps"
+
+content: |
+
+  ![cf push explained](img/app_push_flow_diagram_diego.png)
+
+notes: |
+
+  CF cli sent all our app files to the Cloud Controller.
+  The Cloud Controller stores all files it receives in the Blob Store.
+  It also stores metadata about the app in the database.
