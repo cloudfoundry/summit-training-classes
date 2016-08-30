@@ -9,7 +9,7 @@ In this section we will cover the basics of installing and using the CF command 
 
 * Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads)
 
-### Checking Your Work
+#### Checking Your Work
 
 Open a terminal/command prompt and type the following:
 
@@ -46,7 +46,7 @@ The API endpoint you need is `api.run.pivotal.io`.
 cf login --help
 ```
 
-### Checking Your Work
+#### Checking Your Work
 
 You can see where you are logged in using the following:
 

@@ -12,7 +12,7 @@ First, you need to create an instance of the service.
 * Use `cf marketplace` to view the details of the Redis service.
 * Use `cf service` to create an instance of the `30mb` plan.
 
-### Checking Your Work
+#### Checking Your Work
 
 You can view your service instances:
 
@@ -31,7 +31,7 @@ You need to bind your service instance to your application so it can be used.
 * Use `cf bind-service` to bind your service instance to your app
 * Start your app so that it can pick up the environment values.
 
-### Checking Your Work
+#### Checking Your Work
 
 If you view the details of your service, you should see which apps it is bound to.
 

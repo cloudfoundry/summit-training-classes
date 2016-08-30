@@ -20,11 +20,11 @@ A buggy app is included in the `06-debugging/debug-app` directory with a manifes
 
 ## Check out the Logs
 
-* Use `cf logs` to access the recent logs and debug the issue. 
+* Use `cf logs` to access the recent logs and debug the issue.
 
 If you do not specify the `--recent` flag to `cf logs`, it will start tailing logs from that point onwards.
 
-### Checking Your Work
+#### Checking Your Work
 
 You should see something similar to this in the logs:
 
@@ -45,11 +45,11 @@ Now the app offers other links that allow you to terminate the app's process, us
 
 * Click "crash"
 * Observe the output of `cf events` and `cf logs` for your app
-* Click "exhaust memory" 
+* Click "exhaust memory"
 * Observe the output of `cf events` and `cf logs` for your app
 * _How do the two compare? What help does Cloud Foundry give you in determining the cause of failure?_
 
-### Checking Your Work
+#### Checking Your Work
 
 You should see something like the following:
 

@@ -20,10 +20,10 @@ Can you see it in the "crashed" state before Cloud Foundry restarts it?
 
 * Scale your app to 3 instances.
 
-### Checking Your Work
+#### Checking Your Work
 
 * Use `cf apps` to ensure you have 3 instances requested.
-* Visit your app and click the 'crash' link. 
+* Visit your app and click the 'crash' link.
 * Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.
 
 ### Can you crash instances quicker than Cloud Foundry can restart them?

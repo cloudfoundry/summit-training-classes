@@ -50,7 +50,7 @@ urls: web-app-unpassionate-eighteen.cfapps.io
 
 Alternatively, you can look up the details on your app (next section).
 
-### Checking Your Work
+#### Checking Your Work
 
 * Use `cf apps` to see what apps are in the currently-targeted org/space
 
@@ -85,7 +85,7 @@ Not all apps need to respond to HTTP requests: instead they might do background 
 * Push the app in the `worker-app` directory
 * _What differences are there in the manifest? Why are these needed?_
 
-### Checking Your Work
+#### Checking Your Work
 
 ```sh
 $ cf app worker-app
@@ -106,7 +106,7 @@ buildpack: binary_buildpack
 
 The worker app outputs logs.  Use `cf help` to determine what command to run to see recent logs.
 
-### Checking Your Work
+#### Checking Your Work
 
 You should see an output similar to:
 
@@ -120,7 +120,7 @@ You can also delete apps.
 
 * Delete the two apps you deployed (use `cf help` to find the correct command)
 
-### Checking Your Work
+#### Checking Your Work
 
 You should not see your apps when you run:
 

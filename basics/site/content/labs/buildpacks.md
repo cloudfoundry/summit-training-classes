@@ -17,7 +17,7 @@ An app is included in the `04-buildpacks/static-app` directory.
 
 * Push the app in `04-buildpacks/static-app` to CF using the provided manifest
 
-### Checking Your Work
+#### Checking Your Work
 
 You can view the details of your app:
 
@@ -40,7 +40,7 @@ $ cf app static-app
 * _Why is CF able to scale instances so quickly?_
 
 
-### Checking Your Work
+#### Checking Your Work
 
 You can view the details of your app:
 
@@ -59,10 +59,10 @@ $ cf app static-app
 
 ## Picking the Correct Buildpack
 
-Cloud Foundry correctly used the Staticfile Buildpack to deploy your app. It did this because the app includes a file 
+Cloud Foundry correctly used the Staticfile Buildpack to deploy your app. It did this because the app includes a file
 called `Staticfile`.
 
-Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`. 
+Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`.
 
 * _Which buildpack do you think will be used to run this app? Staticfile, or PHP?_
 * `cf push` mixed-app
