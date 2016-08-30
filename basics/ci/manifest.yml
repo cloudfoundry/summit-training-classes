@@ -1,0 +1,4 @@
+---
+applications:
+- name: zero-to-hero
+  buildpack: staticfile_buildpack
