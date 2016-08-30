@@ -2,7 +2,7 @@
 menuTitle: "Delivered"
 type: "statement"
 backgroundColor: "#243641"
-buildInStatements: flase
+buildInStatements: false
 statements:
   - As a *CF user*
   - I want a *simple* static website

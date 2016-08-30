@@ -3,7 +3,7 @@ type: "two-column"
 title: "Agenda"
 subtitle: "What are we going to do?"
 menuTitle: "Agenda"
-buildInColumns: "true"
+buildInColumns: "false"
 
 columnLeftContent: |
 
