@@ -5,18 +5,19 @@
 
 ## Development
 
+The site and the slides are in two different Hugo sites.
+You can run them in different terminal windows using `hugo serve`.
+The links to the slides on the agenda page will be broken because they
+are only configured to work when the sites are built via `scripts/build.sh`.
 
+## Building
 
-## Building course site
+Run `./scripts/build.sh`
 
-1. `cd <courseName>/site`
-2. `hugo`
+## Deployment to PWS
 
-Generated content will be in the `public` directory.
+1. Make sure you have access to the cfcommunity org and cforg space on PWS.
+1. Make sure you are logged in.
+1. Run `./scripts/deploy.sh`.
 
-## Building slides
-
-1. `cd <courseName>/slides`
-2. `hugo`
-
-Generated content will be in the `public` directory.
+Deployed to http://cloud-native-workshop.cfapps.io/.
