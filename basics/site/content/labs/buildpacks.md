@@ -72,6 +72,7 @@ _Which buildpack will be used to run this app? Staticfile, or PHP?_
 * `cf push` this app.
 * Observe from the CLI output which buildpack was used
 * Hit both `/index.html` and `index.php`
+* Use `cf ssh` to see what files the buildpack has added
 
 Instead of letting Cloud Foundry allow each buildpack to detect whether it can run the app, we're going to specify which buildpack we want to use.
 
@@ -79,6 +80,7 @@ Instead of letting Cloud Foundry allow each buildpack to detect whether it can r
 * Observe from the CLI output which buildpack was used
 * Hit both `/index.html` and `index.php`
 * _What happens this time? Why?_
+* Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push
 
 
 ## Cleaning Up
