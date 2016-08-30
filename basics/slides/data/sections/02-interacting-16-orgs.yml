@@ -13,16 +13,15 @@ content: |
   ```
 
   ```sh
-  $ cf org <some-org> # for details
-
-  Getting info for org Pivotal-Enablement as sgreenberg@pivotal.io...
+  $ cf org pcfdev-org
+  Getting info for org pcfdev-org as admin...
   OK
 
-  my-org:
-    domains:        cfapps.io
-    quota:          50GB (51200M memory limit, Unlimited instance memory limit, 1000 routes, -1 services, paid services allowed)
-    spaces:         dev, staging, prod
-    space quotas:
+  pcfdev-org:
+                domains:        local.pcfdev.io
+                quota:          default (102400M memory limit, unlimited instance memory limit, 1000 routes, -1 services, paid services allowed, unlimited app instance limit, 0 route ports)
+                spaces:         pcfdev-space
+                space quotas:
   ```
 
 
