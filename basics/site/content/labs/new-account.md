@@ -13,6 +13,7 @@ For this class, we will use the Cloud Foundry running on Pivotal Web Services. Y
 ## Beyond the Class
 
 Compare CF public services:
+
   * [Anynines](http://www.anynines.com/)
   * [Swisscom](https://developer.swisscom.com/)
   * [IBM Bluemix](https://console.ng.bluemix.net/)
