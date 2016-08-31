@@ -1,0 +1,16 @@
+---
+
+baseurl: "/"
+languageCode: "en-us"
+title: "Cloud Foundry Operation"
+theme: "hugo-theme-pivotal-revealjs"
+
+params:
+
+  logo: img/cf.png
+
+  titleSlide:
+    subtitle: "Cloud Foundry Operations with BOSH"
+    notes: |
+
+      A beginners guide to operate Cloud Foundry.
