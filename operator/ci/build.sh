@@ -2,15 +2,15 @@
 
 set -ex
 
-pushd basics/site
+pushd operator/site
   hugo
 popd
 
-pushd basics/slides
+pushd operator/slides
   hugo
 popd
 
 mkdir built
-cp -r basics/site/public/* ../built/
+cp -r operator/site/public/* ../built/
 mkdir -p ../built/slides
-cp -r basics/slides/public/* ../built/slides/
+cp -r operator/slides/public/* ../built/slides/

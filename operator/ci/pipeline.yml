@@ -6,18 +6,18 @@ jobs:
   - get: summit-training-classes
     trigger: true
   - task: generate
-    file: summit-training-classes/basics/ci/build.yml
+    file: summit-training-classes/operator/ci/build.yml
   - put: cf
     params:
-      manifest: summit-training-classes/basics/ci/manifest.yml
+      manifest: summit-training-classes/operator/ci/manifest.yml
       path: built/
 
 resources:
 - name: summit-training-classes
   type: git
   source:
-    uri: https://github.com/cloudfoundry/summit-training-classes.git
-    branch: master
+    uri: https://github.com/anynines/summit-training-classes.git
+    branch: changes-on-operations
 
 - name: cf
   type: cf

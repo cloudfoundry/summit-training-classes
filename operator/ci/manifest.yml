@@ -1,4 +1,4 @@
 ---
 applications:
-- name: zero-to-hero
+- name: cf-operator-training
   buildpack: staticfile_buildpack

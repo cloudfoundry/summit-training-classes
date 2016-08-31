@@ -5,7 +5,7 @@ image_resource:
     repository: publysher/hugo
     tag: latest
 run:
-  path: basics/ci/build.sh
+  path: operator/ci/build.sh
   dir: summit-training-classes
 inputs:
 - name: summit-training-classes
