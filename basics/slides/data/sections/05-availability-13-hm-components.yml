@@ -1,0 +1,19 @@
+---
+type: "slide-basic"
+menuTitle: "Health Management in Diego"
+
+content: |
+
+  **Health Management Components:**
+
+  * **nsync**: gets message from CC (after `cf scale`). Writes the `DesiredLRP` value in BBS.
+
+  * **Cell Rep** Monitors containers to get the `ActualLRP` value
+
+  * **BBS**: Monitors `DesiredLRP` vs `ActualLRP` and kills/launches instances.
+
+
+
+notes:
+
+  This is what happens behind the scenes of a cf scale
