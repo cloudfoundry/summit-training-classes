@@ -15,6 +15,7 @@ We need to create a route for the app we are going to deploy. This route will be
 ### Push v1.0
 
 * Change to the `08-domains-routes/v1.0` directory and push the v1.0 app
+* _Does the push work? If not, why not? How can you fix this?_
 * Use `cf help` to figure out how to map your route above to this app
 * Verify your app is accessible by accessing the route you created
 
