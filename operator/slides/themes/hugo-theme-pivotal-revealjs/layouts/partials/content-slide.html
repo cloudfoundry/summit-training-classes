@@ -1,0 +1,40 @@
+<section class="content-slide"
+  {{ if isset . "backgroundColor" }} data-background="{{ .backgroundColor }}"{{ end }}
+  {{ if isset . "backgroundImage" }} data-background="{{ .backgroundImage }}"{{ end }}
+  {{ if isset . "menuTitle"}} data-menu-title="{{ .menuTitle }}"{{end}}
+  {{ if isset . "audioTrack"}} data-audio-src="{{ .audioTrack }}"{{end}}>
+
+  {{ partial "slide-title.html" . }}
+
+  {{ if isset . "type" }}
+    {{ if eq .type "title" }}
+      {{ partial "title-slide.html" . }}
+    {{ else if eq .type "basic" }}
+      {{ partial "slide-basic.html" . }}
+    {{ else if eq .type "two-column" }}
+      {{ partial "slide-two-column.html" . }}
+    {{ else if eq .type "quote" }}
+      {{ partial "slide-quote.html" . }}
+    {{ else if eq .type "section" }}
+      {{ partial "slide-section.html" . }}
+    {{ else if eq .type "statement" }}
+      {{ partial "slide-statement.html" . }}
+    {{ else if eq .type "images" }}
+      {{ partial "slide-images.html" . }}
+    {{ else if eq .type "svg" }}
+      {{ partial "slide-svg.html" . }}
+    {{ else if eq .type "pane" }}
+      {{ partial "slide-pane.html" . }}
+    {{ else if eq .type "two-line" }}
+      {{ partial "slide-two-line.html" . }}
+    {{ else if eq .type "centered" }}
+      {{ partial "slide-centered.html" . }}
+    {{ else }}
+      {{ partial "slide-basic.html" . }}
+    {{ end }}
+  {{ else }}
+    {{ partial "slide-basic.html" . }}
+  {{ end }}
+
+  {{ partial "slide-notes.html" . }}
+</section>
