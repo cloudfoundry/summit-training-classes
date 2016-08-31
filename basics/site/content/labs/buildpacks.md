@@ -65,16 +65,16 @@ called `Staticfile`.
 Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`.
 
 * _Which buildpack do you think will be used to run this app? Staticfile, or PHP?_
-* `cf push` mixed-app
+* Use `cf push` to deploy `mixed-app`
 * Observe from the CLI output which buildpack was used
-* Hit both `/index.html` and `index.php`
+* Hit both `/index.html` and `/index.php`
 * Use `cf ssh` to see what files the buildpack has added
 
 Instead of letting Cloud Foundry allow each buildpack to detect whether it can run the app, we're going to specify which buildpack we want to use.
 
-* Push the app again, this time with the flag `-b https://github.com/cloudfoundry/staticfile-buildpack`
+* Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push --help` to find out which flag to provide)
 * Observe from the CLI output which buildpack was used
-* Hit both `/index.html` and `index.php`
+* Hit both `/index.html` and `/index.php`
 * _What happens this time? Why?_
 * Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push
 

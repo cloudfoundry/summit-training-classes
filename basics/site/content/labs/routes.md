@@ -48,7 +48,7 @@ cf app
 
 ### Cutting over
 
-We pushed the new version, smoke tested it on its own domain, and then load balanced production traffic to both the new version and the old version. Now it is time to stop traffic going to the old version of the app.
+We pushed the new version, smoke tested it on its own route, and then load balanced production traffic to both the new version and the old version. Now it is time to stop traffic going to the old version of the app.
 
 * Use `cf help` to figure out how to stop sending traffic to v1.0
 * _Could you leave the v1.0 app running in case you need to roll-back?_
@@ -67,7 +67,7 @@ Congratulations! You successfully updated your running application to a new vers
 ## Beyond the Class
 
   * Set up a custom [SSL certificate](http://www.selfsignedcertificate.com/)
-  * Use [feature flags](https://docs.cloudfoundry.org/adminguide/listing-feature-flags.html) instead of ENV vars
+  * Use [feature flags](https://docs.cloudfoundry.org/adminguide/listing-feature-flags.html) instead of ENV vars for new features
   * Delete all routes that are no longer used
 
 ```bash
