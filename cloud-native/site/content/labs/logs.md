@@ -9,7 +9,7 @@ In this exercise, you will view logs for your application and instrumentation fo
 
 Cloud Foundry aggregates logs related to your application.  These include logs for components related to calls to your application.
 
-The browser app has been instrumented using <a href="http://cloud.spring.io/spring-cloud-sleuth/" target="_blank">Spring Cloud Sleuth</a>.  This add span information to your logs and can be easily hooked up to external systems for consumption.  We won't have time to deploy and configure an external service like Zipkin, but you can still view this instrumentation in the logs.
+The browser app has been instrumented using <a href="http://cloud.spring.io/spring-cloud-sleuth/" target="_blank">Spring Cloud Sleuth</a>.  This adds span information to your logs and can be easily hooked up to external systems for consumption.  We won't have time to deploy and configure an external service like Zipkin, but you can still view this instrumentation in the logs.
 
 ### Tailing Logs
 
