@@ -17,13 +17,13 @@ resources:
   type: git
   source:
     uri: https://github.com/anynines/summit-training-classes.git
-    branch: changes-on-operations
+    branch: master
 
 - name: cf
   type: cf
   source:
     api: {{cf-api}}
-    username: owolf@anynines.com
+    username: {{cf-username}}
     password: {{cf-password}}
     organization: {{cf-organization}}
     space: {{cf-space}}
