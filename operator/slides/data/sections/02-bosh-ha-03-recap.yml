@@ -39,7 +39,6 @@ content: |
           </mask>
       </defs>
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <use id="Rectangle-7" stroke="#D0011B" mask="url(#mask-2)" stroke-width="6" fill="#FFFFFF" xlink:href="#path-1" class="fragment"></use>
           <g id="stemcell" transform="translate(0.000000, 236.000000)">
               <use id="Rectangle-1" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-3"></use>
               <text font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
