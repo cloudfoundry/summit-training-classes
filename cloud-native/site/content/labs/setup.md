@@ -4,12 +4,12 @@ title: Setup
 
 ## Pivotal Web Services
 
-We will use Pivotal Web Services for this class.  
+We will use Pivotal Web Services for this class.
 
 * If you don't have an account, sign up now at: <a href="https://try.run.pivotal.io/homepage" target="_blank">try.run.pivotal.io/homepage</a>
 * You will also need the Cloud Foundry command line interface: <a href="https://console.run.pivotal.io/tools" target="_blank">console.run.pivotal.io/tools</a>
 
-If you already have the CLI, be sure you have the same recent version above.
+If you already have the CLI, be sure you have the most recent version.
 
 ### Checking Your Work
 
@@ -28,18 +28,18 @@ If you checked your work, you noticed the CF cli is self documenting.  You can r
 
 ### Login & Target
 
-Use `cf login` to target and login to Pivotal Web Services.  
+Use `cf login` to target and login to Pivotal Web Services.
 
-> If you are new to PWS, you will notice you are automatically directed to your org and the 'development' space.  
+> If you are new to PWS, you will notice you are automatically directed to your org and the 'development' space.
 
 #### Checking Your Work
 
 You should see output similar to:
 
 ```sh
-API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)   
-User:           sgreenberg@pivotal.io   
-Org:            Pivotal-Enablement   
+API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)
+User:           sgreenberg@pivotal.io
+Org:            Pivotal-Enablement
 Space:          development
 ```
 

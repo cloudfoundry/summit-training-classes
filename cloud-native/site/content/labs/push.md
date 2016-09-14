@@ -2,7 +2,7 @@
 title: Pushing a data service
 ---
 
-In this exercise, you will push a restful data microservice.  
+In this exercise, you will push a restful data microservice.
 
 > Note: Currently this microservice does not adhere to all of the 12 factor app principles.
 
@@ -34,8 +34,8 @@ Make sure your app deployed correctly:
 cf apps
 ...
 
-name     requested state   instances   memory   disk   urls   
-people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io   
+name     requested state   instances   memory   disk   urls
+people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
 ```
 
 The app also has an endpoint called `/people`.  You should also be able to curl it:

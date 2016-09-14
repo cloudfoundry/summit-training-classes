@@ -2,7 +2,7 @@
 title: Service Discovery with Eureka
 ---
 
-In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Eureka</a> server.  You will also deploy a  new app `browser` that consumes data from our people service.  
+In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Eureka</a> server.  You will also deploy a  new app `browser` that consumes data from our people service.
 
 ## About the App
 
@@ -71,9 +71,9 @@ You should also see the service instance:
 cf services
 ...
 
-name             service         plan    bound apps   last operation   
-eureka-service   user-provided           people          
-people-mysql     cleardb         spark   people       create succeeded  
+name             service         plan    bound apps   last operation
+eureka-service   user-provided           people
+people-mysql     cleardb         spark   people       create succeeded
 ```
 
 
