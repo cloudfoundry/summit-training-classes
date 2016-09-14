@@ -1,0 +1,9 @@
+---
+menuTitle: "Lab"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: "true"
+statements:
+  - Lab 5.
+  - As an app user
+  - I can still use the app even if an instance crashes

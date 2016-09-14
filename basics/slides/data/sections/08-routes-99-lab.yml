@@ -1,0 +1,8 @@
+---
+menuTitle: "Lab"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: "true"
+statements:
+  - Lab 8.
+  - As an app user, I see no downtime when the app is updated

@@ -1,0 +1,8 @@
+---
+menuTitle: "Lab"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: "true"
+statements:
+  - Lab 4.
+  - I can push apps without caring how runtime dependencies are provided

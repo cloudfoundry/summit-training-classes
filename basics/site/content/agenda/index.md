@@ -52,7 +52,7 @@ _I can investigate my apps to determine the cause of errors_
 
 <a href="/slides/#/state" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/state)
 
-_I can share persistent data between apps_
+_I can share persistent data between app instances_
 
 
 

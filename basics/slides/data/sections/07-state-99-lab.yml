@@ -1,8 +1,8 @@
 ---
-menuTitle: "Goal"
+menuTitle: "Lab"
 type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"
 statements:
-  - I want a CF account
-  - So that I can use Cloud&nbsp;Foundry
+  - Lab 7.
+  - I can share persistent data between app instances
