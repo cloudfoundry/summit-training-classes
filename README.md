@@ -1,18 +1,5 @@
-# cf-oss-training
+# Cloud Foundry Foundation Training
 
-## Prerequisites for building sites/slides
-* [Hugo](https://gohugo.io/)
+This repo contains the three open sourced training classes run at Cloud Foundry Foundation Summits.
 
-## Building course site
-
-1. `cd <courseName>/site`
-2. `hugo`
-
-Generated content will be in the `public` directory.
-
-## Building slides
-
-1. `cd <courseName>/slides`
-2. `hugo`
-
-Generated content will be in the `public` directory.
+See the `README.md` file in each subdirectory for details on how to build the materials.
