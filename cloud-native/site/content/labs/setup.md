@@ -11,13 +11,19 @@ We will use Pivotal Web Services for this class.
 
 If you already have the CLI, be sure you have the most recent version.
 
+```sh
+  cf --version
+  cf version 6.21.1+6fd3c9f-2016-08-10
+```
+If your version is not more recent that this one, please install the latest.
+
 ### Checking Your Work
 
 Be sure you have correctly installed the cli.  From a terminal window/command prompt:
 
-  ```sh
-  cf
-  ```
+```sh
+cf
+```
 
 You should see the self documenting help text.  This will be very useful as you go through the class.
 
