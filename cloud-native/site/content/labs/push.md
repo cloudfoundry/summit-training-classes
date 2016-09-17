@@ -8,7 +8,7 @@ In this exercise, you will push a restful data microservice.
 
 ## The App
 
-The app is a very simple Spring Data Rest application. You can download the jar file here: <a href="/public/cf-oss-training/cloud-native/site/resources/people.jar" target="_blank">/public/cf-oss-training/cloud-native/site/resources/people.jar</a>.
+The app is a very simple Spring Data Rest application. You can download the jar file here: <a href="/resources/people.jar" target="_blank">people.jar</a>.
 
 If you are comfortable with git and gradle, you can also clone the source here <a href="https://github.com/spgreenberg/people" target="_blank">github.com/spgreenberg/people</a> and build it yourself.
 
