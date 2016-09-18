@@ -12,12 +12,12 @@ The browser app uses Eureka to identify instances of our people service.  It use
 
 ## Deploying Eureka
 
-First you need to deploy the Eureka server.  A prebuilt jar is provided here <a href="/public/cf-oss-training/cloud-native/site/resources/eureka.jar" target="_blank">/public/cf-oss-training/cloud-native/site/resources/eureka.jar</a> or you can download and build the source from github <a href="https://github.com/spgreenberg/eureka" target="_blank">github.com/spgreenberg/eureka</a>.
+First you need to deploy the Eureka server.  A prebuilt jar is provided here <a href="/resources/eureka.jar" target="_blank">eureka.jar</a> or you can download and build the source from github <a href="https://github.com/spgreenberg/eureka" target="_blank">github.com/spgreenberg/eureka</a>.
 
 * Push the Eureka server to cloud foundry
 
 ```sh
-cf push eureka -p <path-to-jar> -m 512M -i 1 --random-route -b java_buildpack
+cf push eureka -p <path-to-jar> -m 512M --random-route -b java_buildpack
 ```
 
 ### Checking Your Work
@@ -84,7 +84,7 @@ Within a few minutes of restaging, you should see your people service registered
 
 ## Pushing the Browser App
 
-* Now, push the browser app.  The jar file is located here <a href="/public/cf-oss-training/cloud-native/site/resources/browser.jar" target="_blank">/public/cf-oss-training/cloud-native/site/resources/browser.jar</a> or you can download and build the project yourself: <a href="https://github.com/spgreenberg/browser" target="_blank">github.com/spgreenberg/browser</a>.
+* Now, push the browser app with 512MB of memory.  The jar file is located here <a href="/resources/browser.jar" target="_blank">browser.jar</a> or you can download and build the project yourself: <a href="https://github.com/spgreenberg/browser" target="_blank">github.com/spgreenberg/browser</a>.
 
 * Bind the Eureka service and restart the browser app.
 

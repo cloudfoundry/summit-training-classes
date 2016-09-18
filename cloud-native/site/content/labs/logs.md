@@ -40,4 +40,4 @@ This info is also available in the browser UI.
 * Stream Application Logs to a 3rd party tool: <a href="https://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html</a>
 * Use PCF Metrics to view detailed information about your app: <a href="http://docs.run.pivotal.io/metrics/using.html" target="_blank">docs.run.pivotal.io/metrics/using.html</a>
 * Deploy the Microservices Dashboard: <a href="https://github.com/ordina-jworks/microservices-dashboard" target="_blank">github.com/ordina-jworks/microservices-dashboard</a>
-* Use <a href="http://start.spring.io" target="_blank">start.spring.io</a> to generate a zipkin server.  Deploy it to CF and hook it up to your microservices.
+* Use <a href="http://start.spring.io" target="_blank">start.spring.io</a> to generate a zipkin server.  <a href="https://spring.io/blog/2016/02/15/distributed-tracing-with-spring-cloud-sleuth-and-spring-cloud-zipkin" target="_blank">Deploy it to CF </a> and hook it up to your microservices.
