@@ -1,7 +1,7 @@
 ---
 menuTitle: "Goal"
 id: services
-type: "scaling"
+type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"
 statements:
