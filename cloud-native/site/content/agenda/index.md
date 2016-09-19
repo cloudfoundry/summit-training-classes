@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Agenda
 ---
 
-## 1. From monoliths to microservices
+## 1. From Monoliths to Microservices
 
 <a href="/slides/#/" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/setup)
