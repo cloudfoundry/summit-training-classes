@@ -150,7 +150,7 @@ export BOSH_LITE_NAME=cfsummit-bosh-lite
 export BOSH_AWS_ACCESS_KEY_ID=[your-key-id-from-the-csv-you-have-downloaded-in-previous-steps]
 export BOSH_AWS_SECRET_ACCESS_KEY=[your-key-from-the-csv-you-have-downloaded-in-previous-steps]
 export BOSH_LITE_SUBNET_ID=subnet-04df6e5c
-export BOSH_LITE_SECURITY_GROUP=	sg-01d2cd66
+export BOSH_LITE_SECURITY_GROUP=sg-01d2cd66
 export BOSH_LITE_KEYPAIR=cfsummit-bosh-lite
 export BOSH_LITE_PRIVATE_KEY=~/.ssh/cfsummit-bosh-lite.pem
 ```
