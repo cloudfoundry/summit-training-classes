@@ -11,11 +11,11 @@ googleAnalytics = ""
 	# General information
 	author = "sgreenberg@pivotal.io"
 	description = "CF Foundation Training - Operating Cloud Foundry"
-	copyright = "Copyright Pivotal Software, Inc.  All Rights Reserved."
+	copyright = "Copyright Cloud Foundry Foundation, Inc.  All Rights Reserved."
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/pivotal-enablement/cf-oss-training"
+	repo_url = "https://github.com/cloudfoundry/summit-training-classes"
 
 	version = "1.0.0"
   headerLogo = "/img/cf-white.png"
