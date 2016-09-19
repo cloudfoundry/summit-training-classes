@@ -11,7 +11,7 @@ googleAnalytics = ""
 	# General information
 	author = "sgreenberg@pivotal.io"
 	description = "CF Foundation Training - Operating Cloud Foundry"
-	copyright = "Copyright Cloud Foundry Foundation, Inc.  All Rights Reserved."
+	copyright = "Copyright Cloud Foundry Foundation.  All Rights Reserved."
 
 	# Repository
 	provider = "GitHub"
