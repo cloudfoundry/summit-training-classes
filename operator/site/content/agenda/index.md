@@ -21,7 +21,7 @@ title: Agenda
 
 ## 3. CF Basics
 
-<a href="/slides/#/bosh-ha/cf-basics" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/cf-basics)
+<a href="/slides/#/cf-basics" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/cf-basics)
 
 *"As a CF operator, I can provision a new CF user so that user can deploy their app."*
 
@@ -41,7 +41,7 @@ title: Agenda
 
 ## 6. Upgrade
 
-<a href="/slides/#/upgrading" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/upgrading)
+<a href="/slides/#/upgrade" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/upgrading)
 
 *"As a CF operator, I can upgrade Cloud Foundry with no interruption to my users."*
 
