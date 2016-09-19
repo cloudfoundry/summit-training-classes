@@ -1,0 +1,4 @@
+---
+applications:
+- name: cf-operator-training
+  buildpack: staticfile_buildpack

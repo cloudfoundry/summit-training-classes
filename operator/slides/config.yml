@@ -1,0 +1,16 @@
+---
+
+baseurl: "/"
+languageCode: "en-us"
+title: "Cloud Foundry Operations"
+theme: "hugo-theme-pivotal-revealjs"
+
+params:
+
+  logo: img/cf.png
+
+  titleSlide:
+    subtitle: "Cloud Foundry Operations For Beginners"
+    notes: |
+
+      A beginners guide to Cloud Foundry Operations.

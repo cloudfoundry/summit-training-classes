@@ -1,0 +1,30 @@
+---
+jobs:
+- name: publish
+  public: true
+  plan:
+  - get: summit-training-classes
+    trigger: true
+  - task: generate
+    file: summit-training-classes/operator/ci/build.yml
+  - put: cf
+    params:
+      manifest: summit-training-classes/operator/ci/manifest.yml
+      path: built/
+
+resources:
+- name: summit-training-classes
+  type: git
+  source:
+    uri: https://github.com/anynines/summit-training-classes.git
+    branch: master
+
+- name: cf
+  type: cf
+  source:
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    skip_cert_check: false
