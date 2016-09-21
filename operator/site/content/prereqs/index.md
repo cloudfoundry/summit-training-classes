@@ -43,6 +43,7 @@ You must **bring your own AWS account**.  Additionally, please ensure the follow
   * Security groups
   * (1) m3.xLarge instance
 
+A guide to prepare your AWS account for installing BOSH lite can be found [here](/labs/bosh-lite-on-aws/). Instead of installing BOSH lite with vagrant you can also use an AMI to start BOSH lite (AMI ID: ami-2bcdb658).
 
 ## Not supported but possible: On your Laptop
 
