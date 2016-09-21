@@ -42,7 +42,7 @@ googleAnalytics = ""
 
 [social]
 	twitter = ""
-	github  = "pivotal-enablement/cf-oss-training"
+	github  = "cloudfoundry/summit-training-classes"
 
 
 [[menu.main]]
