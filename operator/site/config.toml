@@ -42,7 +42,7 @@ googleAnalytics = "UA-67001027-2"
 
 [social]
 	twitter = ""
-	github  = "pivotal-enablement/cf-oss-training"
+	github  = "cloudfoundry/summit-training-classes"
 
 
 [[menu.main]]
