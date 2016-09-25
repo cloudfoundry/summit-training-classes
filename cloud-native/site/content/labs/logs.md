@@ -51,13 +51,13 @@ Now lets take a look at what it looks like in <a href="Zipkin" target="_blank">Z
 
 Let's Digest some of this information.
 
-![zipkin-trace](/public/cf-oss-training/cloud-native/site/img/zipkin-trace.png)
+![zipkin-trace](/img/zipkin-trace.png)
 
 From the trace, take note of the number of spans made, the number of services called, and how long it took for the trace to finish.
 
 Lets take a look at the Spans.
 
-![spans](/public/cf-oss-training/cloud-native/site/img/spans.png)
+![spans](/img/spans.png)
 
 
 After we send our initial request to the ui what methods are called?
@@ -72,7 +72,7 @@ Lets check out the hierachy.
 
 When the initial request is sent to the **UI** a  call to the **back-office-microservice** is made which then gets data from the **account-microservice** and the **customer-mircroservice**.
 
-![dependencies](/public/cf-oss-training/cloud-native/site/img/dependencies.png  )
+![dependencies](/img/dependencies.png  )
 
 
 ## Beyond the Class
