@@ -3,81 +3,90 @@ date: 2016-04-19T19:21:15-06:00
 title: Logs
 ---
 
-In this exercise, you will view logs for your application and instrumentation for distributed tracing.
+In this exercise, you will view logs for the browser application as well as instrumentation for distributed tracing in another demo application.
 
+> Notice that Cloud Foundry automatically treats your application logs as streams and makes them easily accessible: http://12factor.net/logs
+ 
 ## CLI Logs
 
-Cloud Foundry aggregates logs related to your application.  These include logs for components related to calls to your application.
+Cloud Foundry aggregates logs related to your application.  These include logs for Cloud Foundry components as well as calls to your application.
 
-The browser app has been instrumented using <a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.0.9.RELEASE/" target="_blank">Spring Cloud Sleuth</a>.  This add span information to your logs and can be easily hooked up to external systems for consumption.
+To help with tracing of microservice calls, the browser app has been instrumented using <a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.0.9.RELEASE/" target="_blank">Spring Cloud Sleuth</a>.  This adds tracing information to your logs.
 
 ### Tailing Logs
 
 * Use `cf logs` to tail logs for your browser application.
-* Issue a few requests through the web interface.
+* Issue a few requests through the web interface for the browser application.
 
-You should see logs from the application but also the Router component of CF.
+You should see logs from the Router component of CF
 
 ```sh
 2016-05-20T12:50:59.07-0600 [RTR/5] <-- RTR is the Router.
 ```
 
-Also note:
+and also your application`.
 
 ```sh
 2016-05-20T12:52:11.07-0600 [APP/0]      OUT 2016-05-20 18:52:11.068  INFO [browser,92ca8a46b9903cdc,92ca8a46b9903cdc,true]
 ```
 
-The section `[browser,92ca8a46b9903cdc,92ca8a46b9903cdc,true]` is instrumented by Spring Cloud Sleuth.  You are seeing [app-name, spanID, traceID].
+The section `[browser,92ca8a46b9903cdc,92ca8a46b9903cdc,true]` is added by Spring Cloud Sleuth to display tracing information.  This corresponds to [app-name from configuration, spanID, traceID,...].
 
 This info is also available in the browser UI.
 
-> Notice that cloud foundry automatically treats your application logs as streams and makes them easily accessible: http://12factor.net/logs
+************** Put picture her of where you can see them in the browser UI app *************
 
-### Working with Zipkin
+If you want to see just the application logs, you can run:
+
+```sh
+cf logs | grep APP
+```
+
+## Working with Zipkin
 
 We have pushed four microservice applications that use Spring Cloud Slueth with an external [Zipkin](http://zipkin.io/) service.
 
-In the previous section you have seen span and trace ids in the application logs lets see how zipkin works with this inromation.
+The source for these applications can be found at:
+<https://github.com/mikegehard/DistributedTracingDemo_Velocity2016>
 
-Let's start a trace by sending a request to our Acme Finacial UI. <a href="/start" target="_blank">Start Trace!</a>
+The Zipkin UI can be found at <http://zipkin-server-receivable-plasmolysis.cfapps.io/>.
 
-Now lets take a look at what it looks like in <a href="Zipkin" target="_blank">Zipkin</a>.
+In the previous section you saw span and trace ids added to the application logs. Now lets see how zipkin works with this information to provide visiblity into your microservice application.
 
-  - From the Zipkin UI make sure you are on the `Find a trace` tab.
-  - Select acme-financial-ui
-    - then select Find Traces
-  - Select a trace.
+If you want to add a new trace, you can curl any one of the microservices using:
 
-Let's Digest some of this information.
+```sh
+curl http://acme-financial-ui-transferrable-conversazione.cfapps.io/start
+curl http://acme-financial-account-microservice-parlourish-pumicer.cfapps.io/action
+curl http://acme-financial-back-office-microservice-spoutless-nonfreeman.cfapps.io//action
+curl http://acme-financial-customer-microservice-overeager-browser.cfapps.io//action
+```
 
-![zipkin-trace](/img/zipkin-trace.png)
+### Understanding the trace hierarchy
 
-From the trace, take note of the number of spans made, the number of services called, and how long it took for the trace to finish.
+In your browser Navigate to the <a href="http://zipkin-server-receivable-plasmolysis.cfapps.io/dependency" target="_blank">dependencies</a> to view the microservice hierarchy.
 
-Lets take a look at the Spans.
+* Which microservices get called from the UI service?
+* Which microservices are at the end of the call chain?
 
-![spans](/img/spans.png)
+### Viewing trace timings
 
+In your browser Navigate <a href="http://zipkin-server-receivable-plasmolysis.cfapps.io/" target="_blank">here</a> to access the find trace form.
 
-After we send our initial request to the ui what methods are called?
+Clicking on the `Find Traces` button will bring up a list of existing traces.
 
-What happens in the back-office service?
+Click on one of the traces and let's dive into the details.
 
-## Understanding the trace hierarchy
-
-In your browser Navigate to the<a href="/dependency" target="_blank">dependencies</a> or your traces.
-
-Lets check out the hierachy.
-
-When the initial request is sent to the **UI** a  call to the **back-office-microservice** is made which then gets data from the **account-microservice** and the **customer-mircroservice**.
-
-![dependencies](/img/dependencies.png  )
-
+* How many services are invoved in this trace?
+* How long does the total trace take?
+* What HTTP endpoints get called for each span?
+* What controller methods get called for each span?
+* How long is spent in each span for the trace?
+* Which leaf service takes the longest?
 
 ## Beyond the Class
 
-* Stream Application Logs to <a href="https://papertrailapp.com" target="_blank">Papertrail</a> via <a href="https://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">these instructions.</a>
+* Stream Application Logs to <a href="https://papertrailapp.com" target="_blank">Papertrail</a> via <a href="https://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">these instructions. </a> Can you identify the log entries for each span?
 * Use PCF Metrics to view detailed information about your app: <a href="http://docs.run.pivotal.io/metrics/using.html" target="_blank">docs.run.pivotal.io/metrics/using.html</a>
 * Deploy the Microservices Dashboard: <a href="https://github.com/ordina-jworks/microservices-dashboard" target="_blank">github.com/ordina-jworks/microservices-dashboard</a>
 <!-- * Use <a href="http://start.spring.io" target="_blank">start.spring.io</a> to generate a zipkin server.  <a href="https://spring.io/blog/2016/02/15/distributed-tracing-with-spring-cloud-sleuth-and-spring-cloud-zipkin" target="_blank">Deploy it to CF </a> and hook it up to your microservices. -->
