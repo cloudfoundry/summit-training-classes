@@ -6,7 +6,7 @@ title: Logs
 In this exercise, you will view logs for the browser application as well as instrumentation for distributed tracing in another demo application.
 
 > Notice that Cloud Foundry automatically treats your application logs as streams and makes them easily accessible: http://12factor.net/logs
- 
+
 ## CLI Logs
 
 Cloud Foundry aggregates logs related to your application.  These include logs for Cloud Foundry components as well as calls to your application.
@@ -34,8 +34,7 @@ The section `[browser,92ca8a46b9903cdc,92ca8a46b9903cdc,true]` is added by Sprin
 
 This info is also available in the browser UI.
 
-************** Put picture her of where you can see them in the browser UI app *************
-
+![ui-span-trace-id](/img/ui-span-trace-id.png)
 If you want to see just the application logs, you can run:
 
 ```sh
