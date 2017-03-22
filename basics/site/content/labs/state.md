@@ -10,7 +10,7 @@ In this lab,  you will create an instance of a Redis service and use it with an 
 First, you need to create an instance of the service.
 
 * Use `cf marketplace` to view the details of the Redis service
-* Use `cf service` to create an instance of the `30mb` plan
+* Use the CLI to create an instance of the `30mb` plan
 
 #### Checking Your Work
 
