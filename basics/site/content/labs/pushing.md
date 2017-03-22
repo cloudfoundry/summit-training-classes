@@ -5,6 +5,14 @@ title: Pushing your first app
 
 In this exercise, you will deploy an app to Cloud Foundry.
 
+## Get the code
+
+We'll be working with applications that have already been written and are available on GitHub.
+
+* Clone the apps repository with `git clone https://github.com/EngineerBetter/training-zero-to-hero.git`
+
+All paths in these exercises assume that you're in the `training-zero-to-hero` directory.
+
 ## Push my app
 
 Be sure you are logged in and targeting your org/space.
