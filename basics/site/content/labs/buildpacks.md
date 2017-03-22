@@ -36,7 +36,7 @@ $ cf app static-app
 
 ## Scaling with Speed
 
-* Use `cf scale` to scale your static app to 32 instances
+* Use `cf scale` to scale your static app to 16 instances
 * _Why is CF able to scale instances so quickly?_
 
 
