@@ -16,7 +16,11 @@ A buggy app is included in the `06-debugging/debug-app` directory with a manifes
 
 * Open a browser and access the app.
 * Observe a 500 error.
-* _How does this impact app health? How does an error on one page compare to a crashing app from the last lab?_
+* _What does Cloud Foundry think the health of the app is? How did it draw this conclusion?_
+
+Getting fast feedback on failures is a key element of agility. The sooner we know something is broken, the sooner we can fix it.
+
+* Use `cf push --help` and Cloud Foundry documentation to push the app again, in a way that Cloud Foundry will deem it unhealthy
 
 ## Check out the Logs
 
