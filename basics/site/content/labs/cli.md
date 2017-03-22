@@ -36,7 +36,7 @@ cf <some-command> --help
 
 ## Logging in
 
-You can use the CLI to log into any cloud foundry you have an account in.
+You can use the CLI to log into any Cloud Foundry you have an account in.
 
 * Use `cf help` to find out how to login to Pivotal Web Services
 
