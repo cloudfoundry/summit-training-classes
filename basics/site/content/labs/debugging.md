@@ -47,7 +47,7 @@ This app can be fixed by setting an environment variable and restarting it.
 
 Now the app offers other links that allow you to terminate the app's process, use up all the app's RAM, or fill the disk.
 
-* Click "crash"
+* Click "stop process"
 * Observe the output of `cf events` and `cf logs` for your app
 * Click "exhaust memory"
 * Observe the output of `cf events` and `cf logs` for your app
