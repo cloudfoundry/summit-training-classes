@@ -68,7 +68,8 @@ Congratulations! You successfully updated your running application to a new vers
 ## Beyond the Class
 
   * Set up a custom [SSL certificate](http://www.selfsignedcertificate.com/)
-  * Use [feature flags](https://docs.cloudfoundry.org/adminguide/listing-feature-flags.html) instead of ENV vars for new features
+  * Read about how libraries like [Togglz](https://www.togglz.org/) and [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/) can be used for application feature flags
+  * Consider how you can ensure that API and schema changes are backwards-compatible when pushing new versions of apps
   * Delete all routes that are no longer used
 
 ```bash
