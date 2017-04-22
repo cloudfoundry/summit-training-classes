@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Debugging
 ---
 
-In this lab, you will continue to master debugging techniques for your applications.
+In this lab, you will use the CF CLI to view an app's logs, as well as to find out what Cloud Foundry itself thinks is happening to your app.
 
 ## Push a buggy app
 
