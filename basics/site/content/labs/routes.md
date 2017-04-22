@@ -37,7 +37,7 @@ Imagine that a new version of the app has been developed. We want to push it and
 
 If this app was being deployed automatically, this is the point that smoke tests would be run against the new version. If the new version works on the random route, we can proceed to load-balance production traffic to it.
 
-* Use the CF cli to map traffic hitting the main route you created to v1.1
+* Use the CF CLI to map traffic hitting the main route you created to v1.1
 
 #### Checking Your Work
 

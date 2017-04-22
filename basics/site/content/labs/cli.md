@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: CLI Basics
 ---
 
-In this section we will cover the basics of installing and using the CF command line interface (cli).
+In this section we will cover the basics of installing and using the CF command line interface (CLI).
 
 ## Installing
 
@@ -28,7 +28,7 @@ USAGE:
 ...
 ```
 
-Notice that the CF cli is self documenting.  You can type any command with `--help` to see details.  Typing `cf` only lists all available commands.
+Notice that the CF CLI is self documenting.  You can type any command with `--help` to see details.  Typing `cf` only lists all available commands.
 
 ```sh
 cf <some-command> --help
@@ -69,5 +69,5 @@ $ cf target -o ORG -s SPACE
 
   * Add the person next to you to your PWS space
   * Create an account on [IBM Bluemix](https://console.ng.bluemix.net/registration/)
-  * Use [Targets cf cli plugin](https://github.com/guidowb/cf-targets-plugin) with PWS &amp; Bluemix
-  * Submit a localisation pull request to [cf cli](https://github.com/cloudfoundry/cli/blob/master/cf/i18n/README-i18n.md)
+  * Use [Targets CF CLI plugin](https://github.com/guidowb/cf-targets-plugin) with PWS &amp; Bluemix
+  * Submit a localisation pull request to [CF CLI](https://github.com/cloudfoundry/cli/blob/master/cf/i18n/README-i18n.md)
