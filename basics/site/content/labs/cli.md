@@ -5,7 +5,7 @@ title: CLI Basics
 
 In this section we will cover the basics of installing and using the CF command line interface (CLI).
 
-## Installing
+## Install the CLI
 
 {{% do %}}Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads){{% /do %}}
 
@@ -34,7 +34,7 @@ Notice that the CF CLI is self documenting.  You can type any command with `--he
 cf <some-command> --help
 ```
 
-## Logging in
+## Log In
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
 
@@ -57,7 +57,7 @@ cf target
 {{% question %}}Are you logged into Pivotal Web Services?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
 
-## Targeting Orgs & Spaces
+## Target Orgs & Spaces
 
 You can change the org and space you are targeting without logging in again.
 

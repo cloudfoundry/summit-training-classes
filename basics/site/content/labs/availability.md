@@ -5,7 +5,7 @@ title: Availability
 
 In this lab, we will use purposefully crash app instances and see how Cloud Foundry works to maintain availability.
 
-## Pushing a Crashable App
+## Push a Crashable App
 
 {{% question %}}What happens when an app crashes?{{% /question %}}
 {{% do %}}Change to the `05-resilience/imperfect-app` directory and push the crashable app.{{% /do %}}

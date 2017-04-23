@@ -6,7 +6,7 @@ title: Routes
 In this exercise, you will use route mapping to perform a zero-downtime upgrade of an app.
 
 
-## Create a new route
+## Create a New Route
 
 We need to create a route for the app we are going to deploy. This route will be used for _all_ versions of the app, so should stay the same even when the app is updated.
 

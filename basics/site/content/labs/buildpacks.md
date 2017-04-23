@@ -5,7 +5,7 @@ title: Buildpacks
 
 In this exercise, we will examine a running app to understand what a buildpack provides.
 
-## System Buildpacks
+## View System Buildpacks
 
 {{% do %}}Use `cf help` to find out how to take a look at the buildpacks configured in PWS.{{% /do %}}
 {{% question %}}If you don't specify a buildpack, what is the first one that will be tested for?{{% /question %}}
@@ -28,13 +28,13 @@ $ cf app static-app
 #0   running   2015-11-02   0.0%   6.5M of 16M   33.6M of 64M
 ```
 
-## Exploring Buildpack Output
+## Explore Buildpack Output
 
 {{% question %}}How does the running droplet compare to your app directory?{{% /question %}}
 {{% do %}}Use `cf ssh static-app` to explore the filesystem of the running application{{% /do %}}
 {{% observe %}}Observe what additional dependencies the buildpack made available for your app{{% /observe %}}
 
-## Scaling with Speed
+## Scale with Speed
 
 {{% do %}}Use `cf scale` to scale your static app to 16 instances{{% /do %}}
 {{% question %}}Why is CF able to scale instances so quickly?{{% /question %}}
@@ -57,7 +57,7 @@ $ cf app static-app
 ```
 
 
-## Picking the Correct Buildpack
+## Override the Chosen Buildpack
 
 Cloud Foundry correctly used the Staticfile Buildpack to deploy your app. It did this because the app includes a file
 called `Staticfile`.
@@ -78,7 +78,7 @@ Instead of letting Cloud Foundry allow each buildpack to detect whether it can r
 {{% do %}}Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push{{% /do %}}
 
 
-## Cleaning Up
+## Clean Up
 
 {{% do %}}Delete your apps to free up space.{{% /do %}}
 

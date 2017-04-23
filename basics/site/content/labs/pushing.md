@@ -5,7 +5,7 @@ title: Pushing your first app
 
 In this exercise, you will deploy an app to Cloud Foundry.
 
-## Get the code
+## Get the App Code
 
 We'll be working with applications that have already been written and are available on GitHub.
 
@@ -17,7 +17,7 @@ All paths in these exercises assume that you're in the `training-zero-to-hero` d
 {{% do %}}Open a terminal window (Linux, macOS) or command prompt (Windows){{% /do %}}
 {{% do %}}Navigate to the `training-zero-to-hero` using the `cd` command{{% /do %}}
 
-## Push my app
+## Push the App
 
 Be sure you are logged in and targeting your org/space.
 
@@ -90,7 +90,7 @@ buildpack: ruby 1.6.7
 #0   running   2015-11-02   0.0%   25.7M of 32M   95.1M of 256M
 ```
 
-## Pushing worker apps
+## Push the Worker App
 
 Not all apps need to respond to HTTP requests: instead they might do background work, such as consuming messages from a queue.
 
@@ -114,7 +114,7 @@ buildpack: binary_buildpack
 #0   running   2015-11-02   0.0%   10.7M of 16M   27.3M of 64M
 ```
 
-## Viewing Logs
+## View App Logs
 
 The worker app outputs logs.  Use `cf help` to determine what command to run to see recent logs.
 

@@ -5,7 +5,7 @@ title: Debugging
 
 In this lab, you will use the CF CLI to view an app's logs, as well as to find out what Cloud Foundry itself thinks is happening to your app.
 
-## Push a buggy app
+## Push a Buggy App
 
 A buggy app is included in the `06-debugging/debug-app` directory with a manifest.
 
@@ -43,7 +43,7 @@ This app can be fixed by setting an environment variable and restarting it.
 {{% do %}}Use `cf help` to find out how to set an environment variable for your app called `FIXED` with a value of `true`{{% /do %}}
 {{% do %}}Restart your app, and visit it in a browser to check that the bug is fixed{{% /do %}}
 
-## Debugging with Events
+## Debug with Events
 
 Now the app offers other links that allow you to terminate the app's process, use up all the app's RAM, or fill the disk.
 
@@ -64,7 +64,7 @@ You should see something like the following:
 {{% do %}}Click the 'exhaust disk' link, and check `cf logs` and `cf events`.{{% /do %}}
 {{% question %}}What happens? Is this what you expected?{{% /question %}}
 
-## App instrumentation
+## Set up App Performance Monitoring
 
 We will use New Relic as a example.  The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing. Services are covered in another section of this course, so don't worry if you don't understand these commands.
 
