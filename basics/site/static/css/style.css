@@ -5,3 +5,38 @@
 .article ul {
   margin-top: 3px;
 }
+
+.article p.instruction:before {
+    display: block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: 16px;
+    width: 1.2em;
+    margin-left: -1.2em;
+    vertical-align: -.1em
+}
+
+.article p.instruction {
+  margin: 0;
+  margin-left: 18px;
+}
+
+.article p.instruction.do:before {
+  color: #5677fc;
+  content: "\f054";
+}
+
+.article p.instruction.question {
+  font-weight:bold;
+}
+
+.article p.instruction.question:before {
+  color: #e84e40;
+  content: "\f128";
+  font-weight: normal;
+}
+
+.article p.instruction.observe:before {
+  color: #259b24;
+  content: "\f06e";
+}
