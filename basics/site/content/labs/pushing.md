@@ -9,7 +9,7 @@ In this exercise, you will deploy an app to Cloud Foundry.
 
 We'll be working with applications that have already been written and are available on GitHub.
 
-{{% do %}}If you do not have `git` installed, you can download the code from [https://github.com/EngineerBetter/training-zero-to-hero.git](https://github.com/EngineerBetter/training-zero-to-hero.git). You'll need to unzip it once you have downloaded it.{{% /do %}}
+{{% do %}}If you do not have `git` installed, you can download the code from [https://github.com/EngineerBetter/training-zero-to-hero/archive/master.zip](https://github.com/EngineerBetter/training-zero-to-hero/archive/master.zip). You'll need to unzip it once you have downloaded it.{{% /do %}}
 {{% do %}}If you have `git` installed, you can clone the repository with `git clone https://github.com/EngineerBetter/training-zero-to-hero.git`{{% /do %}}
 
 All paths in these exercises assume that you're in the `training-zero-to-hero` directory.
