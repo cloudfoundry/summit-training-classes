@@ -9,8 +9,8 @@ In this lab,  you will create an instance of a Redis service and use it with an 
 
 First, you need to create an instance of the service.
 
-* Use `cf marketplace` to view the details of the Redis service
-* Use the CLI to create an instance of the `30mb` plan
+{{% do %}}Use `cf marketplace` to view the details of the Redis service{{% /do %}}
+{{% do %}}Use the CLI to create an instance of the `30mb` plan{{% /do %}}
 
 #### Checking Your Work
 
@@ -27,9 +27,9 @@ redis   rediscloud   30mb                create succeeded
 
 You need to bind your service instance to your application so it can be used.
 
-* Push `07-shared-state/stateful-app` with the `--no-start` flag
-* Use `cf bind-service` to bind your service instance to your app
-* Start your app so that it can pick up the environment variables
+{{% do %}}Push `07-shared-state/stateful-app` with the `--no-start` flag{{% /do %}}
+{{% do %}}Use `cf bind-service` to bind your service instance to your app{{% /do %}}
+{{% do %}}Start your app so that it can pick up the environment variables{{% /do %}}
 
 #### Checking Your Work
 
@@ -45,31 +45,31 @@ If you hit the `/env` endpoint of your app, or run the command `cf env stateful-
 
 By storing state in a service we can restart apps without losing any data.
 
-* Visit the app in a browser
-* Observe the number of requests this app instance has served, along with the overall total number of requests _all_ app instances have served
-* Restart the app and visit it in a browser again
-* Observe that the total number of requests is still stored in Redis, even though the app was restarted
+{{% do %}}Visit the app in a browser{{% /do %}}
+{{% observe %}}Observe the number of requests this app instance has served, along with the overall total number of requests _all_ app instances have served{{% /observe %}}
+{{% do %}}Restart the app and visit it in a browser again{{% /do %}}
+{{% observe %}}Observe that the total number of requests is still stored in Redis, even though the app was restarted{{% /observe %}}
 
 ## Exploring the Service Instance Lifecycle
 
 Service instances can be shared by many apps, and can live longer than the apps that use them.
 
-* Increase the number of instances of your app
-* Visit your app to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance
+{{% do %}}Increase the number of instances of your app{{% /do %}}
+{{% do %}}Visit your app to see the difference between different app instances serving requests and the overall hit count in their shared Redis service instance{{% /do %}}
 
 Now we have many app instances Cloud Foundry is load-balancing between them, but they're all sharing the same Redis instance.
 
-* _What will happen when we unbind the app?_
-* Stop the app, and use `cf unbind-service` to unbind the service from the app
-* Rebind the app, and start it
-* Observe that the Redis instance still holds the same state
+{{% question %}}What will happen when we unbind the app?{{% /question %}}
+{{% do %}}Stop the app, and use `cf unbind-service` to unbind the service from the app{{% /do %}}
+{{% do %}}Rebind the app, and start it{{% /do %}}
+{{% observe %}}Observe that the Redis instance still holds the same state{{% /observe %}}
 
 Unbinding did not delete data in Redis. It _did_ remove the credentials that our app was using to connect to Redis, but new ones were issued when we bound the app again.
 
-* _What will happen when we delete the service instance?_
-* _Can you use `cf delete-service redis`?_
-* Do whatever is necessary to delete the service instance, and then create it again
-* When you start your app and visit it in a browser, you'll see that this is a new, clean Redis instance with no existing state
+{{% question %}}What will happen when we delete the service instance?{{% /question %}}
+{{% question %}}Can you use `cf delete-service redis`?{{% /question %}}
+{{% do %}}Do whatever is necessary to delete the service instance, and then create it again{{% /do %}}
+{{% observe %}}When you start your app and visit it in a browser, you'll see that this is a new, clean Redis instance with no existing state{{% /observe %}}
 
 ## Beyond the Class
 

@@ -7,7 +7,7 @@ For this class, we will use the Cloud Foundry running on Pivotal Web Services. Y
 
 ## Sign Up
 
-* Sign up by going to [https://run.pivotal.io/](https://run.pivotal.io/)
+{{% do %}}Sign up by going to [https://run.pivotal.io/](https://run.pivotal.io/){{% /do %}}
 
 
 ## Beyond the Class

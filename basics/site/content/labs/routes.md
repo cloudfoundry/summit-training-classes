@@ -10,14 +10,14 @@ In this exercise, you will use route mapping to perform a zero-downtime upgrade 
 
 We need to create a route for the app we are going to deploy. This route will be used for _all_ versions of the app, so should stay the same even when the app is updated.
 
-* Use `cf create-route` to a create a new route for your app, making sure the domain is `cfapps.io`
+{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the domain is `cfapps.io`{{% /do %}}
 
 ### Push v1.0
 
-* Change to the `08-domains-routes/v1.0` directory and push the v1.0 app
-* _Does the push work? If not, why not? How can you fix this?_
-* Use `cf help` to figure out how to map your route above to this app
-* Verify your app is accessible by accessing the route you created
+{{% do %}}Change to the `08-domains-routes/v1.0` directory and push the v1.0 app{{% /do %}}
+{{% question %}}Does the push work? If not, why not? How can you fix this?{{% /question %}}
+{{% do %}}Use `cf help` to figure out how to map your route above to this app{{% /do %}}
+{{% do %}}Verify your app is accessible by accessing the route you created{{% /do %}}
 
 #### Checking Your Work
 
@@ -31,13 +31,13 @@ cf app
 
 Imagine that a new version of the app has been developed. We want to push it and check that it works.
 
-* Push version 1.1 of the app from `08-domains-routes/v1.1` and assign it a random route
-* Do not map your main route yet
-* Validate you can access the app by accessing the random route
+{{% do %}}Push version 1.1 of the app from `08-domains-routes/v1.1` and assign it a random route{{% /do %}}
+{{% do %}}Do not map your main route yet{{% /do %}}
+{{% do %}}Validate you can access the app by accessing the random route{{% /do %}}
 
 If this app was being deployed automatically, this is the point that smoke tests would be run against the new version. If the new version works on the random route, we can proceed to load-balance production traffic to it.
 
-* Use the CF CLI to map traffic hitting the main route you created to v1.1
+{{% do %}}Use the CF CLI to map traffic hitting the main route you created to v1.1
 
 #### Checking Your Work
 
@@ -51,8 +51,8 @@ cf app
 
 We pushed the new version, smoke tested it on its own route, and then load balanced production traffic to both the new version and the old version. Now it is time to stop traffic going to the old version of the app.
 
-* Use `cf help` to figure out how to stop sending traffic to v1.0
-* _Could you leave the v1.0 app running in case you need to roll-back?_
+{{% do %}}Use `cf help` to figure out how to stop sending traffic to v1.0{{% /do %}}
+{{% question %}}Could you leave the v1.0 app running in case you need to roll-back?{{% /question %}}
 
 #### Checking Your Work
 

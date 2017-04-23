@@ -7,7 +7,7 @@ In this section we will cover the basics of installing and using the CF command 
 
 ## Installing
 
-* Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads)
+{{% do %}}Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads){{% /do %}}
 
 #### Checking Your Work
 
@@ -38,7 +38,7 @@ cf <some-command> --help
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
 
-* Use `cf help` to find out how to login to Pivotal Web Services
+{{% do %}}Use `cf help` to find out how to login to Pivotal Web Services{{% /do %}}
 
 The API endpoint you need is `api.run.pivotal.io`.
 
@@ -54,8 +54,8 @@ You can see where you are logged in using the following:
 cf target
 ```
 
-* _Are you logged into Pivotal Web Services?_
-* _What org and space are you targeting?_
+{{% question %}}Are you logged into Pivotal Web Services?{{% /question %}}
+{{% question %}}What org and space are you targeting?{{% /question %}}
 
 ## Targeting Orgs & Spaces
 

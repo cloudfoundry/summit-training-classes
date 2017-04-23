@@ -7,24 +7,22 @@ In this lab, we will use purposefully crash app instances and see how Cloud Foun
 
 ## Pushing a Crashable App
 
-_What happens when an app crashes?_
-
-* Change to the `05-resilience/imperfect-app` directory and push the crashable app.
-* Note the random URL for your app, and visit it in a browser.
-* Click the 'crash' link
-* Use `cf app imperfect-app` to see the state of your app.
-
-Can you see it in the "crashed" state before Cloud Foundry restarts it?
+{{% question %}}What happens when an app crashes?{{% /question %}}
+{{% do %}}Change to the `05-resilience/imperfect-app` directory and push the crashable app.{{% /do %}}
+{{% do %}}Note the random URL for your app, and visit it in a browser.{{% /do %}}
+{{% do %}}Click the 'crash' link{{% /do %}}
+{{% do %}}Use `cf app imperfect-app` to see the state of your app.{{% /do %}}
+{{% question %}}Can you see it in the "crashed" state before Cloud Foundry restarts it?{{% /question %}}
 
 ## Access Your App Amid Failures
 
-* Scale your app to 3 instances.
+{{% do %}}Scale your app to 3 instances.{{% /do %}}
 
 #### Checking Your Work
 
-* Use `cf apps` to ensure you have 3 instances requested.
-* Visit your app and click the 'crash' link.
-* Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.
+{{% do %}}Use `cf apps` to ensure you have 3 instances requested.{{% /do %}}
+{{% do %}}Visit your app and click the 'crash' link.{{% /do %}}
+{{% do %}}Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.{{% /do %}}
 
 ### Can you crash instances quicker than Cloud Foundry can restart them?
 
@@ -45,7 +43,7 @@ $ cf app imperfect-app
 #2   down      2015-11-02  0.0%   0 of 0         0 of 0
 ```
 
-* _What happens if you make a request whilst they are all down?_
+{{% question %}}What happens if you make a request whilst they are all down?{{% /question %}}
 
 ## Beyond the Class
 

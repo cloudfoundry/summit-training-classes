@@ -7,15 +7,15 @@ In this exercise, we will examine a running app to understand what a buildpack p
 
 ## System Buildpacks
 
-* Use `cf help` to find out how to take a look at the buildpacks configured in PWS.
-* _If you don't specify a buildpack, what is the first one that will be tested for?_
+{{% do %}}Use `cf help` to find out how to take a look at the buildpacks configured in PWS.{{% /do %}}
+{{% question %}}If you don't specify a buildpack, what is the first one that will be tested for?{{% /question %}}
 
 
 ## Pushing with the Static Buildpack
 
 An app is included in the `04-buildpacks/static-app` directory.
 
-* Push the app in `04-buildpacks/static-app` to CF using the provided manifest
+{{% question %}}Push the app in `04-buildpacks/static-app` to CF using the provided manifest{{% /question %}}
 
 #### Checking Your Work
 
@@ -30,14 +30,14 @@ $ cf app static-app
 
 ## Exploring Buildpack Output
 
-* _How does the running droplet compare to your app directory?_
-* Use `cf ssh static-app` to explore the filesystem of the running application
-* Observe what additional dependencies the buildpack made available for your app
+{{% question %}}How does the running droplet compare to your app directory?{{% /question %}}
+{{% do %}}Use `cf ssh static-app` to explore the filesystem of the running application{{% /do %}}
+{{% observe %}}Observe what additional dependencies the buildpack made available for your app{{% /observe %}}
 
 ## Scaling with Speed
 
-* Use `cf scale` to scale your static app to 16 instances
-* _Why is CF able to scale instances so quickly?_
+{{% do %}}Use `cf scale` to scale your static app to 16 instances{{% /do %}}
+{{% question %}}Why is CF able to scale instances so quickly?{{% /question %}}
 
 
 #### Checking Your Work
@@ -62,26 +62,25 @@ $ cf app static-app
 Cloud Foundry correctly used the Staticfile Buildpack to deploy your app. It did this because the app includes a file
 called `Staticfile`.
 
-Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`.
-
-* _Which buildpack do you think will be used to run this app? Staticfile, or PHP?_
-* Use `cf push` to deploy `mixed-app`
-* Observe from the CLI output which buildpack was used
-* Hit both `/index.html` and `/index.php`
-* Use `cf ssh` to see what files the buildpack has added
+{{% do %}}Change into `04-buildpacks/mixed-app` and see that the directory contains both `index.html` and `index.php`{{% /do %}}
+{{% question %}}Which buildpack do you think will be used to run this app? Staticfile, or PHP?{{% /question %}}
+{{% do %}}Use `cf push` to deploy `mixed-app`{{% /do %}}
+{{% observe %}}Observe from the CLI output which buildpack was used{{% /observe %}}
+{{% do %}}Hit both `/index.html` and `/index.php`{{% /do %}}
+{{% do %}}Use `cf ssh` to see what files the buildpack has added{{% /do %}}
 
 Instead of letting Cloud Foundry allow each buildpack to detect whether it can run the app, we're going to specify which buildpack we want to use.
 
-* Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push --help` to find out which flag to provide)
-* Observe from the CLI output which buildpack was used
-* Hit both `/index.html` and `/index.php`
-* _What happens this time? Why?_
-* Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push
+{{% do %}}Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push --help` to find out which flag to provide){{% /do %}}
+{{% observe %}}Observe from the CLI output which buildpack was used{{% /observe %}}
+{{% do %}}Hit both `/index.html` and `/index.php`{{% /do %}}
+{{% question %}}What happens this time? Why?{{% /question %}}
+{{% do %}}Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push{{% /do %}}
 
 
 ## Cleaning Up
 
-Delete your apps to free up space.
+{{% do %}}Delete your apps to free up space.{{% /do %}}
 
 ## Beyond the Class
 

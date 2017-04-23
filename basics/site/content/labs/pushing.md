@@ -9,15 +9,19 @@ In this exercise, you will deploy an app to Cloud Foundry.
 
 We'll be working with applications that have already been written and are available on GitHub.
 
-* Clone the apps repository with `git clone https://github.com/EngineerBetter/training-zero-to-hero.git`
+{{% do %}}If you do not have `git` installed, you can download the code from [https://github.com/EngineerBetter/training-zero-to-hero.git](https://github.com/EngineerBetter/training-zero-to-hero.git). You'll need to unzip it once you have downloaded it.{{% /do %}}
+{{% do %}}If you have `git` installed, you can clone the repository with `git clone https://github.com/EngineerBetter/training-zero-to-hero.git`{{% /do %}}
 
 All paths in these exercises assume that you're in the `training-zero-to-hero` directory.
+
+{{% do %}}Open a terminal window (Linux, macOS) or command prompt (Windows){{% /do %}}
+{{% do %}}Navigate to the `training-zero-to-hero` using the `cd` command{{% /do %}}
 
 ## Push my app
 
 Be sure you are logged in and targeting your org/space.
 
-* Push the app in `03-push/web-app` to Cloud Foundry
+{{% do %}}Push the app in `03-push/web-app` to Cloud Foundry{{% /do %}}
 
 ```bash
 $ cd 03-push/web-app
@@ -90,8 +94,8 @@ buildpack: ruby 1.6.7
 
 Not all apps need to respond to HTTP requests: instead they might do background work, such as consuming messages from a queue.
 
-* Push the app in the `worker-app` directory
-* _What differences are there in the manifest? Why are these needed?_
+{{% do %}}Push the app in the `worker-app` directory{{% /do %}}
+{{% do %}}What differences are there in the manifest? Why are these needed?{{% /do %}}
 
 #### Checking Your Work
 
@@ -126,7 +130,7 @@ You should see an output similar to:
 
 You can also delete apps.
 
-* Delete the two apps you deployed (use `cf help` to find the correct command)
+{{% do %}}Delete the two apps you deployed (use `cf help` to find the correct command){{% /do %}}
 
 #### Checking Your Work
 
