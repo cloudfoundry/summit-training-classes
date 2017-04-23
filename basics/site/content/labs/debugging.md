@@ -28,13 +28,15 @@ Getting fast feedback on failures is a key element of agility. The sooner we kno
 
 If you do not specify the `--recent` flag to `cf logs`, it will start tailing logs from that point onwards.
 
-#### Checking Your Work
+{{% checking %}}
 
 You should see something similar to this in the logs:
 
 ```sh
 ... [App/0] ERR ...  - RuntimeError - I am a bug, fix me:
 ```
+
+{{% /checking %}}
 
 ### Fix it
 
@@ -53,13 +55,15 @@ Now the app offers other links that allow you to terminate the app's process, us
 {{% observe %}}Observe the output of `cf events` and `cf logs` for your app{{% /observe %}}
 {{% question %}}How do the two compare? What help does Cloud Foundry give you in determining the cause of failure?{{% /question %}}
 
-#### Checking Your Work
+{{% checking %}}
 
 You should see something like the following:
 
 ```sh
 ... index: 0, reason: CRASHED, exit_description: 2 error(s) ...
 ```
+
+{{% /checking %}}
 
 {{% do %}}Click the 'exhaust disk' link, and check `cf logs` and `cf events`.{{% /do %}}
 {{% question %}}What happens? Is this what you expected?{{% /question %}}
@@ -79,8 +83,7 @@ We will use New Relic as a example.  The process involves creating an instance o
 New Relic has a dashboard. You can find the URL by looking at the service details.
 
 {{% do %}}Visit the URL reported by `cf service newrelic`{{% /do %}}
-
-It takes some time for the data from your app to be visible in the New Relic dashboard.
+{{% observe %}}Observe graphs showing app performance data in the New Relic dashboard. Sometimes it takes a few minutes for the data to arrive. {{% /observe %}}
 
 
 ## SSH access

@@ -15,18 +15,8 @@ In this exercise, we will examine a running app to understand what a buildpack p
 
 An app is included in the `04-buildpacks/static-app` directory.
 
-{{% question %}}Push the app in `04-buildpacks/static-app` to CF using the provided manifest{{% /question %}}
-
-#### Checking Your Work
-
-You can view the details of your app:
-
-```sh
-$ cf app static-app
-
-     state     since        cpu    memory        disk
-#0   running   2015-11-02   0.0%   6.5M of 16M   33.6M of 64M
-```
+{{% do %}}Push the app in `04-buildpacks/static-app` to CF using the provided manifest{{% /do %}}
+{{% question %}}How can you check that you pushed your app successfully?{{% /question %}}
 
 ## Explore Buildpack Output
 
@@ -52,8 +42,8 @@ $ cf app static-app
 #1   starting   2015-11-02   0.0%   0 of  16M     0 of 64M
 #2   running    2015-11-02   0.0%   6.9M of 16M   33.5M of 64M
 ...
-#30   running   2015-11-02   0.0%   6.8M of 16M   33.5M of 64M
-#31   running   2015-11-02   0.0%   7M of 16M     33.6M of 64M
+#14   running   2015-11-02   0.0%   6.8M of 16M   33.5M of 64M
+#15   running   2015-11-02   0.0%   7M of 16M     33.6M of 64M
 ```
 
 

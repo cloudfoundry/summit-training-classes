@@ -11,17 +11,17 @@ First, you need to create an instance of the service.
 
 {{% do %}}Use `cf marketplace` to view the details of the Redis service{{% /do %}}
 {{% do %}}Use the CLI to create an instance of the `30mb` plan{{% /do %}}
+{{% do %}}Use `cf help` to find command to list the services in your space{{% /do %}}
 
-#### Checking Your Work
+{{% checking %}}
 
-You can view your service instances:
+You should see something similar to:
 
 ```sh
-$ cf services
-
 name    service      plan   bound apps   last operation
 redis   rediscloud   30mb                create succeeded
 ```
+{{% /checking %}}
 
 ## Bind a Service Instance
 
@@ -30,16 +30,13 @@ You need to bind your service instance to your application so it can be used.
 {{% do %}}Push `07-shared-state/stateful-app` with the `--no-start` flag{{% /do %}}
 {{% do %}}Use `cf bind-service` to bind your service instance to your app{{% /do %}}
 {{% do %}}Start your app so that it can pick up the environment variables{{% /do %}}
+{{% question %}}What commands can you use to tell if you've bound the service instance to the correct app?{{% /question %}}
 
-#### Checking Your Work
-
-You can view the details of your services, and see which apps your service is bound to:
-
-```sh
-cf services
-```
+{{% checking %}}
 
 If you hit the `/env` endpoint of your app, or run the command `cf env stateful-app`, you will see the `VCAP_SERVICES` environment variable that Cloud Foundry provides to your app. When a service is bound to your app, the service's details appear in this variable.
+
+{{% /checking %}}
 
 ## Demonstrate Persistence
 

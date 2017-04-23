@@ -19,18 +19,44 @@ All paths in these exercises assume that you're in the `training-zero-to-hero` d
 
 ## Push the App
 
-Be sure you are logged in and targeting your org/space.
+Let's push the app in `03-push/web-app` to Cloud Foundry.
 
-{{% do %}}Push the app in `03-push/web-app` to Cloud Foundry{{% /do %}}
+{{% do %}}Make sure you are logged in and targeting your org/space.{{% /do %}}
+{{% do %}}Change to the `03-push/web-app` directory{{% /do %}}
+{{% do %}}Run `cf push`{{% /do %}}
+{{% observe %}}Watch the CF CLI output the progress of your push{{% /observe %}}
+{{% do %}}When your push has finished, run `cf apps` to see the list of apps in your space{{% /do %}}
 
-```bash
-$ cd 03-push/web-app
-$ cf push
+{{% checking %}}
 
-...
+You should see something like this:
 
-urls: web-app-unpassionate-eighteen.cfapps.io   <<< note the route
+```sh
+$cf apps
+
+name      state     instances   memory   disk   urls
+web-app   started   1/1         32M      256M   web-app-unpassionate-eighteen.cfapps.io
 ```
+
+{{% /checking %}}
+
+## Accessing Your App
+
+{{% question %}}How can you access your web app?{{% /question %}}
+
+So where is your app? When you pushed, in amongst a lot of output you should have seen a message similar to:
+
+```sh
+...
+urls: web-app-unpassionate-eighteen.cfapps.io
+...
+```
+
+Alternatively, you can find URL mapped to your app in the output of `cf apps` (above).
+
+{{% do %}}Access your app in a web browser{{% /do %}}
+
+## Look at What was Pushed
 
 ### Deployment Manifest
 
@@ -38,7 +64,7 @@ This app is configured with a [deployment manifest](https://docs.cloudfoundry.or
 
 You can see the manifest by opening the file: `03-push/web-app/manifest.yml`.
 
-```sh
+```yaml
 applications:
 - name: web-app
   random-route: true
@@ -54,26 +80,9 @@ You can see the details on `random-route` using cf help:
 cf push --help
 ```
 
-So where is your app?  When you pushed, you should have seen a message:
+&nbsp;
 
-```sh
-urls: web-app-unpassionate-eighteen.cfapps.io
-```
-
-Alternatively, you can look up the details on your app (next section).
-
-#### Checking Your Work
-
-* Use `cf apps` to see what apps are in the currently-targeted org/space
-
-```sh
-$cf apps
-
-name      state     instances   memory   disk   urls
-web-app   started   1/1         32M      256M   web-app-unpass...
-```
-
-* Use `cf app web-app` to see more details of your app
+{{% do %}}Use `cf app web-app` to see more details of your app:{{% /do %}}
 
 ```sh
 $ cf app web-app
@@ -95,9 +104,11 @@ buildpack: ruby 1.6.7
 Not all apps need to respond to HTTP requests: instead they might do background work, such as consuming messages from a queue.
 
 {{% do %}}Push the app in the `worker-app` directory{{% /do %}}
-{{% do %}}What differences are there in the manifest? Why are these needed?{{% /do %}}
+{{% question %}}What differences are there in the manifest? Why are these needed?{{% /question %}}
 
-#### Checking Your Work
+{{% checking %}}
+
+You should not see any URLs associated with your worker app:
 
 ```sh
 $ cf app worker-app
@@ -114,17 +125,23 @@ buildpack: binary_buildpack
 #0   running   2015-11-02   0.0%   10.7M of 16M   27.3M of 64M
 ```
 
+{{% /checking %}}
+
 ## View App Logs
 
-The worker app outputs logs.  Use `cf help` to determine what command to run to see recent logs.
+The worker app outputs logs, and Cloud Foundry allows you to see these from your computer.
 
-#### Checking Your Work
+{{% do %}}Use `cf help` to determine what command to run to see *recent* logs.{{% /do %}}
 
-You should see an output similar to:
+{{% checking %}}
+
+You should see output similar to:
 
 ```sh
 2016-08-30T11:53:13.02+0100 [APP/0]      OUT Doing some work...
 ```
+
+{{% /checking %}}
 
 ## Make room (for better apps)
 
@@ -132,13 +149,11 @@ You can also delete apps.
 
 {{% do %}}Delete the two apps you deployed (use `cf help` to find the correct command){{% /do %}}
 
-#### Checking Your Work
+{{% checking %}}
 
-You should not see your apps when you run:
+You should not see either webp-app or worker-app when you run `cf apps`.
 
-```sh
-cf apps
-```
+{{% /checking %}}
 
 ## Beyond the Class
 

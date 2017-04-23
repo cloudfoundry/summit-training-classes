@@ -40,3 +40,12 @@
   color: #259b24;
   content: "\f06e";
 }
+
+pre {
+  background: #F3F3F3 !important;
+  margin: 0 !important;
+}
+
+.admonition.palette-primary-blue-grey p code {
+  color: #fff !important;
+}

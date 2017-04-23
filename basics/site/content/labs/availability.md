@@ -17,9 +17,6 @@ In this lab, we will use purposefully crash app instances and see how Cloud Foun
 ## Access Your App Amid Failures
 
 {{% do %}}Scale your app to 3 instances.{{% /do %}}
-
-#### Checking Your Work
-
 {{% do %}}Use `cf apps` to ensure you have 3 instances requested.{{% /do %}}
 {{% do %}}Visit your app and click the 'crash' link.{{% /do %}}
 {{% do %}}Refresh the page, and Cloud Foundry will send your request to one of the healthy instances.{{% /do %}}

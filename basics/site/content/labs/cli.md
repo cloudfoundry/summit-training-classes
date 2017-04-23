@@ -8,16 +8,11 @@ In this section we will cover the basics of installing and using the CF command 
 ## Install the CLI
 
 {{% do %}}Select and install the appropriate installer for your laptop: [github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli#downloads){{% /do %}}
+{{% do %}}After the installer has finished, run the `cf` command{{% /do %}}
 
-#### Checking Your Work
+{{% checking %}}
 
-Open a terminal/command prompt and type the following:
-
-```sh
-cf
-```
-
-You should see an output similar to the following:
+You should see output similar to the following:
 
 ```sh
 NAME:
@@ -27,6 +22,8 @@ USAGE:
    [environment variables] cf [global options] command [arguments...
 ...
 ```
+
+{{% /checking %}}
 
 Notice that the CF CLI is self documenting.  You can type any command with `--help` to see details.  Typing `cf` only lists all available commands.
 
@@ -38,24 +35,23 @@ cf <some-command> --help
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
 
-{{% do %}}Use `cf help` to find out how to login to Pivotal Web Services{{% /do %}}
-
-The API endpoint you need is `api.run.pivotal.io`.
-
-```sh
-cf login --help
-```
-
-#### Checking Your Work
-
-You can see where you are logged in using the following:
-
-```sh
-cf target
-```
-
+{{% do %}}Use `cf help` to find out how to login to Pivotal Web Services. The API endpoint you need is `api.run.pivotal.io`.{{% /do %}}
 {{% question %}}Are you logged into Pivotal Web Services?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
+
+{{% checking %}}
+
+You can see where you are logged in using `cf target`. You should see something similar to:
+
+```sh
+API endpoint:   https://api.run.pivotal.io
+API version:    2.78.0
+User:           me@example.com
+Org:            my-org
+Space:          my-space
+```
+
+{{% /checking %}}
 
 ## Target Orgs & Spaces
 

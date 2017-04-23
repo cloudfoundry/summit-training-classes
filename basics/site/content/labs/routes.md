@@ -19,13 +19,11 @@ We need to create a route for the app we are going to deploy. This route will be
 {{% do %}}Use `cf help` to figure out how to map your route above to this app{{% /do %}}
 {{% do %}}Verify your app is accessible by accessing the route you created{{% /do %}}
 
-#### Checking Your Work
+{{% checking %}}
 
-You should be able to access your app on the route created above. You should also be able to see the route/url by looking at the app details:
+You should be able to access your app on the route created above. You should also be able to see the route/url by looking at the app details.
 
-```sh
-cf app
-```
+{{% /checking %}}
 
 ### Push v1.1
 
@@ -39,13 +37,11 @@ If this app was being deployed automatically, this is the point that smoke tests
 
 {{% do %}}Use the CF CLI to map traffic hitting the main route you created to v1.1
 
-#### Checking Your Work
+{{% checking %}}
 
-Check your work by accessing the main route multiple times. You should observe traffic being balanced by Cloud Foundry across both instances. You can also see the routes/urls by looking at the app details:
+Check your work by accessing the main route multiple times. You should observe traffic being **balanced by Cloud Foundry across both instances**. You can also see the routes/urls by looking at the app details.
 
-```sh
-cf app
-```
+{{% /checking %}}
 
 ### Cutting over
 
@@ -54,13 +50,11 @@ We pushed the new version, smoke tested it on its own route, and then load balan
 {{% do %}}Use `cf help` to figure out how to stop sending traffic to v1.0{{% /do %}}
 {{% question %}}Could you leave the v1.0 app running in case you need to roll-back?{{% /question %}}
 
-#### Checking Your Work
+{{% checking %}}
 
-Check your work by accessing the main route multiple times.  You should observe traffic only going to v1.1.  You can also see the routes/urls by looking at the app details:
+Check your work by accessing the main route multiple times.  You should observe traffic **only going to v1.1**.  You can also see the routes/urls by looking at the app details.
 
-```sh
-cf app
-```
+{{% /checking %}}
 
 Congratulations! You successfully updated your running application to a new version with no downtime for users.
 
