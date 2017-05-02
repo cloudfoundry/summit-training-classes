@@ -15,13 +15,13 @@ Cloud Foundry has its own command line interface. You can install it here: [http
 The CLI is self documenting. You can get the list of commands by running:
 
 ```sh
-  cf --help
+  cf help -a
 ```
 
 You can also get details on a specific command with:
 
 ```sh
-  cf <command> --help
+  cf help <command>
 ```
 
 
@@ -48,13 +48,13 @@ cf target
 
 The next step is to add an organization.
 
-* Use `cf --help` to find the right command to create an organization.  You can name the organization anything you want.
+* Use `cf help -a` to find the right command to create an organization.  You can name the organization anything you want.
 
 There are also `cf` commands that allow you to list all the organizations in your installation or view the details on a specific organization.  Try them.
 
 Once you create an organization, you have to target it so that the rest of the commands we run in this exercise pertain to that organization.
 
-* Use `cf --help` to target your new organization.
+* Use `cf help -a` to target your new organization.
 
 ### Checking Your Work
 
@@ -68,13 +68,13 @@ cf target
 
 The next step is to add a space to your organization.
 
-* Use `cf --help` to find the right command to create a space inside your organization.  Name the space `development`.
+* Use `cf help -a` to find the right command to create a space inside your organization.  Name the space `development`.
 
 There are also `cf` commands that allow you to list all the spaces in your organization or view the details on a specific space.  Try them.
 
 Once you create a space, you have to be sure to target it so that the rest of the commands we run in this exercise pertain to that domain.
 
-* Use `cf --help` to target your new space.
+* Use `cf help -a` to target your new space.
 
 ### Checking Your Work
 
@@ -90,11 +90,11 @@ The next step is to create a user and add them to the correct role.
 
 ### Creating a new User
 
-* Use `cf --help` to create a new user.
+* Use `cf help -a` to create a new user.
 
 ### Assign your User to the Space Developer Role
 
-* User `cf --help` to add your new user to the `Space Developer` role in your `development` space.
+* User `cf help -a` to add your new user to the `Space Developer` role in your `development` space.
 
 #### Checking your Work
 
