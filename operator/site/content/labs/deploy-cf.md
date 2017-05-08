@@ -102,9 +102,9 @@ If you don't have CF running at this point, please ask for help.
 
 ```sh
 bosh help
-bosh task recent
-bosh task recent --no-filter
 bosh tasks
+bosh tasks recent
+bosh tasks recent --no-filter
 bosh task <id> --debug
-bosh recreate job
+bosh recreate <job> <index_or_id>
 ```

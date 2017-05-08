@@ -51,7 +51,7 @@ content: |
               </text>
           </g>
           <g id="release" transform="translate(344.000000, 236.000000)">
-              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-6)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-5"></use>
+              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-3"></use>
               <text font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
                   <tspan x="27.4638672" y="35">release</tspan>
               </text>
@@ -63,7 +63,7 @@ content: |
               </text>
           </g>
           <g id="manifest" transform="translate(171.000000, 0.000000)">
-              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-8)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-7"></use>
+              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-6)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-5"></use>
               <text id="release" font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
                   <tspan x="19.4726562" y="84">manifest</tspan>
               </text>
