@@ -35,7 +35,9 @@ Please ensure the following:
 
 ### AWS Requirements
 
-You must **bring your own AWS account**.  Additionally, please ensure the following:
+**NOTE**: Formal classes often provide the AWS environment
+
+An **AWS account** with the following characteristics:
 
 * Access to a VPC
 * An AWS Keypair tied to account that has the ability to create:
@@ -44,7 +46,7 @@ You must **bring your own AWS account**.  Additionally, please ensure the follow
   * (1) m3.xLarge instance
 
 
-## Not supported but possible: On your Laptop
+## On your Laptop
 
 ### Laptop Requirements
 
