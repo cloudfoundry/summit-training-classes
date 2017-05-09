@@ -19,7 +19,7 @@ You first need to target your bosh director.  If you are using bosh-lite on your
 
 When using bosh-lite, the default username is `admin` and password is `admin` (if needed).
 
-### Checking your work
+### Checking Your Work
 
 You should see output similar to the following:
 
@@ -53,7 +53,7 @@ Skip step 1, BOSH Lite has already been deployed for you.
 
 Use `bosh help` to figure out how to add these to your director.
 
-### Checking your work
+### Checking Your Work
 
 You can use the following commands to ensure you have provided the three required inputs to the bosh director:
 
@@ -84,7 +84,7 @@ Deployments in bosh are simple, provided you have provided the stemcell, release
   bosh deploy
 ```
 
-### Checking your work
+### Checking Your Work
 
 If all went well, you should see "cf" deployed when running:
 

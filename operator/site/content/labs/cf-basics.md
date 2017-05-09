@@ -36,7 +36,7 @@ cf login -a https://api.10.244.0.34.xip.io --skip-ssl-validation
 
 *Note: We are skipping ssl validation b/c we are using self signed certificates.*
 
-#### Checking Your Work
+### Checking Your Work
 
 If you run the following, you should see that you are logged in to your cloud foundry installation.
 
@@ -96,7 +96,7 @@ The next step is to create a user and add them to the correct role.
 
 * User `cf help -a` to add your new user to the `Space Developer` role in your `development` space.
 
-#### Checking your Work
+### Checking Your Work
 
 If you run the following, you should see your new user assigned to the `Space Developer` role:
 

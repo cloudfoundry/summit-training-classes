@@ -10,7 +10,7 @@ In this exercise, you will use bosh to add a redis service to your Cloud Foundry
 Given your knowledge of bosh, deploy a new Redis cluster.
 
 * First, you will need to clone the release repo, using this address: `https://github.com/pivotal-cf/cf-redis-release.git`
-* Expore the `releases` directory and upload to BOSH.
+* Explore the `releases` directory and upload to BOSH.
 * Then, use the deployment manifest provided in the `resources`.
 * Modify the necessary values in the manifest.
 * Set the deployment file and deploy!
@@ -57,7 +57,7 @@ Now, we will switch back to CF and use the new redis service.
 
 Use `cf create-service` to create a new service instance of the redis service.
 
-#### Checking Your Work
+### Checking Your Work
 
 If you run the following, you should see your service instance:
 
@@ -69,9 +69,9 @@ cf services
 
 In order for your app to be able to use the service, you must `bind` it.  Use the cf commands to bind the service instance to your application.
 
-#### Checking Your Work
+### Checking Your Work
 
-There are many ways to check and see what services are bound to an app.  One way to to re-run `cf services`.
+There are many ways to check and see what services are bound to an app.  One way is to re-run `cf services`.
 
 ### How does it work?
 
