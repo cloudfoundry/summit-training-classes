@@ -24,7 +24,7 @@ There are two ways to complete this class:
 
 In either case, you **MUST have a laptop and be able to install software on it**.
 
-## Preferred: On AWS
+## AWS (Recommended)
 
 ### Laptop Requirements
 
@@ -46,7 +46,7 @@ An **AWS account** with the following characteristics:
   * (1) m3.xLarge instance
 
 
-## On your Laptop
+## Laptop
 
 ### Laptop Requirements
 
