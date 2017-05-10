@@ -3,11 +3,9 @@ date: 2016-05-19T11:56:15-03:00
 title: Monitoring
 ---
 
-The Loggregator Firehose plugin for the Cloud Foundry Command Line Interface (cf CLI) allows Cloud Foundry (CF) administrators access to the output of the Loggregator Firehose, which includes logs and metrics from all CF components.
+The **CF Top** plugin for the Cloud Foundry Command Line Interface (cf CLI) allows Cloud Foundry (CF) users access to the output of the Loggregator Firehose to view metrics based on the user's privelidges. Users with administrative privilege can view metrics from all CF components while non-administrative users will only see metrics from the orgs and spaces they have been assigned.
 
-Connecting to the Loggregator Firehose requires either running the nozzle plugin as the default admin user or as a user which has been assigned additional admin scopes. 
-
-In this exercise you will install the plugin to gain access to all logs and metrics. You will also modify the user you created in a prior lab to be able to successfully run the nozzle plugin.  This exercise was selected as it does not require external tools.
+In this exercise you will install the CF Top plugin to gain access to all metrics. You will also modify the user you created in a prior lab to be able to successfully run the plugin.  This exercise was selected as it does not require external tools.
 
 ## Installing the Plugin
 
@@ -20,28 +18,28 @@ cf add-plugin-repo CF-Community http://plugins.cloudfoundry.org
 Now you can install the plugin:
 
 ```sh
-cf install-plugin "Firehose Plugin" -r CF-Community
+cf install-plugin "top" -r CF-Community
 ```
 
-## Viewing the Firehose
+## Viewing the Firehose Metrics via CF Top
 
 The plugin added a command to your cf cli.  Run the following as the admin user to see the firehose output:
 
 ```sh
-cf nozzle --debug
+cf top
 ```
 
 Now run the nozzle as the user you created in a prior lab. What do you see?
 
 ## Assign User Admin Scopes
 
-The above command resulted in an authorization error. This was due to the user not having the appropriate permissions to run the command. Permissions within CF are broken into two categories: User or Administrator/Operator.
+Running the plugin as a non-administrative user resulted in a limited view of metrics. This was due to the user not having the appropriate permissions to run the command. Permissions within CF are broken into two categories: User or Administrator/Operator.
 
 User level permissions are governed by setting **Roles** using the CF CLI. Examples of user roles are `SpaceDeveloper`, `OrgManager`. 
 
 Administrator/Operator level permissions are governed by setting **Scopes** using the UAA CLI (uaac). Examples of these scopes include `cloud_controller.admin` and `doppler.firehose`.
 
-To remedy the above authorization failure, the user requires the operator level scopes of `cloud_controller.admin` and `doppler.firehose`. Let's go assign them.
+For a complete view of all the metrics, the user requires the operator level scopes of `cloud_controller.admin` and `doppler.firehose`. Let's go assign them.
 
 Install `uaac`
 ```sh
@@ -59,11 +57,12 @@ uaac token client get admin
 ```
 Assign the scopes to the user created in a prior lab. Use `uaac member add -h` for guidance.
 
-Now login to CF with the above user. You should be able to successfully run `nozzle --debug`.
+Now login to CF with the above user. You should be able to successfully run `cf top`.
 
 
 ## Beyond the Class
 
+* https://github.com/ECSTeam/cloudfoundry-top-plugin
 * http://docs.cloudfoundry.org/adminguide/cli-user-management.html
 * http://docs.cloudfoundry.org/adminguide/uaa-user-management.html
 * github.com/logsearch/logsearch-for-cloudfoundry

@@ -4,17 +4,33 @@ title: Deploying Cloud Foundry to bosh-lite
 ---
 
 - cf-release: https://github.com/cloudfoundry/cf-release
-- Stemcell: https://s3.amazonaws.com/bosh-warden-stemcells/bosh-stemcell-3147-warden-boshlite-ubuntu-trusty-go_agent.tgz
+- diego-release: https://github.com/cloudfoundry/diego-release
+- Stemcell: http://bosh.io/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent 
 - Manifest: You are going to create your own!
 
 
-Your goal is to use what you learned in the previous module to deploy Cloud Foundry to your running bosh-lite instance.
+Your goal is to use what you learned in the previous module to deploy Cloud Foundry with the Diego backend to your running bosh-lite instance.
+
+**NOTE:** If in a formal class, an AWS environment may already be setup which is hosting your bosh-lite instance. If a bosh-lite instance has not been setup for you, please follow the instructions below:
+
+- https://github.com/cloudfoundry/bosh-lite/blob/master/README.md#install-bosh-lite
+
 ## Targeting and Logging In
 
-You first need to target your bosh director.  If you are using bosh-lite on your laptop, the default IP is 192.168.50.4.  If you are using bosh-lite on AWS, you will need the Public/Elastic IP of your instance.
+You first need to target your bosh director.  If you are using bosh-lite on your laptop, the default IP is 192.168.50.4.  
+
 
 ```sh
   bosh target <your-bosh-lite-ip> lite
+```
+If using bosh-lite on AWS, you will need the Public/Elastic IP of your bosh-lite to target bosh-lite from your laptop or (preferred) to `SSH` to your AWS EC2 instance and target localhost.
+
+**NOTE:**
+
+* The rest of this lab and the successive labs assume running bosh-lite on AWS and having `SSHed` into your AWS EC2 instance. 
+
+```sh
+  bosh target 127.0.0.1 lite
 ```
 
 When using bosh-lite, the default username is `admin` and password is `admin` (if needed).
@@ -24,7 +40,7 @@ When using bosh-lite, the default username is `admin` and password is `admin` (i
 You should see output similar to the following:
 
 ```sh
-  $ bosh target 192.168.50.4 lite
+  $ bosh target 127.0.0.1 lite
   Target set to `Bosh Lite Director`
   ...
 ```
@@ -34,13 +50,13 @@ You should also be able to run `bosh status` and see something similar to the fo
 ```sh
   ...
   Name       Bosh Lite Director
-  URL        https://192.168.50.4:25555
-  Version    1.3215.3.0 (00000000)
+  URL        https://127.0.0.1:25555
+  Version    260.0.0 (00000000)
   User       admin
-  UUID       2da68ec9-3249-4c68-8f7b-aa6f5446033c
+  UUID       f314cc48-5260-4d52-968d-bcec8f8eff0f
   CPI        warden_cpi
   dns        disabled
-  compiled_package_cache enabled (provider: local)
+  compiled_package_cache disabled
   snapshots  disabled
   ...
 ```

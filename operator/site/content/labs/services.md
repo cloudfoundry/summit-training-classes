@@ -81,7 +81,7 @@ Run the following:
   cf env <your-app>
 ```
 
-You should see json outputted to the command line.  Find the section that like:
+You should see json outputted to the command line.  Find the section that looks like:
 
 ```
 
