@@ -12,14 +12,19 @@ The bosh cli includes a large number of useful features to explore your clusters
 
 ### VM Details
 
-You can view details on the vms bosh has deployed.
+You can view details on the vms bosh has deployed using either `bosh instances` or `bosh vms`. `bosh instances` provides more detailed information. Try both and see the differences.
+
+```sh
+ bosh instances
+```
+
+OR
 
 ```sh
  bosh vms
 ```
 
-The `vms` command also provides flags to display more information.  How would you see all vms and all details?
-
+Use `bosh help <command>` to see available flags for each command. How would you see all vms and all details?
 
 ### Accessing VMs
 
@@ -29,7 +34,7 @@ You can ssh to any vm bosh has deployed.
   bosh ssh
 ```
 
-* SSH into doppler_z1/0 (choose temp sudo password)
+* SSH into doppler_z1/0
 * Bosh installs components in `/var/vcap`.
 
 ```bash
@@ -70,9 +75,9 @@ kill -9 $(cat /var/vcap/sys/run/doppler/doppler.pid)
 * Monit status is reported up to BOSH director
 
 ```sh
-#in terminal 1
-watch bosh vms
-#in terminal 2
+#in terminal 1 (on the bosh-lite VM)
+watch bosh instances --failing
+#in terminal 2 (on the doppler VM)
 kill -9 $(cat /var/vcap/sys/run/doppler/doppler.pid)
 ```
 
@@ -94,9 +99,9 @@ The following command will find a VM and kill it.
 The script is necessary b/c the "VMs" are actually containers when using bosh-lite.
 
 ```bash
-#in terminal 1
-watch bosh vms
-#in terminal 2
+#in terminal 1 (on the bosh-lite VM)
+watch bosh instances --failing
+#in terminal 2 (on the bosh-lite VM)
 curl -XDELETE http://127.0.0.1:7777/containers/$(curl -s http://127.0.0.1:7777/containers | jq -r '.["Handles"][4]')
 ```
 
