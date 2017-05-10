@@ -9,29 +9,45 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 - Upload releases needed for Cloud Foundry.
 - Upload a stemcell
 
-**NOTE:** If in a formal class, an AWS environment may already be setup which is hosting your bosh-lite instance. If a bosh-lite instance has not been setup for you, please follow the instructions below:
+**NOTE:** Formal classes may already have an AWS environment setup hosting your bosh-lite instance. If a bosh-lite instance has not been setup for you, please follow the instructions below:
 
 - https://github.com/cloudfoundry/bosh-lite/blob/master/README.md#install-bosh-lite
 
-## Targeting and Logging In
-
-You first need to target your bosh director.  If you are using bosh-lite on your laptop, the default IP is `192.168.50.4`.  
-
+## Environment Setup
+There are a few things that need to be installed before we are ready to deploy.
 
 ```sh
-  bosh target <your-bosh-lite-ip> lite
+cd ~
+sudo apt-get update
+sudo apt-get install git jq unzip
+wget https://github.com/cloudfoundry-incubator/spiff/releases/download/v1.0.8/spiff_linux_amd64.zip
+unzip spiff_linux_amd64.zip
+rm spiff_linux_amd64.zip
+sudo mv spiff /usr/local/bin
+sudo gem install bundler
 ```
-If using bosh-lite on AWS, you will need the Public/Elastic IP of your bosh-lite to target bosh-lite from your laptop or (preferred) to `SSH` to your AWS EC2 instance and target localhost.
 
-**NOTE:**
+## Targeting and Logging In
+This section covers logging from an AWS or Laptop setup.
 
-* The rest of this lab and the successive labs assume running bosh-lite on AWS and having `SSHed` into your AWS EC2 instance.
+**NOTE**
+
+- When using bosh-lite, the default username is `admin` and password is `admin` (if needed).
+- The rest of this lab and the successive labs assume running bosh-lite on AWS and having `SSHed` into your AWS EC2 instance.
+
+### Bosh-lite on AWS
+You will need the Public/Elastic IP of your bosh-lite to target bosh-lite from your laptop or to `SSH` to your AWS EC2 instance and target localhost.
 
 ```sh
   bosh target 127.0.0.1 lite
 ```
+### Bosh-lite on Laptop
 
-When using bosh-lite, the default username is `admin` and password is `admin` (if needed).
+The bosh-lite default IP running on a laptop is `192.168.50.4`.  
+
+```sh
+  bosh target <your-bosh-lite-ip> lite
+```
 
 ### Checking Your Work
 
@@ -63,20 +79,7 @@ You should also be able to run `bosh status` and see something similar to the fo
 
 In the previous module, we discussed the 3 components the bosh director needs to create a deployment: a stemcell, release and manifest.
 
-There are a couple of packages needed to create a manifest. Execute the following commands to retrieve the needed packages.
-
-```sh
-cd ~
-sudo apt-get update
-sudo apt-get install git jq unzip
-wget https://github.com/cloudfoundry-incubator/spiff/releases/download/v1.0.8/spiff_linux_amd64.zip
-unzip spiff_linux_amd64.zip
-rm spiff_linux_amd64.zip
-sudo mv spiff /usr/local/bin
-sudo gem install bundler
-```
-
-Now we will create the manifest used to deploy CF. The CF git repository contains templates and a script useful in generating the manifest. We'll clone the repo and step through the manifest creation.
+First, we will create the manifest used to deploy CF. The CF git repository contains templates and a script useful in generating the manifest. We'll clone the repo and step through the manifest creation.
 
 ```sh
 mkdir -p ~/workspace
@@ -101,7 +104,7 @@ properties:
     default_to_diego_backend: true
 ```
 
-Now we are ready to generate the manifest. This will also point bosh to the
+Now we are ready to generate the manifest. This will also point BOSH to the
 generated manifest.
 
 ```sh
@@ -109,10 +112,10 @@ cd ~/workspace/cf-release
 ./scripts/generate-bosh-lite-dev-manifest.sh ~/workspace/stubs/cf-diego-stub.yml
 ```
 
-Use the following links to upload the appropriate release and stemcell to BOSH.  `bosh help` can be useful to figure out how to add these to your director.
+Use the following links to upload the latest release and stemcell to BOSH.  `bosh help` can be useful to figure out how to add these to your director.
 
-> http://bosh.io/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent
-> http://bosh.io/releases
+- http://bosh.io/stemcells (find the `bosh-warden-boshlite`, click on the `prev...` link)
+- http://bosh.io/releases (use the `cf-release` link)
 
 ### Checking Your Work
 
@@ -137,9 +140,10 @@ You can use the following commands to ensure you have provided the three require
 ```
 
 
-## Deploying
+## Deploy CF
 
-Deployments in bosh are simple, provided you have provided the stemcell, release and manifest to the director. Deploy CF:
+Deployments in bosh are simple, provided you have provided the stemcell, release and manifest to the director.
+
 
 ```sh
   bosh deploy
@@ -147,7 +151,7 @@ Deployments in bosh are simple, provided you have provided the stemcell, release
 
 ### Checking Your Work
 
-If all went well, you should see "cf" deployed when running:
+If all went well, you should see `cf-warden` deployed when running:
 
 ```sh
   bosh deployments
@@ -155,10 +159,48 @@ If all went well, you should see "cf" deployed when running:
 
 If you don't have CF running at this point, please ask for help.
 
+## Deploy Diego Backend for CF
+Deploying Diego follows the same pattern as any BOSH deployment. It requires a manifest, stemcell and release(s). For a Diego deployment, the steps are similar to the CF deployment.
+
+```sh
+git clone https://github.com/cloudfoundry/diego-release/ ~/workspace
+cd ~/workspace/diego-release
+./scripts/update
+
+./scripts/generate-bosh-lite-manifests
+```
+
+This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to set the deployment manifest.
+
+Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
+
+- diego-release
+- garden-runc-release
+- cflinuxfs2-rootfs-release
+
+**NOTE:** The diego deployment uses the same stemcell as the CF deployment, so there's no need to upload another stemcell.
+
+```sh
+bosh deploy
+```
+
+### Checking Your Work
+
+If all went well, you should see `cf-warden-diego` deployed when running:
+
+```sh
+  bosh deployments
+```
+
+If you don't have Diego running at this point, please ask for help.
+
+Congratulations!!! You have just deployed a Cloud Foundry Foundation that uses Diego as the application runtime.
+
 ## Beyond the class
 
 * Preparing a "real" cloud for BOSH: http://bosh.io/docs/init.html
 * bosh-init - deploy BOSH director to manage a "real" cloud: http://bosh.io/docs/using-bosh-init.html
+* Precompiled releases - http://bosh.io/docs/compiled-releases.html
 * Try these commands
 
 ```sh
