@@ -12,7 +12,7 @@ The bosh cli includes a large number of useful features to explore your clusters
 
 ### VM Details
 
-You can view details on the VMs bosh has deployed using either `bosh instances` or `bosh vms`. Play with both of these, exploring the various command line options to see different information about the VMs. Recall to get help on a command you can either `bosh help <command>`. What are the different types of information do these commands provide? 
+You can view details on the VMs bosh has deployed using either `bosh instances` or `bosh vms`. Play with both of these, exploring the various command line options to see different information about the VMs. Recall to get help on a command you can either `bosh help <command>`. What are the different types of information do these commands provide?
 
 ```sh
  bosh instances
@@ -33,7 +33,7 @@ You can ssh to any vm bosh has deployed.
   bosh ssh
 ```
 
-* SSH into doppler_z1/0
+* SSH into cell_z1/0
 * Bosh installs components in `/var/vcap`.
 
 ```bash
@@ -56,7 +56,7 @@ tail --lines=1 -f /var/vcap/sys/log/*/*
 
 ### Process Monitoring with Monit
 
-On the doppler vm:
+On the cell_z1 vm:
 
 ```sh
 sudo /var/vcap/bosh/bin/monit summary
@@ -65,19 +65,19 @@ sudo /var/vcap/bosh/bin/monit summary
 * This shows the processes monit is running.  Let's kill one and see what happens.
 
 ```bash
-#in terminal 1
+#in terminal 1 on the cell_z1 VM
 sudo watch /var/vcap/bosh/bin/monit summary
-#in terminal 2
-kill -9 $(cat /var/vcap/sys/run/doppler/doppler.pid)
+#in terminal 2 on the cell_z1 VM
+sudo kill -9 $(cat /var/vcap/sys/run/consul_agent/consul_agent.pid)
 ```
 
 * Monit status is reported up to BOSH director
 
 ```sh
-#in terminal 1 (on the bosh-lite VM)
+#in terminal 1 on the bosh-lite VM
 watch bosh instances --failing
-#in terminal 2 (on the doppler VM)
-kill -9 $(cat /var/vcap/sys/run/doppler/doppler.pid)
+#in terminal 2 on the cell_z1 VM
+sudo kill -9 $(cat /var/vcap/sys/run/consul_agent/consul_agent.pid)
 ```
 
 ### VM resurrection
