@@ -180,7 +180,7 @@ This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml.
 ### Deployment
 Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
 
-- diego-release
+- diego-release (not the incubator release)
 - garden-runc-release
 - cflinuxfs2-rootfs-release
 
