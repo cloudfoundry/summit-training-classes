@@ -170,7 +170,7 @@ cd ~/workspace/diego-release
 ./scripts/generate-bosh-lite-manifests
 ```
 
-This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to set the deployment manifest.
+This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to point bosh at this manifest.
 
 Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
 
