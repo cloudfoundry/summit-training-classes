@@ -9,10 +9,18 @@ In this section, you will add application capacity to the Cloud Foundry platform
 
 Scaling out with bosh is simple.  We simply edit the manifest, add instances, and deploy.
 
-* Edit your Cloud Foundry deployment manifest.
-* Find the `runner_z1` runner instance and increase the number to 2.
-* `bosh deploy`
-* What happened? If you need, check the `networks` resource pool for available static IPs.
+* Edit your Diego deployment manifest.
+* Find the `cell_z1` instance and increase the number to 2.
+* Deploy
+
+```sh
+# In terminal 1
+bosh deploy
+
+# In terminal 2
+cf top  # <-- switch to the "Cell Stats" display
+```
+* What happened?
 
 ### Checking Your Work
 
@@ -28,11 +36,27 @@ bosh vms
 
 * Use the cf cli to scale your application vertically (add memory).
 
+```sh
+# In terminal 1
+# Use cf cli to scale app vertically
+
+# In terminal 2
+cf top # <-- switch to the App Stats display
+```
+
 What happens?  Why?  How long does it take?  Is this a good idea in production systems?
 
 ### Horizontal Scaling
 
 Use the cf cli to scale your application horizontally to 2 instances.
+
+```sh
+# In terminal 1
+# Use cf cli to scale app horizontally
+
+# In terminal 2
+cf top # <-- switch to the App Stats display
+```
 
 What happens?  How long does it take?
 
