@@ -70,7 +70,7 @@ You should also be able to run `bosh status` and see something similar to the fo
   UUID       f314cc48-5260-4d52-968d-bcec8f8eff0f
   CPI        warden_cpi
   dns        disabled
-  compiled_package_cache disabled
+  compiled_package_cache disabled  # TODO: Verify with Michael. This showed enable my laptop.
   snapshots  disabled
   ...
 ```
@@ -83,7 +83,7 @@ First, we will create the manifest used to deploy CF. The CF git repository cont
 
 ```sh
 mkdir -p ~/workspace
-git clone https://github.com/cloudfoundry/cf-release.git ~/workspace
+git clone https://github.com/cloudfoundry/cf-release.git ~/workspace/cf-release
 cd ~/workspace/cf-release
 
 # The submodules need to be updated to the correct commit.
@@ -109,7 +109,7 @@ generated manifest.
 
 ```sh
 cd ~/workspace/cf-release
-./scripts/generate-bosh-lite-dev-manifest.sh ~/workspace/stubs/cf-diego-stub.yml
+sudo ./scripts/generate-bosh-lite-dev-manifest ~/workspace/stubs/cf-diego-stub.yml
 ```
 
 Use the following links to upload the latest release and stemcell to BOSH.  `bosh help` can be useful to figure out how to add these to your director.
@@ -142,7 +142,7 @@ You can use the following commands to ensure you have provided the three require
 
 ## Deploy CF
 
-Deployments in bosh are simple, provided you have provided the stemcell, release and manifest to the director.
+Deployments in bosh are simple, given you have provided the stemcell, release and manifest to the director.
 
 
 ```sh
@@ -162,17 +162,23 @@ If you don't have CF running at this point, please ask for help.
 ## Deploy Diego Backend for CF
 Deploying Diego follows the same pattern as any BOSH deployment. It requires a manifest, stemcell and release(s). For a Diego deployment, the steps are similar to the CF deployment.
 
+### Manifest Generation
 ```sh
-git clone https://github.com/cloudfoundry/diego-release/ ~/workspace
+git clone https://github.com/cloudfoundry/diego-release/ ~/workspace/diego-release
 cd ~/workspace/diego-release
 ./scripts/update
 
 ./scripts/generate-bosh-lite-manifests
 ```
 
-This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to set the deployment manifest.
+This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to point bosh at this manifest.
 
-Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
+### Checking Your Work
+
+`bosh status` should list the diego.yml as the Deployment Manifest. If it doesn't, please ask for assistance.
+
+### Deployment
+Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases. Hint: Not the incubator releases.
 
 - diego-release
 - garden-runc-release
