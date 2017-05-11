@@ -1,9 +1,9 @@
 ---
 menuTitle: "Goal"
-id: monitoring
+id: upgrade
 type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"
 statements:
   - Part 7.
-  - Monitoring
+  - Upgrade
