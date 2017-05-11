@@ -3,14 +3,14 @@ date: 2016-04-19T19:21:15-06:00
 title: CF Basics
 ---
 
-In this exercise, we will log in to our Cloud Foundry deployments, create an org, space and user, and assign the user to a role so they can deploy an app.  We will also deploy an application.
+In this exercise, we will log in to our Cloud Foundry Foundation that we just deployed, create an org, space and user, and assign the user to a role so they can deploy an app.  We'll finish up by deploying an application.
 
 
 ## Getting Started: Cloud Foundry CLI
 
 ### Installing
 
-Cloud Foundry has its own command line interface. You can install it here: [https://github.com/cloudfoundry/cli#downloads](https://github.com/cloudfoundry/cli#downloads).
+Cloud Foundry has its own command line interface. If it is not already installed in your environment, you can download from here. [https://github.com/cloudfoundry/cli#downloads](https://github.com/cloudfoundry/cli#downloads).
 
 The CLI is self documenting. You can get the list of commands by running:
 
@@ -27,7 +27,7 @@ You can also get details on a specific command with:
 
 ### Logging in
 
-When interacting with a cloud foundry, the first thing to do is log in.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<system_domain>`.  By default, manifest generation of your bosh-lite cloud foundry installation uses a system domain of `bosh-lite.com`.
+To start a session with CF, you need to login.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<system_domain>`.  By default, the manifest generation of your bosh-lite CF installation uses a system domain of `bosh-lite.com`.
 
 Verify that:
 
@@ -35,9 +35,9 @@ Verify that:
 - running `host bosh-lite.com` resolves to the address `10.244.0.34`
 - the `ha_proxy_z1` instance has an address of `10.244.0.34` when running `bosh vms`  
 
-As the above illustrates, Cloud Foundry defaults to using HAProxy as it's load balancer, representing the entry point into CF.
+Where was the `10.244.0.34` IP specified as the one for `ha_proxy_z1`?
 
-**TODO** Verify system_domain is the same using bosh-lite with provider virtualbox
+As the above illustrates, Cloud Foundry defaults to using HAProxy as it's load balancer, representing the entry point into CF.
 
 If you don't have a fully qualified domain name, you can use a service like `xip.io` that makes any IP appear as a domain name.
 
@@ -113,7 +113,7 @@ The next step is to create a user and add them to the correct role.
 If you run the following, you should see your new user assigned to the `Space Developer` role:
 
 ```sh
-cf space-users
+cf space-users <org> <space>
 ```
 
 
@@ -121,11 +121,12 @@ cf space-users
 
 Now it is time to push your first app to Cloud Foundry!
 
-* Now that you have a new user, use `cf login` to log in as that user.  Make sure you also target your organization and space.
+* Use `cf login` to log in as the user you just created.  Make sure you also target your organization and space.
 
-* Now push the included sample app:
+* Now push a sample app:
 
 ```bash
+cd ~/workspace
 git clone https://github.com/Altoros/cf-example-sinatra
 cd cf-example-sinatra
 cf push myapp
