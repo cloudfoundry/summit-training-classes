@@ -162,6 +162,7 @@ If you don't have CF running at this point, please ask for help.
 ## Deploy Diego Backend for CF
 Deploying Diego follows the same pattern as any BOSH deployment. It requires a manifest, stemcell and release(s). For a Diego deployment, the steps are similar to the CF deployment.
 
+### Manifest Generation
 ```sh
 git clone https://github.com/cloudfoundry/diego-release/ ~/workspace/diego-release
 cd ~/workspace/diego-release
@@ -172,6 +173,11 @@ cd ~/workspace/diego-release
 
 This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to point bosh at this manifest.
 
+### Checking Your Work
+
+`bosh status` should list the diego.yml as the Deployment Manifest. If it doesn't, please ask for assistance.
+
+### Deployment
 Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
 
 - diego-release
