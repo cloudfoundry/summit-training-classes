@@ -7,7 +7,7 @@ In this exercise, we will upgrade the stemcell used by Redis.  You can upgrade C
 
 ## Updating the stemcell
 
-An previous stemcell (v3126) is included in the `resources` README.
+Explore https://bosh.io/stemcells for a previous version of the `bosh-warden-boshlite` stemcell.
 
 * Use bosh to upload this stemcell to your director.
 * Be sure your deployment is set to Redis.
