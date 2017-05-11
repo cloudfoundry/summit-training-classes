@@ -12,7 +12,7 @@ The bosh cli includes a large number of useful features to explore your clusters
 
 ### VM Details
 
-You can view details on the vms bosh has deployed using either `bosh instances` or `bosh vms`. `bosh instances` provides more detailed information. Try both and see the differences.
+You can view details on the VMs bosh has deployed using either `bosh instances` or `bosh vms`. Play with both of these, exploring the various command line options to see different information about the VMs. Recall to get help on a command, add the `-h` option.
 
 ```sh
  bosh instances

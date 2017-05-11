@@ -178,9 +178,9 @@ This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml.
 `bosh status` should list the diego.yml as the Deployment Manifest. If it doesn't, please ask for assistance.
 
 ### Deployment
-Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases:
+Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases. Hint: Not the incubator releases.
 
-- diego-release (not the incubator release)
+- diego-release
 - garden-runc-release
 - cflinuxfs2-rootfs-release
 
