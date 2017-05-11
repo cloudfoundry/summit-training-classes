@@ -27,10 +27,22 @@ You can also get details on a specific command with:
 
 ### Logging in
 
-When interacting with a cloud foundry, the first thing to do is log in.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<your-domain>`.  If you don't have a fully qualified domain name (as we don't with bosh-lite), you can use a service like `xip.io` that makes any IP appear as a domain name.
+When interacting with a cloud foundry, the first thing to do is log in.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<system_domain>`.  By default, manifest generation of your bosh-lite cloud foundry installation uses a system domain of `bosh-lite.com`.
+
+Verify that:
+
+- the CF deployment manifest has `properties.system_domain` set to `bosh-lite.com`
+- running `host bosh-lite.com` resolves to the address `10.244.0.34`
+- the `ha_proxy_z1` instance has an address of `10.244.0.34` when running `bosh vms`  
+
+As the above illustrates, Cloud Foundry defaults to using HAProxy as it's load balancer, representing the entry point into CF.
+
+**TODO** Verify system_domain is the same using bosh-lite with provider virtualbox
+
+If you don't have a fully qualified domain name, you can use a service like `xip.io` that makes any IP appear as a domain name.
 
 ```sh
-cf login -a https://api.10.244.0.34.xip.io --skip-ssl-validation
+cf login -a https://api.bosh-lite.com --skip-ssl-validation
 # admin / admin
 ```
 
@@ -94,7 +106,7 @@ The next step is to create a user and add them to the correct role.
 
 ### Assign your User to the Space Developer Role
 
-* User `cf help -a` to add your new user to the `Space Developer` role in your `development` space.
+* User `cf help -a` to assign your new user the space developer role in your `development` space.
 
 ### Checking Your Work
 

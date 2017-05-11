@@ -3,7 +3,7 @@ date: 2016-05-19T11:56:15-03:00
 title: Monitoring
 ---
 
-The **CF Top** plugin for the Cloud Foundry Command Line Interface (cf CLI) allows Cloud Foundry (CF) users access to the output of the Loggregator Firehose to view metrics based on the user's privelidges. Users with administrative privilege can view metrics from all CF components while non-administrative users will only see metrics from the orgs and spaces they have been assigned.
+The **CF Top** plugin for the Cloud Foundry Command Line Interface (cf CLI) allows users access to the output of the Loggregator Firehose to view metrics based on privileges. Users with administrative privilege can view routing and application metrics from all CF applications while non-administrative users will only see routing and application metrics within the orgs and spaces they have been assigned.
 
 In this exercise you will install the CF Top plugin to gain access to all metrics. You will also modify the user you created in a prior lab to be able to successfully run the plugin.  This exercise was selected as it does not require external tools.
 
@@ -29,13 +29,13 @@ The plugin added a command to your cf cli.  Run the following as the admin user 
 cf top
 ```
 
-Now run the nozzle as the user you created in a prior lab. What do you see?
+Now run the plugin as the user you created in a prior lab. What do you see?
 
 ## Assign User Admin Scopes
 
 Running the plugin as a non-administrative user resulted in a limited view of metrics. This was due to the user not having the appropriate permissions to run the command. Permissions within CF are broken into two categories: User or Administrator/Operator.
 
-User level permissions are governed by setting **Roles** using the CF CLI. Examples of user roles are `SpaceDeveloper`, `OrgManager`. 
+User level permissions are governed by setting **Roles** using the CF CLI. Examples of user roles are `SpaceDeveloper`, `OrgManager`.
 
 Administrator/Operator level permissions are governed by setting **Scopes** using the UAA CLI (uaac). Examples of these scopes include `cloud_controller.admin` and `doppler.firehose`.
 
