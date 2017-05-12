@@ -37,9 +37,9 @@ Running the plugin as a non-administrative user resulted in a limited view of me
 
 User level permissions are governed by setting **Roles** using the CF CLI. Examples of user roles are `SpaceDeveloper`, `OrgManager`.
 
-Administrator/Operator level permissions are governed by setting **Scopes** using the UAA CLI (uaac). Examples of these scopes include `cloud_controller.admin` and `doppler.firehose`.
+Administrator/Operator level permissions are governed by setting **Groups** using the UAA CLI (uaac). Examples of these scopes include `cloud_controller.admin` and `doppler.firehose`.
 
-For a complete view of all the metrics, the user requires the operator level scopes of `cloud_controller.admin` and `doppler.firehose`. Let's go assign them.
+For a complete view of all the metrics, the user requires the operator level groups of `cloud_controller.admin` and `doppler.firehose`. Let's go assign them.
 
 Install `uaac`
 ```sh
@@ -51,14 +51,13 @@ Target Cloud Foundry's UAA endpoint.
 uaac target https://uaa.bosh-lite.com --skip-ssl-validation
 ```
 
-Obtain a token by using the credentials from `cf.yml` found under `properties.uaa.admin.client_seret`
+Obtain a token by using the credentials from `cf.yml` found under `properties.uaa.admin.client_secret`
 ```sh
 uaac token client get admin
 ```
-Assign the scopes to the user created in a prior lab. Use `uaac member add -h` for guidance.
+Assign the groups to the user created in a prior lab. Use `uaac member add -h` for guidance.
 
 Now login to CF with the above user. You should be able to successfully run `cf top`.
-
 
 ## Beyond the Class
 
