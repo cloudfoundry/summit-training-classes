@@ -1,4 +1,4 @@
----
+dev---
 date: 2016-04-19T19:21:15-06:00
 title: CF Basics
 ---
@@ -80,7 +80,7 @@ cf target
 
 The next step is to add a space to your organization.
 
-* Use `cf help -a` to find the right command to create a space inside your organization.  Name the space `development`.
+* Use `cf help -a` to find the right command to create a space inside your organization.  Name the space `dev`.
 
 There are also `cf` commands that allow you to list all the spaces in your organization or view the details on a specific space.  Try them.
 
@@ -106,7 +106,7 @@ The next step is to create a user and add them to the correct role.
 
 ### Assign your User to the Space Developer Role
 
-* User `cf help -a` to assign your new user the space developer role in your `development` space.
+* User `cf help -a` to assign your new user the space developer role in your `dev` space.
 
 ### Checking Your Work
 
