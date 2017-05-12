@@ -57,7 +57,7 @@ uaac token client get admin
 ```
 Assign the groups to the user created in a prior lab. Use `uaac member add -h` for guidance.
 
-Now login to CF with the above user. You should be able to successfully run `cf top`.
+Now login/relogin and run `cf top` to see the group change take affect.
 
 ## Beyond the Class
 
