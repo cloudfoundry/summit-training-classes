@@ -13,20 +13,6 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 
 - https://github.com/cloudfoundry/bosh-lite/blob/master/README.md#install-bosh-lite
 
-## Environment Setup
-There are a few things that need to be installed before we are ready to deploy.
-
-```sh
-cd ~
-sudo apt-get update
-sudo apt-get install git jq unzip
-wget https://github.com/cloudfoundry-incubator/spiff/releases/download/v1.0.8/spiff_linux_amd64.zip
-unzip spiff_linux_amd64.zip
-rm spiff_linux_amd64.zip
-sudo mv spiff /usr/local/bin
-sudo gem install bundler
-```
-
 ## Targeting and Logging In
 This section covers logging from an AWS or Laptop setup.
 
@@ -73,6 +59,20 @@ You should also be able to run `bosh status` and see something similar to the fo
   compiled_package_cache disabled  # TODO: Verify with Michael. This showed enable my laptop.
   snapshots  disabled
   ...
+```
+
+## BOSH-Lite Instance Environment Setup
+There are a few things that need to be installed on your bosh-lite instance before we are ready to deploy.
+
+```sh
+cd ~
+sudo apt-get update
+sudo apt-get install git jq unzip
+wget https://github.com/cloudfoundry-incubator/spiff/releases/download/v1.0.8/spiff_linux_amd64.zip
+unzip spiff_linux_amd64.zip
+rm spiff_linux_amd64.zip
+sudo mv spiff /usr/local/bin
+sudo gem install bundler
 ```
 
 ## Preparing for the Deployment
