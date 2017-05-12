@@ -43,7 +43,7 @@ For a complete view of all the metrics, the user requires the operator level sco
 
 Install `uaac`
 ```sh
-gem install cf-uaac --no-ri --no-rdoc
+sudo gem install cf-uaac --no-ri --no-rdoc
 ```
 
 Target Cloud Foundry's UAA endpoint.
