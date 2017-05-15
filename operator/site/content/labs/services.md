@@ -10,9 +10,8 @@ In this exercise, you will use bosh to add a redis service to your Cloud Foundry
 Given your knowledge of bosh, deploy a new Redis cluster.
 
 * First, you will need to clone the release repo, using this address: `https://github.com/pivotal-cf/cf-redis-release.git`
-* Explore the `README.md` for help uploading the appropriate releases to BOSH-Lite.
-* Then, use the scripts directory to generate a deployment manifest.
-* Modify the necessary values in the manifest.
+* Then, use the scripts directory to generate a bosh-lite manifest for warden. Modify any placeholders you come across (look at the script's code)
+* Use the generated manifest to find dependent releases and upload to bosh-lite
 * Set the deployment file and deploy!
 
 > **Warning**: To be fair, instruction in the repo's README are a bit old. You may need to read some code. Ask for help if you need!
