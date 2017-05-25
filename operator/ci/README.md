@@ -1,0 +1,1 @@
+Pipeline checks if the repo has been modified, and if so pushes the operator class to CF.  Currently it will re-push the operator course if any of the repo has been modified, even if its one of the other courses (microservices or zero to hero).  Need to split out the three classes into seperate repos to avoid that issue.
