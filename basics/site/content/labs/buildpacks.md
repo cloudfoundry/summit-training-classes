@@ -7,7 +7,7 @@ In this exercise, we will examine a running app to understand what a buildpack p
 
 ## View System Buildpacks
 
-{{% do %}}Use `cf help` to find out how to take a look at the buildpacks configured in PWS.{{% /do %}}
+{{% do %}}Use `cf help -a` to find out how to take a look at the buildpacks configured in PWS.{{% /do %}}
 {{% question %}}If you don't specify a buildpack, what is the first one that will be tested for?{{% /question %}}
 
 
