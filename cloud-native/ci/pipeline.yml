@@ -1,0 +1,29 @@
+---
+jobs:
+- name: publish
+  public: true
+  plan:
+  - get: summit-training-classes
+    trigger: true
+  - task: generate
+    file: summit-training-classes/basics/ci/build.yml
+  - put: cf
+    params:
+      manifest: summit-training-classes/basics/ci/manifest.yml
+      path: built/
+
+resources:
+- name: summit-training-classes
+  type: git
+  source:
+    uri: https://github.com/cloudfoundry/summit-training-classes.git
+    branch: master
+- name: cf
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: systems@engineerbetter.com
+    password: {{cf-password}}
+    organization: engineerbetter
+    space: {{cf-space}}
+    skip_cert_check: false
