@@ -2,11 +2,11 @@
 
 set -ex
 
-pushd basics/site
+pushd cloud-native/site
   hugo
 popd
 
-pushd basics/slides
+pushd cloud-native/slides
   hugo
 popd
 
