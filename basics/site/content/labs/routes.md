@@ -16,7 +16,7 @@ We need to create a route for the app we are going to deploy. This route will be
 
 {{% do %}}Change to the `08-domains-routes/v1.0` directory and push the v1.0 app{{% /do %}}
 {{% question %}}Does the push work? If not, why not? How can you fix this?{{% /question %}}
-{{% do %}}Use `cf help` to figure out how to map your route above to this app{{% /do %}}
+{{% do %}}Use `cf help -a` to figure out how to map your route above to this app{{% /do %}}
 {{% do %}}Verify your app is accessible by accessing the route you created{{% /do %}}
 
 {{% checking %}}
@@ -47,7 +47,7 @@ Check your work by accessing the main route multiple times. You should observe t
 
 We pushed the new version, smoke tested it on its own route, and then load balanced production traffic to both the new version and the old version. Now it is time to stop traffic going to the old version of the app.
 
-{{% do %}}Use `cf help` to figure out how to stop sending traffic to v1.0{{% /do %}}
+{{% do %}}Use `cf help -a` to figure out how to stop sending traffic to v1.0{{% /do %}}
 {{% question %}}Could you leave the v1.0 app running in case you need to roll-back?{{% /question %}}
 
 {{% checking %}}

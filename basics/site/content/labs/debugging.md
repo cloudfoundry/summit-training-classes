@@ -42,7 +42,7 @@ You should see something similar to this in the logs:
 
 This app can be fixed by setting an environment variable and restarting it.
 
-{{% do %}}Use `cf help` to find out how to set an environment variable for your app called `FIXED` with a value of `true`{{% /do %}}
+{{% do %}}Use `cf help -a` to find out how to set an environment variable for your app called `FIXED` with a value of `true`{{% /do %}}
 {{% do %}}Restart your app, and visit it in a browser to check that the bug is fixed{{% /do %}}
 
 ## Debug with Events

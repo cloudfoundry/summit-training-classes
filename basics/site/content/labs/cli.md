@@ -35,7 +35,7 @@ cf <some-command> --help
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
 
-{{% do %}}Use `cf help` to find out how to login to Pivotal Web Services. The API endpoint you need is `api.run.pivotal.io`.{{% /do %}}
+{{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services. The API endpoint you need is `api.run.pivotal.io`.{{% /do %}}
 {{% question %}}Are you logged into Pivotal Web Services?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
 

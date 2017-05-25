@@ -131,7 +131,7 @@ buildpack: binary_buildpack
 
 The worker app outputs logs, and Cloud Foundry allows you to see these from your computer.
 
-{{% do %}}Use `cf help` to determine what command to run to see *recent* logs.{{% /do %}}
+{{% do %}}Use `cf help -a` to determine what command to run to see *recent* logs.{{% /do %}}
 
 {{% checking %}}
 
@@ -147,7 +147,7 @@ You should see output similar to:
 
 You can also delete apps.
 
-{{% do %}}Delete the two apps you deployed (use `cf help` to find the correct command){{% /do %}}
+{{% do %}}Delete the two apps you deployed (use `cf help -a` to find the correct command){{% /do %}}
 
 {{% checking %}}
 

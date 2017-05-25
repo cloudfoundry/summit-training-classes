@@ -11,7 +11,7 @@ First, you need to create an instance of the service.
 
 {{% do %}}Use `cf marketplace` to view the details of the Redis service{{% /do %}}
 {{% do %}}Use the CLI to create an instance of the `30mb` plan{{% /do %}}
-{{% do %}}Use `cf help` to find command to list the services in your space{{% /do %}}
+{{% do %}}Use `cf help -a` to find command to list the services in your space{{% /do %}}
 
 {{% checking %}}
 
