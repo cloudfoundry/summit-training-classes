@@ -3,7 +3,7 @@
 set -ex
 
 pushd basics/site
-  hugo
+  hugo  
 popd
 
 pushd basics/slides
