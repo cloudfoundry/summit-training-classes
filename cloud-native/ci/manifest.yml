@@ -1,0 +1,4 @@
+---
+applications:
+- name: cloud-native-workshop
+  buildpack: staticfile_buildpack
