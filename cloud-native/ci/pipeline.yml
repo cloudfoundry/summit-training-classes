@@ -21,7 +21,7 @@ resources:
 - name: cf
   type: cf
   source:
-    api: https://api.run.pivotal.io
+    api: {{cf-api}}
     username: {{cf-username}}
     password: {{cf-password}}
     organization: {{cf-org}}
