@@ -21,7 +21,7 @@ content: |
   Run `cf target` to confirm your org and current space.
 
   ```sh
-  $ target
+  $ cf target
 
   API endpoint:   https://api.local.pcfdev.io (API version: 2.54.0)
   User:           admin
