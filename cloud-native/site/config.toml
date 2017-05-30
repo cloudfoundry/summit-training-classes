@@ -12,7 +12,7 @@ googleAnalytics = "UA-67001027-2"
 	description = "CF Foundation Training - Cloud Native with Microservices"
 	copyright = "Copyright Cloud Foundry Foundation.  All Rights Reserved."
 
-	version = "1.0.0"
+	version = "1.0.1"
   headerLogo = "/img/cf-white.png"
   logo = "img/cf-rabbit.png"
 	favicon = ""
