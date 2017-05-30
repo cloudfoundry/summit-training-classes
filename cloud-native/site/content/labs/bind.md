@@ -9,7 +9,7 @@ In the last section, we lost all our data when we restarted our app.  In this se
 We will create an instance of mysql and bind it to our app, thereby removing state from memory.
 
 * Use `cf marketplace` to view the available services and plans.  
-* Use `cf create-service` to create a MySQL service instance `cleardb` and select the *free* plan `spark`.
+* Use `cf create-service` to create a MySQL service instance `mariadb` and select the *free* plan `free`.
 
 ### Checking Your Work
 
@@ -20,7 +20,7 @@ cf services
 ...
 
 name           service   plan    bound apps   last operation   
-people-mysql   cleardb   spark                create succeeded   
+people-mysql   mariadb   free                 create succeeded   
 ```
 
 ## Binding to Your App
@@ -39,7 +39,7 @@ cf services
 
 ...
 name         service   plan    bound apps   last operation   
-people-mysql cleardb   spark   people       create succeeded
+people-mysql mariadb   free    people       create succeeded
 ```
 
 ## Testing Statelessness
@@ -47,14 +47,14 @@ people-mysql cleardb   spark   people       create succeeded
 At this point, you should be able to put data into your service that lands in the external mysql service.
 
 ```sh
-curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.scapps.io/people
 ```
 
 * Restart your app.
 * You should still see the data:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.cfapps.io/people
+curl http://people-<RANDOM_ROUTE>.scapps.io/people
 ...
 
 {
@@ -65,23 +65,23 @@ curl http://people-<RANDOM_ROUTE>.cfapps.io/people
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/2"
         },
         "person" : {
-          "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/2"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/search"
     }
   },
   "page" : {

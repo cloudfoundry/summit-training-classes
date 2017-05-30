@@ -35,7 +35,7 @@ cf apps
 ...
 
 name     requested state   instances   memory   disk   urls
-people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
+people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.scapp.io
 ```
 
 The app also has an endpoint called `/people`.  You should also be able to curl it:
@@ -52,13 +52,13 @@ curl people-<RANDOM_ROUTE>.cfapps.io/people
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/search"
     }
   },
   "page" : {
@@ -75,13 +75,13 @@ curl people-<RANDOM_ROUTE>.cfapps.io/people
 You can add data by issuing a curl request to POST to the people endpoint.  Be sure to replace your information and URL below:
 
 ```sh
-curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.scapp.io/people
 ```
 
 Now, you should see the data:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.cfapps.io/people
+curl http://people-<RANDOM_ROUTE>.scapp.io/people
 ...
 
 {
@@ -92,23 +92,23 @@ curl http://people-<RANDOM_ROUTE>.cfapps.io/people
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/1"
+          "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/1"
         },
         "person" : {
-          "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/1"
+          "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/1"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.cfapps.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/search"
     }
   },
   "page" : {
@@ -126,7 +126,7 @@ curl http://people-<RANDOM_ROUTE>.cfapps.io/people
 * Curl your app again:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.cfapps.io/people
+curl http://people-<RANDOM_ROUTE>.scapp.io/people
 ```
 
 What happened?  Why?  Not very durable, right?  We will correct this in the next exercise.

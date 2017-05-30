@@ -8,7 +8,7 @@ In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud
 
 The browser app uses Eureka to identify instances of our people service.  It uses the <a href="https://github.com/Netflix/ribbon" target="_blank">Ribbon</a> support built into <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Spring Cloud Netflix</a> to provide client side load balancing.  The browser app also leverages <a href="https://github.com/Netflix/feign" target="_blank">Feign</a> support which makes writing HTTP clients in java simple.
 
-> NOTE: PWS trial accounts are limited to 2GB, not enough capacity to scale our people-service instances.
+> NOTE: Swisscom trial accounts are limited to 3GB, we have enough capacity to scale our people-service instances.
 
 ## Deploying Eureka
 
@@ -73,7 +73,7 @@ cf services
 
 name             service         plan    bound apps   last operation
 eureka-service   user-provided           people
-people-mysql     cleardb         spark   people       create succeeded
+people-mysql     mariadb         free    people       create succeeded
 ```
 
 
@@ -113,8 +113,16 @@ The Browser app simply logs requests and results to the REST endpoints of the ap
 
 > The first request *might* fail (not gracefully).  This is b/c the browser service is still fetching information from Eureka.  In the next exercise, we will add resiliency so we can fail gracefully.
 
+Let's try scaling our people service to 2 instances
+
+```sh
+cf scale
+```
+
 ### What is happening?
 
-When successful, the browser app is using Eureka to locate the people service instances, then using Ribbon to load balance requests to those instances (b/c of quota limits, we only have 1 instance).  Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
+
+
+When successful, the browser app is using Eureka to locate the people service instances, then using Ribbon to load balance requests to those instances (b/c of quota limits, we only have 2 instance).  Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
 
 Congratulations!  You have successfully used service discovery to consume a microservice.
