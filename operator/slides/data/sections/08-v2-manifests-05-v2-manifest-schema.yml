@@ -1,0 +1,69 @@
+---
+type: "two-column"
+title: "v1 --> v2"
+subtitle: "Road to v2"
+menuTitle: "v1 --> v2"
+buildInColumns: "true"
+
+columnLeftTitle: v1
+
+columnLeftContent: |
+
+  ```sh
+  ---
+  name:
+  director_uuid:
+
+  releases:
+  stemcells:
+
+  jobs:
+    ...
+    templates:
+      ...
+
+  properties:
+    ...
+
+  networks:
+    ...
+
+  resource_pools:
+    ...
+
+  compilation:
+    ...
+
+  update:
+    ...
+  ```
+
+columnRightTitle: v2
+
+columnRightContent: |
+
+  ```sh
+  ---
+  name:
+  director_uuid:
+
+  releases:
+  stemcells:
+
+  instance_groups:
+    ...
+    jobs:
+      ...
+      properties: {}
+    azs: []
+    vm_type:
+    stemcell:
+    persistent_disk_type:
+    ...
+
+  update:
+    ...
+  ```
+notes: |
+
+  Bosh 

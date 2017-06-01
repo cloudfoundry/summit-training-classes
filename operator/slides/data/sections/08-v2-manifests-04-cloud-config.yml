@@ -1,0 +1,45 @@
+---
+type: "two-column"
+title: "Cloud Config"
+subtitle: "Road to v2"
+menuTitle: "Cloud Config"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ```sh
+  ---
+  azs:
+  - name: z1
+    cloud_properties: {availability_zone: us-east-1a}
+  vm_types:
+  - name: small
+    cloud_properties:
+      instance_type: t2.micro
+      ephemeral_disk: {size: 3000, type: gp2}
+  disk_types:
+  - name: small
+    disk_size: 3000
+    cloud_properties: {type: gp2}
+  compilation:
+    workers: 5
+    reuse_compilation_vms: true
+    az: z1
+    vm_type: medium
+    network: private 
+  
+  networks:
+    ...
+  ```
+
+columnRightContent: |
+
+  * azs
+  * vm_types
+  * disk_types
+  * compilation
+  * networks
+
+notes: |
+
+  Bosh 
