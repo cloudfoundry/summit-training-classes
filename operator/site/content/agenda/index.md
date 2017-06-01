@@ -50,7 +50,7 @@ title: Agenda
 
 ## 8. Cloud Config & v2 Deployment Manifests
 
-<a href="/slides/#/v2-manifests" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/cloud-config)
+<a href="/slides/#/v2-manifests" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/cloud-config-and-v2)
 
 *"As a CF operator, I can use Cloud Config to deploy an IaaS agnostic v2 manifest."*
 

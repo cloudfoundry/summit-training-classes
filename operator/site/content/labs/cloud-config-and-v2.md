@@ -1,6 +1,6 @@
 ---
 date: 2016-05-19T19:21:15-03:00
-title: Cloud Config 
+title: Cloud Config & v2 Deployment Manifests 
 ---
 
 In this exercise, we will convert the redis deployment manifest to a v2 manifest. To do so, we will need to create a cloud config and upload this to the Director.
