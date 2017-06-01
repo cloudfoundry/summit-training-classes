@@ -48,9 +48,10 @@ title: Agenda
 
 *"As a CF operator, I can upgrade Cloud Foundry with no interruption to my users."*
 
-## 8. Recap & Retro
-
-## 9. Beyond the Class
+## 8. Cloud Config
 
 <a href="/slides/#/cloud-config" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/cloud-config)
 
+*"As a CF operator, I can use Cloud Config to deploy an IaaS agnostic v2 manifest."*
+
+## 9. Recap & Retro
