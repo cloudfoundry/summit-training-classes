@@ -72,7 +72,7 @@ applications:
 
 ### Random Route
 
-The app deploys using `random-route`.  Since the `cfapps.io` is shared by all [run.pivotal.io](https://run.pivotal.io/) apps, we need an easy way to deploy our app to this shared domain for development.
+The app deploys using `random-route`.  Since the `cfapps.io` is shared by all [run.pivotal.io](https://run.pivotal.io/) apps, we need an easy way to deploy our app to this shared domain for development.  If you are using The Swisscom Application  Cloud, the shared domain will be `scapp.io`.
 
 You can see the details on `random-route` using cf help:
 
