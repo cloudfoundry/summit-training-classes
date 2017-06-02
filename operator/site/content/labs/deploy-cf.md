@@ -171,18 +171,20 @@ cd ~/workspace/diego-release
 ./scripts/generate-bosh-lite-manifests
 ```
 
-This generated a diego deployment manifest in ./bosh-lite/deployments/diego.yml. Use `bosh help` to determine the command needed to point bosh at this manifest.
+This generated a diego deployment manifest in `./bosh-lite/deployments/diego.yml`. Use `bosh help` to determine how to set the deployment manifest.
 
 ### Checking Your Work
 
 `bosh status` should list the diego.yml as the Deployment Manifest. If it doesn't, please ask for assistance.
 
 ### Deployment
-Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases. Hint: Not the incubator releases.
+Diego requires 3 releases. Use https://bosh.io/releases to upload the needed releases. 
+**Do not upload the cloudfoundry-incubator releases**
 
-- diego-release
-- garden-runc-release
-- cflinuxfs2-rootfs-release
+- cloudfoundry/diego-release
+- cloudfoundry/garden-runc-release
+- cloudfoundry/cflinuxfs2-release
+
 
 **NOTE:** The diego deployment uses the same stemcell as the CF deployment, so there's no need to upload another stemcell.
 
