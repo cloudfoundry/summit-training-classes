@@ -10,7 +10,7 @@ In this lab,  you will create an instance of a Redis service and use it with an 
 First, you need to create an instance of the service.
 
 {{% do %}}Use `cf marketplace` to view the details of the Redis service{{% /do %}}
-{{% do %}}Use the CLI to create an instance of the `30mb` plan{{% /do %}}
+{{% do %}}Use the CLI to create an instance of the `30mb` plan for Pivotal Web Services or the `free` plan on The Swisscom Application Cloud{{% /do %}}
 {{% do %}}Use `cf help -a` to find command to list the services in your space{{% /do %}}
 
 {{% checking %}}
@@ -21,6 +21,8 @@ You should see something similar to:
 name    service      plan   bound apps   last operation
 redis   rediscloud   30mb                create succeeded
 ```
+
+Note: On The Swisscom Application Cloud, the Redis service is called `redis`, not `rediscloud`.
 {{% /checking %}}
 
 ## Bind a Service Instance

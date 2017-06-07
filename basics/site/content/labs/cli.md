@@ -34,9 +34,9 @@ cf <some-command> --help
 ## Log In
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
-
-{{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services. The API endpoint you need is `api.run.pivotal.io`.{{% /do %}}
-{{% question %}}Are you logged into Pivotal Web Services?{{% /question %}}
+`
+{{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services/The Swisscom Application Cloud. The API endpoint you need for Pivotal Web Services is `api.run.pivotal.io`, or for The Swisscom Application Cloud use the endpoint `api.lyra-836.appcloud.swisscom.com` .{{% /do %}}
+{{% question %}}Are you logged into Pivotal Web Services/The Swisscom Application Cloud?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
 
 {{% checking %}}
@@ -44,7 +44,7 @@ You can use the CLI to log into any Cloud Foundry you have an account in.
 You can see where you are logged in using `cf target`. You should see something similar to:
 
 ```sh
-API endpoint:   https://api.run.pivotal.io
+API endpoint:   https://api.endpoint.io
 API version:    2.78.0
 User:           me@example.com
 Org:            my-org

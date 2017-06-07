@@ -10,7 +10,7 @@ In this exercise, you will use route mapping to perform a zero-downtime upgrade 
 
 We need to create a route for the app we are going to deploy. This route will be used for _all_ versions of the app, so should stay the same even when the app is updated.
 
-{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the domain is `cfapps.io`{{% /do %}}
+{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the domain is `cfapps.io` if you are using Pivotal Web Services, or `scapp.io` if you are using The Swisscom Application Cloud{{% /do %}}
 
 ### Push v1.0
 
