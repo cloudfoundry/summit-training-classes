@@ -1,0 +1,18 @@
+
+type: "statement"
+menuTitle: "Theory"
+title: "What do you need to know?"
+backgroundColor: "#232B2F"
+buildInStatements: true
+statements:
+  - "I.  Codebase"
+  - "II. Dependencies"
+  - "XII. Admin processes"
+
+notes: |
+
+  Brief description for factors which are not mentioned during the labs.
+
+  * Codebase - One codebase tracked in revision control, many deploys.
+  * Dependencies - Explicitly declare and isolate dependencies.
+  * Admin processes - Run admin/management tasks as one-off processes.
