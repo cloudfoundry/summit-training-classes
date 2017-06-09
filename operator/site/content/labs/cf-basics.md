@@ -104,13 +104,13 @@ The next step is to create a user and add them to the correct role.
 
 * Use `cf help -a` to create a new user.
 
-### Assign your User to the Space Developer Role
+### Assign your User to the SpaceDeveloper Role
 
 * User `cf help -a` to assign your new user the space developer role in your `dev` space.
 
 ### Checking Your Work
 
-If you run the following, you should see your new user assigned to the `Space Developer` role:
+If you run the following, you should see your new user assigned to the `SpaceDeveloper` role:
 
 ```sh
 cf space-users <org> <space>
