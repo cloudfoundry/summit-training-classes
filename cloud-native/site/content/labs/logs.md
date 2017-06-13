@@ -55,22 +55,22 @@ In the previous section you saw span and trace ids added to the application logs
 If you want to add a new trace, you can curl any one of the microservices using:
 
 ```sh
-curl http://acme-financial-ui-transferrable-conversazione.cfapps.io/start
-curl http://acme-financial-account-microservice-parlourish-pumicer.cfapps.io/action
-curl http://acme-financial-back-office-microservice-spoutless-nonfreeman.cfapps.io//action
-curl http://acme-financial-customer-microservice-overeager-browser.cfapps.io//action
+curl http://acme-financial-ui-unproffered-bibliotheca.scapp.io/start
+curl http://acme-financial-account-tubulous-gyttja.scapp.io/action
+curl http://acme-financial-back-office-choleraic-oligotrophy.scapp.io/action
+curl http://acme-financial-customer-uncognizable-knowe.scapp.io/action
 ```
 
 ### Understanding the trace hierarchy
 
-In your browser Navigate to the <a href="http://zipkin-server-receivable-plasmolysis.cfapps.io/dependency" target="_blank">dependencies</a> to view the microservice hierarchy.
+In your browser Navigate to the <a href="http://zipkin-server-postmammillary-milk.scapp.io/dependency" target="_blank">dependencies</a> to view the microservice hierarchy.
 
 * Which microservices get called from the UI service?
 * Which microservices are at the end of the call chain?
 
 ### Viewing trace timings
 
-In your browser Navigate <a href="http://zipkin-server-receivable-plasmolysis.cfapps.io/" target="_blank">here</a> to access the find trace form.
+In your browser Navigate <a href="http://zipkin-server-postmammillary-milk.scapp.io/" target="_blank">here</a> to access the find trace form.
 
 Clicking on the `Find Traces` button will bring up a list of existing traces.
 
