@@ -48,7 +48,7 @@ We have pushed four microservice applications that use Spring Cloud Slueth with 
 The source for these applications can be found at:
 <https://github.com/mikegehard/DistributedTracingDemo_Velocity2016>
 
-The Zipkin UI can be found at <http://zipkin-server-receivable-plasmolysis.cfapps.io/>.
+The Zipkin UI can be found at <http://zipkin-server-postmammillary-milk.scapp.io/>.
 
 In the previous section you saw span and trace ids added to the application logs. Now lets see how zipkin works with this information to provide visiblity into your microservice application.
 
