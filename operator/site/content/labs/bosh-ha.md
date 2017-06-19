@@ -99,7 +99,7 @@ The script is necessary b/c the "VMs" are actually containers when using bosh-li
 
 ```bash
 #in terminal 1 (on the bosh-lite VM)
-watch bosh instances --failing
+watch -n 1 bosh instances --failing
 #in terminal 2 (on the bosh-lite VM)
 curl -XDELETE http://127.0.0.1:7777/containers/$(curl -s http://127.0.0.1:7777/containers | jq -r '.["Handles"][4]')
 ```
