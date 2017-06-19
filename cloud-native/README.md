@@ -14,7 +14,7 @@ are only configured to work when the sites are built via `scripts/build.sh`.
 
 Run `./scripts/build.sh`
 
-## Deployment to PWS
+## Deployment to CF
 
 1. Make sure you have access to the cfcommunity org and cforg space on PWS.
 1. Make sure you are logged in.
