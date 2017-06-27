@@ -32,7 +32,7 @@
 
 			<footer class="footer" style="text-align: right; color: #ccc">
 				{{ with .Site.Params.copyright }}
-				&copy; {{ $.Now.Format "2006" }} {{ . }}
+				&copy; {{ (now).Format "2006" }} {{ . }}
 				{{ end }}
 			</footer>
 		</div>
