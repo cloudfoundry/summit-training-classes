@@ -5,24 +5,7 @@ menuTitle: "Where does the app run?"
 
 content: |
 
-  ```nohighlight
-                             CONSUMER
-
-                                |
-
-                              ROUTER
-
-                              /    \
-                             /      \
-                            /        \
-                           /          \
-
-                        CELL 1       CELL 2
-
-                          |            |
-        APP A INSTANCE 1 -|            |- APP A INSTANCE 2
-        APP B INSTANCE 2 -|            |- APP B INSTANCE 1
-  ```
+  ![routing to apps](img/routing-to-apps.svg)
 
 notes: |
     On an app host, also known as a CELL (CF v3).
