@@ -1,0 +1,20 @@
+---
+type: "slide-basic"
+title: "Orgs, Spaces and Apps"
+subtitle: "Bringing it altogether"
+menuTitle: "Orgs, Spaces and Apps"
+
+content: |
+
+  Run `cf target` to confirm your org and current space.
+
+  ```sh
+  $ cf target
+
+  API endpoint:   https://api.local.pcfdev.io (API version: 2.54.0)
+  User:           admin
+  Org:            cf-hero
+  Space:          training
+  ```
+
+notes: |

@@ -8,27 +8,10 @@ content: |
 
   What is the relationship between **orgs**, **spaces** & **apps**?
 
-  ```nohighlight
+  ![orgs and spaces](img/orgs-and-spaces.svg)
 
-                . Org                   . cf-hero
-                |                       |
-                \-- Space               \-- training
-                   |                       |
-                   |-- App 1               |-- web-app
-                   \-- App 2               \-- worker-app
-  .
-  ```
-  Run `cf target` to confirm your org and current space.
-
-  ```sh
-  $ cf target
-
-  API endpoint:   https://api.local.pcfdev.io (API version: 2.54.0)
-  User:           admin
-  Org:            cf-hero
-  Space:          training
-  ```
+  &nbsp;
 
 notes: |
 
-    Orgs contain 1 or more spaces. Apps are deployed to spaces.
+    Orgs contain 1 or more spaces. Apps are deployed to spaces. Apps within a space cannot have the same name.
