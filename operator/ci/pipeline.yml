@@ -16,15 +16,15 @@ resources:
 - name: summit-training-classes
   type: git
   source:
-    uri: https://github.com/anynines/summit-training-classes.git
+    uri: https://github.com/((github-org))/summit-training-classes.git
     branch: master
 
 - name: cf
   type: cf
   source:
-    api: {{cf-api}}
-    username: {{cf-username}}
-    password: {{cf-password}}
-    organization: {{cf-organization}}
-    space: {{cf-space}}
+    api: ((cf-api))
+    username: ((cf-username))
+    password: ((cf-password))
+    organization: ((cf-organization))
+    space: ((cf-space))
     skip_cert_check: false
