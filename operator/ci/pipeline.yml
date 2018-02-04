@@ -18,6 +18,8 @@ resources:
   source:
     uri: https://github.com/((github-org))/summit-training-classes.git
     branch: master
+    paths:
+    - operator/*
 
 - name: cf
   type: cf
