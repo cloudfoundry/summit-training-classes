@@ -141,10 +141,10 @@ Congratulations, you have just BOSH-deployed your first Cloud Foundry instance!
 
 ## Beyond the class
 
-* Preparing a "real" cloud for BOSH: http://bosh.io/docs/init.html
-* bosh-init - deploy BOSH director to manage a "real" cloud: http://bosh.io/docs/using-bosh-init.html
-* Precompiled releases - http://bosh.io/docs/compiled-releases.html
-* Try these commands
+* Read up on preparing an IaaS for BOSH: http://bosh.io/docs/init.html
+* [BOSH Bootloader](https://github.com/cloudfoundry/bosh-bootloader) - CLI tool to pave an IaaS and deploy a BOSH Director
+* Use precompiled releases - http://bosh.io/docs/compiled-releases.html
+* Try these commands:
 
 ```sh
 bosh help
