@@ -9,7 +9,7 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
 
-**NOTE:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below to set up BOSH Lite v2 locally:
+**NOTE:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below to set up BOSH Lite v2 locally, being sure to *run the optional step to add routes*:
 
 - https://bosh.io/docs/bosh-lite
 
