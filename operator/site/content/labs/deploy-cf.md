@@ -31,12 +31,12 @@ Move on when you're able to run `bosh -e [your environment name] env` successful
 
 <!-- THIS SECTION WILL NEED TO BE REWRITTEN AFTER WE PIN DOWN AWS METHOD -->
 
-This section covers logging from an AWS or laptop setup.
+This section covers logging in from an AWS or laptop setup.
 
 **NOTE**
 
-- When using BOSH Lite v2, the default username is `admin` and password is `admin` (if needed).
-- The rest of this lab and the successive labs assume running BOSH Lite v2 on AWS and having `SSH-ed` into your AWS EC2 instance.
+- BOSH can generate credentials for you, including when using `bosh create-env` to create a BOSH Lite v2 Director. Login instructions appeared in the [instructions from bosh.io](https://bosh.io/docs/bosh-lite).
+- The rest of this lab and the successive labs assume running BOSH Lite v2 on AWS and having `SSH`ed into your AWS EC2 instance.
 
 ### BOSH Lite v2 on AWS
 
@@ -63,13 +63,13 @@ Run the following command to update the cloud-config. This file is used to trans
 bosh update-cloud-config ~/workspace/cf-deployment/iaas-support/bosh-lite/cloud-config.yml
 ```
 
-The last step before deplyong is to upload a stemcell - the base operating system for every VM in the deployment.
+The last step before deploying is to upload a stemcell - the base operating system for every VM in the deployment.
 
 ```sh
 bosh upload-stemcell https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go_agent.tgz
 ```
 
-You can use the following command to check your stemcell has been uploaded:
+### Checking Your Work
 
 ```sh
   bosh stemcells
@@ -137,7 +137,7 @@ cf    binary-buildpack/1.0.15      bosh-warden-boshlite-ubuntu-trusty-go_agent/3
 1 deployments
 ```
 
-Congratulations!!! You have just deployed your first Cloud Foundry Foundation!
+Congratulations, you have just BOSH-deployed your first Cloud Foundry instance!
 
 ## Beyond the class
 
