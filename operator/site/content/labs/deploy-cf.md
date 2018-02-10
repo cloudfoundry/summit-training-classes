@@ -1,15 +1,15 @@
 ---
 date: 2018-02-06T10:21:15-03:00
-title: Deploying Cloud Foundry with BOSH Lite
+title: Deploying Cloud Foundry with BOSH Lite v2
 ---
 
-Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
+Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
 
 - Upload releases needed for Cloud Foundry.
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
 
-**NOTE:** In some training sessions you may already have a BOSH Lite instance set up for you in AWS. If not, please follow the instructions below to set up BOSH Lite locally:
+**NOTE:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below to set up BOSH Lite v2 locally:
 
 - https://bosh.io/docs/bosh-lite
 
@@ -35,10 +35,10 @@ This section covers logging from an AWS or laptop setup.
 
 **NOTE**
 
-- When using BOSH Lite, the default username is `admin` and password is `admin` (if needed).
-- The rest of this lab and the successive labs assume running BOSH Lite on AWS and having `SSH-ed` into your AWS EC2 instance.
+- When using BOSH Lite v2, the default username is `admin` and password is `admin` (if needed).
+- The rest of this lab and the successive labs assume running BOSH Lite v2 on AWS and having `SSH-ed` into your AWS EC2 instance.
 
-### BOSH Lite on AWS
+### BOSH Lite v2 on AWS
 
 
 ## Preparing for the Deployment
