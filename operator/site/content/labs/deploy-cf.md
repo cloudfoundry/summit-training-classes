@@ -1,19 +1,20 @@
 ---
 date: 2018-02-06T10:21:15-03:00
-title: Deploying Cloud Foundry with BOSH Lite v2
+title: Deploying Cloud Foundry with BOSH Lite
 ---
 
-Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
+Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
 
 - Upload releases needed for Cloud Foundry.
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
 
-**NOTE:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below to set up BOSH Lite v2 locally, being sure to *run the optional step to add routes*:
+**NOTE:** In some training sessions you may already have a BOSH Lite instance set up for you in AWS. If not, please follow the instructions below:
 
-- https://bosh.io/docs/bosh-lite
+- [Set up BOSH lite locally](https://bosh.io/docs/bosh-lite)
+- [Set up BOSH lite on AWS](/labs/bosh-lite-on-aws)
 
-Move on when you're able to run `bosh -e [your environment name] env` successfully, which should produce output similar to the following:
+Move on when you're able to run `bosh env` successfully, which should produce output similar to the following:
 
 ```sh
   Name      Bosh Lite Director
@@ -27,34 +28,24 @@ Move on when you're able to run `bosh -e [your environment name] env` successful
   User      admin
 ```
 
-## Logging In
-
-<!-- THIS SECTION WILL NEED TO BE REWRITTEN AFTER WE PIN DOWN AWS METHOD -->
-
-This section covers logging in from an AWS or laptop setup.
-
 **NOTE**
 
-- BOSH can generate credentials for you, including when using `bosh create-env` to create a BOSH Lite v2 Director. Login instructions appeared in the [instructions from bosh.io](https://bosh.io/docs/bosh-lite).
-- The rest of this lab and the successive labs assume running BOSH Lite v2 on AWS and having `SSH`ed into your AWS EC2 instance.
+- The next part of the guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
 
-### BOSH Lite v2 on AWS
-
-
-## Preparing for the Deployment
-
-<!-- THIS SECTION MAY NEED CHANGES FOR AWS -->
+## Preparing to Deploy Cloud Foundry
 
 Next we need to obtain a manifest. In this exercise we'll use the 'canonical' manifest provided by the Cloud Foundry Foundation. Among other uses, the file lists the different releases that BOSH will download when you make your deployment.
 
 ```sh
 git clone https://github.com/cloudfoundry/cf-deployment ~/workspace/cf-deployment
+
+cd ~/workspace/cf-deployment
 ```
 
-Set the following environment variable to the alias you've given your Director (this saves us from having to repeat it in each of the following bosh commands):
+If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following bosh commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite locally:
 
 ```sh
-export BOSH_ENVIRONMENT=vbox
+export BOSH_ENVIRONMENT=<your environment IP/name>
 ```
 
 Run the following command to update the cloud-config. This file is used to translate deployment manifests, which describe cloud resources in a generic way, into configuration specific to the IaaS provider where the deployment is being made.
@@ -63,10 +54,12 @@ Run the following command to update the cloud-config. This file is used to trans
 bosh update-cloud-config ~/workspace/cf-deployment/iaas-support/bosh-lite/cloud-config.yml
 ```
 
-The last step before deploying is to upload a stemcell - the base operating system for every VM in the deployment.
+The last step before deploying is to upload a stemcell - the base operating system for every VM in the deployment. You need to ensure you upload a stemcell that matches the version expected by the manifest `cf-deployment.yml`, which we can achieve by pulling the value out of the file:
 
 ```sh
-bosh upload-stemcell https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go_agent.tgz
+export STEMCELL_VERSION=$(bosh int cf-deployment.yml --path '/stemcells/alias=default/version')
+
+bosh upload-stemcell "https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=$STEMCELL_VERSION"
 ```
 
 ### Checking Your Work
@@ -92,21 +85,22 @@ There's just one more command to set your deployment running:
 ```sh
 bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
 -o ~/workspace/cf-deployment/operations/bosh-lite.yml \
+-o ~/workspace/cf-deployment/operations/use-compiled-releases.yml \
 --vars-store deployment-vars.yml \
--v system_domain=bosh-lite.com
+-v system_domain=$BOSH_ENVIRONMENT.sslip.io
 ```
 
-The process may take around two hours to complete if you're running BOSH-lite locally.
+In our example, `cf` is the name we're choosing to give the deployment. `cf-deployment.yml` is our Cloud Foundry deployment manifest, while `bosh-lite.yml` and `use-compiled-releases.yml` are 'operations' files which make changes to that manifest. The 'vars-store' flag specifies where we want BOSH to generate a file containing credentials for our deployment. Lastly, 'system domain' will be used as the root domain for your deployment.
 
 ### Checking Your Work
 
-Barring any hitches, your deployment can now be inspected by running:
+You can view a list of your deployments by running:
 
 ```sh
   bosh deployments
 ```
 
-The output should look something like this, and will include details of the numerous BOSH releases that make up a Cloud Foundry deployment:
+Barring any hitches, the output should look something like this, and will include details of the many BOSH releases that make up a Cloud Foundry deployment:
 
 ```sh
 Name  Release(s)                   Stemcell(s)                                          Team(s)  Cloud Config
