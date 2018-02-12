@@ -17,7 +17,7 @@ You can view details of the VMs BOSH has deployed with the commands `bosh instan
 You can 'ssh' to any virtual machine deployed by BOSH.
 
 ```sh
-  bosh ssh -d <deployment name> <instance-id>
+  bosh ssh -d <deployment name> <instance-group/<instance-id>>
 ```
 
 For example:
