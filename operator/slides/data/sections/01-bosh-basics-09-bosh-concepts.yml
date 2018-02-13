@@ -3,36 +3,33 @@ title: "Bosh Concepts"
 subtitle: "Anatomy of Bosh Deployments"
 menuTitle: "Anatomy of Bosh Deployments"
 content: |
-    <svg width="903px" height="534px" viewBox="0 0 1094 647" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-        <desc>Created with Sketch.</desc>
-        <defs>
-            <rect id="path-1" x="0" y="0" width="76" height="99"></rect>
-            <rect id="path-3" x="0" y="0" width="76" height="99"></rect>
-            <rect id="path-5" x="0" y="0" width="76" height="99"></rect>
-            <rect id="path-7" x="0" y="0" width="244" height="42" rx="8"></rect>
-            <rect id="path-9" x="0" y="0" width="219" height="43" rx="8"></rect>
-            <path d="M144.5,350.5 L802.5,350.5" id="path-11"></path>
-            <rect id="path-12" x="0" y="0" width="172" height="42" rx="8"></rect>
-            <rect id="path-14" x="0" y="0" width="172" height="42" rx="8"></rect>
-            <rect id="path-16" x="0" y="0" width="172" height="42" rx="8"></rect>
-        </defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="lines" stroke-linecap="square" transform="translate(-1.000000, 89.000000)" class="fragment">
-                <path d="M302,130 L420,2" id="Line" stroke="#979797"></path>
-                <path d="M642,130 L528,0" id="Line" stroke="#979797"></path>
-                <path d="M394,157 L552,157" id="Line" stroke="#979797"></path>
+    <svg width="1093px" height="500px" viewBox="0 0 1093 647" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="76" height="99"></rect>
+        <rect id="path-3" x="0" y="0" width="76" height="99"></rect>
+        <rect id="path-5" x="0" y="0" width="76" height="99"></rect>
+        <rect id="path-7" x="0" y="0" width="244" height="42" rx="8"></rect>
+        <rect id="path-9" x="0" y="0" width="219" height="43" rx="8"></rect>
+        <path d="M144.5,350.5 L802.5,350.5" id="path-11"></path>
+        <rect id="path-12" x="0" y="0" width="172" height="42" rx="8"></rect>
+        <rect id="path-14" x="0" y="0" width="172" height="42" rx="8"></rect>
+        <rect id="path-16" x="0" y="0" width="172" height="42" rx="8"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lines" stroke-linecap="square" transform="translate(300.000000, 89.000000)" class="fragment">
+                <path d="M0,130 L118,2" id="Line" stroke="#979797"></path>
+                <path d="M340,130 L226,0" id="Line" stroke="#979797"></path>
+                <path d="M92,157 L250,157" id="Line" stroke="#979797"></path>
                 <text id="+" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
-                    <tspan x="455.976562" y="88">+</tspan>
+                    <tspan x="153.976562" y="88">+</tspan>
                 </text>
                 <text id="=" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
-                    <tspan x="801.976562" y="88">=</tspan>
+                    <tspan x="499.976562" y="88">=</tspan>
                 </text>
-                <text id="Deployment-specific" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
-                    <tspan x="0" y="307">Deployment-specific config</tspan>
-                </text>
-            </g>
-            <g id="stemcell" transform="translate(218.000000, 232.000000)" class="fragment">
+        </g>
+        <g id="stemcell" transform="translate(217.000000, 232.000000)" class="fragment">
                 <g id="Rectangle" transform="translate(0.000000, 2.000000)">
                     <mask id="mask-15" fill="white">
                         <use xlink:href="#path-14"></use>
@@ -52,8 +49,8 @@ content: |
                 <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
                     <tspan x="20.4853516" y="35">stemcell</tspan>
                 </text>
-            </g>
-            <g id="manifest" transform="translate(391.000000, -4.000000)" class="fragment">
+        </g>
+        <g id="manifest" transform="translate(390.000000, -4.000000)" class="fragment">
                 <g id="Rectangle" transform="translate(0.000000, 51.000000)">
                     <mask id="mask-17" fill="white">
                         <use xlink:href="#path-16"></use>
@@ -70,8 +67,8 @@ content: |
                 <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
                     <tspan x="17.4726562" y="84">manifest</tspan>
                 </text>
-            </g>
-            <g id="release" transform="translate(562.000000, 233.000000)" class="fragment">
+        </g>
+        <g id="release" transform="translate(561.000000, 233.000000)" class="fragment">
                 <g id="Rectangle" transform="translate(0.000000, 1.000000)">
                     <mask id="mask-13" fill="white">
                         <use xlink:href="#path-12"></use>
@@ -94,112 +91,112 @@ content: |
                 <text id="versioned-tarballs" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
                     <tspan x="18.4145508" y="64">versioned tarballs</tspan>
                 </text>
-            </g>
-            <g id="lines-2" stroke-linecap="square" transform="translate(-1.000000, 89.000000)" class="fragment">
-                <path d="M302,130 L420,2" id="Line" stroke="#979797"></path>
-                <path d="M642,130 L528,0" id="Line" stroke="#979797"></path>
-                <path d="M394,157 L552,157" id="Line" stroke="#979797"></path>
-                <g id="Line-2" stroke-dasharray="1,10" stroke="#979797">
-                    <use stroke-width="3" xlink:href="#path-11"></use>
-                    <use stroke-width="1" xlink:href="#path-11"></use>
-                </g>
-                <text id="+" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
-                    <tspan x="455.976562" y="88">+</tspan>
-                </text>
-                <text id="=" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
-                    <tspan x="801.976562" y="88">=</tspan>
-                </text>
-                <text id="Deployment-specific" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
-                    <tspan x="0" y="307">Deployment-specific config</tspan>
-                </text>
-                <text id="Director-specific-co" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
-                    <tspan x="3" y="402">Director-specific config</tspan>
-                </text>
-            </g>
-            <g id="cloud-config" transform="translate(185.000000, 532.000000)" class="fragment">
-                <g id="Rectangle" transform="translate(6.000000, 0.000000)">
-                    <mask id="mask-10" fill="white">
-                        <use xlink:href="#path-9"></use>
-                    </mask>
-                    <g id="path-3"></g>
-                    <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-10)" x="0" y="0" width="219" height="43" rx="8"></rect>
-                </g>
-                <text id="IaaS-specific-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="12.4145508" y="67">IaaS-specific configuration</tspan>
-                </text>
-                <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="0" y="89">that applies to all deployments</tspan>
-                </text>
-                <text id="(e.g.-VM-sizes,-disk" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="12" y="111">(e.g. VM sizes, disk sizes)</tspan>
-                </text>
-                <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
-                    <tspan x="20" y="35">cloud-config</tspan>
-                </text>
-            </g>
-            <g id="runtime-config" transform="translate(526.000000, 532.000000)" class="fragment">
-                <g id="Rectangle" transform="translate(0.000000, 4.000000)">
-                    <mask id="mask-8" fill="white">
-                        <use xlink:href="#path-7"></use>
-                    </mask>
-                    <g id="path-3"></g>
-                    <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-8)" x="0" y="0" width="244" height="42" rx="8"></rect>
-                </g>
-                <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
-                    <tspan x="5" y="35">runtime-config</tspan>
-                </text>
-                <text id="IaaS-agnostic-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="17" y="67">IaaS-agnostic configuration</tspan>
-                </text>
-                <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="5" y="89">that applies to all deployments</tspan>
-                </text>
-                <text id="(e.g.-anti-virus,-me" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="5" y="111">(e.g. anti-virus, metrics, logging)</tspan>
-                </text>
-            </g>
-            <g id="deployment" transform="translate(908.000000, 96.000000)" class="fragment">
-                <g id="VM" transform="translate(46.000000, 26.000000)">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <g id="path-7"></g>
-                    <rect id="path-7" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0" width="76" height="99"></rect>
-                </g>
-                <g id="VM" transform="translate(56.000000, 15.000000)">
-                    <mask id="mask-4" fill="white">
-                        <use xlink:href="#path-3"></use>
-                    </mask>
-                    <g id="path-9"></g>
-                    <rect id="path-9" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-4)" x="0" y="0" width="76" height="99"></rect>
-                </g>
-                <g id="VM" transform="translate(69.000000, 0.000000)">
-                    <mask id="mask-6" fill="white">
-                        <use xlink:href="#path-5"></use>
-                    </mask>
-                    <g id="path-11"></g>
-                    <rect id="path-11" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-6)" x="0" y="0" width="76" height="99"></rect>
-                    <text fill="#4A4A4A" mask="url(#mask-6)" font-family="Helvetica" font-size="24" font-weight="normal">
-                        <tspan x="19.6972656" y="26">VM</tspan>
-                    </text>
-                </g>
-                <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
-                    <tspan x="0.3847656" y="170">deployment</tspan>
-                </text>
-                <text id="a-cluster-of-VMs" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="26.9306641" y="197">a cluster of VMs</tspan>
-                </text>
-                <text id="based-on-the" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="39.4067383" y="219">based on the</tspan>
-                </text>
-                <text id="stemcell,-running" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="23.4194336" y="241">stemcell, running</tspan>
-                </text>
-                <text id="release-software" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
-                    <tspan x="25.4189453" y="263">release software</tspan>
-                </text>
-            </g>
         </g>
+        <g id="lines-2" stroke-linecap="square" transform="translate(-2.000000, 89.000000)" class="fragment">
+            <path d="M302,130 L420,2" id="Line" stroke="#979797"></path>
+            <path d="M642,130 L528,0" id="Line" stroke="#979797"></path>
+            <path d="M394,157 L552,157" id="Line" stroke="#979797"></path>
+            <g id="Line-2" stroke-dasharray="1,10" stroke="#979797">
+                <use stroke-width="3" xlink:href="#path-11"></use>
+                <use stroke-width="1" xlink:href="#path-11"></use>
+            </g>
+            <text id="+" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
+                <tspan x="455.976562" y="88">+</tspan>
+            </text>
+            <text id="=" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
+                <tspan x="801.976562" y="88">=</tspan>
+            </text>
+            <text id="Deployment" font-family="Helvetica" font-size="30" font-weight="normal" fill="#000000">
+                <tspan x="0" y="307">Deployment</tspan>
+            </text>
+            <text id="Director" font-family="Helvetica" font-size="30" font-weight="normal" fill="#000000">
+                <tspan x="0" y="409">Director</tspan>
+            </text>
+        </g>
+        <g id="cloud-config" transform="translate(184.000000, 532.000000)" class="fragment">
+            <g id="Rectangle" transform="translate(6.000000, 0.000000)">
+                <mask id="mask-10" fill="white">
+                    <use xlink:href="#path-9"></use>
+                </mask>
+                <g id="path-3"></g>
+                <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-10)" x="0" y="0" width="219" height="43" rx="8"></rect>
+            </g>
+            <text id="IaaS-specific-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="12.4145508" y="67">IaaS-specific configuration</tspan>
+            </text>
+            <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="0" y="89">that applies to all deployments</tspan>
+            </text>
+            <text id="(e.g.-VM-sizes,-disk" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="12" y="111">(e.g. VM sizes, disk sizes)</tspan>
+            </text>
+            <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                <tspan x="20" y="35">cloud-config</tspan>
+            </text>
+        </g>
+        <g id="runtime-config" transform="translate(525.000000, 532.000000)" class="fragment">
+            <g id="Rectangle" transform="translate(0.000000, 4.000000)">
+                <mask id="mask-8" fill="white">
+                    <use xlink:href="#path-7"></use>
+                </mask>
+                <g id="path-3"></g>
+                <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-8)" x="0" y="0" width="244" height="42" rx="8"></rect>
+            </g>
+            <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                <tspan x="5" y="35">runtime-config</tspan>
+            </text>
+            <text id="IaaS-agnostic-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="17" y="67">IaaS-agnostic configuration</tspan>
+            </text>
+            <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="5" y="89">that applies to all deployments</tspan>
+            </text>
+            <text id="(e.g.-anti-virus,-me" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="5" y="111">(e.g. anti-virus, metrics, logging)</tspan>
+            </text>
+        </g>
+        <g id="deployment" transform="translate(907.000000, 96.000000)" class="fragment">
+            <g id="VM" transform="translate(46.000000, 26.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-7"></g>
+                <rect id="path-7" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0" width="76" height="99"></rect>
+            </g>
+            <g id="VM" transform="translate(56.000000, 15.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="path-9"></g>
+                <rect id="path-9" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-4)" x="0" y="0" width="76" height="99"></rect>
+            </g>
+            <g id="VM" transform="translate(69.000000, 0.000000)">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="path-11"></g>
+                <rect id="path-11" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-6)" x="0" y="0" width="76" height="99"></rect>
+                <text fill="#4A4A4A" mask="url(#mask-6)" font-family="Helvetica" font-size="24" font-weight="normal">
+                    <tspan x="19.6972656" y="26">VM</tspan>
+                </text>
+            </g>
+            <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                <tspan x="0.3847656" y="170">deployment</tspan>
+            </text>
+            <text id="a-cluster-of-VMs" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="26.9306641" y="197">a cluster of VMs</tspan>
+            </text>
+            <text id="based-on-the" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="39.4067383" y="219">based on the</tspan>
+            </text>
+            <text id="stemcell,-running" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="23.4194336" y="241">stemcell, running</tspan>
+            </text>
+            <text id="release-software" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                <tspan x="25.4189453" y="263">release software</tspan>
+            </text>
+        </g>
+    </g>
     </svg>
 
 notes: |
