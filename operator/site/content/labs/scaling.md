@@ -7,7 +7,7 @@ In this section, you will add application capacity to the Cloud Foundry platform
 
 ## Scaling the Platform Out
 
-Scaling out with bosh is simple.  We simply need to change the manifest, add instances, and deploy.  In our case, the number of Diego cells in our deployment is set by an 'operations' file, which modifies the main deployment manifest (you included this as an option when you originally ran `bosh deploy`). You can read more about ops files [here](https://bosh.io/docs/cli-ops-files.html)
+Scaling out with BOSH is simple.  We simply need to change the manifest, add instances, and deploy.  In our case, the number of Diego cells in our deployment is set by an 'operations' file, which modifies the main deployment manifest (you included this as an option when you originally ran `bosh deploy`). You can read more about ops files [here](https://bosh.io/docs/cli-ops-files.html)
 
 * Find the relevant ops file at ~/workspace/cf-deployment/operations/bosh-lite.yml
 * Find the section of the file which changes the number of diego-cell instances and set the value from 1 to 2.
@@ -41,11 +41,11 @@ bosh vms
 
 ### Vertical Scaling
 
-* Use the cf cli to scale your application vertically (add memory).
+* Use the cf CLI to scale your application vertically (add memory).
 
 ```sh
 # In terminal 1
-# Use cf cli to scale app vertically
+# Use cf CLI to scale app vertically
 
 # In terminal 2
 cf top # <-- switch to the App Stats display
@@ -55,11 +55,11 @@ What happens?  Why?  How long does it take?  Is this a good idea in production s
 
 ### Horizontal Scaling
 
-Use the cf cli to scale your application horizontally to 2 instances.
+Use the cf CLI to scale your application horizontally to 2 instances.
 
 ```sh
 # In terminal 1
-# Use cf cli to scale app horizontally
+# Use cf CLI to scale app horizontally
 
 # In terminal 2
 cf top # <-- switch to the App Stats display

@@ -3,19 +3,19 @@ date: 2016-05-19T14:00:15-03:00
 title: Deploying a Redis Data Service
 ---
 
-In this exercise, you will use bosh to add a redis service to your Cloud Foundry installation.  Then, as a user of CF, you will create an instance of this service and bind it to your app.
+In this exercise, you will use BOSH to add a redis service to your Cloud Foundry installation.  Then, as a user of CF, you will create an instance of this service and bind it to your app.
 
 ## Deploying Redis
 
-Given your knowledge of bosh, deploy a new Redis cluster.
+Given your knowledge of BOSH, deploy a new Redis cluster.
 
 * First, you will need to clone the release repo, using this address: `https://github.com/pivotal-cf/cf-redis-release.git`
-* Then, use the scripts directory to generate a bosh-lite manifest for warden and redirect to a file.
-* Use the generated manifest to find dependent releases and upload to bosh-lite
+* Then, use the scripts directory to generate a BOSH-lite manifest for warden and redirect to a file.
+* Use the generated manifest to find dependent releases and upload to BOSH-lite
 * Set the deployment file. **Hint:** use `bosh status` to resolve the error
 * Deploy!
 
-> **Warning**: To be fair, instruction in the repo's README are a bit old. Use the above instructions. Ask for help if needed! 
+> **Warning**: To be fair, instruction in the repo's README are a bit old. Use the above instructions. Ask for help if needed!
 
 ### Checking Your Work
 
@@ -39,7 +39,7 @@ An errand is included in the redis release that registers the broker with Cloud 
 bosh errands
 ```
 
-The errand is called `broker-registrar`.  Use the bosh cli to run this errand.
+The errand is called `broker-registrar`.  Use the BOSH CLI to run this errand.
 
 ### Checking Your Work
 

@@ -1,19 +1,19 @@
 ---
 type: "two-column"
-title: "Bosh Agent"
-menuTitle: "Bosh Agent"
+title: "BOSH Agent"
+menuTitle: "BOSH Agent"
 buildInColumns: "true"
 
 columnLeftContent: |
 
-  ![Bosh Agent](img/vm-bosh-agent.svg "Bosh Agent")
+  ![BOSH Agent](img/vm-bosh-agent.svg "BOSH Agent")
 
 columnRightContent: |
 
   * Part of the **stemcell**
-  * **Communicates** with bosh
+  * **Communicates** with BOSH
   * Critical to **availability**
 
 notes: |
 
-  The bosh agent is part of the stemcell (base OS) and is on every VM bosh creates.  It is critical to bosh's built in lifecycle management of VMs.
+  The BOSH agent is part of the stemcell (base OS) and is on every VM BOSH creates.  It is critical to bosh's built in lifecycle management of VMs.

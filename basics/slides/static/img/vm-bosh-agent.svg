@@ -23,7 +23,7 @@
         <g id="bosh-agent" transform="translate(12.000000, 206.000000)">
             <use id="Rectangle-2" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-3"></use>
             <text font-family="Helvetica" font-size="24" font-weight="normal" fill="#000000">
-                <tspan x="37.1152344" y="32">bosh agent</tspan>
+                <tspan x="37.1152344" y="32">BOSH agent</tspan>
             </text>
         </g>
     </g>

@@ -13,4 +13,4 @@ content: |
 
 notes: |
 
-  Best practice is to right size vms in the installation.  Then to add capacity, scale out.
+  Best practice is to right size VMs in the installation.  Then to add capacity, scale out.

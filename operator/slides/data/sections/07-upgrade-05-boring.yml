@@ -1,6 +1,6 @@
 ---
 type: slide-basic
-title: "Bosh Updates"
+title: "BOSH Updates"
 subtitle: "Coping with boredom"
 menuTitle: "Coping with Boredom"
 backgroundImage: "img/ping-pong.png"
@@ -17,4 +17,4 @@ content: |
 
 notes: |
 
-  Bosh is doing a lot of hard work in a very reliable, repeatable, and robust fashion.  Can we suggest you take up ping pong in your free time?
+  BOSH is doing a lot of hard work in a very reliable, repeatable, and robust fashion.  Can we suggest you take up ping pong in your free time?

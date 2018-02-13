@@ -14,7 +14,7 @@ You can view details of the VMs BOSH has deployed with the commands `bosh instan
 
 ### Accessing VMs
 
-You can 'ssh' to any virtual machine deployed by BOSH.
+You can 'SSH' to any virtual machine deployed by BOSH.
 
 ```sh
   bosh ssh -d <deployment name> <instance-group/<instance-id>>
@@ -26,7 +26,7 @@ For example:
   bosh ssh -d cf diego-api/c754437a-738e-43d7-8f07-b1ddd2359d3b
 ```
 
-* Choose a VM to ssh to. Once you're connected, change directory to `/var/vcap`.
+* Choose a VM to SSH to. Once you're connected, change directory to `/var/vcap`.
 
 ```bash
 /var/vcap
@@ -49,7 +49,7 @@ tail --lines=1 -f /var/vcap/sys/log/*/*
 ### Process Monitoring with Monit and VM resurrection
 
 
-While still ssh-ed into a VM, try the following:
+While still SSHed into a VM, try the following:
 
 ```sh
 sudo /var/vcap/bosh/bin/monit summary
@@ -69,7 +69,7 @@ sudo kill -9 $(cat /var/vcap/sys/run/consul_agent/consul_agent.pid)
 ```sh
 #in terminal 1, back on the bosh-lite VM
 watch bosh instances --failing
-#in terminal 2, while ssh-ed into a VM from your deployment
+#in terminal 2, while SSHed into a VM from your deployment
 sudo kill -9 $(cat /var/vcap/sys/run/consul_agent/consul_agent.pid)
 ```
 #### Cloud Check

@@ -1,7 +1,7 @@
 type: slide-basic
-title: "Bosh Concepts"
-subtitle: "Anatomy of Bosh Deployments"
-menuTitle: "Anatomy of Bosh Deployments"
+title: "BOSH Concepts"
+subtitle: "Anatomy of BOSH Deployments"
+menuTitle: "Anatomy of BOSH Deployments"
 content: |
     <svg width="1093px" height="500px" viewBox="0 0 1093 647" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
@@ -201,4 +201,4 @@ content: |
 
 notes: |
 
-  Bosh clusters are made up of 3 major components (bosh triangle).  Bosh 2.0 separates the concerns of IaaS/Cloud config from the deployment manifest.
+  BOSH clusters are made up of 3 major components (bosh triangle).  BOSH 2.0 separates the concerns of IaaS/Cloud config from the deployment manifest.

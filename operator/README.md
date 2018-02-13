@@ -7,7 +7,7 @@ Scale
 Immutability
 
 
-Bosh as a day 2 solution
+BOSH as a day 2 solution
 - availability
 - updates
 - scaling

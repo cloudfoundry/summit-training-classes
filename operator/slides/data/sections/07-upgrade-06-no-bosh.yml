@@ -1,8 +1,8 @@
 ---
 type: "two-column"
-title: "Life w/o Bosh"
+title: "Life w/o BOSH"
 subtitle: "Pondering the horror"
-menuTitle: "Life w/o Bosh"
+menuTitle: "Life w/o BOSH"
 buildInColumns: "true"
 
 
@@ -10,7 +10,7 @@ columnLeftContent: |
 
   <span class="txt-c">
 
-  Environments without Bosh...
+  Environments without BOSH...
 
   **Why would you?**
 

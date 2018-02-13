@@ -1,6 +1,6 @@
 ---
 date: 2016-05-19T19:21:15-03:00
-title: Cloud Config & v2 Deployment Manifests 
+title: Cloud Config & v2 Deployment Manifests
 ---
 
 In this exercise, we will convert the redis deployment manifest to a v2 manifest. To do so, we will need to create a cloud config and upload this to the Director.
@@ -12,7 +12,7 @@ In this exercise, we will convert the redis deployment manifest to a v2 manifest
 
 ```sh
 ---
-azs: <-- Not needed for a bosh-lite install
+azs: <-- Not needed for a BOSH-lite install
   ...
 vm_types:
   ...
@@ -24,7 +24,7 @@ networks: <-- The entire "networks" block from the redis deployment manifest can
   ...
 ```
 
-* Use bosh to upload the cloud config to the director
+* Use BOSH to upload the cloud config to the director
 
 ## Convert a v1 manifest to a v2 manifest
 
@@ -56,13 +56,13 @@ update:
 ```
 
 ## Deploy V2 Manifest
-* Use bosh to deploy redis using the v2 manifest
+* Use BOSH to deploy redis using the v2 manifest
 
 ## Beyond the Class
 
-* bosh cli v2
-  * http://bosh.io/docs/cli-v2.html 
-* BOSH Runtime Config 
+* BOSH cli v2
+  * http://bosh.io/docs/cli-v2.html
+* BOSH Runtime Config
   * http://bosh.io/docs/runtime-config.html
-* BOSH CPI Config 
+* BOSH CPI Config
   * http://bosh.io/docs/cpi-config.html

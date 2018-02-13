@@ -1,7 +1,7 @@
 ---
 type: slide-basic
-title: "What is Bosh?"
-subtitle: "What is Bosh?"
+title: "What is BOSH?"
+subtitle: "What is BOSH?"
 content: |
 
   BOSH is an open source tool for **release engineering**, **deployment**, **lifecycle management**, and **monitoring** of distributed systems.
@@ -10,4 +10,4 @@ content: |
 
 notes: |
 
-  Bosh can have a steep learning curve and can be hard to get started with.  However, it is optimized for day two operations (post setup).  This class will demonstrate this "day 2" power.
+  BOSH can have a steep learning curve and can be hard to get started with.  However, it is optimized for day two operations (post setup).  This class will demonstrate this "day 2" power.

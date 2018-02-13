@@ -11,7 +11,7 @@ Main Site: [cloudfoundry.org](https://www.cloudfoundry.org)
 * [github.com/cloudfoundry](https://github.com/cloudfoundry)
 * [github.com/cloudfoundry-incubator](https://github.com/cloudfoundry-incubator)
 
-## Bosh
+## BOSH
 
 Main Site: [bosh.io](https://bosh.io)
 

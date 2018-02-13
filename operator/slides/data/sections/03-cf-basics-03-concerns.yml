@@ -20,4 +20,4 @@ columnRightContent: |
 
 notes: |
 
-  By now, you should know how to see all of the VMs that make up a cloud foundry deployment using bosh.  We are not going to cover all of the components in the interest of time.
+  By now, you should know how to see all of the VMs that make up a cloud foundry deployment using BOSH.  We are not going to cover all of the components in the interest of time.

@@ -9,12 +9,12 @@ In this exercise, we will upgrade the stemcell used by Redis.  You can upgrade C
 
 Explore https://bosh.io/stemcells for a previous version of the `bosh-warden-boshlite` stemcell.
 
-* Use bosh to upload this stemcell to your director.
+* Use BOSH to upload this stemcell to your director.
 * Be sure your deployment is set to Redis.
 * Modify the Redis deployment with the stemcell version.
 * Deploy the changes.
 
-> Note: Since we are using bosh-lite with single instances per vm type, a zero downtime deployment is not possible.
+> Note: Since we are using BOSH-lite with single instances per VM type, a zero downtime deployment is not possible.
 
 ### Checking Your Work
 

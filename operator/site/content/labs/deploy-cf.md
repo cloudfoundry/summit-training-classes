@@ -17,7 +17,7 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 Move on when you're able to run `bosh env` successfully, which should produce output similar to the following:
 
 ```sh
-  Name      Bosh Lite Director
+  Name      BOSH Lite Director
   UUID      b1c3a0d6-cd0b-4ff9-9b6a-c80f9c34cf79
   Version   264.7.0 (00000000)
   CPI       warden_cpi
@@ -42,7 +42,7 @@ git clone https://github.com/cloudfoundry/cf-deployment ~/workspace/cf-deploymen
 cd ~/workspace/cf-deployment
 ```
 
-If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following bosh commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite locally:
+If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite locally:
 
 ```sh
 export BOSH_ENVIRONMENT=<your environment IP/name>

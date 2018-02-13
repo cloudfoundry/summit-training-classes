@@ -26,8 +26,8 @@ columnLeftContent: |
     reuse_compilation_vms: true
     az: z1
     vm_type: medium
-    network: private 
-  
+    network: private
+
   networks:
     ...
   ```
@@ -42,4 +42,4 @@ columnRightContent: |
 
 notes: |
 
-  Bosh 
+  BOSH

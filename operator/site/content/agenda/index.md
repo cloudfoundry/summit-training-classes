@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Agenda
 ---
 
-## 1. Bosh Basics
+## 1. BOSH Basics
 
 <a href="/slides/#/bosh-basics" target="_blank">
   <i class="fa fa-tv"></i> Slides</a>
@@ -12,7 +12,7 @@ title: Agenda
 *"As a CF operator, I can deploy the Cloud Foundry platform so that my users can self-serve their app deployment."*
 
 
-## 2. Bosh Clusters & Availability
+## 2. BOSH Clusters & Availability
 
 <a href="/slides/#/bosh-ha" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/bosh-ha)
 

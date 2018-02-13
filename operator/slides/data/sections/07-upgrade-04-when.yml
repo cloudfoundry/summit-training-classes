@@ -23,4 +23,4 @@ columnRightContent: |
 
 notes: |
 
-  Releases happen often as CF is advancing quickly.  Bosh makes upgrades easy and reliable and therefore updates should happen often and during normal business hours.  Example: Pivotal web services runs thousands of applications is updated multiple times a week.
+  Releases happen often as CF is advancing quickly.  BOSH makes upgrades easy and reliable and therefore updates should happen often and during normal business hours.  Example: Pivotal web services runs thousands of applications is updated multiple times a week.

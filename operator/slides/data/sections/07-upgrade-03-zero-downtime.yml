@@ -24,4 +24,4 @@ columnRightContent: |
 
 notes: |
 
-  Bosh is optimized for day 2 onward.  Updates are performed with zero downtime (if configured correctly) by taking instances out of service, creating new ones and placing them in service.  VMs are immutable and never patched.
+  BOSH is optimized for day 2 onward.  Updates are performed with zero downtime (if configured correctly) by taking instances out of service, creating new ones and placing them in service.  VMs are immutable and never patched.

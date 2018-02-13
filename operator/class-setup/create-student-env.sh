@@ -17,9 +17,9 @@
 # instances used in class.
 #
 # The students would be provided with BOSH_LITE_PRIVATE_KEY
-# which would be used to ssh into their environment.
+# which would be used to SSH into their environment.
 #
-# ex. ssh -i ./operator-class-key.pem ubuntu@<vm ip>
+# ex. ssh -i ./operator-class-key.pem ubuntu@<VM ip>
 #
 # Note the user is "ubuntu" not "ec2-user".
 #

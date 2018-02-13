@@ -28,6 +28,6 @@ notes: |
   Open-source with an Apache license, hosted on GitHub.
 
   Developers use the cf command line utility to interact with a CF deployment.
-  The cf cli is pre-built for Windows, Mac and Linux.
+  The cf CLI is pre-built for Windows, Mac and Linux.
 
   CF supports any language or framework through buildpacks. More on that subject later.

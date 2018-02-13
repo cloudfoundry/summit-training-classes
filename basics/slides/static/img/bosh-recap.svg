@@ -41,7 +41,7 @@
                 <tspan x="20.4853516" y="35">stemcell</tspan>
             </text>
             <text id="base-O/S-plus-Bosh-s" font-family="Helvetica" font-size="18" font-weight="normal" fill="#4A4A4A">
-                <tspan x="6.90576172" y="65">base O/S plus Bosh </tspan>
+                <tspan x="6.90576172" y="65">base O/S plus BOSH </tspan>
                 <tspan x="21.4208984" y="87">specifics (agent, </tspan>
                 <tspan x="44.4394531" y="109">monit, etc)</tspan>
             </text>

@@ -3,13 +3,13 @@ date: 2016-04-19T18:59:04-06:00
 title: Prerequisites
 ---
 
-Please review the requirement below and **complete the following prerequisites before class**.  
+Please review the requirement below and **complete the following prerequisites before class**.
 
 ## Experience
 
 This training is targeted at people with:
 
-* Little to no Cloud Foundry BOSH experience  
+* Little to no Cloud Foundry BOSH experience
 * Some experience managing Linux-based systems
 * Comfortable using the command line and SSH
 
@@ -60,6 +60,6 @@ Please ensure the following:
 
 Please install the following:
 
-* [Vagrant](https://www.vagrantup.com/downloads.html): Used to provision a bosh-lite instance.
-* A Vagrant Provider.  [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is recommended.  
+* [Vagrant](https://www.vagrantup.com/downloads.html): Used to provision a BOSH-lite instance.
+* A Vagrant Provider.  [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is recommended.
 * It is highly recommended that you ensure you laptop cannot "sleep" during class.  If you use a mac, you can install [caffeine](https://itunes.apple.com/us/app/caffeine/id411246225?mt=12).
