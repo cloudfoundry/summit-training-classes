@@ -7,7 +7,7 @@ In this section, you will add application capacity to the Cloud Foundry platform
 
 ## Scaling the Platform Out
 
-Scaling out with BOSH is simple.  We simply need to change the manifest, add instances, and deploy.  In our case, the number of Diego cells in our deployment is set by an 'operations' file, which modifies the main deployment manifest (you included this as an option when you originally ran `bosh deploy`). You can read more about ops files [here](https://bosh.io/docs/cli-ops-files.html)
+Scaling out with BOSH is simple.  We simply need to change the manifest, add instances, and deploy.  In our case, the number of Diego cells in our deployment is set by [an 'operations' file](https://bosh.io/docs/cli-ops-files.html), which modifies the main deployment manifest (you included this as an option when you originally ran `bosh deploy`).
 
 * Find the relevant ops file at ~/workspace/cf-deployment/operations/bosh-lite.yml
 * Find the section of the file which changes the number of diego-cell instances and set the value from 1 to 2.
