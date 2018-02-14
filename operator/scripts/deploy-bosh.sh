@@ -20,9 +20,11 @@ jq -r '.private_key' <<< "$settings" > "$private_key_file"
 default_security_groups=$(jq -r '.default_security_groups' <<< "$settings")
 subnet_id=$(jq -r '.subnet_id' <<< "$settings")
 external_ip=$(jq -r '.external_ip' <<< "$settings")
+state_file="${prefix}state.json"
+creds_file="${prefix}creds.yml"
 bosh create-env bosh-deployment/bosh.yml \
-  --state="${prefix}state.json" \
-  --vars-store="${prefix}creds.yml" \
+  --state="$state_file" \
+  --vars-store="$creds_file" \
   -o bosh-deployment/aws/cpi.yml \
   -o bosh-deployment/bosh-lite.yml \
   -o bosh-deployment/bosh-lite-runc.yml \
@@ -41,3 +43,15 @@ bosh create-env bosh-deployment/bosh.yml \
   --var-file "private_key=$private_key_file" \
   -v "subnet_id=$subnet_id" \
   -v "external_ip=$external_ip"
+
+client_secret=$(bosh int "$creds_file" --path /admin_password)
+ca_cert=$(bosh int "$creds_file" --path /director_ssl/ca)
+cat <<EOF
+export BOSH_ENVIRONMENT=$external_ip
+export BOSH_CLIENT=admin
+export BOSH_CLIENT_SECRET=$client_secret
+export BOSH_GW_HOST=$external_ip
+export BOSH_GW_USER=jumpbox
+export BOSH_GW_PRIVATE_KEY=$private_key_file
+export BOSH_CA_CERT='$ca_cert'
+EOF
