@@ -5,7 +5,6 @@ title: Deploying Cloud Foundry with BOSH Lite
 
 Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
 
-- Upload releases needed for Cloud Foundry.
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
 
@@ -14,7 +13,7 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 - [Set up BOSH Lite v2 locally](https://bosh.io/docs/bosh-lite)
 - [Set up BOSH Lite v2 on AWS](/labs/bosh-lite-on-aws)
 
-Move on when you're able to run `bosh env` successfully, which should produce output similar to the following:
+In order to continue you must be able to run `bosh env` successfully, which should produce output similar to the following:
 
 ```sh
   Name      BOSH Lite Director
@@ -31,6 +30,13 @@ Move on when you're able to run `bosh env` successfully, which should produce ou
 **NOTE**
 
 - The next part of the guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
+- If you have deployed BOSH Lite locally, you'll need to run one of the following commands to ensure that you're able to login to Cloud Foundry later on:
+
+```$ sudo route add -net 10.244.0.0/16     192.168.50.6 # Mac OS X
+$ sudo ip route add   10.244.0.0/16 via 192.168.50.6 # Linux (using iproute2 suite)
+$ sudo route add -net 10.244.0.0/16 gw  192.168.50.6 # Linux (using DEPRECATED route command)
+$ route add           10.244.0.0/16     192.168.50.6 # Windows
+```
 
 ## Preparing to Deploy Cloud Foundry
 
@@ -87,7 +93,9 @@ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
 -o ~/workspace/cf-deployment/operations/bosh-lite.yml \
 -o ~/workspace/cf-deployment/operations/use-compiled-releases.yml \
 --vars-store deployment-vars.yml \
--v system_domain=$BOSH_ENVIRONMENT.sslip.io
+-v system_domain=$SYSTEM_DOMAIN
+
+# If you deployed BOSH Lite locally, set $SYSTEM_DOMAIN to bosh-lite.com. If you deployed BOSH Lite to AWS, use $BOSH_ENVIRONMENT.sslip.io.
 ```
 
 In our example, `cf` is the name we're choosing to give the deployment. `cf-deployment.yml` is our Cloud Foundry deployment manifest, while `bosh-lite.yml` and `use-compiled-releases.yml` are 'operations' files which make changes to that manifest. The 'vars-store' flag specifies where we want BOSH to generate a file containing credentials for our deployment. Lastly, 'system domain' will be used as the root domain for your deployment.
