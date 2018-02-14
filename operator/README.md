@@ -17,7 +17,7 @@ If you would like do deploy those bosh environemnts, you can use the following c
 ```
 jq -c '.[]' terraform/students.json | while read -r info
 do
-    ./scripts/deploy-bosh.sh "$(jq -r '.access_key_id' <<< "$info")_" <<< $info
+    ./scripts/deploy-bosh.sh "$(jq -r '.access_key_id' <<< "$info")_" <<< "$info"
 done
 ```
 
