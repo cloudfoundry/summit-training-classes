@@ -28,7 +28,6 @@ bosh create-env bosh-deployment/bosh.yml \
   -o bosh-deployment/aws/cpi.yml \
   -o bosh-deployment/bosh-lite.yml \
   -o bosh-deployment/bosh-lite-runc.yml \
-  -o bosh-deployment/jumpbox-user.yml \
   -o bosh-deployment/external-ip-with-registry-not-recommended.yml \
   -v director_name=bosh-1 \
   -v "internal_cidr=$internal_cidr" \
@@ -51,7 +50,7 @@ export BOSH_ENVIRONMENT=$external_ip
 export BOSH_CLIENT=admin
 export BOSH_CLIENT_SECRET=$client_secret
 export BOSH_GW_HOST=$external_ip
-export BOSH_GW_USER=jumpbox
+export BOSH_GW_USER=vcap
 export BOSH_GW_PRIVATE_KEY=$private_key_file
 export BOSH_CA_CERT='$ca_cert'
 EOF
