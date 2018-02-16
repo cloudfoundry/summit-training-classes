@@ -40,7 +40,7 @@ title: Agenda
 
 <a href="/slides/#/services" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/services)
 
-*"As a CF operator, I can add a Redis service to Cloud Foundry so that apps can store state"*
+*"As a CF operator, I can add a MySQL service to Cloud Foundry so that apps can store state"*
 
 ## 7. Upgrade
 
