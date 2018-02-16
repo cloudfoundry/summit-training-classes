@@ -29,7 +29,7 @@ Finally run `bosh upload-release` to send the release to your Director.
 * Now, clone the MySQL Bosh **Deployment** repo:
 
 ```sh
-git clone https://github.com/cloudfoundry/cf-mysql-deployment.git ~/workspace/cf-mysql-deployment
+git clone https://github.com/EngineerBetter/cf-mysql-deployment.git ~/workspace/cf-mysql-deployment
 ```
 
 We're now ready to deploy MySQL with the following command. Note that you need to pass through your Cloud Foundry admin password and system domain as variables. Can you remember where to find these?
@@ -45,6 +45,19 @@ bosh -d cf-mysql deploy \
   --var cf_api_url=https://api.$SYSTEM_DOMAIN \
   --var cf_skip_ssl_validation=true
 ```
+
+```sh
+Task 217
+
+Task 217 | 14:48:17 | Preparing deployment: Preparing deployment (00:00:00)
+                    L Error: Instance group 'mysql' references an unknown vm type 'massive'
+```
+
+What happened? BOSH is complaining that your manifest is referring to a type of VM that it doesn't recognise. To fix this, you'll need to make changes to your `cloud-config`.
+
+### Cloud Config
+
+Every BOSH Director has a cloud config that defines IaaS-specific configuration, allowing deployment manifests themselves to be IaaS-agnostic.
 
 ### Checking Your Work
 
