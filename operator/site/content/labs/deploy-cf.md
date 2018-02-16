@@ -8,7 +8,7 @@ Your goal is to use what you learned in the previous module to deploy Cloud Foun
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
 
-**NOTE:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below:
+> Note: In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below:
 
 - [Set up BOSH Lite v2 locally](https://bosh.io/docs/bosh-lite)
 - [Set up BOSH Lite v2 on AWS](/labs/bosh-lite-on-aws)
@@ -27,16 +27,7 @@ In order to continue you must be able to run `bosh env` successfully, which shou
   User      admin
 ```
 
-**NOTE**
-
-- The next part of the guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
-- If you have deployed BOSH Lite locally, you'll need to run one of the following commands to ensure that you're able to login to Cloud Foundry later on:
-
-```$ sudo route add -net 10.244.0.0/16     192.168.50.6 # Mac OS X
-$ sudo ip route add   10.244.0.0/16 via 192.168.50.6 # Linux (using iproute2 suite)
-$ sudo route add -net 10.244.0.0/16 gw  192.168.50.6 # Linux (using DEPRECATED route command)
-$ route add           10.244.0.0/16     192.168.50.6 # Windows
-```
+> Note: - The next part of the guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
 
 ## Preparing to Deploy Cloud Foundry
 
@@ -140,6 +131,27 @@ cf    binary-buildpack/1.0.15      bosh-warden-boshlite-ubuntu-trusty-go_agent/3
 ```
 
 Congratulations, you have just BOSH-deployed your first Cloud Foundry instance!
+
+## Checking your manifest
+
+After you've made a deployment, it can sometimes be useful to be able to check the exact version of the manifest BOSH used when standing it up. You could check the copy of the manifest you have locally (in our case, `cf-deployment.yml`), but it's likely that in this version a number of variables will be undefined. For example:
+
+```
+- name: blobstore
+    release: capi
+    properties:
+      system_domain: "((system_domain))"
+```
+
+If instead you run `bosh manifest -d <deployment-name>`, you'll see the complete manifest:
+
+```
+- name: blobstore
+    release: capi
+    properties:
+      system_domain: bosh-lite.com
+```
+
 
 ## Beyond the class
 
