@@ -24,32 +24,27 @@ You can also get details on a specific command with:
   cf help <command>
 ```
 
-
 ### Logging in
 
-To start a session with CF, you need to login.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<system_domain>`. You passed through `bosh-lite.com` as the variable 'system_domain' (referred to in numerous sections of the Cloud Foundry deployment manifest) when you ran `bosh deploy` in the first lab.
+To start using Cloud Foundry, you need to login by targeting the `api` endpoint created in your installation.
 
-Verify that:
-
-- running `host bosh-lite.com` resolves to the address `10.244.0.34`
-
-Run this to get the cf admin password:
+During the deployment process, BOSH generated the file `deployment-vars.yml`. This file contains admin credentials that you'll need to use the Cloud Foundry CLI. Run the following to get your admin password:
 
 ```sh
-bosh interpolate --path /cf_admin_password ~/deployments/vbox/deployment-vars.yml
+bosh interpolate --path /cf_admin_password $path_to_your_deployment_vars_yml_file
 ```
 
-Now let's log in using the password from the previous command and the username `admin`
+Let's login using our endpoint, which will be structured as below - using the `system_domain` variable we passed through when deploying Cloud Foundry earlier. After running the command, you will be prompted for your username (`admin`) and password.
 
 ```sh
-cf login -a https://api.bosh-lite.com --skip-ssl-validation
+cf login -a https://api.$SYSTEM_DOMAIN --skip-ssl-validation
 ```
 
-*Note: We are skipping ssl validation because we are using self-signed certificates.*
+> Note: We are skipping ssl validation because we are using self-signed certificates.
 
 ### Checking Your Work
 
-If you run the following, you should see that you are logged in to your cloud foundry installation.
+Running `cf target` should produce output similar to the following, which will confirm that you're now logged in:
 
 ```sh
 $ cf target
@@ -63,7 +58,7 @@ No space targeted, use 'cf target -s SPACE'
 
 ## Creating an Organization
 
-The next step is to add an organization.
+The next step is to add an organization - an environment with a shared quota of computing resources.
 
 * Use `cf help -a` to find the right command to create an organization.  You can name the organization anything you want.
 
@@ -88,7 +83,7 @@ org:            example-org
 
 ## Creating a Space
 
-The next step is to add a space to your organization.
+Organizations are subdivided into one or more spaces. Let's add a space to your organization.
 
 * Use `cf help -a` to find the right command to create a space inside your organization.  Name the space `dev`.
 
