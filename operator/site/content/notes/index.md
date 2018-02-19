@@ -16,6 +16,6 @@ title: Notes
 
 * Compile releases and publish
 * Validate resources (scripts, apps, etc) and publish
-* Finish BOSH-lite w/ CLI as an AMI
+* Finish BOSH-lite with CLI as an AMI
 * Automated exercise test
 * Timing runs
