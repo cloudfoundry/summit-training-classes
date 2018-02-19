@@ -40,7 +40,6 @@ resource "aws_route_table_association" "main" {
   route_table_id = "${aws_route_table.main.id}"
 }
 
-
 resource "aws_security_group" "bosh" {
   description = "access to BOSH Lite v2"
   vpc_id      = "${aws_vpc.main.id}"
@@ -122,33 +121,33 @@ EOF
 
 resource "aws_iam_user" "student" {
   count = "${var.num_students}"
-  name = "student-${count.index}"
+  name  = "student-${count.index}"
 }
 
 resource "aws_iam_access_key" "student" {
   count = "${var.num_students}"
-  user = "${element(aws_iam_user.student.*.name, count.index)}"
+  user  = "${element(aws_iam_user.student.*.name, count.index)}"
 }
 
 resource "aws_iam_user_policy_attachment" "student" {
-  count = "${var.num_students}"
-  user = "${element(aws_iam_user.student.*.name, count.index)}"
+  count      = "${var.num_students}"
+  user       = "${element(aws_iam_user.student.*.name, count.index)}"
   policy_arn = "${aws_iam_policy.student.arn}"
 }
 
 resource "aws_key_pair" "student" {
-  count = "${var.num_students}"
+  count      = "${var.num_students}"
   public_key = "${file(format("%s/id_rsa_%d.pub", var.key_dir, count.index))}"
 }
 
 resource "aws_eip" "student" {
   count = "${var.num_students}"
-  vpc = true
+  vpc   = true
 }
 
 data "template_file" "internal_ip" {
   template = "${cidrhost(aws_subnet.main.cidr_block, count.index + 4)}"
-  count = "${var.num_students}"
+  count    = "${var.num_students}"
 }
 
 output "internal_cidr" {
@@ -162,6 +161,7 @@ output "internal_gw" {
 output "internal_ips" {
   value = "${join(",", data.template_file.internal_ip.*.rendered)}"
 }
+
 output "access_key_ids" {
   value = "${join(",", aws_iam_access_key.student.*.id)}"
 }
