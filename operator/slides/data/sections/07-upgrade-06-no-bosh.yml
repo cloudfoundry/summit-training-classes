@@ -1,8 +1,8 @@
 ---
 type: "two-column"
-title: "Life w/o BOSH"
+title: "Life without BOSH"
 subtitle: "Pondering the horror"
-menuTitle: "Life w/o BOSH"
+menuTitle: "Life without BOSH"
 buildInColumns: "true"
 
 
@@ -24,7 +24,7 @@ columnRightContent: |
 
   * How many VMs?
   * How many applications?
-  * What about user provided containers (Docker)?
+  * What about user-provided containers (Docker)?
 
 notes: |
 

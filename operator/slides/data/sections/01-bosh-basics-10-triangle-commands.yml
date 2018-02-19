@@ -16,7 +16,7 @@ content: |
   ```
 
   ```sh
-    bosh download manifest
+    bosh manifest
   ```
 
 notes: |
