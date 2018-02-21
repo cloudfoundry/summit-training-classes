@@ -1,7 +1,8 @@
+subtitle: "BOSH Basics"
+title: "Anatomy of BOSH Deployments"
+menuTitle: "BOSH Basics: Deployments"
 type: slide-basic
-title: "BOSH Concepts"
-subtitle: "Anatomy of BOSH Deployments"
-menuTitle: "Anatomy of BOSH Deployments"
+
 content: |
     <svg width="1093px" height="500px" viewBox="0 0 1093 647" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->

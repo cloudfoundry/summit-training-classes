@@ -1,8 +1,8 @@
 ---
+subtitle: "Scaling"
+title: "What are we going to do?"
+menuTitle: "Scaling: Agenda"
 type: "two-column"
-title: "Agenda"
-subtitle: "What are we going to do?"
-menuTitle: "Agenda"
 buildInColumns: "true"
 
 columnLeftContent: |

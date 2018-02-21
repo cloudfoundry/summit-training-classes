@@ -1,8 +1,8 @@
 ---
+subtitle: "CF Basics"
+title: "Cloud Foundry Benefits"
+menuTitle: "CF Basics: Cloud Foundry Benefits"
 type: "two-column"
-title: "Cloud Foundry"
-subtitle: "Key Concerns"
-menuTitle: "Cloud Foundry Concerns"
 buildInColumns: "true"
 
 columnLeftContent: |

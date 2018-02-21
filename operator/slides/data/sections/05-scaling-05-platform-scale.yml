@@ -1,7 +1,9 @@
 ---
+subtitle: "Scaling"
+title: "What should I do?"
+menuTitle: "Scaling: Practices"
 type: slide-basic
-title: "Platform Scaling"
-subtitle: "What should I do?"
+
 content: |
 
   Should I scale the **CF platform** out or up?

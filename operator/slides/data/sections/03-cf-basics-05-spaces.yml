@@ -1,7 +1,9 @@
 ---
+subtitle: "CF Basics"
+title: "Multitenancy in Cloud Foundry"
+menuTitle: "CF Basics: Spaces"
 type: slide-basic
-title: "Spaces"
-subtitle: "Multitenancy in Cloud Foundry"
+
 content: |
 
   **Spaces**: Used to divide organizations (commonly as "development", "staging", etc)

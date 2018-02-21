@@ -1,8 +1,8 @@
 ---
+subtitle: "Monitoring"
+title: "Accessing Loggregator Data"
+menuTitle: "Monitoring: Scenarios"
 type: "two-column"
-title: "Scenarios"
-subtitle: "Accessing loggregator data"
-menuTitle: "Scenarios"
 buildInColumns: "true"
 
 columnLeftContent: |

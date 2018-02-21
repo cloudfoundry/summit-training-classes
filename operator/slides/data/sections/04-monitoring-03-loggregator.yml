@@ -1,8 +1,8 @@
 ---
+subtitle: "Monitoring"
+title: "Aggregation, Streaming and Metrics"
+menuTitle: "Monitoring: Loggregator"
 type: "slide-basic"
-title: "Loggregator"
-subtitle: "Aggregation, Streaming and Metrics"
-menuTitle: "Loggregator"
 
 content: |
 

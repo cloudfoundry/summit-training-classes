@@ -1,7 +1,9 @@
 ---
-type: slide-basic
+subtitle: "CF Basics"
 title: "Applications"
-subtitle: "Cloud Foundry Execution"
+menuTitle: "CF Basics: Applications"
+type: slide-basic
+
 content: |
 
   **Applications**

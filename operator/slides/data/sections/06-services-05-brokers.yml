@@ -1,8 +1,8 @@
 ---
+subtitle: "Services"
+title: "Accessing Data in Cloud Foundry"
+menuTitle: "Services: Service Brokers"
 type: "two-column"
-title: "Service Brokers"
-subtitle: "Accessing Data in Cloud Foundry"
-menuTitle: "Service Brokers"
 buildInColumns: "true"
 
 columnLeftTitle: Service Brokers

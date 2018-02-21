@@ -1,7 +1,9 @@
 ---
+subtitle: "CF Basics"
+title: "Role based access control"
+menuTitle: "CF Basics: Roles"
 type: slide-basic
-title: "Users"
-subtitle: "Role based access control"
+
 content: |
 
   **Users**: Assigned to roles in Orgs and/or Spaces.

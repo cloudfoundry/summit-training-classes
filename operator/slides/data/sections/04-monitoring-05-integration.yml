@@ -1,8 +1,8 @@
 ---
+subtitle: "Monitoring"
+title: "Using purpose-built systems with Loggregator"
+menuTitle: "Monitoring: Integration"
 type: "two-column"
-title: "Integration"
-subtitle: "Using purpose built systems with Loggregator"
-menuTitle: "Integration"
 buildInColumns: "true"
 
 columnLeftContent: |

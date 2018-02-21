@@ -1,7 +1,8 @@
 ---
-type: slide-basic
+subtitle: "BOSH Basics"
 title: "What is BOSH?"
-subtitle: "What is BOSH?"
+menuTitle: "BOSH Basics: What is BOSH?"
+type: slide-basic
 content: |
 
   BOSH is an open source tool for **release engineering**, **deployment**, **lifecycle management**, and **monitoring** of distributed systems.

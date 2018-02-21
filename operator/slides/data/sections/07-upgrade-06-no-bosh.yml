@@ -1,8 +1,8 @@
 ---
-type: "two-column"
+subtitle: "Upgrading"
 title: "Life without BOSH"
-subtitle: "Pondering the horror"
-menuTitle: "Life without BOSH"
+menuTitle: "Upgrading: Life without BOSH"
+type: "two-column"
 buildInColumns: "true"
 
 

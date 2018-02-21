@@ -1,8 +1,8 @@
 ---
+subtitle: "Upgrading"
+title: "Day 2 optimizations"
+menuTitle: "Upgrading: Zero Downtime"
 type: "two-column"
-title: "Zero Downtime"
-subtitle: "Day 2 optimizations"
-menuTitle: "Zero Downtime"
 buildInColumns: "true"
 
 columnLeftTitle: "Deployment Manifest"

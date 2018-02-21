@@ -1,6 +1,6 @@
 ---
+menuTitle: "BOSH Basics: Deploying your Cloud"
 content: "Deploying your Cloud"
-menuTitle: "Deploying your Cloud"
 type: "section"
 notes: |
   In the interest of time, we are going to start our installs.  Don't worry, we will come back to the details on what is happening.

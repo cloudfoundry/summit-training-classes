@@ -1,6 +1,6 @@
 ---
+menuTitle: "BOSH Basics: Lab Review"
 content: "Bosh Basics"
-menuTitle: "Bosh Basics"
 type: "section"
 notes: |
   Let's review what happened in the lab - deploying BOSH and CF

@@ -1,8 +1,8 @@
 ---
-type: two-column
+subtitle: "Services"
 title: "Errands and Instances"
-subtitle: "Bosh Executors"
-menuTitle: "Errands and Instances"
+menuTitle: "Services: Errands and Instances"
+type: two-column
 buildInColumns: "true"
 
 columnLeftContent: |

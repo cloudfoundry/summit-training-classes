@@ -1,8 +1,8 @@
 ---
+subtitle: "Bosh HA"
+title: "Recovering Failed Processes"
+menuTitle: "Bosh HA: Recovering Failed VMs"
 type: "two-column"
-title: "Recovering failed Processes"
-subtitle: "High Availability"
-menuTitle: "Recovering failed VMs"
 buildInColumns: "true"
 
 columnLeftContent: |

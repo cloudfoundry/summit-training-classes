@@ -1,8 +1,8 @@
 ---
+subtitle: "Services"
+title: "Storing State in Cloud Foundry"
+menuTitle: "Services: Data Services"
 type: "two-column"
-title: "Data Services"
-subtitle: "Storing State in Cloud Foundry"
-menuTitle: "Data Services"
 buildInColumns: "true"
 
 columnLeftContent: |

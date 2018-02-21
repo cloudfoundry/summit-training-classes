@@ -1,7 +1,9 @@
 ---
+subtitle: "CF Basics"
+title: "Multitenancy in Cloud Foundry"
+menuTitle: "CF Basics: Orgs"
 type: slide-basic
-title: "Organizations"
-subtitle: "Multitenancy in Cloud Foundry"
+
 content: |
 
   **Organizations**: Provide a mechanism to segregate tenants in a Cloud Foundry installation.

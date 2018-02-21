@@ -1,8 +1,8 @@
 ---
+subtitle: "Services"
+title: "App Execution in Cloud Foundry"
+menuTitle: "Services: Stateless Apps"
 type: "slide-basic"
-title: "Stateless Applications"
-subtitle: "App Execution Cloud Foundry"
-menuTitle: "Stateless Apps"
 
 content: |
 

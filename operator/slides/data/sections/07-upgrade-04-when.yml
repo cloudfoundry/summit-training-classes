@@ -1,6 +1,8 @@
 ---
+subtitle: "Upgrading"
+title: "When to Upgrade?"
+menuTitle: "Upgrading: When to Upgrade?"
 type: two-column
-menuTitle: "When to Upgrade?"
 buildInColumns: "true"
 
 columnLeftContent: |

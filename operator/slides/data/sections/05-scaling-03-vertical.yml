@@ -1,7 +1,9 @@
 ---
+subtitle: "Scaling"
+title: "Vertically"
+menuTitle: "Scaling: Vertically"
 type: slide-basic
-title: "Vertical Scale"
-subtitle: "Scaling Up"
+
 content: |
 
   **Adding Resources**: More memory, compute, etc.

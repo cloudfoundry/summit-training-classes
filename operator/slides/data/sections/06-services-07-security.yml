@@ -1,8 +1,8 @@
 ---
+subtitle: "Services"
+title: "Controlling Outbound Access"
+menuTitle: "Services: Security Groups"
 type: slide-basic
-title: "Application Security Groups"
-subtitle: "Controlling Outbound Access"
-menuTitle: "Security Groups"
 
 content: |
 

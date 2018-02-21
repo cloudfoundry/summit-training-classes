@@ -1,7 +1,8 @@
 ---
+subtitle: "BOSH Basics"
+title: "Core Components"
+menuTitle: "BOSH Basics: Core Components"
 type: slide-basic
-title: "BOSH Basics"
-subtitle: "Core components"
 content: |
 
   * **BOSH CPI** - Cloud Provider Interface

@@ -1,6 +1,8 @@
-type: slide-basic
+subtitle: "BOSH Basics"
 title: "Basic Commands"
-subtitle: "Seeing Deployments..."
+menuTitle: "BOSH Basics: Basic Commands"
+type: slide-basic
+
 content: |
 
   ```sh
