@@ -1,9 +1,9 @@
 ---
 date: 2016-09-19T14:00:15-03:00
-title: Prepare AWS to deploy BOSH Lite
+title: Prepare AWS to deploy BOSH Lite v2
 ---
 
-This step-by-step guide shows how to configure an AWS account to deploy BOSH Lite.
+This step-by-step guide shows how to configure an AWS account to deploy BOSH Lite v2.
 
 Before our BOSH Director, we'll need to create some resources in AWS.
 

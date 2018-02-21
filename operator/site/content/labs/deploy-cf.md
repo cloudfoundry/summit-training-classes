@@ -1,9 +1,9 @@
 ---
 date: 2018-02-06T10:21:15-03:00
-title: Deploying Cloud Foundry with BOSH Lite
+title: Deploying Cloud Foundry with BOSH Lite v2
 ---
 
-Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
+Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
 
 - Upload a stemcell
 - Use a Cloud Foundry manifest to make a deployment
@@ -39,7 +39,7 @@ git clone https://github.com/cloudfoundry/cf-deployment ~/workspace/cf-deploymen
 cd ~/workspace/cf-deployment
 ```
 
-If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite locally:
+If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
 
 ```sh
 export BOSH_ENVIRONMENT=<your environment IP/name>
@@ -86,7 +86,7 @@ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
 --vars-store deployment-vars.yml \
 -v system_domain=$SYSTEM_DOMAIN
 
-# If you deployed BOSH Lite locally, set $SYSTEM_DOMAIN to bosh-lite.com. If you deployed BOSH Lite to AWS, use $BOSH_ENVIRONMENT.sslip.io.
+# If you deployed BOSH Lite v2 locally, set $SYSTEM_DOMAIN to bosh-lite.com. If you deployed BOSH Lite v2 to AWS, use $BOSH_ENVIRONMENT.sslip.io.
 ```
 
 In our example, `cf` is the name we're choosing to give the deployment. `cf-deployment.yml` is our Cloud Foundry deployment manifest, while `bosh-lite.yml` and `use-compiled-releases.yml` are 'operations' files which make changes to that manifest. The 'vars-store' flag specifies where we want BOSH to generate a file containing credentials for our deployment. Lastly, 'system domain' will be used as the root domain for your deployment.

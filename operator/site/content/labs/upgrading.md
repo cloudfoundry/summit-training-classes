@@ -15,7 +15,7 @@ Search https://bosh.io/stemcells for a newer **minor** version of the Ubuntu Tru
 
 > Note: Releases may not work with stemcells significantly higher or lower than those specified by default in their manifest. Check the release's documentation for details.
 
-> Note: In non-BOSH Lite environments, where there is more than one VM for each instance, deploying/upgrading with BOSH incurs zero downtime.
+> Note: In non-BOSH Lite v2 environments, where there is more than one VM for each instance, deploying/upgrading with BOSH incurs zero downtime.
 
 ### Checking Your Work
 

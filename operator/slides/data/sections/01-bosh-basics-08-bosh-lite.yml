@@ -1,6 +1,6 @@
 subtitle: "BOSH Basics"
 title: "Your environment..."
-menuTitle: "BOSH Basics: BOSH-Lite"
+menuTitle: "BOSH Basics: BOSH-Lite v2"
 type: slide-basic
 content: |
 
@@ -12,4 +12,4 @@ content: |
 
 notes:
 
-  BOSH-Lite runs in a single VM.  The CPI is called "Warden" and provides containers when BOSH requests VMs.
+  BOSH-Lite v2 runs in a single VM.  The CPI is called "Warden" and provides containers when BOSH requests VMs.
