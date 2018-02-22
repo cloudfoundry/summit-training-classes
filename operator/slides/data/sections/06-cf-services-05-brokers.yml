@@ -1,7 +1,7 @@
 ---
-subtitle: "Services"
+subtitle: "CF Services"
 title: "Accessing Data in Cloud Foundry"
-menuTitle: "Services: Service Brokers"
+menuTitle: "CF Services: Service Brokers"
 type: "two-column"
 buildInColumns: "true"
 
@@ -19,4 +19,6 @@ columnRightContent: |
 
 notes: |
 
-  Service Brokers are rest endpoints registered with Cloud Foundry.  The purpose is to advertise service availability in the marketplace and provide the ability create and bind service instances to applications.
+  Some services have Service Brokers, APIs that enable them to advertise services in the Cloud Foundry marketplace.
+
+  Developers can use them to provision services, like database instances, and then bind them to their apps.

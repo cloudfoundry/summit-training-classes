@@ -1,7 +1,7 @@
 ---
-subtitle: "Services"
+subtitle: "CF Services"
 title: "App Execution in Cloud Foundry"
-menuTitle: "Services: Stateless Apps"
+menuTitle: "CF Services: Stateless Apps"
 type: "slide-basic"
 
 content: |

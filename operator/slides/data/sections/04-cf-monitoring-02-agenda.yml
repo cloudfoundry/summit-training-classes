@@ -1,0 +1,21 @@
+---
+subtitle: "CF Monitoring"
+title: "What are we going to do?"
+menuTitle: "CF Monitoring: Agenda"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/cf-logo-vertical.png "Cloud Foundry")
+
+columnRightContent: |
+
+    * Loggregator
+    * Common commands
+    * Integration with other services
+
+notes: |
+
+  We're now going to take a look at some of the ways Cloud Foundry's Loggregator collects information about deployed apps, and the ways you can access this in Cloud Foundry itself and through other services.
+

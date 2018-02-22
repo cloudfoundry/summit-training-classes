@@ -1,7 +1,7 @@
 ---
-subtitle: "Bosh HA"
+subtitle: "BOSH HA"
 title: "BOSH Agent"
-menuTitle: "Bosh HA: BOSH Agent"
+menuTitle: "BOSH HA: BOSH Agent"
 type: "two-column"
 
 buildInColumns: "true"

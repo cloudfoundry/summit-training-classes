@@ -14,7 +14,7 @@ content: |
   ```
 
   ```sh
-    bosh deployment
+    bosh deployments
   ```
 
   ```sh

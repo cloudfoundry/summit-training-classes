@@ -1,8 +1,8 @@
 ---
-menuTitle: "Services: Goal"
+menuTitle: "CF Services: Delivered"
 type: "statement"
 backgroundColor: "#243641"
-buildInStatements: true
+buildInStatements: false
 statements:
   - As a *CF operator*
   - I can *add a MySQL* service to Cloud Foundry

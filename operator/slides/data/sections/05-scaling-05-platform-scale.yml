@@ -6,13 +6,15 @@ type: slide-basic
 
 content: |
 
-  Should I scale the **CF platform** out or up?
+  Should I scale out or up?
 
   * First, **right size** VMs
   * Then, **scale out** (add instances)
 
-  It's the **same approach with applications!**
-
 notes: |
 
-  Best practice is to right size VMs in the installation.  Then to add capacity, scale out.
+  Both with apps in CF and with the CF platform itself, it's best practice is to right size VMs in the installation. Then to add capacity, scale out.
+
+  With CF, changing the number of running instances of an app incurs zero downtime, whereas scaling up vertically stops *all* instances and then recreates them.
+
+  With BOSH, scaling vertically results in no downtime if there are multiple instances of whatever VM it is that you're scaling, but *does* cause downtime if there's only one instance.

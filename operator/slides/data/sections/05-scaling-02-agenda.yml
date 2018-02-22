@@ -11,6 +11,10 @@ columnLeftContent: |
 
 columnRightContent: |
 
-    * Vertical Scale
-    * Horizontal Scale
+    * Vertical Scaling
+    * Horizontal Scaling
     * Platform Scaling
+
+notes: |
+
+  In this section, we'll talk about scaling resources. The principles apply whether you're scaling the containers in which your Cloud Foundry apps run, or the VMs on which BOSH deploys the Cloud Foundry platform.

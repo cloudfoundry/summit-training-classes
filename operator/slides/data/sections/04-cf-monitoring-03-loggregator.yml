@@ -1,7 +1,7 @@
 ---
-subtitle: "Monitoring"
-title: "Aggregation, Streaming and Metrics"
-menuTitle: "Monitoring: Loggregator"
+subtitle: "CF Monitoring"
+title: "Loggregator"
+menuTitle: "CF Monitoring: Loggregator"
 type: "slide-basic"
 
 content: |

@@ -1,7 +1,7 @@
 ---
-subtitle: "Bosh HA"
+subtitle: "BOSH HA"
 title: "Recovering Failed VMs"
-menuTitle: "Bosh HA: Recovering Failed VMs"
+menuTitle: "BOSH HA: Recovering Failed VMs"
 type: "two-column"
 buildInColumns: "true"
 
