@@ -1,7 +1,7 @@
 ---
-subtitle: "Upgrading"
+subtitle: "Upgrading with BOSH"
 title: "When to Upgrade?"
-menuTitle: "Upgrading: When to Upgrade?"
+menuTitle: "Upgrading with BOSH: When to Upgrade?"
 type: two-column
 buildInColumns: "true"
 
@@ -19,10 +19,10 @@ columnRightContent: |
 
   * Regularly - generally cannot "skip" versions
 
-  * New CF release ~ every week.
+  * New CF stemcell, buildpack, and component versions ~ every week.
 
   * You should be upgrading during working hours!
 
 notes: |
 
-  Releases happen often as CF is advancing quickly.  BOSH makes upgrades easy and reliable and therefore updates should happen often and during normal business hours.  Example: Pivotal web services runs thousands of applications is updated multiple times a week.
+  Releases happen often as CF is advancing quickly.  BOSH makes upgrades easy and reliable and therefore updates should happen often and during normal business hours.  Example: Pivotal web services runs thousands of applications and is updated multiple times a week.

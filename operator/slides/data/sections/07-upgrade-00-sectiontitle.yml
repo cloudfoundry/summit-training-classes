@@ -1,9 +1,9 @@
 ---
-menuTitle: "Upgrading"
+menuTitle: "Upgrading with BOSH"
 id: upgrade
 type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"
 statements:
   - Part 7.
-  - Upgrade
+  - Upgrading with BOSH

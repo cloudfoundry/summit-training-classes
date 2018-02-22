@@ -1,16 +1,15 @@
 ---
-subtitle: "Upgrading"
+subtitle: "Upgrading with BOSH"
 title: "Life without BOSH"
-menuTitle: "Upgrading: Life without BOSH"
+menuTitle: "Upgrading with BOSH: Life without BOSH"
 type: "two-column"
 buildInColumns: "true"
 
+columnLeftTitle: Environments without BOSH...
 
 columnLeftContent: |
 
   <span class="txt-c">
-
-  Environments without BOSH...
 
   **Why would you?**
 
@@ -24,8 +23,12 @@ columnRightContent: |
 
   * How many VMs?
   * How many applications?
-  * What about user-provided containers (Docker)?
+  * What happens when a CVE occurs in one component?
+
+  * **How could BOSH help you?**
 
 notes: |
 
-  What happens when a CVE occurs in the O/S?  In the application runtime?  Docker containers must be patched by the container creator.
+  What happens when a CVE occurs in the O/S? How about in the application runtime? How hard are these to address without BOSH?
+
+  With BOSH these events are easy to address. New O/S updates can even be picked up and deployed by CI with zero downtime automatically.

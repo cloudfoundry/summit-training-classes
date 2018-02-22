@@ -1,0 +1,25 @@
+---
+subtitle: "CF Basics"
+title: "Controlling Outbound Access"
+menuTitle: "CF Basics: Security Groups"
+type: slide-basic
+
+content: |
+
+  <span class="txt-c">
+
+  **Application Security Groups**
+
+  Egress networking for applications
+
+  <i class="fa fa-shield" style="font-size: 100px; padding: 10px"></i>
+
+  </span>
+
+notes: |
+
+  CF is a shared compute cluster, which makes egress networking hard.
+
+  ASGs are configured as iptables in the host by Garden. They are bound to either app running or stagin phases.
+
+  Inbound access is not part of the platform currently and is left to the load balancer or application.
