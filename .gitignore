@@ -6,3 +6,4 @@ operator/terraform/students.json
 operator/terraform/terraform.tfstate*
 operator/*_creds.yml
 operator/*_state.json
+operator/ci/secrets/*

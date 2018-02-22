@@ -21,6 +21,20 @@ do
 done
 ```
 
+## Deleting a lab environment
+
+If the BOSH environments were deployed using the command above then they can all be deleted using the following:
+
+```sh
+./scripts/destroy-all-bosh.sh
+```
+
+Delete the VPC with:
+
+```sh
+./scripts/delete-vpc.sh $NUMBER_OF_STUDENTS
+```
+
 ## Key Narratives
 
 Availability
