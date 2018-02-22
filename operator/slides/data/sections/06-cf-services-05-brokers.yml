@@ -13,12 +13,14 @@ columnLeftContent: |
 
 columnRightContent: |
 
-  * Register **data service** with CF runtime (`cf marketplace`)
-  * **Provision** service - *optional* (`cf create-service`)
+  * Register **data service** with Cloud Foundry (`cf marketplace`)
+  * **Provision** service (`cf create-service`)
   * Provide connection **credentials** (`cf bind-service`)
 
 notes: |
 
   Some services have Service Brokers, APIs that enable them to advertise services in the Cloud Foundry marketplace.
 
-  Developers can use them to provision services, like database instances, and then bind them to their apps.
+  You can deploy a BOSH release like MySQL yourself, and then register that as a Cloud Foundry service - or you can register services provided by third parties.
+
+  Developers can use them to provision services, like database instances, and then bind them to their apps. `cf bind-service`

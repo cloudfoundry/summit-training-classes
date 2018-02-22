@@ -19,10 +19,10 @@ columnRightContent: |
 
   ... with a **BOSH errand**
 
-  * **Instances**: Long running (VMs running software)
+  * **Instances**: Long-running (VMs running software)
   * **Errands**: Run once (tasks)
 
 
 notes: |
 
-  Instances (formly "jobs" in BOSH 1.0) are VMs with installed software that are kept alive.  Errands are one off tasks.  Many releases encapsulate setup scripts in an errand, like registering a Service Broker
+  Instances (formerly "jobs" in BOSH 1.0) are VMs with installed software that are kept alive.  Errands are one-off tasks.  Many releases encapsulate setup scripts in an errand, like registering a Service Broker
