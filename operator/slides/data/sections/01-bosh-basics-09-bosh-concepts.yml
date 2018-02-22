@@ -245,4 +245,6 @@ content: |
 
 notes: |
 
-  BOSH clusters are made up of 3 major components (bosh triangle).  BOSH 2.0 separates the concerns of IaaS/Cloud config from the deployment manifest.
+  BOSH clusters are made up of 3 major components (bosh triangle).
+
+  BOSH 2.0 separates the concerns of IaaS/Networking into a Cloud Config and add-on configuration into a runtime config. Both of these are configured on the director rather than in the manifest.
