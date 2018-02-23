@@ -18,7 +18,7 @@ git clone https://github.com/cloudfoundry/cf-mysql-release.git ~/workspace/cf-my
 * At the time of writing, the MySQL release next requires you to run the following commands from the main directory of the repo:
 
 ```sh
-git checkout release-candidate
+git checkout tags/v36.10.0
 ./scripts/update
 bosh create-release
 ```
@@ -34,9 +34,11 @@ git clone https://github.com/EngineerBetter/cf-mysql-deployment.git ~/workspace/
 We're now ready to deploy MySQL with the following command. Note that you need to pass through your Cloud Foundry admin password and system domain as variables. Can you remember where to find these?
 
 ```sh
+cd ~/workspace/cf-mysql-deployment
 bosh -d cf-mysql deploy \
   cf-mysql-deployment.yml --vars-store mysql-creds.yml \
   -o ./operations/add-broker.yml \
+  -o ./operations/latest-versions.yml \
   --vars-file bosh-lite/default-vars.yml \
   --var cf_mysql_external_host=p-mysql.$SYSTEM_DOMAIN \
   --var cf_mysql_host=$BOSH_ENVIRONMENT \
