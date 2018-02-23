@@ -68,6 +68,8 @@ Run `git clone git@github.com:cloudfoundry/bosh-deployment.git`
 
 Now we're ready to deploy our BOSH Director with the following command:
 
+> **Note:** If you created your own VPC using the instructions above then $EXTERNAL_IP is the elastic IP that you allocated.
+
 ```sh
 bosh create-env bosh.yml \
   --state=state.json \
@@ -95,13 +97,13 @@ bosh create-env bosh.yml \
 Great! If that all went well, you should now have a BOSH Director. In order to access it, export the following environment variables:
 
 ```sh
-export BOSH_ENVIRONMENT=$the_elastic_ip_you_created_earlier
+export BOSH_ENVIRONMENT=$EXTERNAL_IP
 export BOSH_CA_CERT="$(bosh int creds.yml --path /director_ssl/ca)"
 export BOSH_CLIENT=admin
 export BOSH_CLIENT_SECRET="$(bosh int creds.yml --path /admin_password)"
 export BOSH_GW_HOST=$BOSH_ENVIRONMENT
-export BOSH_GW_USER=jumpbox
-export BOSH_GW_PRIVATE_KEY=$path_to_the_private_key_you_downloaded_earlier
+export BOSH_GW_USER=vcap
+export BOSH_GW_PRIVATE_KEY=<path/to/private/key>
 ```
 
 ### Checking your deployment

@@ -12,7 +12,16 @@ cd summit-training-classes/operator
 
 This creates the file `terraform/students.json` which contains an array of objects containing settings for an independent BOSH Lite v2 deployments.
 
-If you would like deploy those BOSH environments (rather than letting the students do it), you can use the following command:
+To generate zip files for each of the students containing their credentials run:
+
+```sh
+cd scripts
+ruby create_zips.rb ../terraform/students.json
+```
+
+This will create a `students` directory in the directory where the script is run, with zip archives for each student. Each zip archive contains a `private_key.pem` and a `export_vars`. The latter should be sourced by the student to export the necessary environment variables.
+
+If you would like deploy the BOSH environments (rather than letting the students do it), you can use the following command:
 
 ```sh
 jq -c '.[]' terraform/students.json | while read -r info
