@@ -38,7 +38,6 @@ cd ~/workspace/cf-mysql-deployment
 bosh -d cf-mysql deploy \
   cf-mysql-deployment.yml --vars-store mysql-creds.yml \
   -o ./operations/add-broker.yml \
-  -o ./operations/latest-versions.yml \
   --vars-file bosh-lite/default-vars.yml \
   --var cf_mysql_external_host=p-mysql.$SYSTEM_DOMAIN \
   --var cf_mysql_host=$BOSH_ENVIRONMENT \
