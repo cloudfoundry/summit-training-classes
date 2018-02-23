@@ -65,7 +65,7 @@ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
 -v system_domain=$SYSTEM_DOMAIN
 ```
 
-> **Note:** This deployment will take a while (~45 minutes). However there will be a confirmation prompt near the beginning so keep an eye on your screen.
+> **Note:** This deployment will take a while (~20-30 minutes). However there will be a confirmation prompt near the beginning so keep an eye on your screen.
 
 In our example, `cf` is the name we're choosing to give the deployment. `cf-deployment.yml` is our Cloud Foundry deployment manifest, while `bosh-lite.yml` and `use-compiled-releases.yml` are 'operations' files which make changes to that manifest. The 'vars-store' flag specifies where we want BOSH to generate a file containing credentials for our deployment. Lastly, 'system domain' will be used as the root domain for your deployment.
 
