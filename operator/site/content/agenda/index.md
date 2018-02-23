@@ -36,13 +36,13 @@ title: Agenda
 
 *"As a CF operator, I can scale Cloud Foundry to provide additional capacity to my users."*
 
-## 6. Data services & the marketplace
+## 6. CF Data services & the marketplace
 
 <a href="/slides/#/services" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/services)
 
 *"As a CF operator, I can add a MySQL service to Cloud Foundry so that apps can store state"*
 
-## 7. Upgrade
+## 7. Upgrading with BOSH
 
 <a href="/slides/#/upgrade" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/upgrading)
 
