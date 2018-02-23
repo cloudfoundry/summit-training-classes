@@ -52,11 +52,13 @@ Task 217 | 14:48:17 | Preparing deployment: Preparing deployment (00:00:00)
                     L Error: Instance group 'mysql' references an unknown vm type 'massive'
 ```
 
-What happened? BOSH is complaining that your manifest is referring to a type of VM that it doesn't recognise. To fix this, you'll need to make changes to your `cloud-config`.
+What happened? BOSH is complaining that your manifest is referring to a type of VM that it doesn't recognise.
+
+To fix this, you'll need to make changes to your `cloud-config` and update your BOSH Director with the new `cloud-config`, and finally redeploy MySQL.
 
 ### Cloud Config
 
-Every BOSH Director has a cloud config that defines IaaS-specific configuration, allowing deployment manifests themselves to be IaaS-agnostic.
+Every BOSH Director has a cloud config that defines IaaS-specific configuration, allowing deployment manifests themselves to be IaaS-agnostic. You added a cloud config when first deploying Cloud Foundry, but it didn't include a VM description that the MySQL manifest was expecting.
 
 ### Checking Your Work
 
