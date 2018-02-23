@@ -3,14 +3,15 @@ date: 2018-02-16T19:21:15-03:00
 title: Agenda
 ---
 
-## 1. BOSH Basics
+## 0. Deploying BOSH Lite v2 with AWS
 
-<a href="/slides/#/bosh-basics" target="_blank">
-  <i class="fa fa-tv"></i> Slides</a>
-  &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/deploy-cf)
+[<i class="fa fa-flask"></i> Lab](../labs/deploy-bosh)
+
+## 1. Deploying Cloud Foundry with BOSH
+
+<a href="/slides/#/bosh-basics" target="_blank"><i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/deploy-cf)
 
 *"As a CF operator, I can deploy the Cloud Foundry platform so that my users can self-serve their app deployment."*
-
 
 ## 2. BOSH Clusters & Availability
 

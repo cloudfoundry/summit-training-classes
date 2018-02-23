@@ -3,33 +3,9 @@ date: 2018-02-06T10:21:15-03:00
 title: Deploying Cloud Foundry with BOSH Lite v2
 ---
 
-Your goal is to use what you learned in the previous module to deploy Cloud Foundry to an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs. You will learn how to:
-
-- Upload a stemcell
-- Use a Cloud Foundry manifest to make a deployment
-
-> Note: In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, please follow the instructions below:
-
-- [Set up BOSH Lite v2 locally](https://bosh.io/docs/bosh-lite)
-- [Set up BOSH Lite v2 on AWS](/labs/bosh-lite-on-aws)
-
-In order to continue you must be able to run `bosh env` successfully, which should produce output similar to the following:
-
-```sh
-  Name      BOSH Lite Director
-  UUID      b1c3a0d6-cd0b-4ff9-9b6a-c80f9c34cf79
-  Version   264.7.0 (00000000)
-  CPI       warden_cpi
-  Features  compiled_package_cache: disabled
-            config_server: disabled
-            dns: disabled
-            snapshots: disabled
-  User      admin
-```
-
-> Note: - The next part of the guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
-
 ## Preparing to Deploy Cloud Foundry
+
+> Note: - This guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
 
 Next we need to obtain a manifest. In this exercise we'll use the 'canonical' manifest provided by the Cloud Foundry Foundation. Among other uses, the file lists the different releases that BOSH will download when you make your deployment.
 
