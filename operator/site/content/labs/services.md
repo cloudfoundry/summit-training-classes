@@ -61,6 +61,10 @@ To fix this, you'll need to make changes to your `cloud-config` and update your 
 
 Every BOSH Director has a cloud config that defines IaaS-specific configuration, allowing deployment manifests themselves to be IaaS-agnostic. You added a cloud config when first deploying Cloud Foundry, but it didn't include a VM description that the MySQL manifest was expecting.
 
+### Another Roadbump?
+
+Did your deployment work once you had updated your cloud config? If not, why not? What commands have you previously used that can fix this?
+
 ### Checking Your Work
 
 Before moving on, check that you now have a MySQL deployment with the `bosh deployments` command.
