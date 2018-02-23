@@ -9,7 +9,7 @@ MySQL is one of many BOSH releases that includes a 'service broker'. This enable
 
 ## Deploying MySQL
 
-* First, clone the MySQL Bosh **Release** repo:
+* First, clone the MySQL BOSH **Release** repo:
 
 ```sh
 git clone https://github.com/cloudfoundry/cf-mysql-release.git ~/workspace/cf-mysql-release
@@ -26,7 +26,7 @@ bosh create-release
 
 Finally run `bosh upload-release` to send the release to your Director.
 
-* Now, clone the MySQL Bosh **Deployment** repo:
+* Now, clone the MySQL BOSH **Deployment** repo:
 
 ```sh
 git clone https://github.com/EngineerBetter/cf-mysql-deployment.git ~/workspace/cf-mysql-deployment
