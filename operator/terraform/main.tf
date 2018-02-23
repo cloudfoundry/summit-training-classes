@@ -41,6 +41,7 @@ resource "aws_route_table_association" "main" {
 }
 
 resource "aws_security_group" "bosh" {
+  name        = "bosh"
   description = "access to BOSH Lite v2"
   vpc_id      = "${aws_vpc.main.id}"
 

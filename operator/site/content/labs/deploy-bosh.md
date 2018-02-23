@@ -77,19 +77,19 @@ bosh create-env bosh.yml \
   -o bosh-lite-runc.yml \
   -o jumpbox-user.yml \
   -o external-ip-with-registry-not-recommended.yml \
-  -v director_name=bosh-1 \
-  -v internal_cidr=10.0.0.0/24 \
-  -v internal_gw=10.0.0.1 \
-  -v internal_ip=10.0.0.6 \
+  -v director_name=$DIRECTOR_NAME \
+  -v internal_cidr=$INTERNAL_CIDR \
+  -v internal_gw=$INTERNAL_GW \
+  -v internal_ip=$INTERNAL_IP \
   -v access_key_id=$AWS_ACCESS_KEY_ID \
   -v secret_access_key=$AWS_SECRET_ACCESS_KEY \
   -v region=$AWS_DEFAULT_REGION \
-  -v az=$the_availability_zone_of_your_subnet \
-  -v default_key_name=bosh \
-  -v 'default_security_groups=[bosh]' \
-  --var-file private_key=$path_to_the_private_key_you_downloaded_earlier \
-  -v subnet_id=$your_subnet_id \
-  -v external_ip=$the_elastic_ip_you_created_earlier
+  -v az=$AZ \
+  -v default_key_name=$DEFAULT_KEY_NAME \
+  -v default_security_groups=[bosh] \
+  --var-file private_key=<path/to/private/key> \
+  -v subnet_id=$SUBNET_ID \
+  -v external_ip=$EXTERNAL_IP
   ```
 
 Great! If that all went well, you should now have a BOSH Director. In order to access it, export the following environment variables:
