@@ -13,6 +13,8 @@ Search https://bosh.io/stemcells for a newer **minor** version of the Ubuntu Tru
 * Modify the MySQL deployment manifest with the new stemcell version.
 * Deploy the change.
 
+**Note:** This deploy can take a long time depending on how many packages need to be compiled.
+
 **Note:** Releases may not work with stemcells significantly higher or lower than those specified by default in their manifest. Check the release's documentation for details.
 
 **Note:** In non-BOSH Lite v2 environments, where there is more than one VM for each instance, deploying/upgrading with BOSH incurs zero downtime.
