@@ -1,6 +1,6 @@
 ---
 date: 2018-02-16T19:21:15-03:00
-title: Upgrading
+title: Upgrading with BOSH
 ---
 
 In this exercise, we will upgrade the stemcell used by MySQL.  You can also upgrade Cloud Foundry, but this will take longer as cf-deployment is far larger than MySQL.
