@@ -7,7 +7,7 @@ In this exercise, we will upgrade the stemcell used by MySQL.  You can also upgr
 
 ## Updating the stemcell
 
-Search https://bosh.io/stemcells for a newer **minor** version of the Ubuntu Trusty `bosh-warden-boshlite` stemcell (if there is one).
+Search https://bosh.io/stemcells for a newer **minor** version of the Ubuntu Trusty `bosh-warden-boshlite` stemcell. If there are no newer versions, use an older minor version to downgrade instead (the process is the same).
 
 * Use BOSH to upload this stemcell to your director.
 * Modify the MySQL deployment manifest with the new stemcell version.
