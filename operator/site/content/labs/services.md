@@ -19,7 +19,6 @@ git clone https://github.com/cloudfoundry/cf-mysql-release.git ~/workspace/cf-my
 
 ```sh
 git checkout release-candidate
-bosh create-release
 ./scripts/update
 bosh create-release
 ```
