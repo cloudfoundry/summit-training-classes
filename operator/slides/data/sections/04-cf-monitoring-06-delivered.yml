@@ -1,0 +1,9 @@
+---
+menuTitle: "CF Monitoring: Delivered"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: false
+statements:
+  - As a *CF operator*
+  - I can *monitor* Cloud Foundry apps
+  - so *I know* about problems *before* they affect my users

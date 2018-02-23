@@ -1,0 +1,9 @@
+---
+menuTitle: "Recap"
+id: recap
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: "true"
+statements:
+  - Recap
+  - Q&A

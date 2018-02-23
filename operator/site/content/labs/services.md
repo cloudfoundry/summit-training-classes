@@ -1,77 +1,129 @@
 ---
-date: 2016-05-19T14:00:15-03:00
-title: Deploying a Redis Data Service
+date: 2018-02-16T19:21:15-03:00
+title: Deploying MySQL
 ---
 
-In this exercise, you will use bosh to add a redis service to your Cloud Foundry installation.  Then, as a user of CF, you will create an instance of this service and bind it to your app.
+In this section, we'll use BOSH to add MySQL as a 'service' to your Cloud Foundry deployment. Then, as a user of Cloud Foundry, you will create an instance of this service and bind it to your app.
 
-## Deploying Redis
+MySQL is one of many BOSH releases that includes a 'service broker'. This enables these services to integrate with a range of platforms, including Cloud Foundry, and advertise a catalog of services to app developers through the platform's marketplace.
 
-Given your knowledge of bosh, deploy a new Redis cluster.
+## Deploying MySQL
 
-* First, you will need to clone the release repo, using this address: `https://github.com/pivotal-cf/cf-redis-release.git`
-* Then, use the scripts directory to generate a bosh-lite manifest for warden and redirect to a file.
-* Use the generated manifest to find dependent releases and upload to bosh-lite
-* Set the deployment file. **Hint:** use `bosh status` to resolve the error
-* Deploy!
+* First, clone the MySQL BOSH **Release** repo:
 
-> **Warning**: To be fair, instruction in the repo's README are a bit old. Use the above instructions. Ask for help if needed! 
+```sh
+git clone https://github.com/cloudfoundry/cf-mysql-release.git ~/workspace/cf-mysql-release
+```
+
+* At the time of writing, the MySQL release next requires you to run the following commands from the main directory of the repo:
+
+```sh
+git checkout release-candidate
+./scripts/update
+bosh create-release
+```
+
+Finally run `bosh upload-release` to send the release to your Director.
+
+* Now, clone the MySQL BOSH **Deployment** repo:
+
+```sh
+git clone https://github.com/EngineerBetter/cf-mysql-deployment.git ~/workspace/cf-mysql-deployment
+```
+
+We're now ready to deploy MySQL with the following command. Note that you need to pass through your Cloud Foundry admin password and system domain as variables. Can you remember where to find these?
+
+```sh
+bosh -d cf-mysql deploy \
+  cf-mysql-deployment.yml --vars-store mysql-creds.yml \
+  -o ./operations/add-broker.yml \
+  --vars-file bosh-lite/default-vars.yml \
+  --var cf_mysql_external_host=p-mysql.$SYSTEM_DOMAIN \
+  --var cf_mysql_host=$BOSH_ENVIRONMENT \
+  --var cf_admin_password=$CF_ADMIN_PASSWORD \
+  --var cf_api_url=https://api.$SYSTEM_DOMAIN \
+  --var cf_skip_ssl_validation=true
+```
+
+```sh
+Task 217
+
+Task 217 | 14:48:17 | Preparing deployment: Preparing deployment (00:00:00)
+                    L Error: Instance group 'mysql' references an unknown vm type 'massive'
+```
+
+What happened? BOSH is complaining that your manifest is referring to a type of VM that it doesn't recognise. To fix this, you'll need to make changes to your `cloud-config`.
+
+### Cloud Config
+
+Every BOSH Director has a cloud config that defines IaaS-specific configuration, allowing deployment manifests themselves to be IaaS-agnostic.
 
 ### Checking Your Work
 
-If you run the following, you should see your redis cluster deployed:
+Before moving on, check that you now have a MySQL deployment with the `bosh deployments` command.
+
+You can also see the MySQL VMs (in our case, containers mimicking VMs) that have been created:
 
 ```sh
-bosh deployments
-```
+$ bosh vms
 
-You should also see redis VMs created:
+...
+Deployment 'cf-mysql'
 
-```sh
-bosh vms
+Instance                                         Process State  AZ  IPs           VM CID                                VM Type  Active
+arbitrator/5657c922-6128-48ac-94b5-67a1aec69e51  running        z3  10.244.0.144  d0e6eda5-8a04-4ede-614e-c49be6fafa7f  default  false
+broker/7c3e7334-5d6d-4117-8239-d57f77967345      running        z1  10.244.0.147  008f6980-c47a-4853-69b4-f268be089eb6  default  false
+broker/de86395f-1b72-4ce2-91f3-5d9590433eaa      running        z2  10.244.0.148  362e5ad6-8911-4d75-48eb-0b800cc1d859  default  false
+...
 ```
 
 ## Register the Service Broker
 
-An errand is included in the redis release that registers the broker with Cloud Foundry.  You can see the available errands by running:
+A BOSH errand is included in the MySQL release that 'registers' its service broker with Cloud Foundry. You can see the available errands by running:
 
 ```sh
-bosh errands
+bosh errands -d <deployment-name>
 ```
 
-The errand is called `broker-registrar`.  Use the bosh cli to run this errand.
+Let's run the errand `broker-registrar` with `bosh run-errand`.
 
 ### Checking Your Work
 
-At this point, you should see redis available inside the cf marketplace:
+At this point, you should see MySQL available in the cf marketplace:
 
 ```sh
-cf marketplace
+$ cf marketplace
+Getting services from marketplace in org system / space test as admin...
+OK
+
+service   plans        description
+p-mysql   10mb, 20mb   MySQL databases on demand
 ```
 
-## Using the Redis Service
+## Using the MySQL Service
 
-Now, we will switch back to CF and use the new redis service.
-
-### Creating a Service Instance
-
-Use `cf create-service` to create a new service instance of the redis service.
+Let's provision a database for an app. Use `cf create-service` to create a new instance of the MySQL service.
 
 ### Checking Your Work
 
 If you run the following, you should see your service instance:
 
 ```sh
-cf services
+$ cf services
+Getting services in org system / space test as admin...
+OK
+
+name         service   plan   bound apps   last operation
+mydatabase   p-mysql   20mb                create succeeded
 ```
 
 ### Binding your Service Instance
 
-In order for your app to be able to use the service, you must `bind` it.  Use the cf commands to bind the service instance to your application.
+In order for your app to be able to use the service, you must `bind` it.  Find and run the command to bind the service instance to your application.
 
 ### Checking Your Work
 
-There are many ways to check and see what services are bound to an app.  One way is to re-run `cf services`.
+There are many several to check and see what services are bound to an app.  One way is to re-run `cf services`.
 
 ### How does it work?
 
@@ -92,12 +144,10 @@ You should see json outputted to the command line.  Find the section that looks 
   }
 ```
 
-Under this you should see the redis service.  The connection credentials were provided by the service broker and handed to the application via an environment variable called `VCAP_SERVICES`.  This is why cf prompted you to `restage` your application after binding.
+Under here you should see the MySQL service.  The connection credentials were provided by the service broker and handed to the application via an environment variable called `VCAP_SERVICES`.
 
 ## Beyond the Class
 
 Review the documentation on [Application Security Groups](https://docs.pivotal.io/pivotalcf/adminguide/app-sec-groups.html).
 
 It is best practice to restrict outgoing access by default through the use of the system-wide `running` and `staging` security groups.  Then, allow exceptions on a space by space basis by binding security groups to spaces.
-
-Modify your running security group to restrict access, then create a security group (and bind it to your space) that allows your app to connect to redis.

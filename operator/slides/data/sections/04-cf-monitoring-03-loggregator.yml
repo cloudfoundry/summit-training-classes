@@ -1,0 +1,20 @@
+---
+subtitle: "CF Monitoring"
+title: "Loggregator"
+menuTitle: "CF Monitoring: Loggregator"
+type: "slide-basic"
+
+content: |
+
+  <span class="txt-c">
+
+  **Loggregator**: Aggregates and streams logs and metrics from **all apps and CF components**
+
+
+    <img src="img/loggregator.png" style="max-height: 350px" />
+
+  </span>
+
+notes: |
+
+  Think about the complexity of a single application with 10 instances running on VMs, behind load balancers and leveraging a database?  Something is wrong.  How do you get **aggregated** logs from all the components?

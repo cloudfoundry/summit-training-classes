@@ -1,9 +1,9 @@
 ---
-date: 2016-05-19T11:56:15-03:00
+date: 2018-02-16T19:21:15-03:00
 title: Monitoring
 ---
 
-The **CF Top** plugin for the Cloud Foundry Command Line Interface (cf CLI) allows users access to the output of the Loggregator Firehose to view metrics based on privileges. Users with administrative privilege can view routing and application metrics from all CF applications while non-administrative users will only see routing and application metrics within the orgs and spaces they have been assigned.
+The **CF Top** plugin for the Cloud Foundry Command Line Interface (cf CLI) allows users access to the output of the Loggregator Firehose to view metrics based on privileges. Users with administrative privilege can view routing and application metrics from all CF applications, while non-administrative users will only see routing and application metrics within the orgs and spaces they have been assigned.
 
 In this exercise you will install the CF Top plugin to gain access to all metrics. You will also modify the user you created in a prior lab to be able to successfully run the plugin.  This exercise was selected as it does not require external tools.
 
@@ -42,19 +42,34 @@ Administrator/Operator level permissions are governed by setting **Groups** usin
 For a complete view of all the metrics, the user requires the operator level groups of `cloud_controller.admin` and `doppler.firehose`. Let's go assign them.
 
 Install `uaac`
+
 ```sh
 sudo gem install cf-uaac --no-ri --no-rdoc
 ```
 
 Target Cloud Foundry's UAA endpoint.
+
 ```sh
-uaac target https://uaa.bosh-lite.com --skip-ssl-validation
+$ uaac target https://uaa.bosh-lite.com --skip-ssl-validation
+
+Unknown key: Max-Age = 86400
+
+Target: https://uaa.bosh-lite.com
 ```
 
-Obtain a token by using the credentials from `cf.yml` found under `properties.uaa.admin.client_secret`
+Obtain a token by using the credentials from `deployment-vars.yml` found under `uaa_admin_client_secret`
+
 ```sh
-uaac token client get admin
+$ uaac token client get admin
+
+Client secret:  ********************
+Unknown key: Max-Age = 86400
+
+Successfully fetched token via client credentials grant.
+Target: https://uaa.bosh-lite.com
+Context: admin, from client admin
 ```
+
 Assign the groups to the user created in a prior lab. Use `uaac member add -h` for guidance.
 
 Now login/relogin and run `cf top` to see the group change take affect.
@@ -62,9 +77,9 @@ Now login/relogin and run `cf top` to see the group change take affect.
 ## Beyond the Class
 
 * https://github.com/ECSTeam/cloudfoundry-top-plugin
-* http://docs.cloudfoundry.org/adminguide/cli-user-management.html
-* http://docs.cloudfoundry.org/adminguide/uaa-user-management.html
-* github.com/logsearch/logsearch-for-cloudfoundry
-* logsearch.io
+* https://docs.cloudfoundry.org/adminguide/cli-user-management.html
+* https://docs.cloudfoundry.org/adminguide/uaa-user-management.html
+* https://github.com/logsearch/logsearch-for-cloudfoundry
+* http://logsearch.io
 * https://github.com/cloudfoundry-community/bosh-gen
 * https://github.com/pivotal-cf-experimental/datadog-config-oss

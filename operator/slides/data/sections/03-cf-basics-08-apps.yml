@@ -1,0 +1,18 @@
+---
+subtitle: "CF Basics"
+title: "Applications"
+menuTitle: "CF Basics: Applications"
+type: slide-basic
+
+content: |
+
+  **Applications**
+
+  * Scoped to a space
+  * Accessible via 0 or more routes
+  * Runtime dependencies provided by buildpacks
+
+
+notes: |
+
+  Applications are pushed to a space and can serve traffic via routes.  The dependencies needed to run an application are typically provided by a buildpack (unless a docker container is pushed).  Buildpacks provide consistency and control that Docker does not.

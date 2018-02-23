@@ -1,8 +1,8 @@
 ---
+subtitle: "CF Basics"
+title: "What are we going to do?"
+menuTitle: "CF Basics: Agenda"
 type: "two-column"
-title: "Agenda"
-subtitle: "What are we going to do?"
-menuTitle: "Agenda"
 buildInColumns: "true"
 
 columnLeftContent: |
@@ -11,6 +11,7 @@ columnLeftContent: |
 
 columnRightContent: |
 
-    * Cloud Foundry Concerns
+    * Cloud Foundry benefits
+    * Architecture
     * Users, roles, orgs and spaces
     * App basics

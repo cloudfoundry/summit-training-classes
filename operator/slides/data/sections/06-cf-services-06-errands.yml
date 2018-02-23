@@ -1,0 +1,28 @@
+---
+subtitle: "CF Services"
+title: "Errands and Instances"
+menuTitle: "CF Services: Errands and Instances"
+type: two-column
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  How do I get a **service broker** registered?
+
+  <i class="fa fa-question-circle" style="font-size: 120px; padding: 10px;"></i>
+
+  </span>
+
+columnRightContent: |
+
+  ... with a **BOSH errand**
+
+  * **Instances**: Long-running (VMs running software)
+  * **Errands**: Run once (tasks)
+
+
+notes: |
+
+  Instances (formerly "jobs" in BOSH 1.0) are VMs with installed software that are kept alive.  Errands are one-off tasks.  Many releases encapsulate setup scripts in an errand, like registering a Service Broker

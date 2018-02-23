@@ -1,0 +1,26 @@
+---
+subtitle: "CF Services"
+title: "Accessing Data in Cloud Foundry"
+menuTitle: "CF Services: Service Brokers"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftTitle: Service Brokers
+
+columnLeftContent: |
+
+  ![Service Broker API](img/v2services-new.png)
+
+columnRightContent: |
+
+  * Register **data service** with Cloud Foundry (`cf marketplace`)
+  * **Provision** service (`cf create-service`)
+  * Provide connection **credentials** (`cf bind-service`)
+
+notes: |
+
+  Some services have Service Brokers, APIs that enable them to advertise services in the Cloud Foundry marketplace.
+
+  You can deploy a BOSH release like MySQL yourself, and then register that as a Cloud Foundry service - or you can register services provided by third parties.
+
+  Developers can use them to provision services, like database instances, and then bind them to their apps. `cf bind-service`

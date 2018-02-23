@@ -1,0 +1,27 @@
+---
+subtitle: "CF Basics"
+title: "Cloud Foundry Benefits"
+menuTitle: "CF Basics: Benefits"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/CFF-BOSH-Full-Color.png "BOSH")
+
+columnRightContent: |
+
+  * Application Lifecycle & Availability
+  * Security
+  * Service integration
+  * Routing and Domains
+  * Logging & Metrics
+
+notes: |
+
+  * Provides your developers with a simple way to push, update, and scale their apps
+  * VMs constantly monitored and resurrected if necessary. Minimizes downtime during product updates and platform upgrades
+  * Roles to define boundaries of what users can do, apps run in secure containers, security groups to define inbound/outbound traffic for apps
+  * Easy integration of services, like databases, with apps through the cf marketplace
+  * Gives you a way to expose your apps with an endpoint
+  * Lots of logging information available for debugging, which can be forwarded to your own logging management service.

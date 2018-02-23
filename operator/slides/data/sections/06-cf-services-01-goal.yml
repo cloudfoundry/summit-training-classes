@@ -1,0 +1,9 @@
+---
+menuTitle: "CF Services: Goal"
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: true
+statements:
+  - As a *CF operator*
+  - I can *add a MySQL* service to Cloud Foundry
+  - So that apps can *store state*

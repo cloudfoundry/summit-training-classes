@@ -1,9 +1,0 @@
----
-menuTitle: "Delivered"
-type: "statement"
-backgroundColor: "#243641"
-buildInStatements: false
-statements:
-  - As a *CF operator*
-  - I can provision a *new CF user*
-  - So that user can *deploy their app*

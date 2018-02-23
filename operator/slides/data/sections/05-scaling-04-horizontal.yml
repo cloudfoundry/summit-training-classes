@@ -1,7 +1,9 @@
 ---
+subtitle: "Scaling"
+title: "Horizontally"
+menuTitle: "Scaling: Horizontally"
 type: slide-basic
-title: "Horizontal Scale"
-subtitle: "Scaling Out"
+
 content: |
 
   **Adding Instances**

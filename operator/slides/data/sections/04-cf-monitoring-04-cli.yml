@@ -1,0 +1,23 @@
+---
+subtitle: "CF Monitoring"
+title: "CLI Log Access"
+menuTitle: "CF Monitoring: CLI Log Access"
+type: slide-basic
+
+content: |
+
+  `cf logs <app name> [--recent]`
+
+  `cf events <app name>`
+
+  `cf app-nozzle` and `cf nozzle`
+
+notes: |
+
+  The Loggregator continuously collects all logs from all apps and CF components. We'll see in a moment how those can be accessed.
+
+  You can stream an app's logs with `cf logs`, or print recent logs with the `--recent` option.
+
+  `cf events` more narrowly shows you a log of [events](https://apidocs.cloudfoundry.org/263/#events), such as when an app has started or stopped
+
+  `cf app-nozzle` and `cf nozzle` let you access Cloud Foundry's Firehose on the command line. This streams all logs from all apps and components. You need a CLI plugin for these commands.

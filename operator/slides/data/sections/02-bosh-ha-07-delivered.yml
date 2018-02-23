@@ -1,9 +1,9 @@
 ---
-menuTitle: "Delivered"
+menuTitle: "BOSH HA: Delivered"
 type: "statement"
 backgroundColor: "#243641"
 buildInStatements: false
 statements:
-  - As a *CF operator*
-  - I can *interact* with my BOSH clusters
-  - So that I can *troubleshoot* problems
+  - As a *BOSH operator*
+  - I *understand* BOSH HA
+  - So I can be *confident* my deployment is resilient

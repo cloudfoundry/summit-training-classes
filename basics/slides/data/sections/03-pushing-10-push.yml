@@ -16,6 +16,6 @@ content: |
 
 notes: |
 
-  CF cli sent all our app files to the Cloud Controller.
+  CF CLI sent all our app files to the Cloud Controller.
   The Cloud Controller stores all files it receives in the Blob Store.
   It also stores metadata about the app in the database.

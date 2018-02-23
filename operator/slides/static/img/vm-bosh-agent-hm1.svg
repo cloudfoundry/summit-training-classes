@@ -25,7 +25,7 @@
         <g id="bosh" transform="translate(314.000000, 0.000000)">
             <use id="Rectangle-3" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
             <text id="Bosh" font-family="Helvetica" font-size="16.8" font-weight="normal" fill="#000000">
-                <tspan x="155.141406" y="283">Bosh</tspan>
+                <tspan x="155.141406" y="283">BOSH</tspan>
             </text>
             <use id="Rectangle-2" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-3"></use>
             <text id="health-monitor" font-family="Helvetica" font-size="24" font-weight="normal" fill="#000000">
@@ -39,7 +39,7 @@
             <use id="Rectangle-1" stroke="#979797" mask="url(#mask-6)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-5"></use>
             <use id="Rectangle-2" stroke="#979797" mask="url(#mask-8)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-7"></use>
             <text id="bosh-agent" font-family="Helvetica" font-size="24" font-weight="normal" fill="#000000">
-                <tspan x="49.1152344" y="238">bosh agent</tspan>
+                <tspan x="49.1152344" y="238">BOSH agent</tspan>
             </text>
         </g>
         <g id="you-there" transform="translate(172.000000, 152.000000)" fill="#417505">

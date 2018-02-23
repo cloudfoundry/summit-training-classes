@@ -1,9 +1,0 @@
----
-menuTitle: "Delivered"
-type: "statement"
-backgroundColor: "#243641"
-buildInStatements: false
-statements:
-  - As a *CF operator*
-  - I can *monitor* Cloud Foundry
-  - so that *I know* of potential problems *before* they affect my users

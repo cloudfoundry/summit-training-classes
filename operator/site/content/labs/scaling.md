@@ -1,5 +1,5 @@
 ---
-date: 2016-05-19T11:56:15-03:00
+date: 2018-02-16T19:21:15-03:00
 title: Scaling
 ---
 
@@ -7,18 +7,25 @@ In this section, you will add application capacity to the Cloud Foundry platform
 
 ## Scaling the Platform Out
 
-Scaling out with bosh is simple.  We simply edit the manifest, add instances, and deploy.
+Scaling out with BOSH is simple.  We simply need to change the manifest, add instances, and deploy.  In our case, the number of Diego cells in our deployment is set by [an 'operations' file](https://bosh.io/docs/cli-ops-files.html), which modifies the main deployment manifest (you included this as an option when you originally ran `bosh deploy`).
 
-* Edit your Diego deployment manifest.
-* Find the `cell_z1` instance and increase the number to 2.
+* Find the relevant ops file at ~/workspace/cf-deployment/operations/bosh-lite.yml
+* Find the section of the file which changes the number of diego-cell instances and set the value from 1 to 2.
 * Deploy
 
 ```sh
 # In terminal 1
-bosh deploy
+$ bosh deploy
 
-# In terminal 2
-cf top  # <-- switch to the "Cell Stats" display
+...
+  instance_groups:
+  - name: diego-cell
+-   instances: 1
++   instances: 2
+Continue? [yN]:
+
+# In terminal 2 (before hitting y)
+cf top  # <-- switch to the "Cell Stats" display by hitting 'd'
 ```
 * What happened?
 
@@ -34,11 +41,11 @@ bosh vms
 
 ### Vertical Scaling
 
-* Use the cf cli to scale your application vertically (add memory).
+* Use the cf CLI to scale your application vertically (add memory).
 
 ```sh
 # In terminal 1
-# Use cf cli to scale app vertically
+# Use cf CLI to scale app vertically
 
 # In terminal 2
 cf top # <-- switch to the App Stats display
@@ -48,19 +55,19 @@ What happens?  Why?  How long does it take?  Is this a good idea in production s
 
 ### Horizontal Scaling
 
-Use the cf cli to scale your application horizontally to 2 instances.
+Use the cf CLI to scale your application horizontally to 2 instances.
 
 ```sh
 # In terminal 1
-# Use cf cli to scale app horizontally
+# Use cf CLI to scale app horizontally
 
 # In terminal 2
 cf top # <-- switch to the App Stats display
 ```
 
-What happens?  How long does it take?
+What happens? How long does it take?
 
-This is the preferred approach to scaling after right sizing your app.
+This is the preferred approach to scaling after allocating an appropriate level of resources to your app.
 
 ### Checking Your Work
 
@@ -79,4 +86,4 @@ cf app <your-app>
 * Drain scripts
   * http://bosh.io/docs/drain.html
 * Availability Zones
-  * https://github.com/cloudfoundry/bosh-notes/blob/master/availability-zones.md
+  * https://bosh.io/docs/azs.html

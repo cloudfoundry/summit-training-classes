@@ -1,118 +1,250 @@
+subtitle: "BOSH Basics"
+title: "Anatomy of BOSH Deployments"
+menuTitle: "BOSH Basics: Deployments"
 type: slide-basic
-title: "Bosh Concepts"
-subtitle: "Anatomy of Bosh Deployments"
-menuTitle: "Anatomy of Bosh Deployments"
+
 content: |
 
-  <svg width="903px" height="371px" viewBox="0 0 903 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
-      <title>bosh</title>
-      <desc>Created with Sketch.</desc>
-      <defs>
-          <rect id="path-1" x="0" y="2" width="172" height="42" rx="8"></rect>
-          <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="172" height="42" fill="white">
-              <use xlink:href="#path-1"></use>
-          </mask>
-          <rect id="path-3" x="0" y="2" width="172" height="42" rx="8"></rect>
-          <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="172" height="42" fill="white">
-              <use xlink:href="#path-3"></use>
-          </mask>
-          <rect id="path-5" x="1" y="51" width="172" height="42" rx="8"></rect>
-          <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="172" height="42" fill="white">
-              <use xlink:href="#path-5"></use>
-          </mask>
-          <rect id="path-7" x="0" y="0" width="76" height="99"></rect>
-          <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="76" height="99" fill="white">
-              <use xlink:href="#path-7"></use>
-          </mask>
-          <rect id="path-9" x="0" y="0" width="76" height="99"></rect>
-          <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="76" height="99" fill="white">
-              <use xlink:href="#path-9"></use>
-          </mask>
-          <rect id="path-11" x="0" y="0" width="76" height="99"></rect>
-          <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="76" height="99" fill="white">
-              <use xlink:href="#path-11"></use>
-          </mask>
-      </defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="stemcell" transform="translate(0.000000, 236.000000)" class="fragment" data-fragment-index="1">
-              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-1"></use>
-              <text font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
-                  <tspan x="20.4853516" y="35">stemcell</tspan>
-              </text>
-              <text id="base-O/S-plus-Bosh-s" font-family="Helvetica" font-size="18" font-weight="normal" fill="#4A4A4A">
-                  <tspan x="6.90576172" y="65">base O/S plus Bosh </tspan>
-                  <tspan x="21.4208984" y="87">specifics (agent, </tspan>
-                  <tspan x="44.4394531" y="109">monit, etc)</tspan>
-              </text>
-          </g>
-          <g id="release" transform="translate(344.000000, 236.000000)" class="fragment" data-fragment-index="2">
-              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-3"></use>
-              <text font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
-                  <tspan x="27.4638672" y="35">release</tspan>
-              </text>
-              <text id="versioned-tarball-co" font-family="Helvetica" font-size="18" font-weight="normal" fill="#4A4A4A">
-                  <tspan x="18.4145508" y="65">versioned tarball </tspan>
-                  <tspan x="0.708984375" y="87">containing ALL of the </tspan>
-                  <tspan x="13.4179688" y="109">assets that will be </tspan>
-                  <tspan x="47.9194336" y="131">deployed</tspan>
-              </text>
-          </g>
-          <g id="manifest" transform="translate(171.000000, 0.000000)" class="fragment" data-fragment-index="3">
-              <use id="Rectangle-1" stroke="#979797" mask="url(#mask-6)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-5"></use>
-              <text id="release" font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
-                  <tspan x="19.4726562" y="84">manifest</tspan>
-              </text>
-              <text id="cluster-config-speci" font-family="Helvetica" font-size="18" font-weight="normal" fill="#4A4A4A">
-                  <tspan x="31.4267578" y="18">cluster config </tspan>
-                  <tspan x="34.9248047" y="40">specification</tspan>
-              </text>
-          </g>
-          <g id="lines" transform="translate(86.000000, 100.000000)" stroke="#979797" stroke-linecap="square">
-              <path d="M0.5,130.5 L118.5,2.5" id="Line"></path>
-              <path d="M340.5,130.5 L226.5,0.5" id="Line"></path>
-              <path d="M92.5,157.5 L250.5,157.5" id="Line"></path>
-          </g>
-          <g id="addition" transform="translate(214.000000, 112.000000)" font-size="72" font-family="Helvetica" fill="#4A4A4A" font-weight="normal" class="fragment" data-fragment-index="4">
-              <text id="+">
-                  <tspan x="22.9765625" y="69">+</tspan>
-              </text>
-              <text id="=">
-                  <tspan x="368.976562" y="69">=</tspan>
-              </text>
-          </g>
-          <g id="deployment" transform="translate(664.000000, 100.000000)" class="fragment" data-fragment-index="5">
-              <g id="VM" transform="translate(72.000000, 26.000000)">
-                  <use id="Rectangle-4" stroke="#979797" mask="url(#mask-8)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-7"></use>
-                  <text font-family="Helvetica" font-size="24" font-weight="normal" fill="#4A4A4A">
-                      <tspan x="19.6972656" y="26">VM</tspan>
-                  </text>
-              </g>
-              <g id="VM" transform="translate(82.000000, 15.000000)">
-                  <use id="Rectangle-4" stroke="#979797" mask="url(#mask-10)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-9"></use>
-                  <text font-family="Helvetica" font-size="24" font-weight="normal" fill="#4A4A4A">
-                      <tspan x="19.6972656" y="26">VM</tspan>
-                  </text>
-              </g>
-              <g id="VM" transform="translate(95.000000, 0.000000)">
-                  <use id="Rectangle-4" stroke="#979797" mask="url(#mask-12)" stroke-width="2" fill="#D8D8D8" xlink:href="#path-11"></use>
-                  <text font-family="Helvetica" font-size="24" font-weight="normal" fill="#4A4A4A">
-                      <tspan x="19.6972656" y="26">VM</tspan>
-                  </text>
-              </g>
-              <text id="a-cluster-of-VMs-bas" font-family="Helvetica" font-size="18" font-weight="normal" fill="#4A4A4A">
-                  <tspan x="52.9306641" y="197">a cluster of VMs </tspan>
-                  <tspan x="65.4067383" y="219">based on the </tspan>
-                  <tspan x="49.4194336" y="241">stemcell, running </tspan>
-                  <tspan x="51.4189453" y="263">release software</tspan>
-              </text>
-              <text font-family="Helvetica" font-size="36" font-weight="normal" fill="#000000">
-                  <tspan x="26.3847656" y="170">deployment</tspan>
-              </text>
-          </g>
-      </g>
-  </svg>
+    <svg width="957px" height="509px" viewBox="0 0 957 509" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+        <title>bosh-extended</title>
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <rect id="path-1" x="0" y="0" width="244" height="42" rx="8"></rect>
+            <rect id="path-3" x="0" y="0" width="219" height="43" rx="8"></rect>
+            <path d="M0.5,1.5 L658.5,1.5" id="path-5"></path>
+            <rect id="path-6" x="0" y="0" width="76" height="99"></rect>
+            <rect id="path-8" x="0" y="0" width="76" height="99"></rect>
+            <rect id="path-10" x="0" y="0" width="76" height="99"></rect>
+            <rect id="path-12" x="0" y="0" width="172" height="42" rx="8"></rect>
+            <rect id="path-14" x="0" y="0" width="172" height="42" rx="8"></rect>
+            <rect id="path-16" x="0" y="0" width="172" height="42" rx="8"></rect>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="structure" transform="translate(167.000000, 94.000000)">
+                <g id="lines" stroke-linecap="square" stroke="#979797">
+                    <path d="M0.5,125.5 L112.5,0.5" id="Line"></path>
+                    <path d="M344,125 L232,0" id="Line"></path>
+                    <path d="M90.5,150.5 L248.5,150.5" id="Line"></path>
+                </g>
+                <g id="addition" transform="translate(148.000000, 5.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="72" font-weight="normal">
+                    <g id="+">
+                        <text>
+                            <tspan x="0.9765625" y="69">+</tspan>
+                        </text>
+                    </g>
+                    <g id="=" transform="translate(346.000000, 0.000000)">
+                        <text>
+                            <tspan x="0.976562" y="69">=</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="stemcell" transform="translate(79.000000, 223.000000)" class="fragment">
+                <g id="Rectangle-1" transform="translate(0.000000, 2.000000)">
+                    <g id="path-1-Clipped">
+                        <mask id="mask-17" fill="white">
+                            <use xlink:href="#path-16"></use>
+                        </mask>
+                        <g id="path-1"></g>
+                        <rect id="path-1" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-17)" x="0" y="0" width="172" height="42" rx="8"></rect>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(20.000000, 0.000000)" fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                    <text id="stemcell">
+                        <tspan x="0.4853516" y="35">stemcell</tspan>
+                    </text>
+                </g>
+                <g id="base-O/S-plus-Bosh-s" transform="translate(6.000000, 47.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                    <text id="base-O/S-plus-BOSH">
+                        <tspan x="0.90576172" y="18">base O/S plus BOSH</tspan>
+                    </text>
+                    <text id="specifics-(agent,">
+                        <tspan x="15.4208984" y="40">specifics (agent,</tspan>
+                    </text>
+                    <text id="monit,-etc)">
+                        <tspan x="38.4394531" y="62">monit, etc)</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="manifest" transform="translate(251.000000, -4.000000)" class="fragment">
+                <g id="Rectangle-1" transform="translate(0.000000, 51.000000)">
+                    <g id="path-5-Clipped">
+                        <mask id="mask-15" fill="white">
+                            <use xlink:href="#path-14"></use>
+                        </mask>
+                        <g id="path-5"></g>
+                        <rect id="path-5" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-15)" x="0" y="0" width="172" height="42" rx="8"></rect>
+                    </g>
+                </g>
+                <g id="release" transform="translate(18.000000, 49.000000)" fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                    <text id="manifest">
+                        <tspan x="0.4726562" y="35">manifest</tspan>
+                    </text>
+                </g>
+                <g id="cluster-config-speci" transform="translate(30.000000, 0.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                    <text id="cluster-config">
+                        <tspan x="0.4267578" y="18">cluster config</tspan>
+                    </text>
+                    <text id="specification">
+                        <tspan x="3.9248047" y="40">specification</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="release" transform="translate(423.000000, 223.000000)" class="fragment">
+                <g id="Rectangle-1" transform="translate(0.000000, 2.000000)">
+                    <g id="path-3-Clipped">
+                        <mask id="mask-13" fill="white">
+                            <use xlink:href="#path-12"></use>
+                        </mask>
+                        <g id="path-3"></g>
+                        <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-13)" x="0" y="0" width="172" height="42" rx="8"></rect>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(27.000000, 0.000000)" fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                    <text id="release">
+                        <tspan x="0.4638672" y="35">release</tspan>
+                    </text>
+                </g>
+                <g id="versioned-tarball-co" transform="translate(0.000000, 47.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                    <text id="versioned-tarball">
+                        <tspan x="18.4145508" y="18">versioned tarball</tspan>
+                    </text>
+                    <text id="containing-ALL-of-the">
+                        <tspan x="0.708984375" y="40">containing ALL of the</tspan>
+                    </text>
+                    <text id="assets-that-will-be">
+                        <tspan x="13.4179688" y="62">assets that will be</tspan>
+                    </text>
+                    <text id="deployed">
+                        <tspan x="47.9194336" y="84">deployed</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="deployment" transform="translate(771.000000, 34.000000)" class="fragment">
+                <g id="VM" transform="translate(46.000000, 26.000000)">
+                    <g id="Rectangle-4">
+                        <g id="path-7-Clipped">
+                            <mask id="mask-7" fill="white">
+                                <use xlink:href="#path-6"></use>
+                            </mask>
+                            <g id="path-7"></g>
+                            <rect id="path-7" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-7)" x="0" y="0" width="76" height="99"></rect>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(19.000000, 3.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="24" font-weight="normal">
+                        <text id="VM">
+                            <tspan x="0.6972656" y="23">VM</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="VM" transform="translate(56.000000, 15.000000)">
+                    <g id="Rectangle-4">
+                        <g id="path-9-Clipped">
+                            <mask id="mask-9" fill="white">
+                                <use xlink:href="#path-8"></use>
+                            </mask>
+                            <g id="path-9"></g>
+                            <rect id="path-9" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-9)" x="0" y="0" width="76" height="99"></rect>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(19.000000, 3.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="24" font-weight="normal">
+                        <text id="VM">
+                            <tspan x="0.6972656" y="23">VM</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="VM" transform="translate(69.000000, 0.000000)">
+                    <g id="Rectangle-4">
+                        <g id="path-11-Clipped">
+                            <mask id="mask-11" fill="white">
+                                <use xlink:href="#path-10"></use>
+                            </mask>
+                            <g id="path-11"></g>
+                            <rect id="path-11" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-11)" x="0" y="0" width="76" height="99"></rect>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(19.000000, 3.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="24" font-weight="normal">
+                        <text id="VM">
+                            <tspan x="0.6972656" y="23">VM</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="a-cluster-of-VMs-bas" transform="translate(23.000000, 179.000000)" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                    <text id="a-cluster-of-VMs">
+                        <tspan x="3.9306641" y="18">a cluster of VMs</tspan>
+                    </text>
+                    <text id="based-on-the">
+                        <tspan x="16.4067383" y="40">based on the</tspan>
+                    </text>
+                    <text id="stemcell,-running">
+                        <tspan x="0.4194336" y="62">stemcell, running</tspan>
+                    </text>
+                    <text id="release-software">
+                        <tspan x="2.4189453" y="84">release software</tspan>
+                    </text>
+                </g>
+                <g id="Group" transform="translate(0.000000, 135.000000)" fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                    <text id="deployment">
+                        <tspan x="0.3847656" y="35">deployment</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="divider" transform="translate(1.000000, 373.000000)" stroke="#979797" stroke-dasharray="1,10" stroke-linecap="square" class="fragment">
+                <g id="Line-2">
+                    <use stroke-width="3" xlink:href="#path-5"></use>
+                    <use stroke-width="1" xlink:href="#path-5"></use>
+                </g>
+            </g>
+            <g id="cc-rc" transform="translate(47.000000, 390.000000)" class="fragment">
+                <g id="runtime-config" transform="translate(344.000000, 0.000000)">
+                    <g id="Rectangle" transform="translate(0.000000, 4.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path-3"></g>
+                        <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0" width="244" height="42" rx="8"></rect>
+                    </g>
+                    <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                        <tspan x="8" y="35">runtime-config</tspan>
+                    </text>
+                    <text id="IaaS-agnostic-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="17" y="67">IaaS-agnostic configuration</tspan>
+                    </text>
+                    <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="5" y="89">that applies to all deployments</tspan>
+                    </text>
+                    <text id="(e.g.-anti-virus,-me" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="5" y="111">(e.g. anti-virus, metrics, logging)</tspan>
+                    </text>
+                </g>
+                <g id="cloud-config" transform="translate(0.000000, 1.000000)">
+                    <g id="Rectangle" transform="translate(6.000000, 3.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="path-3"></g>
+                        <rect id="path-3" stroke="#979797" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" mask="url(#mask-4)" x="0" y="0" width="219" height="43" rx="8"></rect>
+                    </g>
+                    <text id="IaaS-specific-config" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="12.4145508" y="70">IaaS-specific configuration</tspan>
+                    </text>
+                    <text id="that-applies-to-all" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="0" y="92">that applies to all deployments</tspan>
+                    </text>
+                    <text id="(e.g.-VM-sizes,-disk" fill="#4A4A4A" font-family="Helvetica" font-size="18" font-weight="normal">
+                        <tspan x="12" y="114">(e.g. VM sizes, disk sizes)</tspan>
+                    </text>
+                    <text fill="#000000" font-family="Helvetica" font-size="36" font-weight="normal">
+                        <tspan x="20" y="35">cloud-config</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </svg>
 
 notes: |
 
-  Bosh clusters are made up of 3 major components (bosh triangle).  Bosh 2.0 separates the concerns of IaaS/Cloud config from the deployment manifest.
+  BOSH clusters are made up of 3 major components (bosh triangle). There can be one release or many (by default, CF uses 23).
+
+  BOSH 2.0 separates the concerns of IaaS/Networking into a Cloud Config and add-on configuration into a runtime config. Both of these are configured on the director rather than in the manifest.

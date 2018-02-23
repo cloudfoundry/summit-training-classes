@@ -1,11 +1,11 @@
 ---
+subtitle: "Upgrading with BOSH"
+title: "Day 2 optimizations"
+menuTitle: "Upgrading with BOSH: Zero Downtime"
 type: "two-column"
-title: "Zero Downtime"
-subtitle: "Day 2 optimizations"
-menuTitle: "Zero Downtime"
 buildInColumns: "true"
 
-columnLeftTitle: "Deployment Manifest"
+columnLeftTitle: "Updating without downtime"
 
 columnLeftContent: |
 
@@ -20,8 +20,12 @@ columnRightContent: |
 
     * **Canaries**: # of failures that will trigger a roll back
     * **Max in Flight**: Concurrent upgrades
-    * max_in_flight **must be less than** # of instances!
+      * max_in_flight **must be less than** # of instances!
 
 notes: |
 
-  Bosh is optimized for day 2 onward.  Updates are performed with zero downtime (if configured correctly) by taking instances out of service, creating new ones and placing them in service.  VMs are immutable and never patched.
+  BOSH is optimized for day 2 onward. Rolling out upgrades to a large distributed system can be painful.
+
+  With BOSH, updates are performed with zero downtime (assuming the depoyment is configured correctly) by taking instances out of service, creating new ones, and placing them in service. Provided there are more than one VM of each instance, at least one will always be available during the upgrade.
+
+  VMs are immutable and never patched - instead they are replaced with new ones during upgrades.

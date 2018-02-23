@@ -1,0 +1,21 @@
+---
+subtitle: "CF Services"
+title: "What are we going to do?"
+menuTitle: "CF Services: Agenda"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![CF Logo](img/cf-logo-vertical.png "Cloud Foundry")
+
+columnRightContent: |
+
+    * Services, Brokers and Binding
+    * BOSH Errands
+
+notes: |
+
+  We'll be talking about Cloud Foundry services, the Service Broker APIs through which they interact with the platform, and the binding of those services to apps.
+
+  We'll also briefly look at the process of making services available in the Cloud Foundry marketplace, which we do using BOSH errands - a type of one-off task.

@@ -1,6 +1,8 @@
-type: slide-basic
+subtitle: "BOSH Basics"
 title: "Basic Commands"
-subtitle: "Seeing Deployments..."
+menuTitle: "BOSH Basics: Basic Commands"
+type: slide-basic
+
 content: |
 
   ```sh
@@ -12,13 +14,13 @@ content: |
   ```
 
   ```sh
-    bosh deployment
+    bosh deployments
   ```
 
   ```sh
-    bosh download manifest
+    bosh manifest
   ```
 
 notes: |
 
-  Try it!  Don't forget to use the bosh help commands.  Generating a manifest is often the difficult "day one" problem.
+  Try it!  Don't forget to use the BOSH help commands.  Generating a manifest is often the difficult "day one" problem.

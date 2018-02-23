@@ -1,7 +1,9 @@
 ---
+subtitle: "Scaling"
+title: "Vertically"
+menuTitle: "Scaling: Vertically"
 type: slide-basic
-title: "Vertical Scale"
-subtitle: "Scaling Up"
+
 content: |
 
   **Adding Resources**: More memory, compute, etc.
@@ -11,4 +13,4 @@ content: |
 
 notes: |
 
-  Vertical scaling involves adding resources, or making things bigger. To scale the platform up, we can make larger VMs.  To scale application up, we can make larger containers.  Scaling up of applications requires a restart == downtime.
+  Vertical scaling involves adding resources, or making things bigger. To scale the platform up, we can make larger VMs.  To scale application up, we can make larger containers.  Scaling up of CF applications requires a restart == downtime.

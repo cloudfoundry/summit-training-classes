@@ -1,0 +1,18 @@
+---
+subtitle: "CF Basics"
+title: "Multitenancy in Cloud Foundry"
+menuTitle: "CF Basics: Spaces"
+type: slide-basic
+
+content: |
+
+  **Spaces**: Used to divide organizations (commonly as "development", "staging", etc)
+
+  * Fully Qualified Domain Names (`myapp.example.com`)
+  * Security Groups (outbound app traffic)
+  * Services
+  * Apps
+
+notes: |
+
+  Spaces are typically used to seperate environments for a tenant or project. However, there are no limits and users are free to implement any structure they see fit.  Applications are always pushed to spaces.

@@ -1,8 +1,8 @@
 ---
-type: "two-column"
+subtitle: "BOSH Basics"
 title: "What is a Cloud?"
-subtitle: "Establishing the baseline"
-menuTitle: "What is a Cloud?"
+menuTitle: "BOSH Basics: What is a Cloud?"
+type: "two-column"
 
 columnLeftContent: |
   ### Technical

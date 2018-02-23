@@ -1,0 +1,27 @@
+---
+subtitle: "CF Basics"
+title: "Cloud Foundry Architecture"
+menuTitle: "CF Basics: Architecture"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  ![Cloud Foundry Architecture](img/cf-architecture.png "Cloud Foundry Architecture")
+
+columnRightContent: |
+
+  * Cloud Controller - REST API
+  * Diego Brain - allocates the workload
+  * Diego Cell(s) - run the apps
+
+notes: |
+
+  This is the structure of a Cloud Foundry deployment. By now, you should know how to see all of the VMs that make up a CF deployment using BOSH (our example has 15, but typically there will be several dozen VMs).
+  We are not going to cover all of the components, but some of the important ones are
+
+    * Cloud Controller. A REST API used by developers, admins, etc to access the system, and maintains a database of orgs, spaces, services, user roles (we'll see more of these in a moment)
+
+    * Diego Brain. Coordinates the running of apps, by holding auctions among Diego Cell VMs in order to find the best place to run an app instance.
+
+    * Diego Cell. Runs apps inside containers.

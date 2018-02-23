@@ -1,65 +1,39 @@
 ---
-date: 2016-04-19T18:59:04-06:00
+date: 2018-02-23T18:59:04-06:00
 title: Prerequisites
 ---
 
-Please review the requirement below and **complete the following prerequisites before class**.  
+Please ensure you have **the following before starting the class**.
 
 ## Experience
 
-This training is targeted at people with:
+These training materials are targeted at people:
 
-* Little to no Cloud Foundry BOSH experience  
-* Some experience managing Linux-based systems
-* Comfortable using the command line and SSH
-
+* With little or no Cloud Foundry/BOSH experience,
+* Some experience using Linux-based systems, and
+* Who are comfortable using the command line
 
 ## System Requirements
 
-There are two ways to complete this class:
+The course will require you to set up a virtual machine, and provides instructions for doing this in one of two ways:
 
-* Preferred: On a VM on Amazon Web Services.
-* Unsupported but possible: On your laptop provided you have sufficient resources and permissions.
+* In Amazon Web Services (preferred)
+* Locally on your own laptop, provided you have sufficient resources and permissions.
 
-
-In either case, you **MUST have a laptop and be able to install software on it**.
+In either case, you **need a laptop with a command line SSH tool, and the ability to install software**.
 
 ## AWS (Recommended)
 
-### Laptop Requirements
+Organised training sessions often provide an AWS environment to students. Where this is not the case, follow [these](https://bosh.io/docs/init-aws.html) instructions to prepare your own environment before beginning the course.
 
-Please ensure the following:
-
-* You **MUST be able to install software on your laptop**.
-* You must have an SSH program.
-
-### AWS Requirements
-
-**NOTE**: Formal classes often provide the AWS environment
-
-An **AWS account** with the following characteristics:
-
-* Access to a VPC
-* An AWS Keypair tied to account that has the ability to create:
-  * Elastic IPs
-  * Security groups
-  * (1) m3.xLarge instance
-
-
-## Laptop
+## Local
 
 ### Laptop Requirements
 
-Please ensure the following:
-
-* Make sure your machine has at least 8GB RAM, and 100GB free disk space. Smaller configurations may work, but significantly smaller configurations will certainly fail.
-* You **MUST be able to install software on your laptop**.
-* You must have a command line SSH tool.
+Please ensure your machine has at least 8GB RAM, and 100GB free disk space. Smaller configurations may work, but significantly smaller configurations will not.
 
 ### Required Software
 
 Please install the following:
 
-* [Vagrant](https://www.vagrantup.com/downloads.html): Used to provision a bosh-lite instance.
-* A Vagrant Provider.  [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is recommended.  
-* It is highly recommended that you ensure you laptop cannot "sleep" during class.  If you use a mac, you can install [caffeine](https://itunes.apple.com/us/app/caffeine/id411246225?mt=12).
+* It is recommended that you ensure you laptop cannot "sleep" during class.  If you use a mac, you can install [caffeine](http://lightheadsw.com/caffeine/).

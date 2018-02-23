@@ -1,0 +1,9 @@
+---
+menuTitle: "CF Monitoring"
+id: monitoring
+type: "statement"
+backgroundColor: "#243641"
+buildInStatements: "true"
+statements:
+  - Part 4.
+  - CF Monitoring

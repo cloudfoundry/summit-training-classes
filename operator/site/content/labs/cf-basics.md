@@ -1,5 +1,5 @@
 ---
-date: 2016-04-19T19:21:15-06:00
+date: 2018-02-16T19:21:15-03:00
 title: CF Basics
 ---
 
@@ -24,41 +24,41 @@ You can also get details on a specific command with:
   cf help <command>
 ```
 
-
 ### Logging in
 
-To start a session with CF, you need to login.  You do this by targeting the `api` endpoint of the cloud foundry installation.  The url should be something like `https://api.<system_domain>`.  By default, the manifest generation of your bosh-lite CF installation uses a system domain of `bosh-lite.com`.
+To start using Cloud Foundry, you need to login by targeting the `api` endpoint created in your installation.
 
-Verify that:
-
-- the CF deployment manifest has `properties.system_domain` set to `bosh-lite.com`
-- running `host bosh-lite.com` resolves to the address `10.244.0.34`
-- the `ha_proxy_z1` instance has an address of `10.244.0.34` when running `bosh vms`  
-
-Where was the `10.244.0.34` IP specified as the one for `ha_proxy_z1`?
-
-As the above illustrates, Cloud Foundry defaults to using HAProxy as it's load balancer, representing the entry point into CF.
-
-If you don't have a fully qualified domain name, you can use a service like `xip.io` that makes any IP appear as a domain name.
+During the deployment process, BOSH generated the file `deployment-vars.yml`. This file contains admin credentials that you'll need to use the Cloud Foundry CLI. Run the following to get your admin password:
 
 ```sh
-cf login -a https://api.bosh-lite.com --skip-ssl-validation
-# admin / admin
+bosh interpolate --path /cf_admin_password $path_to_your_deployment_vars_yml_file
 ```
 
-*Note: We are skipping ssl validation b/c we are using self signed certificates.*
+Let's login using our endpoint, which will be structured as below - using the `system_domain` variable we passed through when deploying Cloud Foundry earlier. After running the command, you will be prompted for your username (`admin`) and password.
+
+```sh
+cf login -a https://api.$SYSTEM_DOMAIN --skip-ssl-validation
+```
+
+> Note: We are skipping ssl validation because we are using self-signed certificates.
 
 ### Checking Your Work
 
-If you run the following, you should see that you are logged in to your cloud foundry installation.
+Running `cf target` should produce output similar to the following, which will confirm that you're now logged in:
 
 ```sh
-cf target
+$ cf target
+
+api endpoint:   https://api.bosh-lite.com
+api version:    2.102.0
+user:           admin
+org:            system
+No space targeted, use 'cf target -s SPACE'
 ```
 
 ## Creating an Organization
 
-The next step is to add an organization.
+The next step is to add an organization - an environment with a shared quota of computing resources.
 
 * Use `cf help -a` to find the right command to create an organization.  You can name the organization anything you want.
 
@@ -73,12 +73,17 @@ Once you create an organization, you have to target it so that the rest of the c
 If you run the following, you should see that you are logged in to your cloud foundry installation, and targeted to your organization.
 
 ```sh
-cf target
+$ cf target
+
+api endpoint:   https://api.bosh-lite.com
+api version:    2.102.0
+user:           admin
+org:            example-org
 ```
 
 ## Creating a Space
 
-The next step is to add a space to your organization.
+Organizations are subdivided into one or more spaces. Let's add a space to your organization.
 
 * Use `cf help -a` to find the right command to create a space inside your organization.  Name the space `dev`.
 
@@ -93,7 +98,13 @@ Once you create a space, you have to be sure to target it so that the rest of th
 If you run the following, you should see that you are logged in to your cloud foundry installation, and targeted to your organization and space.
 
 ```sh
-cf target
+$ cf target
+
+api endpoint:   https://api.bosh-lite.com
+api version:    2.102.0
+user:           admin
+org:            example-org
+space:          dev
 ```
 
 ## Adding a new User
@@ -113,9 +124,20 @@ The next step is to create a user and add them to the correct role.
 If you run the following, you should see your new user assigned to the `SpaceDeveloper` role:
 
 ```sh
-cf space-users <org> <space>
-```
+$ cf space-users <org> <space>
 
+Getting users in org example-org / space dev as admin
+
+SPACE MANAGER
+  admin
+
+SPACE DEVELOPER
+  admin
+  test-user
+
+SPACE AUDITOR
+  No SPACE AUDITOR found
+```
 
 ## Pushing your First App
 

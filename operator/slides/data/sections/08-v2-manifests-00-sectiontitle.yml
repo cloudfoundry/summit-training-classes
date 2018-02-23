@@ -1,9 +1,0 @@
----
-menuTitle: "Goal"
-id: v2-manifests 
-type: "statement"
-backgroundColor: "#243641"
-buildInStatements: "true"
-statements:
-  - Part 8.
-  - v2 Manifests 

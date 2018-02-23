@@ -1,8 +1,8 @@
 ---
+subtitle: "Upgrading with BOSH"
+title: "What are we going to do?"
+menuTitle: "Upgrading with BOSH: Agenda"
 type: "two-column"
-title: "Agenda"
-subtitle: "What are we going to do?"
-menuTitle: "Agenda"
 buildInColumns: "true"
 
 columnLeftContent: |
@@ -14,4 +14,4 @@ columnRightContent: |
 
     * Zero Downtime Deployments
     * When to Upgrade
-    * Life w/o Bosh...
+    * Life without BOSH...

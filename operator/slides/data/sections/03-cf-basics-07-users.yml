@@ -1,0 +1,24 @@
+---
+subtitle: "CF Basics"
+title: "Role-based access control"
+menuTitle: "CF Basics: Roles"
+type: slide-basic
+
+content: |
+
+  **Users**: Assigned to roles in Orgs and/or Spaces.
+
+  **Roles**: Users can have one or more. E.g:
+
+  * Admin
+
+  * Org Manager
+
+  * Space Manager
+
+  * Space Developer
+
+
+notes: |
+
+  Users are assigned one or more roles in either orgs or spaces.  In order for a user to push an app, they should be given the Space Developer role for the space the app will run in.

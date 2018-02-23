@@ -1,0 +1,28 @@
+---
+subtitle: "CF Monitoring"
+title: "Using purpose-built systems with Loggregator"
+menuTitle: "CF Monitoring: Integration"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  <img src="img/logging.svg" />
+
+  </span>
+
+columnRightContent: |
+
+    * **Log Drains**: Send logs to external syslog-compliant service (ex. ELK, papertrail)
+
+    * **Nozzles**: The programs that enable you to do this, and which filter/manipulate data
+
+notes: |
+
+  Cloud Foundry makes integration with purpose-built tools easy. Doppler VMs receive logs from all other components, where they're stored in buffers and sent to either the Traffic Controller or a third-party syslog drain.
+
+  The Traffic Controller exposes the Firehose.
+
+  Nozzles are programs that consume the Firehose and, after transforming the data, forward it to other services. e.g. The Datadog nozzle, the Syslog nozzle.

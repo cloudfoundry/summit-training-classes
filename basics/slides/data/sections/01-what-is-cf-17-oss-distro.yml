@@ -15,7 +15,7 @@ columnRightContent: |
 
   * [github.com/cloudfoundry](https://github.com/cloudfoundry)
   * **cf-release** requires [BOSH](https://bosh.io/docs) knowledge
-  * **bosh-lite** for a local CF deployment
+  * **BOSH-lite** for a local CF deployment
 
 notes: |
 

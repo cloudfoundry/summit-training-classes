@@ -1,0 +1,27 @@
+---
+subtitle: "CF Services"
+title: "Storing State in Cloud Foundry"
+menuTitle: "CF Services: Data Services"
+type: "two-column"
+buildInColumns: "true"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  If CF runs **stateless apps**...
+
+  where does the **data** go?
+
+  <i class="fa fa-question-circle" style="font-size: 120px; padding: 10px;"></i>
+
+  </span>
+
+columnRightContent: |
+
+    * In **external data stores** available as services.
+    * Many BOSH releases for data services - see bosh.io
+
+notes: |
+
+  A core cloud native pattern is to store state (including sessions) in external data stores bound to application instances.

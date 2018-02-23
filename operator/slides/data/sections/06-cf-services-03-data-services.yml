@@ -1,0 +1,17 @@
+---
+subtitle: "CF Services"
+title: "App Execution in Cloud Foundry"
+menuTitle: "CF Services: Stateless Apps"
+type: "slide-basic"
+
+content: |
+
+  Cloud Foundry runs **stateless apps**
+
+    * Immutable
+    * Scalable
+    * Disposable
+
+notes: |
+
+  Cloud Foundry runs stateless apps.  The ability to add and remove instances, including recovering from failed instances, is critical to cloud scalability & recoverability.

@@ -1,0 +1,16 @@
+---
+subtitle: "CF Basics"
+title: "Multitenancy in Cloud Foundry"
+menuTitle: "CF Basics: Orgs"
+type: slide-basic
+
+content: |
+
+  **Organizations**: Provide a mechanism to segregate tenants in a Cloud Foundry installation.
+
+  * Quotas
+  * Domains (`example.com`)
+
+notes: |
+
+  Organizations are typically used to segregate tenants or projects in a cloud foundry installation.  However, there are no limits and users are free to implement any structure they see fit.

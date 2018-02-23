@@ -1,21 +1,21 @@
 ---
+subtitle: "BOSH HA"
+title: "Recovering Failed VMs"
+menuTitle: "BOSH HA: Recovering Failed VMs"
 type: "two-column"
-title: "Recovering failed VMs"
-subtitle: "High Availability"
-menuTitle: "Recovering failed VMs"
 buildInColumns: "true"
 
 columnLeftContent: |
 
-  ![Bosh Agent](img/vm-bosh-agent-hm1.svg "Bosh Agent")
+  ![BOSH Agent](img/vm-bosh-agent-hm1.svg "BOSH Agent")
 
 columnRightContent: |
 
   Who **likes** being paged?
-  
+
   * **Health monitor** pings VMs
-  * If the VM doesn't respond **bosh recreates it**
+  * If the VM doesn't respond **BOSH recreates it**
 
 notes: |
 
-  The health manager in bosh constantly pings created vms.  When a VM is "gone", bosh recreates it.  No pages.  No manual intervention necessary.  This is critical to "day 2" operations.
+  The health manager in BOSH constantly pings created vms.  When a VM is "gone", BOSH recreates it.  No pages.  No manual intervention necessary.  This is critical to "day 2" operations.

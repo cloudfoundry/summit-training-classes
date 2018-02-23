@@ -1,7 +1,8 @@
 ---
+subtitle: "BOSH Basics"
+title: "Core Components"
+menuTitle: "BOSH Basics: Core Components"
 type: slide-basic
-title: "Bosh Basics"
-subtitle: "Core components"
 content: |
 
   * **BOSH CPI** - Cloud Provider Interface
@@ -12,6 +13,6 @@ content: |
 
 notes:
 
-  Bosh separates the concerns of clusters from underlying infrastructure via a Cloud Provider Interface.  The CPI defines common functions and CPIs exist for many infrastructures.
+  BOSH separates the concerns of clusters from underlying infrastructure via a Cloud Provider Interface.  The CPI defines common functions and CPIs exist for many infrastructures.
 
-  The Bosh Director is the "brains" of the operation and what you will be interacting with.
+  The BOSH Director is the "brains" of the operation and what you will be interacting with.
