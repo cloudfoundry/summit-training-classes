@@ -64,7 +64,10 @@ Fill in the following inbound rules:
 
 Run `git clone git@github.com:cloudfoundry/bosh-deployment.git`
 
-`cd bosh-deployment`
+```sh
+cd bosh-deployment
+git checkout 2c1f713
+```
 
 Now we're ready to deploy our BOSH Director with the following command:
 

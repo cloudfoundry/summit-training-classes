@@ -13,6 +13,7 @@ Next we need to obtain a manifest. In this exercise we'll use the 'canonical' ma
 git clone https://github.com/cloudfoundry/cf-deployment ~/workspace/cf-deployment
 
 cd ~/workspace/cf-deployment
+git checkout tags/v1.15.0
 ```
 
 If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
