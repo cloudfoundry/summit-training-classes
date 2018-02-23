@@ -5,7 +5,6 @@ title: CF Basics
 
 In this exercise, we will log in to our Cloud Foundry Foundation that we just deployed, create an org, space and user, and assign the user to a role so they can deploy an app.  We'll finish up by deploying an application.
 
-
 ## Getting Started: Cloud Foundry CLI
 
 ### Installing
@@ -40,7 +39,7 @@ Let's login using our endpoint, which will be structured as below - using the `s
 cf login -a https://api.$SYSTEM_DOMAIN --skip-ssl-validation
 ```
 
-**Note:** We are skipping ssl validation because we are using self-signed certificates.
+**Note:** We are skipping SSL validation because we are using self-signed certificates.
 
 ### Checking Your Work
 
