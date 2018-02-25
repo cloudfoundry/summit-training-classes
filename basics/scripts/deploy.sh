@@ -1,7 +1,7 @@
 #!/bin/sh
 
 STC_ORG=${STC_ORG:-'cfcommunity'}
-STC_SPACE=${STC_ORG:-'cforg'}
+STC_SPACE=${STC_SPACE:-'cforg'}
 
 cf api | grep "^No[t ]" && exit 1 
 
