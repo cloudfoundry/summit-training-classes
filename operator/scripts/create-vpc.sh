@@ -35,7 +35,7 @@ do
     --arg region "$(terraform output region)" \
     --arg az "$(terraform output az)" \
     --arg default_key_name "$(terraform output default_key_names | cut -d, -f "$i")" \
-    --arg private_key "$(<"$tmp/id_rsa_$((num_students -1))")" \
+    --arg private_key "$(<"$tmp/id_rsa_$((i-1))")" \
     --arg default_security_groups "$(terraform output default_security_groups)" \
     --arg subnet_id "$(terraform output subnet_id)" \
     --arg external_ip "$(terraform output external_ips | cut -d, -f "$i")" \
