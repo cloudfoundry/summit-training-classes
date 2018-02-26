@@ -62,7 +62,7 @@ Fill in the following inbound rules:
 
 ### Deploying the Director
 
-Run `git clone git@github.com:cloudfoundry/bosh-deployment.git`
+Run `git clone https://github.com/cloudfoundry/bosh-deployment.git`
 
 ```sh
 cd bosh-deployment
