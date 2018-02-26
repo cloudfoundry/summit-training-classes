@@ -34,6 +34,8 @@ done
 
 If the BOSH environments were deployed using the command above then they can all be deleted using the following:
 
+*If you have run `source create_env` beware that your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY env vars will have been overwriten with ones for a student.*
+
 ```sh
 ./scripts/destroy-all-bosh.sh
 ```
