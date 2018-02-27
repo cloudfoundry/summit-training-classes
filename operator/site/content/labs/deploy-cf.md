@@ -5,7 +5,7 @@ title: Deploying Cloud Foundry with BOSH Lite v2
 
 ## Preparing to Deploy Cloud Foundry
 
-> Note: - This guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
+**Note:** - This guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
 
 Next we need to obtain a manifest. In this exercise we'll use the 'canonical' manifest provided by the Cloud Foundry Foundation. Among other uses, the file lists the different releases that BOSH will download when you make your deployment.
 

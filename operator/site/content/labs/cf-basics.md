@@ -40,7 +40,7 @@ Let's login using our endpoint, which will be structured as below - using the `s
 cf login -a https://api.$SYSTEM_DOMAIN --skip-ssl-validation
 ```
 
-> Note: We are skipping ssl validation because we are using self-signed certificates.
+**Note:** We are skipping ssl validation because we are using self-signed certificates.
 
 ### Checking Your Work
 
