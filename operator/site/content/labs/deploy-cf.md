@@ -16,7 +16,13 @@ cd ~/workspace/cf-deployment
 git checkout tags/v1.15.0
 ```
 
-If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
+Check to see if you've already set `$BOSH_ENVIRONMENT`:
+
+```
+echo $BOSH_ENVIRONMENT
+```
+
+If you see an empty output, set the `BOSH_ENVIRONMENT` environment variable to your Director's external IP. Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
 
 ```sh
 export BOSH_ENVIRONMENT=<your environment IP/name>
