@@ -3,6 +3,10 @@ date: 2018-02-06T10:21:15-03:00
 title: Deploying BOSH Lite v2 on AWS
 ---
 
+## Install the BOSH CLI
+
+You need to [install the BOSH v2 CLI](http://bosh.io/docs/cli-v2.html#install).
+
 ## Deploying a BOSH Director
 
 Your goal is to deploy an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs.
@@ -10,6 +14,7 @@ Your goal is to deploy an instance of BOSH Lite v2 - a scaled-down version of BO
 > **Note for AWS users:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, you can set one up yourself by following the instructions on this page. If your instructor has provided you with a VPC, Security Group and Elastic IP, jump to [deploying the director](#deploying-the-director).
 
 > **Note for other users:** Provided you have a machine with [sufficient resources](../../prereqs), you can deploy a BOSH Lite Director locally by following [these instructions](https://bosh.io/docs/bosh-lite). Then skip to [checking your deployment](#checking-your-deployment) at the bottom of this page.
+
 
 ### AWS Setup
 
@@ -68,6 +73,8 @@ Run `git clone https://github.com/cloudfoundry/bosh-deployment.git`
 cd bosh-deployment
 git checkout 2c1f713
 ```
+
+> The specific BOSH command we're going to run has further dependencies. **Make sure you have [installed these extra dependencies](http://bosh.io/docs/cli-env-deps.html)**.
 
 Now we're ready to deploy our BOSH Director with the following command:
 
