@@ -60,7 +60,7 @@ bosh-warden-boshlite-ubuntu-trusty-go_agent  3468.21*  ubuntu-trusty  -    76579
 
 ## Deploy CF
 
-If have you deployed BOSH Lite v2 locally, set `$SYSTEM_DOMAIN` to bosh-lite.com. If you deployed BOSH Lite v2 to AWS, use $BOSH_ENVIRONMENT.sslip.io.
+If have you deployed BOSH Lite v2 locally, set `$SYSTEM_DOMAIN` to bosh-lite.com. If you deployed BOSH Lite v2 to AWS, use `$BOSH_ENVIRONMENT.sslip.io`.
 
 There's just one more command to set your deployment running:
 
