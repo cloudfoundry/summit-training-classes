@@ -117,9 +117,14 @@ resource "aws_iam_policy" "student" {
 EOF
 }
 
+resource "random_id" "student_name" {
+  count       = "${var.num_students}"
+  byte_length = 8
+}
+
 resource "aws_iam_user" "student" {
   count = "${var.num_students}"
-  name  = "student-${count.index}"
+  name  = "${element(random_id.student_name.*.hex, count.index)}"
 }
 
 resource "aws_iam_access_key" "student" {
