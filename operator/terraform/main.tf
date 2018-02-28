@@ -1,9 +1,6 @@
 variable "num_students" {}
 variable "key_dir" {}
-
-variable "region" {
-  default = "us-east-1"
-}
+variable "region" {}
 
 provider "aws" {
   region = "${var.region}"

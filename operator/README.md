@@ -4,6 +4,8 @@
 
 You can create a lab environment for multiple students in AWS by first cloning this repository (the clone is important):
 
+*Note:* The VPC is deployed to `us-east-1` by default. To deploy to a different region set the environment variable `$AWS_REGION`
+
 ```sh
 git clone --recursive https://github.com/EngineerBetter/summit-training-classes.git
 cd summit-training-classes/operator

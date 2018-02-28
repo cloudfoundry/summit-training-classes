@@ -13,6 +13,7 @@ if [ -z "$out" ]
 then
     out="students.json"
 fi
+region="${AWS_REGION:-us-east-1}"
 set -u
 
 tmp=$(mktemp -d)
@@ -22,7 +23,7 @@ do
 done
 
 terraform init
-terraform apply -auto-approve -var num_students="$num_students" -var key_dir="$tmp"
+terraform apply -auto-approve -var num_students="$num_students" -var key_dir="$tmp" -var region="$region"
 
 for i in $(seq 1 $num_students)
 do
