@@ -5,7 +5,7 @@ title: Deploying Cloud Foundry with BOSH Lite v2
 
 ## Preparing to Deploy Cloud Foundry
 
-> Note: - This guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
+**Note:** - This guide requires you to be logged in to your Director, and the rest of the instructions assume you have already done so.
 
 Next we need to obtain a manifest. In this exercise we'll use the 'canonical' manifest provided by the Cloud Foundry Foundation. Among other uses, the file lists the different releases that BOSH will download when you make your deployment.
 
@@ -13,9 +13,16 @@ Next we need to obtain a manifest. In this exercise we'll use the 'canonical' ma
 git clone https://github.com/cloudfoundry/cf-deployment ~/workspace/cf-deployment
 
 cd ~/workspace/cf-deployment
+git checkout tags/v1.15.0
 ```
 
-If you haven't already, set the following environment variable to the alias you've given your Director (this saves us from having to repeat it as an option in each of the following BOSH commands). Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
+Check to see if you've already set `$BOSH_ENVIRONMENT`:
+
+```
+echo $BOSH_ENVIRONMENT
+```
+
+If you see an empty output, set the `BOSH_ENVIRONMENT` environment variable to your Director's external IP. Your Director IP will be 192.168.50.6 if you followed the guide to run BOSH Lite v2 locally:
 
 ```sh
 export BOSH_ENVIRONMENT=<your environment IP/name>
@@ -53,6 +60,8 @@ bosh-warden-boshlite-ubuntu-trusty-go_agent  3468.21*  ubuntu-trusty  -    76579
 
 ## Deploy CF
 
+If have you deployed BOSH Lite v2 locally, set `$SYSTEM_DOMAIN` to bosh-lite.com. If you deployed BOSH Lite v2 to AWS, use `$BOSH_ENVIRONMENT.sslip.io`
+
 There's just one more command to set your deployment running:
 
 ```sh
@@ -61,9 +70,9 @@ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
 -o ~/workspace/cf-deployment/operations/use-compiled-releases.yml \
 --vars-store deployment-vars.yml \
 -v system_domain=$SYSTEM_DOMAIN
-
-# If you deployed BOSH Lite v2 locally, set $SYSTEM_DOMAIN to bosh-lite.com. If you deployed BOSH Lite v2 to AWS, use $BOSH_ENVIRONMENT.sslip.io.
 ```
+
+> **Note:** This deployment will take a while (~20-30 minutes). However there will be a confirmation prompt near the beginning so keep an eye on your screen.
 
 In our example, `cf` is the name we're choosing to give the deployment. `cf-deployment.yml` is our Cloud Foundry deployment manifest, while `bosh-lite.yml` and `use-compiled-releases.yml` are 'operations' files which make changes to that manifest. The 'vars-store' flag specifies where we want BOSH to generate a file containing credentials for our deployment. Lastly, 'system domain' will be used as the root domain for your deployment.
 

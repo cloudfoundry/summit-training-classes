@@ -3,6 +3,10 @@ date: 2018-02-06T10:21:15-03:00
 title: Deploying BOSH Lite v2 on AWS
 ---
 
+## Install the BOSH CLI
+
+You need to [install the BOSH v2 CLI](http://bosh.io/docs/cli-v2.html#install).
+
 ## Deploying a BOSH Director
 
 Your goal is to deploy an instance of BOSH Lite v2 - a scaled-down version of BOSH in which the Director uses containers to emulate VMs.
@@ -10,6 +14,7 @@ Your goal is to deploy an instance of BOSH Lite v2 - a scaled-down version of BO
 > **Note for AWS users:** In some training sessions you may already have a BOSH Lite v2 instance set up for you in AWS. If not, you can set one up yourself by following the instructions on this page. If your instructor has provided you with a VPC, Security Group and Elastic IP, jump to [deploying the director](#deploying-the-director).
 
 > **Note for other users:** Provided you have a machine with [sufficient resources](../../prereqs), you can deploy a BOSH Lite Director locally by following [these instructions](https://bosh.io/docs/bosh-lite). Then skip to [checking your deployment](#checking-your-deployment) at the bottom of this page.
+
 
 ### AWS Setup
 
@@ -62,11 +67,18 @@ Fill in the following inbound rules:
 
 ### Deploying the Director
 
-Run `git clone git@github.com:cloudfoundry/bosh-deployment.git`
+Run `git clone https://github.com/cloudfoundry/bosh-deployment.git`
 
-`cd bosh-deployment`
+```sh
+cd bosh-deployment
+git checkout 2c1f713
+```
+
+> The specific BOSH command we're going to run has further dependencies. **Make sure you have [installed these extra dependencies](http://bosh.io/docs/cli-env-deps.html)**.
 
 Now we're ready to deploy our BOSH Director with the following command:
+
+> **Note:** If you created your own VPC using the instructions above then $EXTERNAL_IP is the elastic IP that you allocated.
 
 ```sh
 bosh create-env bosh.yml \
@@ -77,31 +89,31 @@ bosh create-env bosh.yml \
   -o bosh-lite-runc.yml \
   -o jumpbox-user.yml \
   -o external-ip-with-registry-not-recommended.yml \
-  -v director_name=bosh-1 \
-  -v internal_cidr=10.0.0.0/24 \
-  -v internal_gw=10.0.0.1 \
-  -v internal_ip=10.0.0.6 \
+  -v director_name=$DIRECTOR_NAME \
+  -v internal_cidr=$INTERNAL_CIDR \
+  -v internal_gw=$INTERNAL_GW \
+  -v internal_ip=$INTERNAL_IP \
   -v access_key_id=$AWS_ACCESS_KEY_ID \
   -v secret_access_key=$AWS_SECRET_ACCESS_KEY \
   -v region=$AWS_DEFAULT_REGION \
-  -v az=$the_availability_zone_of_your_subnet \
-  -v default_key_name=bosh \
-  -v 'default_security_groups=[bosh]' \
-  --var-file private_key=$path_to_the_private_key_you_downloaded_earlier \
-  -v subnet_id=$your_subnet_id \
-  -v external_ip=$the_elastic_ip_you_created_earlier
+  -v az=$AZ \
+  -v default_key_name=$DEFAULT_KEY_NAME \
+  -v default_security_groups=[bosh] \
+  --var-file private_key=<path/to/private/key> \
+  -v subnet_id=$SUBNET_ID \
+  -v external_ip=$EXTERNAL_IP
   ```
 
 Great! If that all went well, you should now have a BOSH Director. In order to access it, export the following environment variables:
 
 ```sh
-export BOSH_ENVIRONMENT=$the_elastic_ip_you_created_earlier
+export BOSH_ENVIRONMENT=$EXTERNAL_IP
 export BOSH_CA_CERT="$(bosh int creds.yml --path /director_ssl/ca)"
 export BOSH_CLIENT=admin
 export BOSH_CLIENT_SECRET="$(bosh int creds.yml --path /admin_password)"
 export BOSH_GW_HOST=$BOSH_ENVIRONMENT
-export BOSH_GW_USER=jumpbox
-export BOSH_GW_PRIVATE_KEY=$path_to_the_private_key_you_downloaded_earlier
+export BOSH_GW_USER=vcap
+export BOSH_GW_PRIVATE_KEY=<path/to/private/key>
 ```
 
 ### Checking your deployment

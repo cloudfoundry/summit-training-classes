@@ -13,6 +13,7 @@ if [ -z "$out" ]
 then
     out="students.json"
 fi
+region="${AWS_REGION:-us-east-1}"
 set -u
 
 tmp=$(mktemp -d)
@@ -22,7 +23,7 @@ do
 done
 
 terraform init
-terraform apply -auto-approve -var num_students="$num_students" -var key_dir="$tmp"
+terraform apply -auto-approve -var num_students="$num_students" -var key_dir="$tmp" -var region="$region"
 
 for i in $(seq 1 $num_students)
 do
@@ -35,7 +36,7 @@ do
     --arg region "$(terraform output region)" \
     --arg az "$(terraform output az)" \
     --arg default_key_name "$(terraform output default_key_names | cut -d, -f "$i")" \
-    --arg private_key "$(<"$tmp/id_rsa_$((num_students -1))")" \
+    --arg private_key "$(<"$tmp/id_rsa_$((i-1))")" \
     --arg default_security_groups "$(terraform output default_security_groups)" \
     --arg subnet_id "$(terraform output subnet_id)" \
     --arg external_ip "$(terraform output external_ips | cut -d, -f "$i")" \

@@ -1,9 +1,6 @@
 variable "num_students" {}
 variable "key_dir" {}
-
-variable "region" {
-  default = "us-east-1"
-}
+variable "region" {}
 
 provider "aws" {
   region = "${var.region}"
@@ -41,6 +38,7 @@ resource "aws_route_table_association" "main" {
 }
 
 resource "aws_security_group" "bosh" {
+  name        = "bosh"
   description = "access to BOSH Lite v2"
   vpc_id      = "${aws_vpc.main.id}"
 
@@ -119,9 +117,14 @@ resource "aws_iam_policy" "student" {
 EOF
 }
 
+resource "random_id" "student_name" {
+  count       = "${var.num_students}"
+  byte_length = 8
+}
+
 resource "aws_iam_user" "student" {
   count = "${var.num_students}"
-  name  = "student-${count.index}"
+  name  = "${element(random_id.student_name.*.hex, count.index)}"
 }
 
 resource "aws_iam_access_key" "student" {

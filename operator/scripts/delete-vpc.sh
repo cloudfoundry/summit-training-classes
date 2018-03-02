@@ -13,6 +13,7 @@ if [ -z "$out" ]
 then
     out="students.json"
 fi
+region="${AWS_REGION:-us-east-1}"
 set -u
 
 tmp=$(mktemp -d)
@@ -22,6 +23,6 @@ do
     touch "$tmp/id_rsa_$i.pub"
 done
 
-terraform destroy -force -var num_students="$num_students" -var key_dir="$tmp"
+terraform destroy -force -var num_students="$num_students" -var key_dir="$tmp" -var region="$region"
 
 rm -r "$tmp"

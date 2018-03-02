@@ -15,7 +15,12 @@ Scaling out with BOSH is simple.  We simply need to change the manifest, add ins
 
 ```sh
 # In terminal 1
-$ bosh deploy
+$ cd ~/workspace/cf-deployment
+$ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml \
+-o ~/workspace/cf-deployment/operations/bosh-lite.yml \
+-o ~/workspace/cf-deployment/operations/use-compiled-releases.yml \
+--vars-store deployment-vars.yml \
+-v system_domain=$SYSTEM_DOMAIN
 
 ...
   instance_groups:
@@ -23,10 +28,13 @@ $ bosh deploy
 -   instances: 1
 +   instances: 2
 Continue? [yN]:
+```
 
+```sh
 # In terminal 2 (before hitting y)
 cf top  # <-- switch to the "Cell Stats" display by hitting 'd'
 ```
+
 * What happened?
 
 ### Checking Your Work
