@@ -4,7 +4,7 @@ backgroundColor: "#232B2F"
 buildInStatements: true
 statements:
   - So what is 12 factor?
-  - "**Coping mechanism** for **complexity** in **distributed systems**."
+  - "**Coping mechanism** for **diversity** in **distributed systems**."
 
 notes: |
 

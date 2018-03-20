@@ -48,29 +48,29 @@ We have pushed four microservice applications that use Spring Cloud Slueth with 
 The source for these applications can be found at:
 <https://github.com/mikegehard/DistributedTracingDemo_Velocity2016>
 
-The Zipkin UI can be found at <http://zipkin-server-postmammillary-milk.scapp.io/>.
+The Zipkin UI can be found at <http://acme-zipkin-server.a9sapp.eu/>.
 
 In the previous section you saw span and trace ids added to the application logs. Now lets see how zipkin works with this information to provide visiblity into your microservice application.
 
 If you want to add a new trace, you can curl any one of the microservices using:
 
 ```sh
-curl http://acme-financial-ui-unproffered-bibliotheca.scapp.io/start
-curl http://acme-financial-account-tubulous-gyttja.scapp.io/action
-curl http://acme-financial-back-office-choleraic-oligotrophy.scapp.io/action
-curl http://acme-financial-customer-uncognizable-knowe.scapp.io/action
+curl http://acme-financial-ui.aws.ie.a9sapp.eu/start
+curl http://acme-financial-account.aws.ie.a9sapp.eu/action
+curl http://acme-financial-back-office.aws.ie.a9sapp.eu/action
+curl http://acme-financial-customer.aws.ie.a9sapp.eu/action
 ```
 
 ### Understanding the trace hierarchy
 
-In your browser Navigate to the <a href="http://zipkin-server-postmammillary-milk.scapp.io/dependency" target="_blank">dependencies</a> to view the microservice hierarchy.
+In your browser Navigate to the <a href="http://acme-zipkin-server.a9sapp.eu/dependency" target="_blank">dependencies</a> to view the microservice hierarchy.
 
 * Which microservices get called from the UI service?
 * Which microservices are at the end of the call chain?
 
 ### Viewing trace timings
 
-In your browser Navigate <a href="http://zipkin-server-postmammillary-milk.scapp.io/" target="_blank">here</a> to access the find trace form.
+In your browser Navigate <a href="http://acme-zipkin-server.a9sapp.eu/" target="_blank">here</a> to access the find trace form.
 
 Clicking on the `Find Traces` button will bring up a list of existing traces.
 

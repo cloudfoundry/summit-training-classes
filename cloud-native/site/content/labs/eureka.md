@@ -14,7 +14,7 @@ The browser app uses Eureka to identify instances of our people service.  It use
 
 First you need to deploy the Eureka server.  A prebuilt jar is provided here <a href="/resources/eureka.jar" target="_blank">eureka.jar</a> or you can download and build the source from github <a href="https://github.com/spgreenberg/eureka" target="_blank">github.com/spgreenberg/eureka</a>.
 
-* Push the Eureka server to cloud foundry
+* Push the Eureka server to Cloud Foundry
 
 ```sh
 cf push eureka -p <path-to-jar> -m 512M --random-route -b java_buildpack
