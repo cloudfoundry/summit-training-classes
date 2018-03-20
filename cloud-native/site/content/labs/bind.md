@@ -4,12 +4,12 @@ title: Binding and Environment Variables
 
 In the last section, we lost all our data when we restarted our app.  In this section, we will fix that.
 
-## Creating a MySQL instance
+## Creating a PostgreSQL instance
 
-We will create an instance of mysql and bind it to our app, thereby removing state from memory.
+We will create an instance of postgresql and bind it to our app, thereby removing state from memory.
 
 * Use `cf marketplace` to view the available services and plans.  
-* Use `cf create-service` to create a MySQL service instance `mariadb` and select the *free* plan `free`.
+* Use `cf create-service` to create a PostgreSQL service instance `a9s-postgresql` and select the `postgresql-single-small` plan.
 
 ### Checking Your Work
 
@@ -19,8 +19,8 @@ You should be able to see your service instance:
 cf services
 ...
 
-name           service   plan    bound apps   last operation   
-people-mysql   mariadb   free                 create succeeded   
+name        service          plan                      bound apps   last operation
+people-db   a9s-postgresql   postgresql-single-small                create succeeded
 ```
 
 ## Binding to Your App
@@ -38,23 +38,23 @@ You should be able to see your service instance bound to your app:
 cf services
 
 ...
-name         service   plan    bound apps   last operation   
-people-mysql mariadb   free    people       create succeeded
+name        service          plan                      bound apps   last operation
+people-db   a9s-postgresql   postgresql-single-small   people       create succeeded
 ```
 
 ## Testing Statelessness
 
-At this point, you should be able to put data into your service that lands in the external mysql service.
+At this point, you should be able to put data into your service that lands in the external PostgreSQL service.
 
 ```sh
-curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.scapps.io/people
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people
 ```
 
 * Restart your app.
 * You should still see the data:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.scapps.io/people
+curl http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people
 ...
 
 {
@@ -65,23 +65,23 @@ curl http://people-<RANDOM_ROUTE>.scapps.io/people
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/2"
         },
         "person" : {
-          "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/2"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapps.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/search"
     }
   },
   "page" : {
@@ -103,7 +103,7 @@ Run the following:
 cf env people
 ```
 
-This will print the environment variables for your application.  Look for a `System-Provided` variable called `VCAP_SERVICES`.  You should see the service credentials for your mysql service.  Note:
+This will print the environment variables for your application.  Look for a `System-Provided` variable called `VCAP_SERVICES`.  You should see the service credentials for your PostgreSQL service.  Note:
 
 > * Cloud Foundry leverage the environment variables: <a href="http://12factor.net/config" target="_blank">12factor.net/config</a>
 > * Cloud Foundry treats services as attached resources: <a href="http://12factor.net/backing-services" target="_blank">12factor.net/backing-services</a>

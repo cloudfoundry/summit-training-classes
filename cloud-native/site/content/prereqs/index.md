@@ -20,5 +20,4 @@ This training is targeted at people with:
 * 1GB of FREE RAM
 * ability to install software
 * code editor of choice
-* <a href="https://pre-cf-summit-registration.scapp.io/" target="_blank">Swisscom</a> account or ability to create one
 * <a href="https://curl.haxx.se" target="_blank">cURL</a> (<a href="https://curl.haxx.se/download.html#Win64" target="_blank">for windows</a>)
