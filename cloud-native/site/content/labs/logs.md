@@ -49,11 +49,7 @@ We have pushed four microservice applications that use Spring Cloud Slueth with 
 The source for these applications can be found at:
 <https://github.com/mikegehard/DistributedTracingDemo_Velocity2016>
 
-<<<<<<< HEAD
 The Zipkin UI can be found at <http://zipkin-server.aws.ie.a9sapp.eu/>.
-=======
-The Zipkin UI can be found at <http://acme-zipkin-server.a9sapp.eu/>.
->>>>>>> use a9s cloud for the cloud-native labs
 
 In the previous section you saw span and trace IDs added to the application logs. Now lets see how zipkin works with this information to provide visiblity into your microservice application.
 
