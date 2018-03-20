@@ -2,7 +2,8 @@
 title: Circuit Breakers with Hystrix
 ---
 
-Currently, our browser app does not fail gracefully when an issue occurs communicating with the people service.  Let's fix that.
+Currently, our browser app does not fail gracefully when an issue occurs while communicating with the people service.  Let's fix that.
+
 
 ## Simulating Failure
 
@@ -25,14 +26,16 @@ Now if you access your browser app and hit `Go` on the `/people` endpoint, you s
 }
 ```
 
+
 ## Enabling Hystrix
 
-Our browser app actually has Hystrix built in, but currently disabled.  You can enable Hystrix by setting the `SPRING_PROFILES_ACTIVE` environment variable to `hystrix`.
+Our browser app actually has Hystrix built in, but currently disabled. You can enable Hystrix by setting the `SPRING_PROFILES_ACTIVE` environment variable to `hystrix`.
 
 * `cf set-env browser SPRING_PROFILES_ACTIVE hystrix`
 * `cf restart browser`
 
-> **Don't** write your apps this way.  You should always be using Hystrix in your spring code, but we do this for the purposes of teaching.
+> **Don't** write your apps this way. You should always be using Hystrix in your Spring code, but we do this for the purpose of teaching.
+
 
 ### Checking Your Work
 
@@ -41,6 +44,7 @@ You should see the environment variable:
 ```sh
 cf env browser
 ```
+
 
 ### Seeing Hystrix in Action
 
@@ -68,8 +72,9 @@ Properties
 {}
 ```
 
-In this case, the fallback method is very simple.  It returns an empty array.  The fallback could be much more useful as well.
+In this case, the fallback method is very simple. It returns an empty array. The fallback could be much more useful as well.
+
 
 ### Restoring...
 
-Now, start your people app.  Access the browser a few times again until service is restored.
+Now, start your people app. Access the browser a few times again until service is restored.

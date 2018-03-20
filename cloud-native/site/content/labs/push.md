@@ -2,13 +2,13 @@
 title: Pushing a data service
 ---
 
-In this exercise, you will push a restful data microservice.
+In this exercise, you will push a RESTful data microservice.
 
 > Note: Currently this microservice does not adhere to all of the 12 factor app principles.
 
 ## The App
 
-The app is a very simple Spring Data Rest application. You can download the jar file here: <a href="/resources/people.jar" target="_blank">people.jar</a>.
+The app is a very simple Spring Data REST application. You can download the jar file here: <a href="/resources/people.jar" target="_blank">people.jar</a>.
 
 If you are comfortable with git and gradle, you can also clone the source here <a href="https://github.com/spgreenberg/people" target="_blank">github.com/spgreenberg/people</a> and build it yourself.
 

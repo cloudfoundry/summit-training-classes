@@ -3,13 +3,13 @@ date: 2016-04-19T18:59:04-06:00
 title: Prerequisites
 ---
 
-Please review the requirement below and **complete the following prerequisites before class**.  
+Please review the requirement below and **complete the following prerequisites before class**.
 
 ## Experience
 
 This training is targeted at people with:
 
-* Basic Cloud Foundry experience  
+* Basic Cloud Foundry experience
 * Some experience deploying web-based applications
 * Comfortable using the command line and SSH
 

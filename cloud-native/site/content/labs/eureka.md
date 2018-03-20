@@ -110,7 +110,8 @@ The Browser app simply logs requests and results to the REST endpoints of the ap
 * Open the browser app in your web browser
 * In the `Explorer` text box, enter `/people` and hit `GO`
 
-> The first request *might* fail (not gracefully).  This is b/c the browser service is still fetching information from Eureka.  In the next exercise, we will add resiliency so we can fail gracefully.
+> The first request *might* fail (not gracefully).  This is because the browser service
+is still fetching information from Eureka. In the next exercise, we will add resiliency so we can fail gracefully.
 
 Let's try scaling our people service to 2 instances
 
@@ -120,8 +121,8 @@ cf scale
 
 ### What is happening?
 
+When successful, the browser app is using Eureka to locate the people service instances,
+then using Ribbon to load balance requests to those instances (because of quota limits, we only have 2 instance).
+Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
 
-
-When successful, the browser app is using Eureka to locate the people service instances, then using Ribbon to load balance requests to those instances (b/c of quota limits, we only have 2 instance).  Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
-
-Congratulations!  You have successfully used service discovery to consume a microservice.
+Congratulations! You have successfully used service discovery to consume a microservice.
