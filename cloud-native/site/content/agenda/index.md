@@ -11,13 +11,13 @@ title: Agenda
 
 ## 2. Microservices & 12 Factor Apps
 
-<a href="/slides/#/12" target="_blank">
+<a href="/slides/#/13" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/push)
 
 
 ## 3. 12 Factor Review
 
-<a href="/slides/#/20" target="_blank">
+<a href="/slides/#/21" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/bind)
 
 
