@@ -8,7 +8,6 @@ In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud
 
 The browser app uses Eureka to identify instances of our people service.  It uses the <a href="https://github.com/Netflix/ribbon" target="_blank">Ribbon</a> support built into <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Spring Cloud Netflix</a> to provide client side load balancing.  The browser app also leverages <a href="https://github.com/Netflix/feign" target="_blank">Feign</a> support which makes writing HTTP clients in java simple.
 
-> NOTE: Swisscom trial accounts are limited to 3GB, we have enough capacity to scale our people-service instances.
 
 ## Deploying Eureka
 
@@ -71,9 +70,9 @@ You should also see the service instance:
 cf services
 ...
 
-name             service         plan    bound apps   last operation
-eureka-service   user-provided           people
-people-mysql     mariadb         free    people       create succeeded
+name             service             plan                     bound apps   last operation
+eureka-service   user-provided                                people
+people-mysql     postgresql-service  postgresql-single-small  people       create succeeded
 ```
 
 
