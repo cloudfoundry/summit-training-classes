@@ -15,7 +15,7 @@ If you already have the CLI, be sure you have the most recent version.
   cf --version
   cf version 6.26.0+9c9a261fd.2017-04-06
 ```
-If your version is not more recent that this one, please install the latest.
+If your version is not more recent that this one, please install <a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html" target="_blank">the latest</a>.
 
 ### Checking Your Work
 

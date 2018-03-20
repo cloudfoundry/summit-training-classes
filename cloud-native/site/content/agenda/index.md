@@ -23,19 +23,19 @@ title: Agenda
 
 ## 4. Service Discovery
 
-<a href="/slides/#/24" target="_blank">
+<a href="/slides/#/26" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/eureka)
 
 
 ## 5. Circuit Breaking
 
-<a href="/slides/#/31" target="_blank">
+<a href="/slides/#/33" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/hystrix)
 
 
 ## 6. Distributed Tracing
 
-<a href="/slides/#/38" target="_blank">
+<a href="/slides/#/40" target="_blank">
   <i class="fa fa-tv"></i> Slides</a> &nbsp; | &nbsp; [<i class="fa fa-flask"></i> Lab](../labs/logs)
 
 
