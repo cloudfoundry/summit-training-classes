@@ -8,7 +8,7 @@ In the last section, we lost all our data when we restarted our app.  In this se
 
 We will create an instance of postgresql and bind it to our app, thereby removing state from memory.
 
-* Use `cf marketplace` to view the available services and plans.  
+* Use `cf marketplace` to view the available services and plans.
 * Use `cf create-service` to create a PostgreSQL service instance `a9s-postgresql` and select the `postgresql-single-small` plan.
 
 ### Checking Your Work
@@ -20,7 +20,7 @@ cf services
 ...
 
 name        service          plan                      bound apps   last operation
-people-db   a9s-postgresql   postgresql-single-small                create succeeded
+people-db   a9s-postgresql94 postgresql-single-small                create succeeded
 ```
 
 ## Binding to Your App
@@ -39,7 +39,7 @@ cf services
 
 ...
 name        service          plan                      bound apps   last operation
-people-db   a9s-postgresql   postgresql-single-small   people       create succeeded
+people-db   a9s-postgresql94 postgresql-single-small   people       create succeeded
 ```
 
 ## Testing Statelessness
@@ -47,41 +47,41 @@ people-db   a9s-postgresql   postgresql-single-small   people       create succe
 At this point, you should be able to put data into your service that lands in the external PostgreSQL service.
 
 ```sh
-curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Jedediah,", "lastName":"Leland", "company":"The Inquirer"}' http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ```
 
 * Restart your app.
 * You should still see the data:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people
+curl http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ...
 
 {
   "_embedded" : {
     "people" : [ {
-      "firstName" : "Steve",
-      "lastName" : "Greenberg",
-      "company" : "Pivotal",
+      "firstName" : "Jedediah",
+      "lastName" : "Leland",
+      "company" : "The Inquirer",
       "_links" : {
         "self" : {
-          "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/2"
         },
         "person" : {
-          "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/2"
+          "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/2"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.aws.ie.a9sapp.eu/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/search"
     }
   },
   "page" : {
@@ -125,8 +125,8 @@ You should see 2 instances:
 cf app people
 ...
 
-0   running   2016-05-17 09:53:40 AM   0.1%     376.8M of 750M   153.7M of 1G      
-1   running   2016-05-17 10:01:35 AM   0.0%     232.1M of 750M   153.7M of 1G      
+0   running   2016-05-17 09:53:40 AM   0.1%     376.8M of 750M   153.7M of 512M
+1   running   2016-05-17 10:01:35 AM   0.0%     232.1M of 750M   153.7M of 512M
 ```
 
 ## Scale Down
@@ -137,5 +137,5 @@ cf app people
 
 ## Beyond the Class
 
-* CF also allows you to manipulate environment variables or create your own: <a href="https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html" target="_blank">docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html</a>.  Write an app that prints out all environment variables.
+* CF also allows you to manipulate environment variables or create your own: <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html" target="_blank">docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html</a>.  Write an app that prints out all environment variables.
 * With CF, you can create instances of services that point to existing endpoints with existing credentials: <a href="http://docs.cloudfoundry.org/devguide/services/user-provided.html" target="_blank">docs.cloudfoundry.org/devguide/services/user-provided.html</a>.  Create a User Provided Service that points to a DB and bind it to an app.

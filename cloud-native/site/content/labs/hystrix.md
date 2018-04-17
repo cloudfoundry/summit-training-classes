@@ -2,7 +2,7 @@
 title: Circuit Breakers with Hystrix
 ---
 
-Currently, our browser app does not fail gracefully when an issue occurs while communicating with the people service.  Let's fix that.
+Currently, our browser app does not fail gracefully when an issue occurs while communicating with the people service. Let's fix that.
 
 
 ## Simulating Failure
