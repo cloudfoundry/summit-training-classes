@@ -15,14 +15,13 @@ First, you need to create an instance of the service.
 
 {{% checking %}}
 
-You should see something similar to:
+Depending on your Cloud Foundry provider, you should see something similar to:
 
 ```sh
 name    service      plan   bound apps   last operation
 redis   rediscloud   30mb                create succeeded
 ```
 
-Note: On The Swisscom Application Cloud, the Redis service is called `redis`, not `rediscloud`.
 {{% /checking %}}
 
 ## Bind a Service Instance
