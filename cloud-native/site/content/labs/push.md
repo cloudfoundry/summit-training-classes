@@ -2,16 +2,13 @@
 title: Pushing a data service
 ---
 
-In this exercise, you will push a restful data microservice.
+In this exercise, you will push a RESTful data microservice.
 
 > Note: Currently this microservice does not adhere to all of the 12 factor app principles.
 
 ## The App
 
-The app is a very simple Spring Data Rest application. You can download the jar file here: <a href="/resources/people.jar" target="_blank">people.jar</a>.
-
-If you are comfortable with git and gradle, you can also clone the source here <a href="https://github.com/spgreenberg/people" target="_blank">github.com/spgreenberg/people</a> and build it yourself.
-
+The app is a very simple Spring Data REST application. You can download the jar file here: <a href="/resources/people.jar" target="_blank">people.jar</a>.
 
 ### Push
 
@@ -23,7 +20,7 @@ Use `cf push` to deploy the application.  You should:
 * Use --random-route to ensure no collisions with other students
 
 ```sh
-cf push people --random-route -b java_buildpack -p ...
+cf push people --random-route -b java_buildpack -m 750M -p /path/to/people.jar
 ```
 
 #### Checking Your Work
@@ -35,7 +32,7 @@ cf apps
 ...
 
 name     requested state   instances   memory   disk   urls
-people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.scapp.io
+people   started           1/1         750M     512M     people-<RANDOM_ROUTE>.de.a9sapp.eu
 ```
 
 The app also has an endpoint called `/people`.  You should also be able to curl it:
@@ -43,7 +40,7 @@ The app also has an endpoint called `/people`.  You should also be able to curl 
 > On Windows, if you don't have curl you can get it from here: <a href="https://curl.haxx.se/download.html" target="_blank">curl.haxx.se/download.html</a>
 
 ```sh
-curl people-<RANDOM_ROUTE>.cfapps.io/people
+curl people-<RANDOM_ROUTE>.de.cfapps.eu/people
 ...
 
 {
@@ -52,13 +49,13 @@ curl people-<RANDOM_ROUTE>.cfapps.io/people
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/search"
     }
   },
   "page" : {
@@ -75,40 +72,40 @@ curl people-<RANDOM_ROUTE>.cfapps.io/people
 You can add data by issuing a curl request to POST to the people endpoint.  Be sure to replace your information and URL below:
 
 ```sh
-curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.scapp.io/people
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Jedediah,", "lastName":"Leland", "company":"The Inquirer"}' http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ```
 
 Now, you should see the data:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.scapp.io/people
+curl http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ...
 
 {
   "_embedded" : {
     "people" : [ {
-      "firstName" : "Steve",
-      "lastName" : "Greenberg",
-      "company" : "Pivotal",
+      "firstName" : "Jedediah",
+      "lastName" : "Leland",
+      "company" : "The Inquirer",
       "_links" : {
         "self" : {
-          "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/1"
+          "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/1"
         },
         "person" : {
-          "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/1"
+          "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/1"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people"
     },
     "profile" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/profile/people"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/profile/people"
     },
     "search" : {
-      "href" : "http://people-<RANDOM_ROUTE>.scapp.io/people/search"
+      "href" : "http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people/search"
     }
   },
   "page" : {
@@ -122,14 +119,14 @@ curl http://people-<RANDOM_ROUTE>.scapp.io/people
 
 ### Restart your App
 
-* Now restart your app with `cf restart`.
+* Now restart your app with `cf restart people`.
 * Curl your app again:
 
 ```sh
-curl http://people-<RANDOM_ROUTE>.scapp.io/people
+curl http://people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ```
 
-What happened?  Why?  Not very durable, right?  We will correct this in the next exercise.
+What happened? Why? Not very durable, right? We will correct this in the next exercise.
 
 
 ## Beyond the Class

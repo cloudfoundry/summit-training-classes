@@ -9,4 +9,4 @@ statements:
   - "**Flexible** - URIs change"
 
 notes: |
-  Client's should be able to access services directly without knowing brittle credentials like uris.  Load balancers fail.  Instances come and go.
+  Clients should be able to access services directly without knowing brittle credentials like uris.  Load balancers fail.  Instances come and go.

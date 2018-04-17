@@ -8,16 +8,15 @@ In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud
 
 The browser app uses Eureka to identify instances of our people service.  It uses the <a href="https://github.com/Netflix/ribbon" target="_blank">Ribbon</a> support built into <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Spring Cloud Netflix</a> to provide client side load balancing.  The browser app also leverages <a href="https://github.com/Netflix/feign" target="_blank">Feign</a> support which makes writing HTTP clients in java simple.
 
-> NOTE: Swisscom trial accounts are limited to 3GB, we have enough capacity to scale our people-service instances.
 
 ## Deploying Eureka
 
-First you need to deploy the Eureka server.  A prebuilt jar is provided here <a href="/resources/eureka.jar" target="_blank">eureka.jar</a> or you can download and build the source from github <a href="https://github.com/spgreenberg/eureka" target="_blank">github.com/spgreenberg/eureka</a>.
+First you need to deploy the Eureka server.  A prebuilt jar is provided here <a href="/resources/eureka.jar" target="_blank">eureka.jar</a>.
 
-* Push the Eureka server to cloud foundry
+* Push the Eureka server to Cloud Foundry
 
 ```sh
-cf push eureka -p <path-to-jar> -m 512M --random-route -b java_buildpack
+cf push eureka -p /path/to/jar -m 750M --random-route -b java_buildpack
 ```
 
 ### Checking Your Work
@@ -71,9 +70,9 @@ You should also see the service instance:
 cf services
 ...
 
-name             service         plan    bound apps   last operation
-eureka-service   user-provided           people
-people-mysql     mariadb         free    people       create succeeded
+name             service             plan                     bound apps   last operation
+eureka-service   user-provided                                people
+people-mysql     a9s-postgresql94    postgresql-single-small  people       create succeeded
 ```
 
 
@@ -84,7 +83,7 @@ Within a few minutes of restaging, you should see your people service registered
 
 ## Pushing the Browser App
 
-* Now, push the browser app with 512MB of memory.  The jar file is located here <a href="/resources/browser.jar" target="_blank">browser.jar</a> or you can download and build the project yourself: <a href="https://github.com/spgreenberg/browser" target="_blank">github.com/spgreenberg/browser</a>.
+* Now, push the browser app with 512MB of memory.  The jar file is located here <a href="/resources/browser.jar" target="_blank">browser.jar</a>.
 
 * Bind the Eureka service and restart the browser app.
 
@@ -111,7 +110,8 @@ The Browser app simply logs requests and results to the REST endpoints of the ap
 * Open the browser app in your web browser
 * In the `Explorer` text box, enter `/people` and hit `GO`
 
-> The first request *might* fail (not gracefully).  This is b/c the browser service is still fetching information from Eureka.  In the next exercise, we will add resiliency so we can fail gracefully.
+> The first request *might* fail (not gracefully).  This is because the browser service
+is still fetching information from Eureka. In the next exercise, we will add resiliency so we can fail gracefully.
 
 Let's try scaling our people service to 2 instances
 
@@ -121,8 +121,8 @@ cf scale
 
 ### What is happening?
 
+When successful, the browser app is using Eureka to locate the people service instances,
+then using Ribbon to load balance requests to those instances (because of quota limits, we only have 2 instance).
+Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
 
-
-When successful, the browser app is using Eureka to locate the people service instances, then using Ribbon to load balance requests to those instances (b/c of quota limits, we only have 2 instance).  Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
-
-Congratulations!  You have successfully used service discovery to consume a microservice.
+Congratulations! You have successfully used service discovery to consume a microservice.

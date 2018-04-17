@@ -7,4 +7,5 @@ bottomLine: Release Cycles
 
 notes: |
 
-  The tight coupling and poor separation of concerns in most monoliths coupled with antiquated process lead to very long and complicated release cycles.
+  The tight coupling and poor separation of concerns in most monoliths coupled
+  with antiquated process lead to very long and complicated release cycles.
