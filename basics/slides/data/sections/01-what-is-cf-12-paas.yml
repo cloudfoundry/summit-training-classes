@@ -1,21 +1,21 @@
 ---
 type: "two-column"
-title: "What is PaaS?"
-subtitle: "PaaS Overview"
-menuTitle: "What is PaaS?"
+title: "What is the Application Runtime?"
+subtitle: "Application Runtime"
+menuTitle: "Application Runtime"
 buildInColumns: "false"
 
 columnLeftContent: |
 
   <span class="txt-c">
 
-  <img src="img/logging.svg" />
+  <img src="img/cf-ar.png" />
 
   </span>
 
 columnRightContent: |
 
-  **Platform as a Service**
+  **Application Runtime is PaaS**
 
   * Cloud Computing taxonomy: **IaaS**, **PaaS**, and **SaaS**
   * PaaS aims to improve developer **productivity**
