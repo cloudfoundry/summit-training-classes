@@ -70,11 +70,30 @@ You should see something like the following:
 
 ## Set up App Performance Monitoring
 
-We will use New Relic as a example.  The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing. Services are covered in another section of this course, so don't worry if you don't understand these commands.
+We will demonstrate application performance monitoring using NewRelic.
+
+The **setup process is different for Pivotal Web Services and Swisscom**. PWS uses Cloud Foundry service brokers to automate some of the manual steps for you.
+
+### PWS Setup
+
+The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing. Services are covered in another section of this course, so don't worry if you don't understand these commands.
 
 {{% do %}}Create a New Relic service instance: `cf create-service newrelic standard newrelic`{{% /do %}}
 {{% do %}}Tell Cloud Foundry that `debug-app` should use your New Relic service instance: `cf bind-service debug-app newrelic`{{% /do %}}
 {{% do %}}Find the New Relic license key in the output of `cf env debug-app`{{% /do %}}
+
+### Swisscom Setup
+
+Swisscom does not use the NewRelic Cloud Foundry service broker, so we'll need to set up an account manually.
+
+{{% do %}}Create a new account on [NewRelic.com](https://newrelic.com/signup){{% /do %}}
+{{% do %}}Click on your account name in the top-right of the welcome dashboard, and **select Account Settings**{{% /do %}}
+{{% do %}}Copy the license key from the right-hand Account Information section{{% /do %}}
+
+### Set the License Key in your App
+
+From now on, the steps are the same regardless of whether you're using PWS or Swisscom.
+
 {{% do %}}In `newrelic.yml`, replace `YOUR-LICENSE-KEY` with the value you just found{{% /do %}}
 {{% do %}}Re-push the app{{% /do %}}
 
