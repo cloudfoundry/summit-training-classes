@@ -30,6 +30,7 @@ You need to bind your service instance to your application so it can be used.
 
 {{% do %}}Push `07-shared-state/stateful-app` with the `--no-start` flag{{% /do %}}
 {{% do %}}Use `cf bind-service` to bind your service instance to your app{{% /do %}}
+{{% question %}}Does this work immediately? If not, why not? What commands can you use to find out more?{{% /question %}}
 {{% do %}}Start your app so that it can pick up the environment variables{{% /do %}}
 {{% question %}}What commands can you use to tell if you've bound the service instance to the correct app?{{% /question %}}
 
