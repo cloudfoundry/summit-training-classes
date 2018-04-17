@@ -44,7 +44,7 @@ You should see output similar to:
 
 ```sh
 cf login
-API endpoint: https://api.aws.ie.a9s.eu
+API endpoint: https://api.de.a9s.eu
 
 Email> owolf+cftraining@anynines.com
 
@@ -62,7 +62,7 @@ Select a space (or press enter to skip):
 Space> 3
 Targeted space test
 
-API endpoint:   https://api.aws.ie.a9s.eu (API version: 2.100.0)
+API endpoint:   https://api.de.a9s.eu (API version: 2.100.0)
 User:           owolf+cftraining@anynines.com
 Org:            owolf+cftraining_anynines_com
 Space:          test

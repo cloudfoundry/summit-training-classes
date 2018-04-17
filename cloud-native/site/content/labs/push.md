@@ -40,7 +40,7 @@ The app also has an endpoint called `/people`.  You should also be able to curl 
 > On Windows, if you don't have curl you can get it from here: <a href="https://curl.haxx.se/download.html" target="_blank">curl.haxx.se/download.html</a>
 
 ```sh
-curl people-<RANDOM_ROUTE>.de.cfapps.eu/people
+curl people-<RANDOM_ROUTE>.de.a9sapp.eu/people
 ...
 
 {
