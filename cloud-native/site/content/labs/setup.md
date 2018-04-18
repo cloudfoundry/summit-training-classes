@@ -53,19 +53,11 @@ Authenticating...
 OK
 
 Targeted org boston2018
-
-Select a space (or press enter to skip):
-1. production
-2. staging
-3. test
-
-Space> 3
-Targeted space test
-
-API endpoint:   https://api.de.a9s.eu (API version: 2.100.0)
-User:           owolf+cftraining@anynines.com
-Org:            owolf+cftraining_anynines_com
-Space:          test
 ```
 
-Alternatively, you can check where you are logged in and targeted at anytime using `cf target`.
+Then create your own space with:
+
+```sh
+cf create-space <YOUR-NAME>
+```
+
