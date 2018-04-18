@@ -30,13 +30,13 @@ You should see the self-documenting help text. This will be very useful as you g
 
 ## CF Help
 
-If you checked your work, you noticed the CF cli is self documenting.  You can run `cf help` at any time to see a list of commands.  You can also run `cf <SOME_COMMAND> --help` to see the details for a specific command.
+If you checked your work, you noticed the CF CLI is self-documenting.  You can run `cf help` at any time to see a list of commands. You can also run `cf <SOME_COMMAND> --help` to see the details for a specific command.
 
 ### Login & Target
 
 Use `cf login` to target and login to anynines public PaaS.
 
-> If you are new to anynines public PaaS, you will notice that three spaces has been created for you (production, development, test).
+> You will notice that three spaces has been created for the organisation we're going to use today (boston2018): production, staging, test.
 
 #### Checking Your Work
 
