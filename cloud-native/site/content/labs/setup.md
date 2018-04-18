@@ -6,10 +6,10 @@ title: Setup
 
 We will use anynines public PaaS for this class.
 
-* If you don't have an account, sign up now at: <a href="https://paas.anynines.com/" target="_blank">paas.anynines.com/</a>
+* Once you provide us with your e-mail address, we're going to invite you to <a href="https://paas.anynines.com/" target="_blank">paas.anynines.com/</a>
 * You will also need the Cloud Foundry command line interface: <a href="https://github.com/cloudfoundry/cli#downloads" target="_blank">github.com/cloudfoundry/cli#downloads</a>
 
-If you already have the CLI, be sure you have the most recent version.
+If you already have the CLI, be sure you have a recent version.
 
 ```sh
   cf --version
@@ -19,13 +19,13 @@ If your version is not more recent that this one, please install <a href="https:
 
 ### Checking Your Work
 
-Be sure you have correctly installed the cli.  From a terminal window/command prompt:
+Be sure you have correctly installed the cli. From a terminal window/command prompt:
 
 ```sh
 cf
 ```
 
-You should see the self documenting help text.  This will be very useful as you go through the class.
+You should see the self-documenting help text. This will be very useful as you go through the class.
 
 
 ## CF Help
@@ -52,7 +52,7 @@ Password>
 Authenticating...
 OK
 
-Targeted org owolf+cftraining_anynines_com
+Targeted org boston2018
 
 Select a space (or press enter to skip):
 1. production

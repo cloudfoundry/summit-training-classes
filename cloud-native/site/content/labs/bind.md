@@ -9,7 +9,7 @@ In the last section, we lost all our data when we restarted our app.  In this se
 We will create an instance of postgresql and bind it to our app, thereby removing state from memory.
 
 * Use `cf marketplace` to view the available services and plans.
-* Use `cf create-service` to create a PostgreSQL service instance `a9s-postgresql` and select the `postgresql-single-small` plan.
+* Use `cf create-service` to create a PostgreSQL service instance `a9s-postgresql94` and select the `postgresql-single-small` plan.
 
 ### Checking Your Work
 
