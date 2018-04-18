@@ -137,5 +137,5 @@ cf app people
 
 ## Beyond the Class
 
-* CF also allows you to manipulate environment variables or create your own: <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html" target="_blank">docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html</a>.  Write an app that prints out all environment variables.
+* CF also allows you to manipulate environment variables or create your own: <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html" target="_blank">docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html</a>.  Write an app that prints out all environment variables.
 * With CF, you can create instances of services that point to existing endpoints with existing credentials: <a href="http://docs.cloudfoundry.org/devguide/services/user-provided.html" target="_blank">docs.cloudfoundry.org/devguide/services/user-provided.html</a>.  Create a User Provided Service that points to a DB and bind it to an app.
