@@ -81,3 +81,25 @@ Explain the rationale for buildpacks and the benefits they bring.
 Students often benefit from examples of what "dependencies" really means in this context, so providing an explanation in relation to languages they're familiar with will help. Perhaps clarify to Java developers that the Java Buildpack does not compile their code or pull down Maven dependencies. By contrast, the Golang buildpack _does_ compile source code!
 
 This module is a good opportunity to highlight the differences between pushing apps and using buildpacks, versus pushing Docker images. The latter can't be restaged and are opaque to the operator - the people running the platform have no idea of what has been pushed. Buildpacks also save a lot of effort in CI pipelines in comparison to building and pushing Docker images.
+
+## 5. Resilience and Availability
+
+Explain the paradox of why cloud environments make failure more likely, but allow for greater resilience.
+
+### Key Takeaways
+
+* **CF is self-healing** and will restart unhealthy apps without paging a human
+* When deployed with **BOSH**, there are **additional levels of recoverability**
+* **Running more instances of an app results in greater availability**, but apps must be written to allow multiple instances to be run.
+
+### Notes
+
+This is a key moment to remind students that they won't get all the benefits of the cloud that sales people promised them, unless they change their habits.
+
+Explaining why embracing failure leads to increased availability can be somewhat of a tangent. Having more instances means that failure is not absolute, giving us the opportunity to learn from it and adapt. This is in stark contrast to the 'robust' approach of traditional enterprise IT of having one sacred server that is protected at all costs, but when it fails, it fails catastrophically. A sidetrack into the topic of antifragility here is entirely possible.
+
+Talking about BOSH may be appropriate here, explaining how it will restart processes (ie Diego itself), restart missing VMs, and allow VMs to be striped across availability zones. However, it is best to avoid the inaccurate phrase "Four Levels of HA" that was used in the past, as these features make the system very recoverable, but not highly available - you will have downtime, but the system will right itself.
+
+Students may benefit from being reminded that their apps may need to change. For example, leader election or external scheduling may be required when migrating from a monolith to many replicas of an app.
+
+The slide on health management components is often superfluous.
