@@ -57,3 +57,25 @@ _Resolution:_ Wait an unspecified amount of time (try again after the next slide
 An unexplained issue has been observed on Windows machines whereby the CLI will fail on `cf login` with an authentication issue without even prompting for a username/password.
 
 _Resolution:_ Delete the contents of the `~/.cf` directory.
+
+## 3. Pushing Your First App
+
+### Common Issues
+
+#### Being in the wrong directory
+
+Many users are command-line novices, and end up pushing from the wrong directory. Symptoms will be either the CLI unexpectedly asking for an app name (because there is no manifest in the directory), or incredibly slow pushes (because the CLI is trying to upload the user's entire home directory).
+
+_Resolution:_ Draw common filesystem navigation commands on the whiteboard.
+
+#### Wrong version of the CLI
+
+The symptoms of this are typically errors about unknown flags. If you seen unexpected behaviour, check the user's CLI version.
+
+_Resolution:_ Ensure the student has the latest CF CLI release.
+
+#### Users getting stuck tailing logs
+
+Users may run `cf logs` which tails, and either think it hasn't worked because an app isn't logging, or may not know how to exit.
+
+_Resolution:_ CTRL+C
