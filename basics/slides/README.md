@@ -42,3 +42,24 @@ Orgs can separate tenants - if the students are using a public CF like PWS, then
 Spaces are often used like environments, eg "dev", "staging", "UAT".
 
 Quotas are primarily an operator concern, and often at most a curiosity for developers.
+
+## 3. Pushing Your First App
+
+Expose the inner working of `cf push` to enable students to develop an accurate mental model of the system and reason about any issues they may face.
+
+### Key Takeaways
+
+* **Cloud Foundry adds whatever your app needs** to make it runnable.
+* Buildpacks allow flexibility, and can be thought of as a little like "plug-ins".
+* Cloud Foundry **keeps a copy of your app code**.
+* App instances run on Diego Cells.
+
+### Notes
+
+Students will have endured two fairly tedious and uninteresting labs to get to this point, so everything may be seeming a little abstract. At this point, energise the students by emphasising that this is where the exciting stuff starts.
+
+The sequence diagram may seem quite dull, but is important for starting to expose the inner workings of Cloud Foundry, which will be revisited again in the post-lab recap sessions.
+
+Some non-technical students may be confused what an "app instance" is. It may be necessary to delve into what a VM is when talking about Diego Cells, and also to explain containerisation at some level (ranging from "_apps can't see each other_" to a full explanation).
+
+That staging containers are destroyed has security benefits - build tooling is not present in running droplets.
