@@ -123,3 +123,23 @@ Many users do not realise that `cf logs` does not store their logs indefinitely,
 Recommend to students that if log entries need to be kept for regulatory purposes, they should be stored in a transactional data store instead.
 
 `cf ssh` is a particularly dangerous command as it can change the state of running applications, completely invalidating testing and governance. Students should be discouraged from using it except when issues cannot be replicated anywhere other than the live environment.
+
+## 7. Dealing with State
+
+Demonstrate the power and flexibility of the service broker model, and ensure students understand the lifecycle of service instances.
+
+### Key Takeaways
+
+* Storing state outside of apps is essential to allow **horizontal scalability**
+* Service brokers are like 'plug ins' that allow CF users to provision databases and other services
+* Service credentials are provided through environment variables
+
+### Notes
+
+The lab for this module is quite long.
+
+Some students may not be familiar with the term "sticky sessions", and may need some exposition on that pattern. Breaking out to a whiteboard to explain how sticky sessions and app server clustering worked in the past may be helpful. Referencing Zynga's Farmville and the 'shared nothing' architecture where all state was in the database may help to illustrate that pushing the complex logic of data replication to a data service is probably better than doing it in app code.
+
+Explaining service instances in the abstract can be difficult, as a service _could_ be anything, and it could end up running anywhere.
+
+Often students ask how _they_ can connect to service instances, in which case a verbal explanation of service keys may be useful, along with pointing out that one might not have network connectivity between a workstation and the service instance.
