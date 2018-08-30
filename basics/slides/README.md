@@ -143,3 +143,21 @@ Some students may not be familiar with the term "sticky sessions", and may need 
 Explaining service instances in the abstract can be difficult, as a service _could_ be anything, and it could end up running anywhere.
 
 Often students ask how _they_ can connect to service instances, in which case a verbal explanation of service keys may be useful, along with pointing out that one might not have network connectivity between a workstation and the service instance.
+
+## 8. Domains and Routes
+
+Students should be able to exploit route mapping for the purpose of zero-downtime deployments.
+
+### Key Takeaways
+
+* Routes and apps have separate lifecycles
+* **Route mapping can allow zero-downtime deployments** of apps
+* Custom domains can be registered so that, with some DNS configuration, `www.your-domain.com` can point to a public Cloud Foundry, or a Cloud Foundry of your own
+
+### Notes
+
+Avoid the term "blue/green". This term refers to entire environments, full of collaborating apps, being stood up and switched between. This is not what we do in the cloud native world - we want to be able to perform a zero-downtime deployment of apps within a collaborating ecosystem of microservices, not change the whole lot at once.
+
+The mechanism of zero-downtime deploys often confuses students. Breaking out to a white board to draw a diagram of a 'front door' route (`www.myshop.com`) being mapped to different versions of an app may help.
+
+Often students find that it seems nonsensical to have one route mapped to two apps. Pointing out that Cloud Foundry doesn't know that two different apps could be different versions of the same codebase tends to alleviate this - ie, the route isn't mapped to completely different apps, but v1 and v2 of the same app.
