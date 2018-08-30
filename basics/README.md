@@ -1,5 +1,7 @@
 # Cloud Foundry Foundation basics training
 
+If you're delivering the course, please review the [delivery guidelines](delivery.md) and the [slide notes](slides/README.md).
+
 ## Prerequisites for building sites/slides
 * [Hugo](https://gohugo.io/)
 
