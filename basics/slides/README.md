@@ -103,3 +103,23 @@ Talking about BOSH may be appropriate here, explaining how it will restart proce
 Students may benefit from being reminded that their apps may need to change. For example, leader election or external scheduling may be required when migrating from a monolith to many replicas of an app.
 
 The slide on health management components is often superfluous.
+
+## 6. Debugging
+
+Give students the tools they need to debug broken apps of their own after finishing the course.
+
+### Key Takeaways
+
+* `cf logs` tells you what the app thinks is happening.
+* `cf events` tells you what the _platform_ thinks is happening.
+* **Logs in Cloud Foundry are not kept indefinitely**.
+* Logs in Cloud Foundry are 'best effort' and **may be lost**.
+* Use of **`cf ssh` should be discouraged**.
+
+### Notes
+
+Many users do not realise that `cf logs` does not store their logs indefinitely, and also do not realise that log entries may be lost altogether. Some students may perceive this latter point as a weakness of the platform, so explaining the extreme performance impact of guaranteed log delivery in a distributed environment may be required.
+
+Recommend to students that if log entries need to be kept for regulatory purposes, they should be stored in a transactional data store instead.
+
+`cf ssh` is a particularly dangerous command as it can change the state of running applications, completely invalidating testing and governance. Students should be discouraged from using it except when issues cannot be replicated anywhere other than the live environment.
