@@ -63,3 +63,21 @@ The sequence diagram may seem quite dull, but is important for starting to expos
 Some non-technical students may be confused what an "app instance" is. It may be necessary to delve into what a VM is when talking about Diego Cells, and also to explain containerisation at some level (ranging from "_apps can't see each other_" to a full explanation).
 
 That staging containers are destroyed has security benefits - build tooling is not present in running droplets.
+
+## 4. Buildpacks
+
+Explain the rationale for buildpacks and the benefits they bring.
+
+### Key Takeaways
+
+* Buildpacks save developers from having to know or care how their apps become runnable - **they provide a separation of concerns**.
+* **Buildpacks allow operators control** over what middleware and languages are available on their platform.
+* Because CF keeps app code and droplets separately, **_operators_ can restage an app** to update its dependencies (and therefore patch security issues), without needing the app team's involvement.
+* Buildpacks are _just scripts_.
+* Restriction of buildpacks and their capabilities is often important in regulated environments.
+
+### Notes
+
+Students often benefit from examples of what "dependencies" really means in this context, so providing an explanation in relation to languages they're familiar with will help. Perhaps clarify to Java developers that the Java Buildpack does not compile their code or pull down Maven dependencies. By contrast, the Golang buildpack _does_ compile source code!
+
+This module is a good opportunity to highlight the differences between pushing apps and using buildpacks, versus pushing Docker images. The latter can't be restaged and are opaque to the operator - the people running the platform have no idea of what has been pushed. Buildpacks also save a lot of effort in CI pipelines in comparison to building and pushing Docker images.
