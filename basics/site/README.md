@@ -35,3 +35,25 @@ _Resolution:_ It may be easier to use instructor-provisioned accounts (see the `
 The Swisscom web UI for sign-up has been known to slow down when an entire class has hit it at once.
 
 _Resolution:_ It may be easier to use instructor-provisioned accounts (see the `scripts` directory), although this has only been tried for PWS.
+
+## 2. CLI Basics
+
+### Common Issues
+
+#### Unable to install software
+
+Windows users often have their permissions limited, preventing them from installing the CLI.
+
+_Resolution:_ Pair with another student. The ability to install software is a class pre-requisite.
+
+#### Account lock-outs
+
+The UAA will lock an account if the wrong password is used three times in succession.
+
+_Resolution:_ Wait an unspecified amount of time (try again after the next slides), or use an instructor-provided account.
+
+#### Immediate login failure
+
+An unexplained issue has been observed on Windows machines whereby the CLI will fail on `cf login` with an authentication issue without even prompting for a username/password.
+
+_Resolution:_ Delete the contents of the `~/.cf` directory.
