@@ -79,3 +79,19 @@ _Resolution:_ Ensure the student has the latest CF CLI release.
 Users may run `cf logs` which tails, and either think it hasn't worked because an app isn't logging, or may not know how to exit.
 
 _Resolution:_ CTRL+C
+
+## 4. Buildpacks
+
+### Common Issues
+
+#### `cf ssh` appearing to hang on Windows
+
+Some terminal emulators on Windows particularly (including Git Bash's bundled emu) don't display a prompt when `cf ssh` has successfully connected, making it _look_ like the command is hanging.
+
+_Resolution:_ None needed.
+
+#### Students don't understand how to explore the running container
+
+Novice command-line users may need some help navigating the filesystem, and an explanation of what the files present _mean_.
+
+_Resolution:_ Draw common filesystem navigation commands on the whiteboard; discuss file differences in the recap.
