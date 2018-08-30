@@ -22,3 +22,23 @@ This section often takes the longest, as there's a lot of background that can be
 You may need to explain what the 12 Factor manifesto is.
 
 For a non-operator audience, the "where to get OS CF" slide is of minimal important. If you've got operators, they'll be keen to expand on this a little.
+
+## 2. Interacting with Cloud Foundry
+
+In addition to enumerating the ways that students can interact with Cloud Foundry, establish a mental model of orgs and spaces before they start pushing apps.
+
+### Key Takeaways
+
+* The **CLI is universal** and will work on any certified Cloud Foundry.
+* **Web UIs are mostly proprietary**, and therefore the course does not teach them.
+* Apps live in spaces, and **you can't have two apps with the same name in the space space**.
+
+### Notes
+
+Orgs and spaces are usually just logical divisions; however with Isolation Segments, orgs can be tied to particular subsets of underlying infrastructure.
+
+Orgs can separate tenants - if the students are using a public CF like PWS, then they will each have their own org in one big Cloud Foundry. In large enterprises, an org might map to a business unit or a 'big A' application (set of apps).
+
+Spaces are often used like environments, eg "dev", "staging", "UAT".
+
+Quotas are primarily an operator concern, and often at most a curiosity for developers.
