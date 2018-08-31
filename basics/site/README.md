@@ -102,3 +102,12 @@ _Resolution:_ Draw common filesystem navigation commands on the whiteboard; disc
 
 This lab tends to go smoothly - the only likely problems are to do with pushing apps from the wrong directory.
 
+## 6. Debugging
+
+### Common Issues
+
+#### New Relic data takes a long time to appear
+
+Sometimes data and charts don't appear in the New Relic dashboard in a timely fashion.
+
+_Resolution:_ Wait, or move on. It shouldn't take more than a few minutes, and certainly not more than fifteen.
