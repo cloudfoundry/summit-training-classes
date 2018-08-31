@@ -92,6 +92,8 @@ _Resolution:_ CTRL+C
 
 ## 4. Buildpacks
 
+Students who aren't particularly technical may not get so much benefit from this exercise, and will need extra guidance to recognise the value provided by buildpacks.
+
 ### Answers
 
 #### If you don’t specify a buildpack, what is the first one that will be tested for?
@@ -150,6 +152,8 @@ This lab tends to go smoothly - the only likely problems are to do with pushing 
 
 ## 6. Debugging
 
+If the New Relic section is attempted, this is likely the longest lab of the course.
+
 ### Answers
 
 #### What does Cloud Foundry think the health of the app is? How did it draw this conclusion?
@@ -173,6 +177,8 @@ Sometimes data and charts don't appear in the New Relic dashboard in a timely fa
 _Resolution:_ Wait, or move on. It shouldn't take more than a few minutes, and certainly not more than fifteen.
 
 ## 7. Dealing with State
+
+This lab has many steps, and as a result is one of the longer ones.
 
 ### Answers
 
@@ -207,6 +213,8 @@ Sometimes service provisioning has been observed to time out after 10 minutes. T
 _Resolution:_ Contact Swisscom if this issue is seen, and the only option is to wait.
 
 ## 8. Routes
+
+This exercise is often quite long, and students are confused by the route-mapping. It may help to draw the route-mapping on a whiteboard, linking routes and apps with arrows.
 
 ### Answers
 
