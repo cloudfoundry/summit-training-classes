@@ -95,3 +95,10 @@ _Resolution:_ None needed.
 Novice command-line users may need some help navigating the filesystem, and an explanation of what the files present _mean_.
 
 _Resolution:_ Draw common filesystem navigation commands on the whiteboard; discuss file differences in the recap.
+
+## 5. Availability
+
+### Common Issues
+
+This lab tends to go smoothly - the only likely problems are to do with pushing apps from the wrong directory.
+
