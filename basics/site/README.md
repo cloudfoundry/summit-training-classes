@@ -111,3 +111,19 @@ This lab tends to go smoothly - the only likely problems are to do with pushing 
 Sometimes data and charts don't appear in the New Relic dashboard in a timely fashion.
 
 _Resolution:_ Wait, or move on. It shouldn't take more than a few minutes, and certainly not more than fifteen.
+
+## 7. Dealing with State
+
+### Common Issues
+
+#### Students misunderstand parameters
+
+Students sometimes don't understand the name parameter.
+
+_Resolution:_ Make sure to explain that they can name the service instance whatever they like, for example "_You might store user data in it, and call it `users`._"
+
+#### Provisioning on Swisscom times out
+
+Sometimes service provisioning has been observed to time out after 10 minutes. The operation cannot be cancelled.
+
+_Resolution:_ Contact Swisscom if this issue is seen, and the only option is to wait.
