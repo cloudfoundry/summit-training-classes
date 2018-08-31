@@ -127,3 +127,17 @@ _Resolution:_ Make sure to explain that they can name the service instance whate
 Sometimes service provisioning has been observed to time out after 10 minutes. The operation cannot be cancelled.
 
 _Resolution:_ Contact Swisscom if this issue is seen, and the only option is to wait.
+
+## 8. Routes
+
+### Common Issues
+
+#### Arguments in the wrong order
+
+The argument order in `cf create-route` and `cf map-route` are counter-intuitive:
+
+`cf create-route space domain.com --hostname www`
+
+The thing that usually appears on the left (`www`) appears on the right in the command, and the command misuses terminology.
+
+_Resolution:_ Explicitly highlight this confusing issue on a white board.
