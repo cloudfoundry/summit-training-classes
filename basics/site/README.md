@@ -60,6 +60,16 @@ _Resolution:_ Delete the contents of the `~/.cf` directory.
 
 ## 3. Pushing Your First App
 
+### Answers
+
+#### How can you access your web app?
+
+Open the URL in a web browser.
+
+#### What differences are there in the manifest? Why are these needed?
+
+`no-route: true`, to prevent Diego from treating the app as a web app and marking it as crashed for not listening on `$PORT`.
+
 ### Common Issues
 
 #### Being in the wrong directory
@@ -82,6 +92,32 @@ _Resolution:_ CTRL+C
 
 ## 4. Buildpacks
 
+### Answers
+
+#### If you don’t specify a buildpack, what is the first one that will be tested for?
+
+The one at the top of the list.
+
+#### How can you check that you pushed your app successfully?
+
+Access it in a browser, or use `cf app`.
+
+#### How does the running droplet compare to your app directory?
+
+Amongst other things, it moves the `index.html` file and adds NGiNX and associated config.
+
+#### Why is CF able to scale instances so quickly?
+
+Because the droplet is already built, and possibly already exists in the cache of each Diego cell.
+
+#### Which buildpack do you think will be used to run this app? Staticfile, or PHP?
+
+Whichever of the two is higher in the list.
+
+#### What happens this time? Why?
+
+NGiNX doesn't understand how to render PHP, so sends headers that prompt the browser to treat it as a file download.
+
 ### Common Issues
 
 #### `cf ssh` appearing to hang on Windows
@@ -98,11 +134,35 @@ _Resolution:_ Draw common filesystem navigation commands on the whiteboard; disc
 
 ## 5. Availability
 
+### Answers
+
+#### Can you see it in the “crashed” state before Cloud Foundry restarts it?
+
+Probably not. If Diego is having a good day, on the first crash, it should restart the app almost immediately.
+
+#### What happens if you make a request whilst they are all down?
+
+The GoRouter returns a 404.
+
 ### Common Issues
 
 This lab tends to go smoothly - the only likely problems are to do with pushing apps from the wrong directory.
 
 ## 6. Debugging
+
+### Answers
+
+#### What does Cloud Foundry think the health of the app is? How did it draw this conclusion?
+
+Cloud Foundry thinks the app is healthy, because the default healthcheck is merely to check that the app is listening on the given port. It is likely that we will want to know if our web app is only returning 500 errors, hence the change to a HTTP-based healthcheck.
+
+#### How do the two compare? What help does Cloud Foundry give you in determining the cause of failure?
+
+The events should differ based on the nature of the crash; however the exact output differs as Garden/Diego change.
+
+#### What happens? Is this what you expected?
+
+Exhausting the disk does _not_ immediately crash an app. It is considered a recoverable situation, so the platform does not terminate the app. The app may, however, crash of its own accord by merit of having no disk space.
 
 ### Common Issues
 
@@ -113,6 +173,24 @@ Sometimes data and charts don't appear in the New Relic dashboard in a timely fa
 _Resolution:_ Wait, or move on. It shouldn't take more than a few minutes, and certainly not more than fifteen.
 
 ## 7. Dealing with State
+
+### Answers
+
+#### Does this work immediately? If not, why not? What commands can you use to find out more?
+
+No. The app needs to be started, but the CLI will ask the user to restage, which will fail because the app has never staged. Neither the CLI nor CAPI team wanted to fix this behaviour when asked.
+
+#### What commands can you use to tell if you’ve bound the service instance to the correct app?
+
+`cf services` is the easiest answer.
+
+#### What will happen when we unbind the app?
+
+No data is lost.
+
+#### Can you use cf delete-service redis?
+
+No, as it is still bound to the app. Unbind it first.
 
 ### Common Issues
 
@@ -129,6 +207,16 @@ Sometimes service provisioning has been observed to time out after 10 minutes. T
 _Resolution:_ Contact Swisscom if this issue is seen, and the only option is to wait.
 
 ## 8. Routes
+
+### Answers
+
+#### Does the push work? If not, why not? Can you fix this with a commandline argument?
+
+No, as the route is probably already-taken. The student should use the `--random-route` functionality.
+
+#### Could you leave the v1.0 app running in case you need to roll-back?
+
+Yes.
 
 ### Common Issues
 
