@@ -1,0 +1,3 @@
+course-repository: https://github.com/cloudfoundry/summit-training-classes.git
+routes-file: routes.yml
+routes: '[route: basics-workshop.cloudfoundry.org]'

@@ -2,3 +2,5 @@
 applications:
 - name: basics-workshop
   buildpack: staticfile_buildpack
+  routes:
+    ((routes))
