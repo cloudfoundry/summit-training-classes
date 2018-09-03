@@ -1,141 +1,133 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body>
-      <div class="reveal">
-        <div class="slides">
-          {{ partial "title-slide.html" . }}
 
-          {{ range $.Site.Data.sections }}
-            {{ partial "content-slide.html" . }}
-          {{ end }}
+<head>
+  {{ partial "head.html" . }}
+</head>
 
-          {{ partial "last-slide.html" . }}
-        </div>
-        <div class="copyright">
-          {{ if isset $.Site.Params "copyright" }}
-        	  {{ $.Site.Params.copyright }}
-          {{ else }}
-            (C) Copyright 2016 Cloud Foundry Foundation, Inc. All Rights Reserved.
-          {{ end }}
-        </div>
-  			<div class="logo">
-          {{ if isset $.Site.Params "logo" }}
-  				  <img src="{{ $.Site.Params.logo }}" alt="logo" title="logo" />
-          {{ else }}
-            <img src="img/Pivotal_Teal.png" alt="Pivotal logo" title="Pivotal" />
-          {{ end }}
-  			</div>
-      </div>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      {{ partial "title-slide.html" . }} {{ range $.Site.Data.sections }} {{ partial "content-slide.html" . }} {{ end }} {{ partial
+      "last-slide.html" . }}
+    </div>
+    <div class="copyright">
+      {{ if isset $.Site.Params "copyright" }} {{ $.Site.Params.copyright }} {{ else }} (C) Copyright 2016-Present Cloud Foundry
+      Foundation, Inc. All Rights Reserved. {{ end }}
+    </div>
+    <div class="logo">
+      {{ if isset $.Site.Params "logo" }}
+      <img src="{{ $.Site.Params.logo }}" alt="logo" title="logo" /> {{ else }}
+      <img src="img/Pivotal_Teal.png" alt="Pivotal logo" title="Pivotal" /> {{ end }}
+    </div>
+  </div>
 
 
-      {{ partial "js.html" . }}
-      {{ partial "settings.html" . }}
-      <script>
+  {{ partial "js.html" . }} {{ partial "settings.html" . }}
+  <script>
 
-        Reveal.initialize({
-          controls: true,
-          progress: true,
-          slideNumber: true,
-          history: true,
-          keyboard: true,
-          overview: true,
-          center: false,
-          touch: true,
-          loop: false,
-          rtl: false,
-          fragments: true,
-          embedded: false,
-          help: true,
-          showNotes: false,
-          previewLinks: true,
-          transition: 'slide', // none/fade/slide/convex/concave/zoom
-          backgroundTransition: 'fade',
-          margin: 0,
-          minScale: 0.2,
-          maxScale: 2.0,
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      history: true,
+      keyboard: true,
+      overview: true,
+      center: false,
+      touch: true,
+      loop: false,
+      rtl: false,
+      fragments: true,
+      embedded: false,
+      help: true,
+      showNotes: false,
+      previewLinks: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      backgroundTransition: 'fade',
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
 
-          /* Reveal.configure({ autoSlide: 0 }); configure while running.  use this for turning on/off notes */
+      /* Reveal.configure({ autoSlide: 0 }); configure while running.  use this for turning on/off notes */
 
-          dependencies: [
-              // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
-            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
 
-            // Interpret Markdown in <section> elements
-            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        // Interpret Markdown in <section> elements
+        { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
 
-            // Syntax highlight for <code> elements
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        // Syntax highlight for <code> elements
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
 
-            // Zoom in and out with Alt+click
-            { src: 'plugin/zoom-js/zoom.js', async: true },
+        // Zoom in and out with Alt+click
+        { src: 'plugin/zoom-js/zoom.js', async: true },
 
-            // Speaker notes
-            { src: 'plugin/notes/notes.js', async: true },
+        // Speaker notes
+        { src: 'plugin/notes/notes.js', async: true },
 
-            // MathJax
-            { src: 'plugin/math/math.js', async: true },
+        // MathJax
+        { src: 'plugin/math/math.js', async: true },
 
-            { src: 'plugin/menu/menu.js', async: true }
-					],
+        { src: 'plugin/menu/menu.js', async: true }
+      ],
 
-          menu: {
-            // Specifies which side of the presentation the menu will
-            // be shown. Use 'left' or 'right'.
-            side: 'left',
+      menu: {
+        // Specifies which side of the presentation the menu will
+        // be shown. Use 'left' or 'right'.
+        side: 'left',
 
-            // Add slide numbers to the titles in the slide list.
-            // Use 'true' or format string (same as reveal.js slide numbers)
-            numbers: false,
+        // Add slide numbers to the titles in the slide list.
+        // Use 'true' or format string (same as reveal.js slide numbers)
+        numbers: false,
 
-            // Hide slides from the menu that do not have a title.
-            // Set to 'true' to only list slides with titles.
-            hideMissingTitles: false,
+        // Hide slides from the menu that do not have a title.
+        // Set to 'true' to only list slides with titles.
+        hideMissingTitles: false,
 
-            // Add markers to the slide titles to indicate the
-            // progress through the presentation
-            markers: true,
+        // Add markers to the slide titles to indicate the
+        // progress through the presentation
+        markers: true,
 
-            // Specify custom panels to be included in the menu, by
-            // providing an array of objects with 'title', 'icon'
-            // properties, and either a 'src' or 'content' property.
+        // Specify custom panels to be included in the menu, by
+        // providing an array of objects with 'title', 'icon'
+        // properties, and either a 'src' or 'content' property.
 
 
-            // Specifies the themes that will be available in the themes
-            // menu panel. Set to 'false' to hide themes panel.
-            themes: false,
+        // Specifies the themes that will be available in the themes
+        // menu panel. Set to 'false' to hide themes panel.
+        themes: false,
 
-            // Specifies if the transitions menu panel will be shown.
-            transitions: false,
+        // Specifies if the transitions menu panel will be shown.
+        transitions: false,
 
-            // Adds a menu button to the slides to open the menu panel.
-            // Set to 'false' to hide the button.
-            openButton: true,
+        // Adds a menu button to the slides to open the menu panel.
+        // Set to 'false' to hide the button.
+        openButton: true,
 
-            // If 'true' allows the slide number in the presentation to
-            // open the menu panel. The reveal.js slideNumber option must
-            // be displayed for this to take effect
-            openSlideNumber: false,
+        // If 'true' allows the slide number in the presentation to
+        // open the menu panel. The reveal.js slideNumber option must
+        // be displayed for this to take effect
+        openSlideNumber: false,
 
-            // If true allows the user to open and navigate the menu using
-            // the keyboard. Standard keyboard interaction with reveal
-            // will be disabled while the menu is open.
-            keyboard: true
-          }
-/*
-				    keyboard: {
-				        82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
-				        90: function() { Recorder.downloadZip(); }  // press 'z' to download zip containing audio files
-				    }*/
-        });
+        // If true allows the user to open and navigate the menu using
+        // the keyboard. Standard keyboard interaction with reveal
+        // will be disabled while the menu is open.
+        keyboard: true
+      }
+      /*
+                  keyboard: {
+                      82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
+                      90: function() { Recorder.downloadZip(); }  // press 'z' to download zip containing audio files
+                  }*/
+    });
 
-        Reveal.addEventListener( 'ready', function( event ) {
-          PresentationSettings.updateFromCookie();
-        });
+    Reveal.addEventListener('ready', function (event) {
+      PresentationSettings.updateFromCookie();
+    });
 
-      </script>
-    </body>
+  </script>
+</body>
+
 </html>
