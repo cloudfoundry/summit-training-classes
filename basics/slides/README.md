@@ -31,7 +31,7 @@ In addition to enumerating the ways that students can interact with Cloud Foundr
 
 * The **CLI is universal** and will work on any certified Cloud Foundry.
 * **Web UIs are mostly proprietary**, and therefore the course does not teach them.
-* Apps live in spaces, and **you can't have two apps with the same name in the space space**.
+* Apps live in spaces, and **you can't have two apps with the same name in the same space**.
 
 ### Notes
 
