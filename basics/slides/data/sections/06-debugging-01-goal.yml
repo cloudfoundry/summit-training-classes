@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
 statements:
-  - I want to know what my CF *app is doing*
-  - So that *I can debug* it
+  - How can I *debug* my app?

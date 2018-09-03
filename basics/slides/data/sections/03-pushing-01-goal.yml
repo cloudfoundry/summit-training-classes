@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInStatements: false
 statements:
-  - I want my app to be *accessible at a public URL*
-  - So that the *whole world* can see it
+  - How can I access my *running app?*

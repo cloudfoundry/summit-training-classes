@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInStatements: "true"
 statements:
-  - I want a *CF account*
-  - So that I can use *Cloud&nbsp;Foundry*
+  - How can I access *Cloud&nbsp;Foundry?*

@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
 statements:
-  - I want to store *data in a service*
-  - So that it is *persistent* and shared
+  - How can I *persist* app data?

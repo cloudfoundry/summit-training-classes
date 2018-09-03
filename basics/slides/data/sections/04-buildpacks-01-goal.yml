@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInStatements: false
 statements:
-  - I want the PaaS to *manage dependencies*
-  - So that I can *focus on my application code*
+  - How can I leverage *Cloud&nbsp;Foundry* to manage *my dependencies?*
