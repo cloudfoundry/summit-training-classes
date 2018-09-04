@@ -4,4 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
 statements:
-  - How can I *debug* my app?
+  - How can I *investigate problems* with my app?

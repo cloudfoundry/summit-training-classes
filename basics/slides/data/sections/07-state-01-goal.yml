@@ -4,4 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
 statements:
-  - How can I *persist* app data?
+  - How can I *share persistent data* between app instances?
