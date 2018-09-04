@@ -4,4 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInStatements: false
 statements:
-  - How can I access my *running app?*
+  - How can I run my code in *Cloud&nbsp;Foundry?*
