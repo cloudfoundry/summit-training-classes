@@ -18,7 +18,8 @@ columnLeftContent: |
 columnRightContent: |
 
   * Initial release in **2011**
-  * An **open** Cloud Native Platform (PaaS)
+  * An **open** Cloud Native Platform
+  * Application Runtime and Container Runtime
   * Fast and easy to **build, test, deploy &amp; scale apps**
   * Works with **any language** or framework
   * Available as **open source**, **commercial distributions** or **hosted offerings**

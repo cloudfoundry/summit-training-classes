@@ -42,6 +42,8 @@ $ cf app imperfect-app
 
 {{% question %}}What happens if you make a request whilst they are all down?{{% /question %}}
 
+{{% do %}} Delete your app to free up space. {{% /do %}}
+
 ## Beyond the Class
 
   * Read the [Twelve-Factor App](http://12factor.net/)

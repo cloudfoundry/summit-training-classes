@@ -99,10 +99,11 @@ From now on, the steps are the same regardless of whether you're using PWS or Sw
 
 ### Viewing the Dashboard
 
-New Relic has a dashboard. You can find the URL by looking at the service details.
+New Relic has a dashboard that you'll already have seen if you signed up for an account manually.
 
-{{% do %}}Visit the URL reported by `cf service newrelic`{{% /do %}}
-{{% observe %}}Observe graphs showing app performance data in the New Relic dashboard. Sometimes it takes a few minutes for the data to arrive. {{% /observe %}}
+{{% do %}}Visit the NewRelic dashboard, using `cf service newrelic` to find the URL if you're using PWS. {{% /do %}}
+{{% do %}} Navigate to the APM section. {{% /do %}}
+{{% observe %}} Observe graphs showing app performance data in the New Relic dashboard. Sometimes it takes 5-10 minutes for the data to arrive, and you may need to refresh the page. {{% /observe %}}
 
 
 ## SSH access

@@ -151,7 +151,7 @@ You can also delete apps.
 
 {{% checking %}}
 
-You should not see either webp-app or worker-app when you run `cf apps`.
+You should not see either `web-app` or `worker-app` when you run `cf apps`.
 
 {{% /checking %}}
 
