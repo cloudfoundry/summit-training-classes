@@ -35,8 +35,8 @@ cf <some-command> --help
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
 `
-{{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services/The Swisscom Application Cloud. The API endpoint you need for Pivotal Web Services is `api.run.pivotal.io`. You can find the URL to use for The Swisscom Application Cloud by clicking on 'Settings' when looking at your space in the Swisscom UI. {{% /do %}}
-{{% question %}}Are you logged into Pivotal Web Services/The Swisscom Application Cloud?{{% /question %}}
+{{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services/The Swisscom Application Cloud/anynines public PaaS. The API endpoint you need for Pivotal Web Services is `api.run.pivotal.io`. The anynines public PaaS endpoint is `https://api.de.a9s.eu`. You can find the URL to use for The Swisscom Application Cloud by clicking on 'Settings' when looking at your space in the Swisscom UI. {{% /do %}}
+{{% question %}}Are you logged into Pivotal Web Services/The Swisscom Application Cloud/anynines public PaaS?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
 
 {{% checking %}}
@@ -63,7 +63,7 @@ $ cf target -o ORG -s SPACE
 
 ## Beyond the Class
 
-  * Add the person next to you to your PWS space
+  * Add the person next to you to your Cloud Foundry space
   * Create an account on [IBM Bluemix](https://console.ng.bluemix.net/registration/)
   * Use [Targets CF CLI plugin](https://github.com/guidowb/cf-targets-plugin) with PWS &amp; Bluemix
   * Submit a localisation pull request to [CF CLI](https://github.com/cloudfoundry/cli/blob/master/cf/i18n/README-i18n.md)

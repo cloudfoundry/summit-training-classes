@@ -11,13 +11,18 @@ You must have an account to continue.
 
 ## Sign Up
 
-### Pivotal Web Services 
+### Pivotal Web Services
 {{% do %}}Sign up by going to [https://run.pivotal.io/](https://run.pivotal.io/){{% /do %}}
 
 -- or --
 
 ### Swisscom Application Cloud
 {{% do %}}Sign up by going to [https://cfsummit.swisscom.com/](https://cfsummit.swisscom.com/){{% /do %}}
+
+-- or --
+
+### anynines public PaaS
+{{% do %}}Sign up by going to [https://paas.anynines.com/](https://paas.anynines.com/){{% /do %}}
 
 ## Beyond the Class
 
