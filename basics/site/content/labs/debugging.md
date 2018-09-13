@@ -9,7 +9,7 @@ In this lab, you will use the CF CLI to view an app's logs, as well as to find o
 
 A buggy app is included in the `06-debugging/debug-app` directory with a manifest.
 
-{{% do %}}Push `06-debugging/debug-app` to PWS{{% /do %}}
+{{% do %}}Push `06-debugging/debug-app` to Cloud Foundry{{% /do %}}
 {{% do %}}Note the URL{{% /do %}}
 
 ### Access the App
@@ -82,9 +82,9 @@ The process involves creating an instance of the New Relic service, binding it t
 {{% do %}}Tell Cloud Foundry that `debug-app` should use your New Relic service instance: `cf bind-service debug-app newrelic`{{% /do %}}
 {{% do %}}Find the New Relic license key in the output of `cf env debug-app`{{% /do %}}
 
-### Swisscom Setup
+### Swisscom and anynines Setup
 
-Swisscom does not use the NewRelic Cloud Foundry service broker, so we'll need to set up an account manually.
+Swisscom and anynines do not use the NewRelic Cloud Foundry service broker, so we'll need to set up an account manually.
 
 {{% do %}}Create a new account on [NewRelic.com](https://newrelic.com/signup){{% /do %}}
 {{% do %}}Click on your account name in the top-right of the welcome dashboard, and **select Account Settings**{{% /do %}}
@@ -92,7 +92,7 @@ Swisscom does not use the NewRelic Cloud Foundry service broker, so we'll need t
 
 ### Set the License Key in your App
 
-From now on, the steps are the same regardless of whether you're using PWS or Swisscom.
+From now on, the steps are the same regardless of whether you're using PWS, Swisscom or anynines.
 
 {{% do %}}In `newrelic.yml`, replace `YOUR-LICENSE-KEY` with the value you just found{{% /do %}}
 {{% do %}}Re-push the app{{% /do %}}
