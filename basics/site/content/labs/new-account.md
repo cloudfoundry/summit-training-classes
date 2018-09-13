@@ -17,7 +17,7 @@ You must have an account to continue.
 -- or --
 
 ### Swisscom Application Cloud
-{{% do %}}Sign up by going to [https://cf-summit-registration.scapp.io/](https://cf-summit-registration.scapp.io/){{% /do %}}
+{{% do %}}Sign up by going to [https://cfsummit.swisscom.com/](https://cfsummit.swisscom.com/){{% /do %}}
 
 ## Beyond the Class
 

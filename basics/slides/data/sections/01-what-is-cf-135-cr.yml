@@ -1,0 +1,28 @@
+---
+type: "two-column"
+title: "What is the Container Runtime?"
+subtitle: "Container Runtime"
+menuTitle: "Container Runtime"
+buildInColumns: "false"
+
+columnLeftContent: |
+
+  <span class="txt-c">
+
+  <img src="img/cf-cr.png" />
+
+  </span>
+
+columnRightContent: |
+
+  **Container Runtime is Kubernetes**
+
+  * Runs **pre-built container images**
+  * Good for running **other people's code**
+  * Suited to **lift 'n' shift**, non-cloud-native systems
+
+notes: |
+
+  IaaS - servers, SaaS - users.
+
+  Heroku created patterns based on their experiences called "12 Factors" that have been heavily influencial. Also drove "buildpack" model
