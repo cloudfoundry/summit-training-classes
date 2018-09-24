@@ -1,17 +1,17 @@
 type: "two-column"
-menuTitle: "Blue Green Deployments"
+menuTitle: "Zero-downtime Deployments"
 buildInColumns: "false"
 
-columnLeftTitle: "Blue/Green Deployments"
+columnLeftTitle: "Zero-downtime Deployments"
 
 columnLeftContent: |
 
 columnRightContent: |
 
-  * Deploy a new version (GREEN) of your app.
+  * Deploy a new version of your app.
   * Map the route to it
   * Validate
-  * Unmap from the old version (BLUE)
+  * Unmap from the old version
 
 notes: |
 

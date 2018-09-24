@@ -1,6 +1,9 @@
 public/
 .DS_Store
 **/credentials.yml
+
+basics/ci/custom-vars.yml
+
 operator/terraform/.terraform
 operator/terraform/students.json
 operator/terraform/terraform.tfstate*

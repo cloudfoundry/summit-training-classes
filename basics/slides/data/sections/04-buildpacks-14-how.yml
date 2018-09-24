@@ -20,18 +20,32 @@ columnLeftContent: |
 columnRightContent: |
 
   * `bin/detect`: Can I handle this? (introspection)
-  * `bin/compile`: If yes, make the droplet
+  * `bin/supply`: If yes, provide the dependencies
+  * `bin/finalize`: Prepare the app for launch - runs only for the last buildpack
   * `bin/release`: Build the metadata (env variables, start command, etc)
 
 notes: |
 
-  run in containers
+  `bin/compile`: is a deprecated alternative to `bin/supply` and `bin/finalize`
 
-  ---
+  Buildpack execution and app runtime are in containers
 
-  ## [Where does the](#/6) buildpack [run?](#/6)
+  * Uses the host kernel with a rootfs (jeos)
+  * Default rootfs is <span style="color: #8FF541;">cflinuxfs2</span> (based on Ubuntu 14.04 Trusty)
+  * Moving towards <span style="color: #0008FF;">cflinuxfs3</span> (based on Ubuntu 18.04 Bionic)
+  * Cloud Foundry uses [Garden](https://github.com/cloudfoundry-incubator/garden) for containerisation
 
-    * Uses the host kernel with a rootfs (jeos)
-    * Default rootfs is <span style="color: #8FF541;">cflinuxfs2</span> (based on Ubuntu 14.04 Trusty)
-    * Buildpack execution and app runtime are in containers
-    * Cloud Foundry uses [Garden](https://github.com/cloudfoundry-incubator/garden) for containerisation
+  Script examples from staticfile buildpack:
+
+  * `detect`: is there a Staticfile?
+  * `supply`: install nginx
+  * `finalize`: look at provided config, configure nginx, then creates `boot.sh`
+  * `release`: creates yaml file:
+
+    ```yaml
+    ---
+    default_process_types:
+    web: \$HOME/boot.sh
+    ```
+
+  More info: https://docs.cloudfoundry.org/buildpacks/understand-buildpacks.html

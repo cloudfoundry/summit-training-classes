@@ -61,7 +61,7 @@ called `Staticfile`.
 
 Instead of letting Cloud Foundry allow each buildpack to detect whether it can run the app, we're going to specify which buildpack we want to use.
 
-{{% do %}}Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push --help` to find out which flag to provide){{% /do %}}
+{{% do %}}Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push -\-help` to find out which flag to provide){{% /do %}}
 {{% observe %}}Observe from the CLI output which buildpack was used{{% /observe %}}
 {{% do %}}Hit both `/index.html` and `/index.php`{{% /do %}}
 {{% question %}}What happens this time? Why?{{% /question %}}
