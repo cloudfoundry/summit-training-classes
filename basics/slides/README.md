@@ -21,7 +21,7 @@ This section often takes the longest, as there's a lot of background that can be
 
 You may need to explain what the 12 Factor manifesto is.
 
-For a non-operator audience, the "where to get OS CF" slide is of minimal important. If you've got operators, they'll be keen to expand on this a little.
+For a non-operator audience, the "where to get OS CF" slide is of minimal importance. If you've got operators, they'll be keen to expand on this a little.
 
 ## 2. Interacting with Cloud Foundry
 
