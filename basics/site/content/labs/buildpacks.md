@@ -23,7 +23,7 @@ An app is included in the `04-buildpacks/static-app` directory.
 {{% question %}}How does the running droplet compare to your app directory?{{% /question %}}
 {{% do %}}Use `cf ssh static-app` to explore the filesystem of the running application{{% /do %}}
 {{% observe %}}Observe what additional dependencies the buildpack made available for your app{{% /observe %}}
-{{% do %}}Exit the SSH session with the `exit` command or `CTRL+D`.{{% /do %}}
+{{% do %}}Exit the SSH session with the `exit` command or `CTRL+d`.{{% /do %}}
 
 ## Scale with Speed
 
