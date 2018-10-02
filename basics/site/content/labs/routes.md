@@ -17,7 +17,7 @@ At some point we will want to push an updated v1.1 of our app, find out if it wo
 
 We need to create a route for the app we are going to deploy. This route will be used for _all_ versions of the app, so should stay the same even when the app is updated.
 
-{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the domain is `cfapps.io` if you are using Pivotal Web Services, or `scapp.io` if you are using The Swisscom Application Cloud{{% /do %}}
+{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the address is `www-yourname.cfapps.io` if you are using Pivotal Web Services, or `www-yourname.scapp.io` if you are using The Swisscom Application Cloud{{% /do %}}
 
 ### Push v1.0
 

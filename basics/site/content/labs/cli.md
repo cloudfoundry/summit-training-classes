@@ -64,6 +64,6 @@ $ cf target -o ORG -s SPACE
 ## Beyond the Class
 
   * Add the person next to you to your Cloud Foundry space
-  * Create an account on [IBM Bluemix](https://console.ng.bluemix.net/registration/)
-  * Use [Targets CF CLI plugin](https://github.com/guidowb/cf-targets-plugin) with PWS &amp; Bluemix
+  * Create an account on [IBM Cloud](https://console.ng.bluemix.net/registration/)
+  * Use [Targets CF CLI plugin](https://github.com/guidowb/cf-targets-plugin)
   * Submit a localisation pull request to [CF CLI](https://github.com/cloudfoundry/cli/blob/master/cf/i18n/README-i18n.md)

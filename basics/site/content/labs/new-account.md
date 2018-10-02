@@ -29,6 +29,6 @@ You must have an account to continue.
 Compare CF public services:
 
   * [Anynines](http://www.anynines.com/)
-  * [IBM Bluemix](https://console.ng.bluemix.net/)
+  * [IBM Cloud](https://www.ibm.com/cloud/)
   * [Pivotal Web Services](https://run.pivotal.io/)
   * [Swisscom](https://developer.swisscom.com/)

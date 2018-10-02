@@ -20,7 +20,7 @@ A buggy app is included in the `06-debugging/debug-app` directory with a manifes
 
 Getting fast feedback on failures is a key element of agility. The sooner we know something is broken, the sooner we can fix it.
 
-{{% do %}}Use `cf push --help` and Cloud Foundry documentation to push the app again, in a way that Cloud Foundry will deem it unhealthy{{% /do %}}
+{{% do %}}Use `cf push -\-help` and Cloud Foundry documentation to push the app again, in a way that Cloud Foundry will deem it unhealthy{{% /do %}}
 
 ## Check out the Logs
 

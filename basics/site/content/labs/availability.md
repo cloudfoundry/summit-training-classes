@@ -48,6 +48,6 @@ $ cf app imperfect-app
 
   * Read the [Twelve-Factor App](http://12factor.net/)
   * Benchmark app with [Load Impact](https://loadimpact.com/) (crash 1-2 instances)
-  * Read about [Blue-Green deployment in CF](http://garage.mybluemix.net/posts/blue-green-deployment/)
+  * Read about [Zero-downtime deployments in CF](http://garage.mybluemix.net/posts/blue-green-deployment/)
   * Use [cf-blue-green-deploy](https://github.com/bluemixgaragelondon/cf-blue-green-deploy) CLI plugin
   * [Coding Horror wisdom](http://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway/)

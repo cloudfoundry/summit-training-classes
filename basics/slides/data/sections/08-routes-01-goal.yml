@@ -4,5 +4,4 @@ type: "statement"
 backgroundColor: "#243641"
 buildInColumns: "false"
 statements:
-  - I want to deploy a *new version* of my app
-  - With *no interruptions* to my users
+  - How can I deploy with *zero downtime?*
