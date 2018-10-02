@@ -72,7 +72,7 @@ You should see something like the following:
 
 We will demonstrate application performance monitoring using NewRelic.
 
-The **setup process is different for Pivotal Web Services and Swisscom**. PWS uses Cloud Foundry service brokers to automate some of the manual steps for you.
+The **setup process is different for Pivotal Web Services and Swisscom/anynines**. PWS uses Cloud Foundry service brokers to automate some of the manual steps for you.
 
 ### PWS Setup
 

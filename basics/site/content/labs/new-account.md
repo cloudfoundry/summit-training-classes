@@ -3,7 +3,7 @@ date: 2016-04-19T19:21:15-06:00
 title: Sign Up - Pivotal Web Services or Swisscom Application Cloud
 ---
 
-For this class, we will use the Cloud Foundry running on either Pivotal Web Services or The Swisscom Application Cloud.
+For this class, we will use the Cloud Foundry running on either Pivotal Web Services, The Swisscom Application Cloud or anynines.
 
 Your instructor will guide you on which service to use.
 
@@ -28,7 +28,7 @@ You must have an account to continue.
 
 Compare CF public services:
 
-  * [Anynines](http://www.anynines.com/)
+  * [anynines](http://www.anynines.com/)
   * [IBM Cloud](https://www.ibm.com/cloud/)
   * [Pivotal Web Services](https://run.pivotal.io/)
   * [Swisscom](https://developer.swisscom.com/)
