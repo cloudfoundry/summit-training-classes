@@ -2,7 +2,7 @@
 title: Service Discovery with Eureka
 ---
 
-In this exercise, you will deploy a <a href="https://github.com/Netflix/eureka/" target="_blank">Eureka</a> server.  You will also deploy a  new app `browser` that consumes data from our people service.
+In this exercise, you will deploy a <a href="http://cloud.spring.io/spring-cloud-netflix/" target="_blank">Eureka</a> server.  You will also deploy a  new app `browser` that consumes data from our people service.
 
 ## About the App
 
@@ -83,7 +83,7 @@ Within a few minutes of restaging, you should see your people service registered
 
 ## Pushing the Browser App
 
-* Now, push the browser app with 750MB of memory.  The jar file is located here <a href="/resources/browser.jar" target="_blank">browser.jar</a>.
+* Now, push the browser app with 512MB of memory.  The jar file is located here <a href="/resources/browser.jar" target="_blank">browser.jar</a>.
 
 * Bind the Eureka service and restart the browser app.
 
@@ -122,7 +122,7 @@ cf scale
 ### What is happening?
 
 When successful, the browser app is using Eureka to locate the people service instances,
-then using Ribbon to load balance requests to those instances (because of quota limits, we only have 2 instances).
+then using Ribbon to load balance requests to those instances (because of quota limits, we only have 2 instance).
 Should we add/remove instances of the people service, or should that service move, updates will happen automatically.
 
 Congratulations! You have successfully used service discovery to consume a microservice.

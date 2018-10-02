@@ -32,7 +32,7 @@ Now if you access your browser app and hit `Go` on the `/people` endpoint, you s
 Our browser app actually has Hystrix built in, but currently disabled. You can enable Hystrix by setting the `SPRING_PROFILES_ACTIVE` environment variable to `hystrix`.
 
 * `cf set-env browser SPRING_PROFILES_ACTIVE hystrix`
-* `cf restage browser`
+* `cf restart browser`
 
 > **Don't** write your apps this way. You should always be using Hystrix in your Spring code, but we do this for the purpose of teaching.
 

@@ -16,8 +16,8 @@ Use `cf push` to deploy the application.  You should:
 
 * Create 1 instance of the app
 * Allocate 750M of memory
-* Use the `-p` flag to point to the jar file
-* Use `--random-route` to ensure no collisions with other students
+* Use the -p flag to point to the jar file
+* Use --random-route to ensure no collisions with other students
 
 ```sh
 cf push people --random-route -b java_buildpack -m 750M -p /path/to/people.jar
@@ -35,12 +35,12 @@ name     requested state   instances   memory   disk   urls
 people   started           1/1         750M     512M     people-<RANDOM_ROUTE>.de.a9sapp.eu
 ```
 
-The app also has an endpoint called */people*. You should also be able to curl it:
+The app also has an endpoint called `/people`.  You should also be able to curl it:
 
 > On Windows, if you don't have curl you can get it from here: <a href="https://curl.haxx.se/download.html" target="_blank">curl.haxx.se/download.html</a>
 
 ```sh
-curl people-<RANDOM_ROUTE>.de.a9sapp.eu/people
+curl people-<RANDOM_ROUTE>.de.cfapps.eu/people
 ...
 
 {

@@ -17,7 +17,7 @@ At some point we will want to push an updated v1.1 of our app, find out if it wo
 
 We need to create a route for the app we are going to deploy. This route will be used for _all_ versions of the app, so should stay the same even when the app is updated.
 
-{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the address is `www-yourname.cfapps.io` if you are using Pivotal Web Services, or `www-yourname.scapp.io` if you are using The Swisscom Application Cloud{{% /do %}}
+{{% do %}}Use `cf create-route` to a create a new route for your app, making sure the address is `www-yourname.cfapps.io` if you are using Pivotal Web Services, `www-yourname.scapp.io` if you are using The Swisscom Application Cloud, or `www-yourname.de.a9sapp.eu` if you are using anynines.{{% /do %}}
 
 ### Push v1.0
 
@@ -64,7 +64,7 @@ We pushed the new version, smoke tested it on its own route, and then load balan
 
 {{% checking %}}
 
-Check your work by accessing the main route multiple times.  You should observe traffic **only going to v1.1**.  You can also see the routes/urls by looking at the app details.
+Check your work by accessing the main route multiple times. You should observe traffic **only going to v1.1**. You can also see the routes/urls by looking at the app details.
 
 {{% /checking %}}
 
