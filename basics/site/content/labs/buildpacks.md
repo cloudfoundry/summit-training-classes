@@ -23,6 +23,7 @@ An app is included in the `04-buildpacks/static-app` directory.
 {{% question %}}How does the running droplet compare to your app directory?{{% /question %}}
 {{% do %}}Use `cf ssh static-app` to explore the filesystem of the running application{{% /do %}}
 {{% observe %}}Observe what additional dependencies the buildpack made available for your app{{% /observe %}}
+{{% do %}}Exit the SSH session with the `exit` command or `CTRL+d`.{{% /do %}}
 
 ## Scale with Speed
 
@@ -56,14 +57,14 @@ called `Staticfile`.
 {{% question %}}Which buildpack do you think will be used to run this app? Staticfile, or PHP?{{% /question %}}
 {{% do %}}Use `cf push` to deploy `mixed-app`{{% /do %}}
 {{% observe %}}Observe from the CLI output which buildpack was used{{% /observe %}}
-{{% do %}}Hit both `/index.html` and `/index.php`{{% /do %}}
+{{% do %}}Visit both `/index.html` and `/index.php`{{% /do %}}
 {{% do %}}Use `cf ssh` to see what files the buildpack has added{{% /do %}}
 
 Instead of letting Cloud Foundry allow each buildpack to detect whether it can run the app, we're going to specify which buildpack we want to use.
 
 {{% do %}}Push the app again, using a flag to specify this buildpack: `https://github.com/cloudfoundry/staticfile-buildpack` (use `cf push -\-help` to find out which flag to provide){{% /do %}}
 {{% observe %}}Observe from the CLI output which buildpack was used{{% /observe %}}
-{{% do %}}Hit both `/index.html` and `/index.php`{{% /do %}}
+{{% do %}}Visit both `/index.html` and `/index.php`{{% /do %}}
 {{% question %}}What happens this time? Why?{{% /question %}}
 {{% do %}}Use `cf ssh` to see what files the buildpack has added, and how they differ from the last push{{% /do %}}
 
