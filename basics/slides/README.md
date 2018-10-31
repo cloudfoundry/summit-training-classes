@@ -161,3 +161,7 @@ Avoid the term "blue/green". This term refers to entire environments, full of co
 The mechanism of zero-downtime deploys often confuses students. Breaking out to a white board to draw a diagram of a 'front door' route (`www.myshop.com`) being mapped to different versions of an app may help.
 
 Often students find that it seems nonsensical to have one route mapped to two apps. Pointing out that Cloud Foundry doesn't know that two different apps could be different versions of the same codebase tends to alleviate this - ie, the route isn't mapped to completely different apps, but v1 and v2 of the same app.
+
+Internal domains allow container-to-container networking. This means traffic between apps with a route on an internal domain does not go out to the GoRouter via the public internet, which is good for security. It also means that if an app _only_ has a route on an internal domain, it will not be routable via the GoRouter, effectively preventing it from being accessed from the outside world.
+
+Route services are an advanced feature, and shouldn't be given too much focus. They are referenced in the slides just so people know they exist.

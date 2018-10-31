@@ -1,0 +1,23 @@
+type: "two-column"
+menuTitle: "Route Services"
+buildInColumns: "false"
+
+columnLeftContent: |
+
+  **Route Services** transform or process requests before they reach an app
+
+    <i class="fa fa-sitemap" style="font-size: 120px; margin-top: 30px;"></i>
+
+columnRightContent: |
+
+  * Bound to routes, not apps
+  * Can be re-used between apps
+  * Use cases:
+    * Authentication
+    * Rate limiting
+    * Caching
+  * Not for internal domains
+
+notes: |
+
+  Advanced feature. GoRouter sends requests to a URL _before_ sending it to the app, and the route service implementation can do whatever it wants.

@@ -17,7 +17,7 @@ googleAnalytics = "UA-67001027-2"
 	provider = "GitHub"
 	repo_url = "https://github.com/cloudfoundry/summit-training-classes"
 
-	version = "1.5.0"
+	version = "1.6.0"
   headerLogo = "/img/cf-white.png"
   logo = "img/cf-rabbit.png"
 	favicon = ""

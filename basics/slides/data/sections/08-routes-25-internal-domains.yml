@@ -1,0 +1,22 @@
+type: "two-column"
+menuTitle: "Route Services"
+buildInColumns: "false"
+
+columnLeftContent: |
+
+  **Internal domains** allow apps to communicate directly
+
+    <i class="fa fa-connectdevelop" style="font-size: 120px; margin-top: 30px;"></i>
+
+columnRightContent: |
+
+  * Requests to regular routes go 'out and back in'
+  * Requests to internal domains go app-to-app
+  * Allows DNS-based 'service discovery'
+
+notes: |
+
+  Added in 2018, supercedes old 'container-to-container' networking implementation
+  Normally requests between apps go via the GoRouter, meaning all apps on a CF can be hit if the GoRouter can be
+  Apps can be bound _just_ to an internal domain, preventing the GoRouter from reaching them, enabling privacy
+  Internal domain route traffic doesn't go via GoRouter, so no route services

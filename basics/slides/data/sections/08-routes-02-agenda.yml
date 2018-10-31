@@ -11,6 +11,8 @@ columnLeftContent: |
 
 columnRightContent: |
 
-    * Custom Domains
     * Routes
     * Zero-downtime Deployments
+    * Custom Domains
+    * Internal Domains
+    * Route Services
