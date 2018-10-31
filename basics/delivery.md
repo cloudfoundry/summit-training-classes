@@ -47,9 +47,11 @@ Interactive recap sessions should be held after each module where appropriate. T
 * What does the CLI talk to?
 * How does the CLI remember who you are?
 
-As each question is answered, the instructor draws relevant components of Cloud Foundry on the whiteboard. Be careful to not fall into the trap of explaining without first answering questions: people are more likely to remember information if they were asked about it previously - even if when asked they had no chance of knowing the answer!
+As each question is answered, the instructor draws relevant components of Cloud Foundry on the whiteboard. Be careful to not fall into the trap of explaining without first asking questions: people are more likely to remember information if they were asked about it previously - even if when asked they had no chance of knowing the answer!
 
-The recap sessions further cement knowledge in the students, allow the instructor to drill into details upon request, and also allow the instructor to gauge how much of the prior material has been understood.
+The recap sessions further cement knowledge in the students, allow the instructor to delve into details upon request, and also allow the instructor to gauge how much of the prior material has been understood.
+
+It is okay to repeat elements between recaps, as this reinforces learning. For example, you will likely find yourself drawing the `cf push` flow several time. If the class grow weary of answering the same questions in each recaps, you can turn this into a game of the class calling out what happens more quickly than you can draw the diagram.
 
 ### Retrospective
 
