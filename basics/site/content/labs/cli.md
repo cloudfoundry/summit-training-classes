@@ -34,7 +34,7 @@ cf <some-command> --help
 ## Log In
 
 You can use the CLI to log into any Cloud Foundry you have an account in.
-`
+
 {{% do %}}Use `cf help -a` to find out how to login to Pivotal Web Services/The Swisscom Application Cloud/anynines public PaaS. The API endpoint you need for Pivotal Web Services is `api.run.pivotal.io`. The anynines public PaaS endpoint is `https://api.de.a9s.eu`. You can find the URL to use for The Swisscom Application Cloud by clicking on 'Settings' when looking at your space in the Swisscom UI. {{% /do %}}
 {{% question %}}Are you logged into Pivotal Web Services/The Swisscom Application Cloud/anynines public PaaS?{{% /question %}}
 {{% question %}}What org and space are you targeting?{{% /question %}}
