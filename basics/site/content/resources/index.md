@@ -7,6 +7,7 @@ title: Resources
 
 Main Site: [cloudfoundry.org](https://www.cloudfoundry.org)
 
+* Slack - [slack.cloudfoundry.org](https://slack.cloudfoundry.org/)
 * Mailing lists - [lists.cloudfoundry.org](https://lists.cloudfoundry.org)
 * [github.com/cloudfoundry](https://github.com/cloudfoundry)
 * [github.com/cloudfoundry-incubator](https://github.com/cloudfoundry-incubator)
