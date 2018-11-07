@@ -81,6 +81,7 @@ The process involves creating an instance of the New Relic service, binding it t
 {{% do %}}Create a New Relic service instance: `cf create-service newrelic standard newrelic`{{% /do %}}
 {{% do %}}Tell Cloud Foundry that `debug-app` should use your New Relic service instance: `cf bind-service debug-app newrelic`{{% /do %}}
 {{% do %}}Find the New Relic license key in the output of `cf env debug-app`{{% /do %}}
+{{% do %}}Use `cf service newrelic` to find the URL of the NewRelic dashboard. **Make a note of this**, you'll need it in a later step. {{% /do %}}
 
 ### Swisscom and anynines Setup
 
@@ -101,7 +102,7 @@ From now on, the steps are the same regardless of whether you're using PWS, Swis
 
 New Relic has a dashboard that you'll already have seen if you signed up for an account manually.
 
-{{% do %}}Visit the NewRelic dashboard, using `cf service newrelic` to find the URL if you're using PWS. {{% /do %}}
+{{% do %}}Visit the NewRelic dashboard{{% /do %}}
 {{% do %}} Navigate to the APM section. {{% /do %}}
 {{% observe %}} Observe graphs showing app performance data in the New Relic dashboard. Sometimes it takes 5-10 minutes for the data to arrive, and you may need to refresh the page. {{% /observe %}}
 
