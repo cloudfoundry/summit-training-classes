@@ -19,12 +19,10 @@ columnRightContent: |
 
   * `cf logs` App logs
   * `cf events` App events
-  * App instrumentation via 3rd party tools
   * `cf ssh` SSH access to the app container
 
 notes: |
 
   * Loggregator aggregates logs from all instances and relevant components.  If you suspected a routing problem in your existing org, how would you get the logs?  What if you have 100 instances running?
   * Events shows things like start, stop, crash, etc.
-  * Instrumentation hooks are built into the platform and support a multitude of 3rd party tools.
   * If you need to see things inside the container, you can SSH inside.

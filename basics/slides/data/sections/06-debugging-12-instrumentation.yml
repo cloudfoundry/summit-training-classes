@@ -22,3 +22,7 @@ columnRightContent: |
   * PWS console (built in)
 
   *AppDynamics and New Relic agents are included in Java buildpack*
+
+notes: |
+
+  * Instrumentation hooks are built into the platform and support a multitude of 3rd party tools.
