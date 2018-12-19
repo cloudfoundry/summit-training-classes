@@ -62,7 +62,7 @@ Alternatively, you can find URL mapped to your app in the output of `cf apps` (a
 
 This app is configured with a [deployment manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).  The manifest tells CF the app name and how many instances to create (among other things). Manifests are optional.
 
-You can see the manifest by opening the file: `03-push/web-app/manifest.yml`.
+You can see the manifest by opening the file: `03-push/web-app/manifest.yml`. On Linux and macOS you can use the `cat` command to print the contents of a file to the terminal.
 
 ```yaml
 applications:
