@@ -78,7 +78,7 @@ The **setup process is different for Pivotal Web Services and Swisscom**. PWS us
 
 The process involves creating an instance of the New Relic service, binding it to our app, adding a license key, then re-pushing. Services are covered in another section of this course, so don't worry if you don't understand these commands.
 
-{{% do %}}Create a New Relic service instance: `cf create-service newrelic standard newrelic`{{% /do %}}
+{{% do %}}Create a New Relic service instance: `cf create-service newrelic lite newrelic`{{% /do %}}
 {{% do %}}Tell Cloud Foundry that `debug-app` should use your New Relic service instance: `cf bind-service debug-app newrelic`{{% /do %}}
 {{% do %}}Find the New Relic license key in the output of `cf env debug-app`{{% /do %}}
 {{% do %}}Use `cf service newrelic` to find the URL of the NewRelic dashboard. **Make a note of this**, you'll need it in a later step. {{% /do %}}
