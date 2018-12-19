@@ -1,10 +1,10 @@
 ---
 type: "slide-basic"
-menuTitle: "Health Management in Diego"
+menuTitle: "Components used in `cf scale`"
 
 content: |
 
-  **Health Management Components:**
+  **Components used in `cf scale`:**
 
   * **nsync**: gets message from CC (after `cf scale`). Writes the `DesiredLRP` value in BBS.
 
