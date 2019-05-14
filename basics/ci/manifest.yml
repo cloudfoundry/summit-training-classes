@@ -3,5 +3,6 @@ applications:
 - name: basics-workshop
   buildpacks:
   - staticfile_buildpack
+  stack: cflinuxfs3
   routes:
     ((routes))
