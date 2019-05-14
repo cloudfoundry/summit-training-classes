@@ -2,3 +2,5 @@
 applications:
 - name: operator-workshop
   buildpack: staticfile_buildpack
+  stack: cflinuxfs3
+  memory: 64M
